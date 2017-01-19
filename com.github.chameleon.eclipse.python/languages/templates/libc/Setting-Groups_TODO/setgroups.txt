@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) process’s supplementary group ids
+//\\ //// ==> completion hint (1 line):
+sets the process’s supplementary group IDs
+//\\ //// Replacement text (1+ lines):
+int setgroups (size_t count, const gid_t *groups)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setgroups (size_t count, const gid_t *groups)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+This function sets the process’s supplementary group IDs.  It can only
+be called from privileged processes.  The count argument specifies
+the number of group IDs in the array groups.
+
+This function returns 0 if successful and -1 on error.
+The following errno error conditions are defined for this
+function:
+
+
+EPERM
+The calling process is not privileged.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-Groups.html#Setting-Groups
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-Groups/setgroups.txt

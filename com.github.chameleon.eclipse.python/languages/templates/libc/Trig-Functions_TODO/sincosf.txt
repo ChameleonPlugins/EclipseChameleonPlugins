@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) sine of x in * and (the,) cosine of x in *, where x is given in radians
+//\\ //// ==> completion hint (1 line):
+These functions return the sine of x in * and the cosine of x in *, where x is given in radians
+//\\ //// Replacement text (1+ lines):
+Function: void sincos (double x, double *sinx, double *cosx)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void sincos (double x, double *sinx, double *cosx)
+Function: void sincosf (float x, float *sinx, float *cosx)
+Function: void sincosl (long double x, long double *sinx, long double *cosx)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return the sine of x in *sinx and the
+cosine of x in *cos, where x is given in
+radians.  Both values, *sinx and *cosx, are in
+the range of -1 to 1.
+
+This function is a GNU extension.  Portable programs should be prepared
+to cope with its absence.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Trig-Functions.html#Trig-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Trig-Functions/sincosf.txt

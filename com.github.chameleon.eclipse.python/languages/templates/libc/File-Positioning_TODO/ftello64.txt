@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+is similar to ftello with (the,) only difference that (the,) (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) value is of (output,print,show,say,type,write) off64_t
+//\\ //// ==> completion hint (1 line):
+is similar to ftello with the only difference that the return value is of type off64_t
+//\\ //// Replacement text (1+ lines):
+off64_t ftello64 (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: off64_t ftello64 (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function is similar to ftello with the only difference that
+the return value is of type off64_t.  This also requires that the
+stream stream was opened using either fopen64,
+freopen64, or tmpfile64 since otherwise the underlying
+file operations to position the file pointer beyond the 2^31
+bytes limit might fail.
+
+If the sources are compiled with _FILE_OFFSET_BITS == 64 on a 32
+bits machine this function is available under the name ftello
+and so transparently replaces the old interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Positioning.html#File-Positioning
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Positioning/ftello64.txt

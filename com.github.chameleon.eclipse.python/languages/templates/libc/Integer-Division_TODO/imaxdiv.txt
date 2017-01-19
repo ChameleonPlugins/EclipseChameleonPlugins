@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+is like (the,) div function, but (the,) arguments are of (output,print,show,say,type,write) intmax_t and (the,) result is returned as (a,) structure of (output,print,show,say,type,write) imaxdiv_t
+//\\ //// ==> completion hint (1 line):
+is like the div function, but the arguments are of type intmax_t and the result is returned as a structure of type imaxdiv_t
+//\\ //// Replacement text (1+ lines):
+imaxdiv_t imaxdiv (intmax_t numerator, intmax_t denominator)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: imaxdiv_t imaxdiv (intmax_t numerator, intmax_t denominator)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The imaxdiv function is like the div function, but the
+arguments are of type intmax_t and the result is returned as
+a structure of type imaxdiv_t.
+
+See Integers for a description of the intmax_t type.
+
+The imaxdiv function was added in ISO C99.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Integer-Division.html#Integer-Division
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Integer-Division/imaxdiv.txt

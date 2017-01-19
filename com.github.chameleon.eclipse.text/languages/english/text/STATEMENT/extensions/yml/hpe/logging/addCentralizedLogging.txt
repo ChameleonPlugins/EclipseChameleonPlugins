@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(add,create) centralized logging
+//\\ //// ==> completion hint (1 line):
+add centralized logging
+//\\ //// Replacement text (1+ lines):
+    - centralized_logging:
+        enabled: false
+        format: json
+      files:
+      - /var/log/barbican/barbican-monitor.log
+      log_rotate:
+      - daily
+      - maxsize 50M
+      - rotate 7
+      - compress
+      - missingok
+      - notifempty
+      - copytruncate
+      - create 640 barbican barbican
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Help...
+//\\ //// Tool tip (1 line):
+Change 'currentDate' if you want...
+ //\\

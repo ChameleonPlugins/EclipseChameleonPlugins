@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+is functionally identical to mktime except it always takes (the,) input values to be coordinated universal time regardless of any local time zone setting
+//\\ //// ==> completion hint (1 line):
+is functionally identical to mktime except it always takes the input values to be Coordinated Universal Time regardless of any local time zone setting
+//\\ //// Replacement text (1+ lines):
+time_t timegm (struct tm *brokentime)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: time_t timegm (struct tm *brokentime)
+Preliminary:
+| MT-Safe env locale
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+
+timegm is functionally identical to mktime except it
+always takes the input values to be Coordinated Universal Time (UTC)
+regardless of any local time zone setting.
+
+Note that timegm is the inverse of gmtime.
+
+Portability note:  mktime is essentially universally
+available.  timegm is rather rare.  For the most portable
+conversion from a UTC broken-down time to a simple time, set
+the TZ environment variable to UTC, call mktime, then set
+TZ back.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Broken_002ddown-Time.html#Broken_002ddown-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Broken_002ddown-Time/timegm.txt

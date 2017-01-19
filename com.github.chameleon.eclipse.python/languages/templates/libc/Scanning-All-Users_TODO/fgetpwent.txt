@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+reads (the,) next user entry from stream and (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) pointer to (the,) entry
+//\\ //// ==> completion hint (1 line):
+reads the next user entry from stream and returns a pointer to the entry
+//\\ //// Replacement text (1+ lines):
+struct passwd * fgetpwent (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct passwd * fgetpwent (FILE *stream)
+Preliminary:
+| MT-Unsafe race:fpwent
+| AS-Unsafe corrupt lock
+| AC-Unsafe corrupt lock
+| See POSIX Safety Concepts.
+
+
+This function reads the next user entry from stream and returns a
+pointer to the entry.  The structure is statically allocated and is
+rewritten on subsequent calls to fgetpwent.  You must copy the
+contents of the structure if you wish to save the information.
+
+The stream must correspond to a file in the same format as the standard
+password database file.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Scanning-All-Users.html#Scanning-All-Users
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Scanning-All-Users/fgetpwent.txt

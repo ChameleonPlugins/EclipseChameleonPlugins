@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+is similar to setrlimit but its second parameter is (a,) pointer to (a,) variable of (output,print,show,say,type,write) struct rlimit64 which allows it to set values which wouldn’t fit in (the,) member of (a,) struct rlimit
+//\\ //// ==> completion hint (1 line):
+is similar to setrlimit but its second parameter is a pointer to a variable of type struct rlimit64 which allows it to set values which wouldn’t fit in the member of a struct rlimit
+//\\ //// Replacement text (1+ lines):
+int setrlimit64 (int resource, const struct rlimit64 *rlp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setrlimit64 (int resource, const struct rlimit64 *rlp)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is similar to setrlimit but its second parameter is
+a pointer to a variable of type struct rlimit64 which allows it
+to set values which wouldn’t fit in the member of a struct
+rlimit.
+
+If the sources are compiled with _FILE_OFFSET_BITS == 64 on a
+32-bit machine this function is available under the name
+setrlimit and so transparently replaces the old interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Limits-on-Resources.html#Limits-on-Resources
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Limits-on-Resources/setrlimit64.txt

@@ -1,0 +1,90 @@
+//\\ //// code completion entries (1+ lines):
+tutorial
+//\\
+# tutorial showing how to make a hello world console program using Chameleon
+//\\
+
+
+
+"""**********************************************************************
+ **********************************************************************
+ * tutorial (for Chameleon)
+ * 
+ * In this tutorial, you will create a short program that asks your name
+ * and says hello to you. Use the key words below to perform the
+ * actions...
+ *
+ * Start at the first set of BLANK LINES and follow the comments
+ * to fill the blank lines with the appropriate text. 
+ * Change the text as prompted, and SAVE (Ctrl-S) often,
+ * especially after each step.  Each set of BLANK LINES should be
+ * filled in with text by the time you are done with the tutorial.
+ * Let's get started...
+ **********************************************************************"""
+# 1.     TYPE: ask "What is your name? "
+#  and SELECT: ask "What is your name? " to the user 
+
+
+# 2.     TYPE: print "Hello, "+answer
+#  and SELECT: print "Hello, "+answer then go to the next line 
+
+
+"""***********************************************************************
+ * Now run it with the following, from the menu:
+ * Run | Run (Or press Ctrl-F11)
+ * 
+ * A window should pop up with your question. Click anywhere in that
+ * window and type your name (green text) and press Enter.
+ * 
+ * You should see your response. Congratulations!
+ * 
+ * If you want to add file input/output, add the tutorial2 comment
+ * below this comment and follow those instructions...
+ ***********************************************************************"""
+
+
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+        <pre>
+		/**********************************************************************
+		 **********************************************************************
+		 * tutorial (for Chameleon)
+		 * 
+		 * In this tutorial, you will create a short program that asks your name
+		 * and says hello to you. Use the key words below to perform the
+		 * actions...
+		 *
+		 * Start at the first set of BLANK LINES and follow the comments
+		 * to fill the blank lines with the appropriate text. 
+		 * Change the text as prompted, and SAVE (Ctrl-S) often,
+		 * especially after each step.  Each set of BLANK LINES should be
+		 * filled in with text by the time you are done with the tutorial.
+		 * Let's get started...
+		 **********************************************************************/
+		// 1.     TYPE: ask "What is your name? "
+		//  and SELECT: ask "What is your name? " to the user 
+ 
+ 
+		// 2.     TYPE: print "Hello, "+answer
+		//  and SELECT: print "Hello, "+answer then go to the next line 
+ 		
+ 		
+       /***********************************************************************
+        * Now run it with the following, from the menu:
+        * Run | Run (Or press Ctrl-F11)
+        * 
+        * A window should pop up with your question. Click anywhere in that
+        * window and type your name (green text) and press Enter.
+        * 
+        * You should see your response. Congratulations!
+        * 
+        * If you want to add file input/output, add the tutorial2 comment
+        * below this comment and follow those instructions...
+        ***********************************************************************/
+         </pre>
+         
+         
+//\\ //// Tool tip (1 line):
+Save (Ctrl-S) then Scroll to tutorial (for Chameleon) 
+//\\

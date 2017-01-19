@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) real-time timer to expire in seconds seconds
+//\\ //// ==> completion hint (1 line):
+sets the real-time timer to expire in seconds seconds
+//\\ //// Replacement text (1+ lines):
+unsigned int alarm (unsigned int seconds)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: unsigned int alarm (unsigned int seconds)
+Preliminary:
+| MT-Safe timer
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The alarm function sets the real-time timer to expire in
+seconds seconds.  If you want to cancel any existing alarm, you
+can do this by calling alarm with a seconds argument of
+zero.
+
+The return value indicates how many seconds remain before the previous
+alarm would have been sent.  If there is no previous alarm, alarm
+returns zero.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-an-Alarm.html#Setting-an-Alarm
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-an-Alarm/alarm.txt

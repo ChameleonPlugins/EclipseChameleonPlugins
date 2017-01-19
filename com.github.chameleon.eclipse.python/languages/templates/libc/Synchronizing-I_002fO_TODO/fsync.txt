@@ -1,0 +1,46 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) sure all data associated with (the,) open file fildes is written to (the,) device associated with (the,) descriptor
+//\\ //// ==> completion hint (1 line):
+make sure all data associated with the open file fildes is written to the device associated with the descriptor
+//\\ //// Replacement text (1+ lines):
+int fsync (int fildes)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fsync (int fildes)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The fsync function can be used to make sure all data associated with
+the open file fildes is written to the device associated with the
+descriptor.  The function call does not return unless all actions have
+finished.
+
+A prototype for fsync can be found in unistd.h.
+
+This function is a cancellation point in multi-threaded programs.  This
+is a problem if the thread allocates some resources (like memory, file
+descriptors, semaphores or whatever) at the time fsync is
+called.  If the thread gets canceled these resources stay allocated
+until the program ends.  To avoid this, calls to fsync should be
+protected using cancellation handlers.
+
+The return value of the function is zero if no error occurred.  Otherwise
+it is -1 and the global variable errno is set to the
+following values:
+
+EBADF
+The descriptor fildes is not valid.
+
+
+EINVAL
+No synchronization is possible since the system does not implement this.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Synchronizing-I_002fO.html#Synchronizing-I_002fO
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Synchronizing-I_002fO/fsync.txt

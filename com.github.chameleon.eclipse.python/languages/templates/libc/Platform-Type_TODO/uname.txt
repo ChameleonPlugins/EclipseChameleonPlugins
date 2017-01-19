@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+fills in (the,) structure pointed to by X:INFO with information about (the,) operating (box,computer,system,node,host,target) and host machine
+//\\ //// ==> completion hint (1 line):
+fills in the structure pointed to by info with information about the operating system and host machine
+//\\ //// Replacement text (1+ lines):
+int uname (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=buf
+
+//\\ //// Help/documentation (1+ lines):
+Function: int uname (struct utsname *info)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The uname function fills in the structure pointed to by
+info with information about the operating system and host machine.
+A non-negative value indicates that the data was successfully stored.
+
+-1 as the value indicates an error.  The only error possible is
+EFAULT, which we normally don’t mention as it is always a
+possibility.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Platform-Type.html#Platform-Type
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Platform-Type/uname.txt

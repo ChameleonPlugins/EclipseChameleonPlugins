@@ -1,0 +1,49 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) address of (the,) socket that socket is connected to
+//\\ //// ==> completion hint (1 line):
+returns the address of the socket that socket is connected to
+//\\ //// Replacement text (1+ lines):
+int getpeername (int socket, struct sockaddr *addr, socklen_t *length-ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getpeername (int socket, struct sockaddr *addr, socklen_t *length-ptr)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The getpeername function returns the address of the socket that
+socket is connected to; it stores the address in the memory space
+specified by addr and length-ptr.  It stores the length of
+the address in *length-ptr.
+
+See Socket Addresses, for information about the format of the
+address.  In some operating systems, getpeername works only for
+sockets in the Internet domain.
+
+The return value is 0 on success and -1 on error.  The
+following errno error conditions are defined for this function:
+
+
+EBADF
+The argument socket is not a valid file descriptor.
+
+
+ENOTSOCK
+The descriptor socket is not a socket.
+
+
+ENOTCONN
+The socket socket is not connected.
+
+
+ENOBUFS
+There are not enough internal buffers available.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Who-is-Connected.html#Who-is-Connected
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Who-is-Connected/getpeername.txt

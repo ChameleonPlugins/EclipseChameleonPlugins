@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function fputs (output,print,show,say,type,write) (the,) (string,text) X:TEXT to (the,) stream stream
+//\\ //// ==> completion hint (1 line):
+The function fputs writes the string s to the stream stream
+//\\ //// Replacement text (1+ lines):
+int fputs (X1, FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fputs (const char *s, FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe corrupt lock
+| See POSIX Safety Concepts.
+
+
+The function fputs writes the string s to the stream
+stream.  The terminating null character is not written.
+This function does not add a newline character, either.
+It outputs only the characters in the string.
+
+This function returns EOF if a write error occurs, and otherwise
+a non-negative value.
+
+For example:
+
+
+fputs (&quot;Are &quot;, stdout);
+fputs (&quot;you &quot;, stdout);
+fputs (&quot;hungry?\n&quot;, stdout);
+
+
+outputs the text ‘Are you hungry?’ followed by a newline.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Simple-Output.html#Simple-Output
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Simple-Output/fputs.txt

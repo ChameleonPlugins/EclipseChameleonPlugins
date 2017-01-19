@@ -1,0 +1,43 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (a,) (new,) process
+//\\ //// ==> completion hint (1 line):
+creates a new process
+//\\ //// Replacement text (1+ lines):
+pid_t fork (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: pid_t fork (void)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe plugin
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+The fork function creates a new process.
+
+If the operation is successful, there are then both parent and child
+processes and both see fork return, but with different values: it
+returns a value of 0 in the child process and returns the child’s
+process ID in the parent process.
+
+If process creation failed, fork returns a value of -1 in
+the parent process.  The following errno error conditions are
+defined for fork:
+
+
+EAGAIN
+There aren’t enough system resources to create another process, or the
+user already has too many processes running.  This means exceeding the
+RLIMIT_NPROC resource limit, which can usually be increased;
+see Limits on Resources.
+
+
+ENOMEM
+The process requires more space than the system can supply.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Creating-a-Process.html#Creating-a-Process
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Creating-a-Process/fork.txt

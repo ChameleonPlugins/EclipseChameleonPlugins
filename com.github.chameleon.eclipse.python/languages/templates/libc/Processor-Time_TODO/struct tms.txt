@@ -1,0 +1,51 @@
+//\\ //// code completion entries (1+ lines):
+all of (the,) times are given in numbers of clock ticks
+//\\ //// ==> completion hint (1 line):
+All of the times are given in numbers of clock ticks
+//\\ //// Replacement text (1+ lines):
+Data Type: struct tms
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: struct tms
+The tms structure is used to return information about process
+times.  It contains at least the following members:
+
+
+clock_t tms_utime
+This is the total processor time the calling process has used in
+executing the instructions of its program.
+
+
+clock_t tms_stime
+This is the processor time the system has used on behalf of the calling
+process.
+
+
+clock_t tms_cutime
+This is the sum of the tms_utime values and the tms_cutime
+values of all terminated child processes of the calling process, whose
+status has been reported to the parent process by wait or
+waitpid; see Process Completion.  In other words, it
+represents the total processor time used in executing the instructions
+of all the terminated child processes of the calling process, excluding
+child processes which have not yet been reported by wait or
+waitpid.
+
+
+
+clock_t tms_cstime
+This is similar to tms_cutime, but represents the total processor
+time system has used on behalf of all the terminated child processes
+of the calling process.
+
+
+
+All of the times are given in numbers of clock ticks.  Unlike CPU time,
+these are the actual amounts of time; not relative to any event.
+See Creating a Process.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Processor-Time.html#Processor-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Processor-Time/struct tms.txt

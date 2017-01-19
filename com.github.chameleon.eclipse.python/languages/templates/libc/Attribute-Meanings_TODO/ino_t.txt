@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+if (the,) source is compiled with _file_offset_bits == 64 this (output,print,show,say,type,write) is transparently replaced by ino64_t
+//\\ //// ==> completion hint (1 line):
+If the source is compiled with _FILE_OFFSET_BITS == 64 this type is transparently replaced by ino64_t
+//\\ //// Replacement text (1+ lines):
+Data Type: ino_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: ino_t
+This is an unsigned integer type used to represent file serial numbers.
+(In Unix jargon, these are sometimes called inode numbers.)
+In the GNU C Library, this type is no narrower than unsigned int.
+
+If the source is compiled with _FILE_OFFSET_BITS == 64 this type
+is transparently replaced by ino64_t.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Attribute-Meanings.html#Attribute-Meanings
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Attribute-Meanings/ino_t.txt

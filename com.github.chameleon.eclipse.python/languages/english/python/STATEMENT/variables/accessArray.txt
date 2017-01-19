@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+access item X1:NUMBER of array X:ARRAY
+//\\ //// ==> completion hint (1 line):
+access item in an array
+//\\ //// Replacement text (1+ lines):
+print (X2[X1])
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=0
+X2=myarray
+//\\ //// Help/documentation (1+ lines):
+arrays are 0 based (item 0 is the first item in the array)
+arrays can contain different data types such as [1, "apple", 3]
+//\\ //// Tool tip (1 line):
+Remove print statement if you want...
+//\\

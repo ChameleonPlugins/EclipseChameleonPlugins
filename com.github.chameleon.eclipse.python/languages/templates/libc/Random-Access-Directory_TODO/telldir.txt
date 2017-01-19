@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) file (place,position) of (the,) directory stream dirstream
+//\\ //// ==> completion hint (1 line):
+returns the file position of the directory stream dirstream
+//\\ //// Replacement text (1+ lines):
+long int telldir (DIR *dirstream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int telldir (DIR *dirstream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap/bsd lock/bsd
+| AC-Unsafe mem/bsd lock/bsd
+| See POSIX Safety Concepts.
+
+
+The telldir function returns the file position of the directory
+stream dirstream.  You can use this value with seekdir to
+restore the directory stream to that position.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Random-Access-Directory.html#Random-Access-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Random-Access-Directory/telldir.txt

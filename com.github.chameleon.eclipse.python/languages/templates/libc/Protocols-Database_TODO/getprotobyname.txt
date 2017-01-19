@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) information about (the,) network protocol named name
+//\\ //// ==> completion hint (1 line):
+returns information about the network protocol named name
+//\\ //// Replacement text (1+ lines):
+struct protoent * getprotobyname (const char *name)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct protoent * getprotobyname (const char *name)
+Preliminary:
+| MT-Unsafe race:protobyname locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+The getprotobyname function returns information about the
+network protocol named name.  If there is no such protocol, it
+returns a null pointer.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Protocols-Database.html#Protocols-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Protocols-Database/getprotobyname.txt

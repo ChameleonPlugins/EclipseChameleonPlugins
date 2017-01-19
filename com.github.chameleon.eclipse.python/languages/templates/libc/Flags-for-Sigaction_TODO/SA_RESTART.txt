@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(the,) choice is controlled by (the,) sa_restart flag for (the,) particular kind of signal that was delivered
+//\\ //// ==> completion hint (1 line):
+The choice is controlled by the SA_RESTART flag for the particular kind of signal that was delivered
+//\\ //// Replacement text (1+ lines):
+Macro: int SA_RESTART
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SA_RESTART
+This flag controls what happens when a signal is delivered during
+certain primitives (such as open, read or write),
+and the signal handler returns normally.  There are two alternatives:
+the library function can resume, or it can return failure with error
+code EINTR.
+
+The choice is controlled by the SA_RESTART flag for the
+particular kind of signal that was delivered.  If the flag is set,
+returning from a handler resumes the library function.  If the flag is
+clear, returning from a handler makes the function fail.
+See Interrupted Primitives.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Flags-for-Sigaction.html#Flags-for-Sigaction
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Flags-for-Sigaction/SA_RESTART.txt

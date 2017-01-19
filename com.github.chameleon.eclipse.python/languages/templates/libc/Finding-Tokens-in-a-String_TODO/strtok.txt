@@ -1,0 +1,56 @@
+//\\ //// code completion entries (1+ lines):
+(a,) (string,text) can be (divide,split,separate) into tokens by making (a,) series of calls to (the,) function strtok
+//\\ //// ==> completion hint (1 line):
+A string can be split into tokens by making a series of calls to the function strtok
+//\\ //// Replacement text (1+ lines):
+char * strtok (char *restrict newstring, const char *restrict delimiters)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strtok (char *restrict newstring, const char *restrict delimiters)
+Preliminary:
+| MT-Unsafe race:strtok
+| AS-Unsafe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+A string can be split into tokens by making a series of calls to the
+function strtok.
+
+The string to be split up is passed as the newstring argument on
+the first call only.  The strtok function uses this to set up
+some internal state information.  Subsequent calls to get additional
+tokens from the same string are indicated by passing a null pointer as
+the newstring argument.  Calling strtok with another
+non-null newstring argument reinitializes the state information.
+It is guaranteed that no other library function ever calls strtok
+behind your back (which would mess up this internal state information).
+
+The delimiters argument is a string that specifies a set of delimiters
+that may surround the token being extracted.  All the initial characters
+that are members of this set are discarded.  The first character that is
+not a member of this set of delimiters marks the beginning of the
+next token.  The end of the token is found by looking for the next
+character that is a member of the delimiter set.  This character in the
+original string newstring is overwritten by a null character, and the
+pointer to the beginning of the token in newstring is returned.
+
+On the next call to strtok, the searching begins at the next
+character beyond the one that marked the end of the previous token.
+Note that the set of delimiters delimiters do not have to be the
+same on every call in a series of calls to strtok.
+
+If the end of the string newstring is reached, or if the remainder of
+string consists only of delimiter characters, strtok returns
+a null pointer.
+
+Note that “character” is here used in the sense of byte.  In a string
+using a multibyte character encoding (abstract) character consisting of
+more than one byte are not treated as an entity.  Each byte is treated
+separately.  The function is not locale-dependent.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Finding-Tokens-in-a-String.html#Finding-Tokens-in-a-String
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Finding-Tokens-in-a-String/strtok.txt

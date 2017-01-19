@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (a,) directory with (a,) unique name
+//\\ //// ==> completion hint (1 line):
+creates a directory with a unique name
+//\\ //// Replacement text (1+ lines):
+char * mkdtemp (char *template)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * mkdtemp (char *template)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The mkdtemp function creates a directory with a unique name.  If
+it succeeds, it overwrites template with the name of the
+directory, and returns template.  As with mktemp and
+mkstemp, template should be a string ending with
+‘XXXXXX’.
+
+If mkdtemp cannot create an uniquely named directory, it returns
+NULL and sets errno appropriately.  If template does
+not end with ‘XXXXXX’, mkdtemp returns NULL and does
+not modify template.  errno will be set to EINVAL in
+this case.
+
+The directory is created using mode 0700.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Temporary-Files.html#Temporary-Files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Temporary-Files/mkdtemp.txt

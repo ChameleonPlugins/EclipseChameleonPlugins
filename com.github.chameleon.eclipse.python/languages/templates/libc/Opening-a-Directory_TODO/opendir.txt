@@ -1,0 +1,54 @@
+//\\ //// code completion entries (1+ lines):
+opens and (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) directory stream for reading (the,) directory whose file name is dirname
+//\\ //// ==> completion hint (1 line):
+opens and returns a directory stream for reading the directory whose file name is dirname
+//\\ //// Replacement text (1+ lines):
+DIR * opendir (const char *dirname)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: DIR * opendir (const char *dirname)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem fd
+| See POSIX Safety Concepts.
+
+
+The opendir function opens and returns a directory stream for
+reading the directory whose file name is dirname.  The stream has
+type DIR *.
+
+If unsuccessful, opendir returns a null pointer.  In addition to
+the usual file name errors (see File Name Errors), the
+following errno error conditions are defined for this function:
+
+
+EACCES
+Read permission is denied for the directory named by dirname.
+
+
+EMFILE
+The process has too many files open.
+
+
+ENFILE
+The entire system, or perhaps the file system which contains the
+directory, cannot support any additional open files at the moment.
+(This problem cannot happen on GNU/Hurd systems.)
+
+
+ENOMEM
+Not enough memory available.
+
+
+
+The DIR type is typically implemented using a file descriptor,
+and the opendir function in terms of the open function.
+See Low-Level I/O.  Directory streams and the underlying
+file descriptors are closed on exec (see Executing a File).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Opening-a-Directory.html#Opening-a-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Opening-a-Directory/opendir.txt

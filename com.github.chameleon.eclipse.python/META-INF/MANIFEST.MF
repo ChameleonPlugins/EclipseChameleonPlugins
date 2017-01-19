@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-Activator: com.github.chameleon.eclipse.python.preferences.Activator
+Bundle-ManifestVersion: 2
+Bundle-Name: Chameleon
+Bundle-SymbolicName: com.github.chameleon.eclipse.python;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Hewlett Packard Enterprise
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.8.1",
+ org.eclipse.jface.text;bundle-version="3.8.101",
+ org.eclipse.ui,
+ org.python.pydev,
+ org.junit,
+ org.eclipse.core.filesystem;bundle-version="1.4.100",
+ org.python.pydev.core,
+ org.eclipse.ui.ide;bundle-version="3.10.2",
+ org.eclipse.ui.console;bundle-version="3.5.300",
+ com.python.pydev.codecompletion;bundle-version="4.1.0",
+ org.python.pydev.shared_interactive_console;bundle-version="4.2.0",
+ org.python.pydev.debug;bundle-version="4.2.0"
+Import-Package: org.eclipse.core.resources,
+ org.eclipse.ui.texteditor,
+ org.python.pydev.core,
+ org.python.pydev.core.structure,
+ org.python.pydev.shared_ui.proposals
+Bundle-ClassPath: .,
+ lib/com.github.chameleon.core.jar
+

@@ -1,0 +1,114 @@
+//\\ //// code completion entries (1+ lines):
+tutorial2
+//\\
+# tutorial2 showing how to extend tutorial1's hello world program to include file i/o using Chameleon
+//\\
+
+
+
+"""**********************************************************************
+ **********************************************************************
+ * tutorial2 (for Chameleon)
+ * 
+ * This is a continuation of the first tutorial, so be sure to
+ * finish tutorial before starting tutorial2.
+ * 
+ * In this tutorial we save the name entered to a file, then
+ * print out all the names saved to the file. Continue the following
+ * steps AFTER the commands that you have already entered.
+ * Remember to Save (Ctrl-S) often to fix errors and formatting.
+ **********************************************************************"""
+# 1. start to TYPE: open a file in append mode
+#       and SELECT: open a file in append mode
+
+
+# 2.     TYPE: write answer
+#  and SELECT: write answer to an open file including a newline
+
+
+# 3. start to TYPE: close an open file
+#       and SELECT: close an open file
+
+
+# 4.    HINT: Use cut-and-paste if you need to, followed by a space
+#       TYPE: say "These are the people who have tried this tutorial..."
+# and SELECT: say "These are the people who have tried this tutorial..." and go to the next line
+
+
+# 5. start to TYPE: display the contents of a closed file  
+#       and SELECT: display the contents of a closed file
+
+
+"""**********************************************************************
+ * Now run it with the following, from the menu:
+ * Run | Run (Or press Ctrl-F11)
+ *  
+ * A window should pop up with your question. Click anywhere in that
+ * window and type your name (green text) and press Enter.
+ *  
+ * You should see your response.  Congratulations!
+ *   
+ * If you want to add web (REST) calls, add the tutorial3 comment
+ * and follow those instructions...
+ * tutorial 3 does NOT rely on this, so you can remove these comments
+ * and the code for this tutorial first if you want, or start a new program...     
+ **********************************************************************"""
+
+
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+<pre>
+"""**********************************************************************
+ **********************************************************************
+ * tutorial2 (for Chameleon)
+ * 
+ * This is a continuation of the first tutorial, so be sure to
+ * finish tutorial before starting tutorial2.
+ * 
+ * In this tutorial we save the name entered to a file, then
+ * print out all the names saved to the file. Continue the following
+ * steps AFTER the commands that you have already entered.
+ * Remember to Save (Ctrl-S) often to fix errors and formatting.
+ **********************************************************************"""
+# 1. start to TYPE: open a file in append mode
+#       and SELECT: open a file in append mode
+
+
+# 2.     TYPE: write answer
+#  and SELECT: write answer to an open file including a newline
+
+
+# 3. start to TYPE: close an open file
+#       and SELECT: close an open file
+
+
+# 4.    HINT: Use cut-and-paste if you need to, followed by a space
+#       TYPE: say "These are the people who have tried this tutorial..."
+# and SELECT: say "These are the people who have tried this tutorial..." and go to the next line
+
+
+# 5. start to TYPE: display the contents of a closed file  
+#       and SELECT: display the contents of a closed file
+
+
+"""**********************************************************************
+ * Now run it with the following, from the menu:
+ * Run | Run (Or press Ctrl-F11)
+ *  
+ * A window should pop up with your question. Click anywhere in that
+ * window and type your name (green text) and press Enter.
+ *  
+ * You should see your response.  Congratulations!
+ *   
+ * If you want to add web (REST) calls, add the tutorial3 comment
+ * and follow those instructions...
+ * tutorial 3 does NOT rely on this, so you can remove these comments
+ * and the code for this tutorial first if you want, or start a new program...     
+ **********************************************************************"""
+</pre>
+
+
+//\\ //// Tool tip (1 line):
+Save (Ctrl-S) then Scroll to tutorial2 (for Chameleon)
+//\\

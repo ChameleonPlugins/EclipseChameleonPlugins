@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+to (add,append,construct,create,define,insert,make,push) (a,) block of initialized space, use obstack_grow, which is (the,) growing-object analogue of obstack_copy
+//\\ //// ==> completion hint (1 line):
+To add a block of initialized space, use obstack_grow, which is the growing-object analogue of obstack_copy
+//\\ //// Replacement text (1+ lines):
+void obstack_grow (struct obstack *obstack-ptr, void *data, int size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void obstack_grow (struct obstack *obstack-ptr, void *data, int size)
+Preliminary:
+| MT-Safe race:obstack-ptr
+| AS-Safe 
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+To add a block of initialized space, use obstack_grow, which is
+the growing-object analogue of obstack_copy.  It adds size
+bytes of data to the growing object, copying the contents from
+data.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Growing-Objects.html#Growing-Objects
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Growing-Objects/obstack_grow.txt

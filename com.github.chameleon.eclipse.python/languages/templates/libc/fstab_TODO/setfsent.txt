@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) sure that (the,) internal read pointer for (the,) fstab file is at (the,) beginning of (the,) file
+//\\ //// ==> completion hint (1 line):
+makes sure that the internal read pointer for the fstab file is at the beginning of the file
+//\\ //// Replacement text (1+ lines):
+int setfsent (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setfsent (void)
+Preliminary:
+| MT-Unsafe race:fsent
+| AS-Unsafe heap corrupt lock
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+This function makes sure that the internal read pointer for the
+fstab file is at the beginning of the file.  This is done by
+either opening the file or resetting the read pointer.
+
+Since the file handle is internal to the libc this function is not
+thread-safe.
+
+This function returns a non-zero value if the operation was successful
+and the getfs* functions can be used to read the entries of the
+file.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//fstab.html#fstab
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/fstab/setfsent.txt

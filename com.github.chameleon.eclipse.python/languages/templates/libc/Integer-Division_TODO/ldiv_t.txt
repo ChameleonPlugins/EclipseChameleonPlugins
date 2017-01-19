@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+ 
+//\\ //// ==> completion hint (1 line):
+ 
+//\\ //// Replacement text (1+ lines):
+Data Type: ldiv_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: ldiv_t
+This is a structure type used to hold the result returned by the ldiv
+function.  It has the following members:
+
+
+long int quot
+The quotient from the division.
+
+
+long int rem
+The remainder from the division.
+
+
+
+(This is identical to div_t except that the components are of
+type long int rather than int.)
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Integer-Division.html#Integer-Division
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Integer-Division/ldiv_t.txt

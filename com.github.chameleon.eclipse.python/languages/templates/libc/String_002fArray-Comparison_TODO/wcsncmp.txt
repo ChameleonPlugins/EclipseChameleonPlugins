@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+is (the,) similar to wcscmp, except that no more than size wide characters are compared
+//\\ //// ==> completion hint (1 line):
+is the similar to wcscmp, except that no more than size wide characters are compared
+//\\ //// Replacement text (1+ lines):
+int wcsncmp (const wchar_t *ws1, const wchar_t *ws2, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int wcsncmp (const wchar_t *ws1, const wchar_t *ws2, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is the similar to wcscmp, except that no more than
+size wide characters are compared.  In other words, if the two
+strings are the same in their first size wide characters, the
+return value is zero.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//String_002fArray-Comparison.html#String_002fArray-Comparison
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/String_002fArray-Comparison/wcsncmp.txt

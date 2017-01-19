@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+store (the,) current floating-point environment in (the,) object pointed to by envp
+//\\ //// ==> completion hint (1 line):
+Store the current floating-point environment in the object pointed to by envp
+//\\ //// Replacement text (1+ lines):
+int feholdexcept (fenv_t *envp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int feholdexcept (fenv_t *envp)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Store the current floating-point environment in the object pointed to by
+envp.  Then clear all exception flags, and set the FPU to trap no
+exceptions.  Not all FPUs support trapping no exceptions; if
+feholdexcept cannot set this mode, it returns nonzero value.  If it
+succeeds, it returns zero.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Control-Functions.html#Control-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Control-Functions/feholdexcept.txt

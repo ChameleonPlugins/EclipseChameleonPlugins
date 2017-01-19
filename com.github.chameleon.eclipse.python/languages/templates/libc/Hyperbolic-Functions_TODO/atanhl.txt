@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) inverse hyperbolic tangent of x—(the,) value whose hyperbolic tangent is x
+//\\ //// ==> completion hint (1 line):
+These functions return the inverse hyperbolic tangent of x—the value whose hyperbolic tangent is x
+//\\ //// Replacement text (1+ lines):
+Function: double atanh (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double atanh (double x)
+Function: float atanhf (float x)
+Function: long double atanhl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return the inverse hyperbolic tangent of x—the
+value whose hyperbolic tangent is x.  If the absolute value of
+x is greater than 1, atanh signals a domain error;
+if it is equal to 1, atanh returns infinity.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Hyperbolic-Functions.html#Hyperbolic-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Hyperbolic-Functions/atanhl.txt

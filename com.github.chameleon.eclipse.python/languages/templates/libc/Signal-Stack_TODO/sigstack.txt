@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+(indicate,select,specify) (an,) alternate stack for use during signal handling
+//\\ //// ==> completion hint (1 line):
+specifies an alternate stack for use during signal handling
+//\\ //// Replacement text (1+ lines):
+int sigstack (struct sigstack *stack, struct sigstack *oldstack)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sigstack (struct sigstack *stack, struct sigstack *oldstack)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock/hurd
+| AC-Unsafe lock/hurd
+| See POSIX Safety Concepts.
+
+
+The sigstack function specifies an alternate stack for use during
+signal handling.  When a signal is received by the process and its
+action indicates that the signal stack is used, the system arranges a
+switch to the currently installed signal stack while the handler for
+that signal is executed.
+
+If oldstack is not a null pointer, information about the currently
+installed signal stack is returned in the location it points to.  If
+stack is not a null pointer, then this is installed as the new
+stack for use by signal handlers.
+
+The return value is 0 on success and -1 on failure.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signal-Stack.html#Signal-Stack
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signal-Stack/sigstack.txt

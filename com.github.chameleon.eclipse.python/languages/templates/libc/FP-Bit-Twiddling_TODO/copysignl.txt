@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) x but with (the,) sign of y
+//\\ //// ==> completion hint (1 line):
+These functions return x but with the sign of y
+//\\ //// Replacement text (1+ lines):
+Function: double copysign (double x, double y)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double copysign (double x, double y)
+Function: float copysignf (float x, float y)
+Function: long double copysignl (long double x, long double y)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return x but with the sign of y.  They work
+even if x or y are NaN or zero.  Both of these can carry a
+sign (although not all implementations support it) and this is one of
+the few operations that can tell the difference.
+
+copysign never raises an exception.
+
+This function is defined in IEC 559 (and the appendix with
+recommended functions in IEEE 754/IEEE 854).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//FP-Bit-Twiddling.html#FP-Bit-Twiddling
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/FP-Bit-Twiddling/copysignl.txt

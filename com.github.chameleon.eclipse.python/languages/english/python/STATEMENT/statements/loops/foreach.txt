@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+foreach
+//\\ //// ==> completion hint (1 line):
+foreach item in set: 
+//\\ //// Replacement text (1+ lines):
+for item in (1,2,3):
+    print item
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+foreach help...
+//\\ //// Tool tip (1 line):
+foreach statement...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):

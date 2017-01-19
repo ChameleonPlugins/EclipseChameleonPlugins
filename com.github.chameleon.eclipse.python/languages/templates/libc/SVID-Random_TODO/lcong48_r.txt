@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+initializes all aspects of (the,) random number generator described in buffer with (the,) data in param
+//\\ //// ==> completion hint (1 line):
+initializes all aspects of the random number generator described in buffer with the data in param
+//\\ //// Replacement text (1+ lines):
+int lcong48_r (unsigned short int param[7], struct drand48_data *buffer)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int lcong48_r (unsigned short int param[7], struct drand48_data *buffer)
+Preliminary:
+| MT-Safe race:buffer
+| AS-Safe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+This function initializes all aspects of the random number generator
+described in buffer with the data in param.  Here it is
+especially true that the function does more than just copying the
+contents of param and buffer.  More work is required and
+therefore it is important to use this function rather than initializing
+the random number generator directly.
+
+If the return value is non-negative the function call succeeded.
+
+This function is a GNU extension and should not be used in portable
+programs.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/lcong48_r.txt

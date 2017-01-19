@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<?eclipse version="3.4"?>  
+<plugin>
+ 
+ 
+ <!-- Python -->
+ <extension point="org.python.pydev.pydev_completion"  
+     id="chameleon_python_category"
+     name="Chameleon Python programming languages mappings">
+		<completion_participant class="com.github.chameleon.eclipse.python.ChameleonPythonCompletionProposalComputer"/>
+ </extension>
+     
+ 
+  <!-- Preferences -->
+ <extension
+       name="Chameleon Pytnon programming languages mappings"
+       point="org.eclipse.ui.preferencePages">
+    <page
+          class="com.github.chameleon.eclipse.python.preferences.ChameleonPreferencePage"
+          id="com.github.chameleon.eclipse.python.preferences.ChameleonPreferencePage"
+          name="Chameleon Preferences">
+    </page>
+ </extension>
+ 
+  <extension
+       point="org.eclipse.core.runtime.preferences">
+    <initializer
+          class="com.github.chameleon.eclipse.python.preferences.PreferenceInitializer">
+    </initializer>
+ </extension>  
+ 
+ 
+
+  
+</plugin> 

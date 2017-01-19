@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+(the,) getutent_r is equivalent to (the,) getutent function
+//\\ //// ==> completion hint (1 line):
+The getutent_r is equivalent to the getutent function
+//\\ //// Replacement text (1+ lines):
+int getutent_r (struct utmp *buffer, struct utmp **result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getutent_r (struct utmp *buffer, struct utmp **result)
+Preliminary:
+| MT-Unsafe race:utent sig:ALRM timer
+| AS-Unsafe lock
+| AC-Unsafe lock fd
+| See POSIX Safety Concepts.
+
+
+The getutent_r is equivalent to the getutent function.  It
+returns the next entry from the database.  But instead of storing the
+information in a static buffer it stores it in the buffer pointed to by
+the parameter buffer.
+
+If the call was successful, the function returns 0 and the
+pointer variable pointed to by the parameter result contains a
+pointer to the buffer which contains the result (this is most probably
+the same value as buffer).  If something went wrong during the
+execution of getutent_r the function returns -1.
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Manipulating-the-Database.html#Manipulating-the-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Manipulating-the-Database/getutent_r.txt

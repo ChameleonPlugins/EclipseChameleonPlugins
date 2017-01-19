@@ -1,0 +1,84 @@
+//\\ //// code completion entries (1+ lines):
+unmounts (a,) filesystem
+//\\ //// ==> completion hint (1 line):
+unmounts a filesystem
+//\\ //// Replacement text (1+ lines):
+int umount2 (const char *file, X2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2=MAP_SHARED
+
+//\\ //// Help/documentation (1+ lines):
+Function: int umount2 (const char *file, int flags)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+umount2 unmounts a filesystem.
+
+You can identify the filesystem to unmount either by the device special
+file that contains the filesystem or by the mount point.  The effect is
+the same.  Specify either as the string file.
+
+flags contains the one-bit field identified by the following
+mask macro:
+
+
+MNT_FORCE
+This bit on means to force the unmounting even if the filesystem is
+busy, by making it unbusy first.  If the bit is off and the filesystem is
+busy, umount2 fails with errno = EBUSY.  Depending
+on the filesystem, this may override all, some, or no busy conditions.
+
+
+
+
+All other bits in flags should be set to zero; otherwise, the result
+is undefined.
+
+Example:
+
+
+#include &lt;sys/mount.h&gt;
+
+umount2(&quot;/mnt&quot;, MNT_FORCE);
+
+umount2(&quot;/dev/hdd1&quot;, 0);
+
+
+
+After the filesystem is unmounted, the directory that was the mount point
+is visible, as are any files in it.
+
+As part of unmounting, umount2 syncs the filesystem.
+
+If the unmounting is successful, the return value is zero.  Otherwise, it
+is -1 and errno is set accordingly:
+
+
+EPERM
+The process is not superuser.
+
+EBUSY
+The filesystem cannot be unmounted because it is busy.  E.g. it contains
+a directory that is some process’s working directory or a file that some
+process has open.  With some filesystems in some cases, you can avoid
+this failure with the MNT_FORCE option.
+
+
+EINVAL
+file validly refers to a file, but that file is neither a mount
+point nor a device special file of a currently mounted filesystem.
+
+
+
+
+This function is not available on all systems.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Mount_002dUnmount_002dRemount.html#Mount_002dUnmount_002dRemount
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Mount_002dUnmount_002dRemount/umount2.txt

@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+unlike on some other systems, no special version of (the,) c library must be used for linking
+//\\ //// ==> completion hint (1 line):
+Unlike on some other systems, no special version of the C library must be used for linking
+//\\ //// Replacement text (1+ lines):
+Macro: _REENTRANT
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: _REENTRANT
+Macro: _THREAD_SAFE
+If you define one of these macros, reentrant versions of several functions get
+declared.  Some of the functions are specified in POSIX.1c but many others
+are only available on a few other systems or are unique to the GNU C Library.
+The problem is the delay in the standardization of the thread safe C library
+interface.
+
+Unlike on some other systems, no special version of the C library must be
+used for linking.  There is only one version but while compiling this
+it must have been specified to compile as thread safe.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Feature-Test-Macros.html#Feature-Test-Macros
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Feature-Test-Macros/_THREAD_SAFE.txt

@@ -1,0 +1,45 @@
+//\\ //// code completion entries (1+ lines):
+is nearly identical to (the,) wmemcpy function
+//\\ //// ==> completion hint (1 line):
+is nearly identical to the wmemcpy function
+//\\ //// Replacement text (1+ lines):
+wchar_t * wmempcpy (wchar_t *restrict wto, const wchar_t *restrict wfrom, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wchar_t * wmempcpy (wchar_t *restrict wto, const wchar_t *restrict wfrom, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The wmempcpy function is nearly identical to the wmemcpy
+function.  It copies size wide characters from the object
+beginning at wfrom into the object pointed to by wto.  But
+instead of returning the value of wto it returns a pointer to the
+wide character following the last written wide character in the object
+beginning at wto.  I.e., the value is wto + size.
+
+This function is useful in situations where a number of objects shall be
+copied to consecutive memory positions.
+
+The following is a possible implementation of wmemcpy but there
+are more optimizations possible.
+
+
+wchar_t *
+wmempcpy (wchar_t *restrict wto, const wchar_t *restrict wfrom,
+          size_t size)
+{
+  return (wchar_t *) mempcpy (wto, wfrom, size * sizeof (wchar_t));
+}
+
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/wmempcpy.txt

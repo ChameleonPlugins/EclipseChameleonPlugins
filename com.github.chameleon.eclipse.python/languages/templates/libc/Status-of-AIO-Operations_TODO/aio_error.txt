@@ -1,0 +1,38 @@
+//\\ //// code completion entries (1+ lines):
+determines (the,) error state of (the,) request described by (the,) struct aiocb variable pointed to by aiocbp
+//\\ //// ==> completion hint (1 line):
+determines the error state of the request described by the struct aiocb variable pointed to by aiocbp
+//\\ //// Replacement text (1+ lines):
+int aio_error (const struct aiocb *aiocbp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int aio_error (const struct aiocb *aiocbp)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function determines the error state of the request described by the
+struct aiocb variable pointed to by aiocbp.  If the
+request has not yet terminated the value returned is always
+EINPROGRESS.  Once the request has terminated the value
+aio_error returns is either 0 if the request completed
+successfully or it returns the value which would be stored in the
+errno variable if the request would have been done using
+read, write, or fsync.
+
+The function can return ENOSYS if it is not implemented.  It
+could also return EINVAL if the aiocbp parameter does not
+refer to an asynchronous operation whose return status is not yet known.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 this
+function is in fact aio_error64 since the LFS interface
+transparently replaces the normal implementation.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Status-of-AIO-Operations.html#Status-of-AIO-Operations
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Status-of-AIO-Operations/aio_error.txt

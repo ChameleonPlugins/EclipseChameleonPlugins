@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+copies no more than size bytes from from to to, stopping if (a,) byte matching X:CHARACTER is found
+//\\ //// ==> completion hint (1 line):
+copies no more than size bytes from from to to, stopping if a byte matching c is found
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = memccpy (void *restrict to, const void *restrict from, X3, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X3='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * memccpy (void *restrict to, const void *restrict from, int c, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function copies no more than size bytes from from to
+to, stopping if a byte matching c is found.  The return
+value is a pointer into to one byte past where c was copied,
+or a null pointer if no byte matching c appeared in the first
+size bytes of from.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/memccpy.txt

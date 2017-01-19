@@ -1,0 +1,63 @@
+//\\ //// code completion entries (1+ lines):
+assigns (an,) address to (the,) socket socket
+//\\ //// ==> completion hint (1 line):
+assigns an address to the socket socket
+//\\ //// Replacement text (1+ lines):
+int bind (int socket, struct sockaddr *addr, socklen_t length)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int bind (int socket, struct sockaddr *addr, socklen_t length)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The bind function assigns an address to the socket
+socket.  The addr and length arguments specify the
+address; the detailed format of the address depends on the namespace.
+The first part of the address is always the format designator, which
+specifies a namespace, and says that the address is in the format of
+that namespace.
+
+The return value is 0 on success and -1 on failure.  The
+following errno error conditions are defined for this function:
+
+
+EBADF
+The socket argument is not a valid file descriptor.
+
+
+ENOTSOCK
+The descriptor socket is not a socket.
+
+
+EADDRNOTAVAIL
+The specified address is not available on this machine.
+
+
+EADDRINUSE
+Some other socket is already using the specified address.
+
+
+EINVAL
+The socket socket already has an address.
+
+
+EACCES
+You do not have permission to access the requested address.  (In the
+Internet domain, only the super-user is allowed to specify a port number
+in the range 0 through IPPORT_RESERVED minus one; see
+Ports.)
+
+
+
+Additional conditions may be possible depending on the particular namespace
+of the socket.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-Address.html#Setting-Address
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-Address/bind.txt

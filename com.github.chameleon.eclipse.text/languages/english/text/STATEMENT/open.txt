@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+open a file in append mode for writing text to it
+//\\ //// ==> completion hint (1 line):
+// open a file in append mode for writing text to it
+//\\ //// Replacement text (1+ lines):
+// open a file in append mode for writing text to it
+boolean append = true;
+BufferedWriter file = new BufferedWriter(new FileWriter("c:/temp/file.txt",
+        append));
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+function BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+String answer = bufferedReader.readLine(); http://www.w3.og/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html<br>
+<DL>
+  <DT><b>Parameters:</b></DT><br>
+   <DD>{String} text<br></DD>
+  <DT><b>Since:</b></DT><br>
+   <DD>StandardECMA-262 3rd. Edition</DD><br>
+   <DD>Level 2 Document Object Model HTML Specification.</DD>
+ </DL>
+//\\ //// Tool tip (1 line):
+Update 'file' and "C:/temp/file.txt" if needed...
+//\\

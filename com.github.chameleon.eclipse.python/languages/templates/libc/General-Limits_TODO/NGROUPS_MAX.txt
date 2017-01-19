@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+(the,) value of this macro is actually (a,) lower bound for (the,) maximum
+//\\ //// ==> completion hint (1 line):
+The value of this macro is actually a lower bound for the maximum
+//\\ //// Replacement text (1+ lines):
+Macro: int NGROUPS_MAX
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int NGROUPS_MAX
+The maximum number of supplementary group IDs that one process can have.
+
+The value of this macro is actually a lower bound for the maximum.  That
+is, you can count on being able to have that many supplementary group
+IDs, but a particular machine might let you have even more.  You can use
+sysconf to see whether a particular machine will let you have
+more (see Sysconf).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//General-Limits.html#General-Limits
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/General-Limits/NGROUPS_MAX.txt

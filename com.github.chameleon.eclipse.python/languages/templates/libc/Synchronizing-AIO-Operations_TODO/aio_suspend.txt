@@ -1,0 +1,58 @@
+//\\ //// code completion entries (1+ lines):
+when calling this function, (the,) calling thread is suspended until at least one of (the,) requests pointed to by (the,) nent elements of (the,) array list has completed
+//\\ //// ==> completion hint (1 line):
+When calling this function, the calling thread is suspended until at least one of the requests pointed to by the nent elements of the array list has completed
+//\\ //// Replacement text (1+ lines):
+int aio_suspend (const struct aiocb *const list[], int nent, const struct timespec *timeout)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int aio_suspend (const struct aiocb *const list[], int nent, const struct timespec *timeout)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+When calling this function, the calling thread is suspended until at
+least one of the requests pointed to by the nent elements of the
+array list has completed.  If any of the requests has already
+completed at the time aio_suspend is called, the function returns
+immediately.  Whether a request has terminated or not is determined by
+comparing the error status of the request with EINPROGRESS.  If
+an element of list is NULL, the entry is simply ignored.
+
+If no request has finished, the calling process is suspended.  If
+timeout is NULL, the process is not woken until a request
+has finished.  If timeout is not NULL, the process remains
+suspended at least as long as specified in timeout.  In this case,
+aio_suspend returns with an error.
+
+The return value of the function is 0 if one or more requests
+from the list have terminated.  Otherwise the function returns
+-1 and errno is set to one of the following values:
+
+
+EAGAIN
+None of the requests from the list completed in the time specified
+by timeout.
+
+EINTR
+A signal interrupted the aio_suspend function.  This signal might
+also be sent by the AIO implementation while signalling the termination
+of one of the requests.
+
+ENOSYS
+The aio_suspend function is not implemented.
+
+
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 this
+function is in fact aio_suspend64 since the LFS interface
+transparently replaces the normal implementation.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Synchronizing-AIO-Operations.html#Synchronizing-AIO-Operations
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Synchronizing-AIO-Operations/aio_suspend.txt

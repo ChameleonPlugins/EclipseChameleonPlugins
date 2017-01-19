@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) block long enough to contain (a,) vector of count elements, each of size eltsize
+//\\ //// ==> completion hint (1 line):
+allocates a block long enough to contain a vector of count elements, each of size eltsize
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = calloc (size_t count, size_t eltsize)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * calloc (size_t count, size_t eltsize)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock fd mem
+| See POSIX Safety Concepts.
+
+
+
+This function allocates a block long enough to contain a vector of
+count elements, each of size eltsize.  Its contents are
+cleared to zero before calloc returns.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Allocating-Cleared-Space.html#Allocating-Cleared-Space
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Allocating-Cleared-Space/calloc.txt

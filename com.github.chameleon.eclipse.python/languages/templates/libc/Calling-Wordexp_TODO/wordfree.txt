@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(deallocate,free,release) (the,) storage used for (the,) word-strings and vector that * points to
+//\\ //// ==> completion hint (1 line):
+Free the storage used for the word-strings and vector that * points to
+//\\ //// Replacement text (1+ lines):
+void wordfree (wordexp_t *word-vector-ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void wordfree (wordexp_t *word-vector-ptr)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt heap
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+Free the storage used for the word-strings and vector that
+*word-vector-ptr points to.  This does not free the
+structure *word-vector-ptr itself—only the other
+data it points to.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Calling-Wordexp.html#Calling-Wordexp
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Calling-Wordexp/wordfree.txt

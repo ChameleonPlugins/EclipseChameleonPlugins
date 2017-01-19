@@ -1,0 +1,43 @@
+//\\ //// code completion entries (1+ lines):
+when (a,) call to (the,) fdatasync function (allocate,find,get,grab,lock,obtain,reserve,retrieve,return), it is ensured that all of (the,) file data is written to (the,) device
+//\\ //// ==> completion hint (1 line):
+When a call to the fdatasync function returns, it is ensured that all of the file data is written to the device
+//\\ //// Replacement text (1+ lines):
+int fdatasync (int fildes)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fdatasync (int fildes)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+When a call to the fdatasync function returns, it is ensured
+that all of the file data is written to the device.  For all pending I/O
+operations, the parts guaranteeing data integrity finished.
+
+Not all systems implement the fdatasync operation.  On systems
+missing this functionality fdatasync is emulated by a call to
+fsync since the performed actions are a superset of those
+required by fdatasync.
+
+The prototype for fdatasync is in unistd.h.
+
+The return value of the function is zero if no error occurred.  Otherwise
+it is -1 and the global variable errno is set to the
+following values:
+
+EBADF
+The descriptor fildes is not valid.
+
+
+EINVAL
+No synchronization is possible since the system does not implement this.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Synchronizing-I_002fO.html#Synchronizing-I_002fO
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Synchronizing-I_002fO/fdatasync.txt

@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+copies (the,) descriptor old to descriptor number (new,)
+//\\ //// ==> completion hint (1 line):
+copies the descriptor old to descriptor number new
+//\\ //// Replacement text (1+ lines):
+int dup2 (int old, int new)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int dup2 (int old, int new)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function copies the descriptor old to descriptor number
+new.
+
+If old is an invalid descriptor, then dup2 does nothing; it
+does not close new.  Otherwise, the new duplicate of old
+replaces any previous meaning of descriptor new, as if new
+were closed first.
+
+If old and new are different numbers, and old is a
+valid descriptor number, then dup2 is equivalent to:
+
+
+close (new);
+fcntl (old, F_DUPFD, new)
+
+
+However, dup2 does this atomically; there is no instant in the
+middle of calling dup2 at which new is closed and not yet a
+duplicate of old.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Duplicating-Descriptors.html#Duplicating-Descriptors
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Duplicating-Descriptors/dup2.txt

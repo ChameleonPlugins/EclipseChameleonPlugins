@@ -1,0 +1,119 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) or sets (a,) specified (box,computer,system,node,host,target) parameter
+//\\ //// ==> completion hint (1 line):
+gets or sets a specified system parameter
+//\\ //// Replacement text (1+ lines):
+int sysctl (int *names, int nlen, void *oldval, size_t *oldlenp, void *newval, size_t newlen)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sysctl (int *names, int nlen, void *oldval, size_t *oldlenp, void *newval, size_t newlen)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+sysctl gets or sets a specified system parameter.  There are so
+many of these parameters that it is not practical to list them all here,
+but here are some examples:
+
+
+ network domain name
+ paging parameters
+ network Address Resolution Protocol timeout time
+ maximum number of files that may be open
+ root filesystem device
+ when kernel was built
+
+
+The set of available parameters depends on the kernel configuration and
+can change while the system is running, particularly when you load and
+unload loadable kernel modules.
+
+The system parameters with which syslog is concerned are arranged
+in a hierarchical structure like a hierarchical filesystem.  To identify
+a particular parameter, you specify a path through the structure in a
+way analogous to specifying the pathname of a file.  Each component of
+the path is specified by an integer and each of these integers has a
+macro defined for it by sys/sysctl.h.  names is the path, in
+the form of an array of integers.  Each component of the path is one
+element of the array, in order.  nlen is the number of components
+in the path.
+
+For example, the first component of the path for all the paging
+parameters is the value CTL_VM.  For the free page thresholds, the
+second component of the path is VM_FREEPG.  So to get the free
+page threshold values, make names an array containing the two
+elements CTL_VM and VM_FREEPG and make nlen = 2.
+
+
+The format of the value of a parameter depends on the parameter.
+Sometimes it is an integer; sometimes it is an ASCII string; sometimes
+it is an elaborate structure.  In the case of the free page thresholds
+used in the example above, the parameter value is a structure containing
+several integers.
+
+In any case, you identify a place to return the parameter’s value with
+oldval and specify the amount of storage available at that
+location as *oldlenp.  *oldlenp does double duty because it
+is also the output location that contains the actual length of the
+returned value.
+
+If you don’t want the parameter value returned, specify a null pointer
+for oldval.
+
+To set the parameter, specify the address and length of the new value
+as newval and newlen.  If you don’t want to set the parameter,
+specify a null pointer as newval.
+
+If you get and set a parameter in the same sysctl call, the value
+returned is the value of the parameter before it was set.
+
+Each system parameter has a set of permissions similar to the
+permissions for a file (including the permissions on directories in its
+path) that determine whether you may get or set it.  For the purposes of
+these permissions, every parameter is considered to be owned by the
+superuser and Group 0 so processes with that effective uid or gid may
+have more access to system parameters.  Unlike with files, the superuser
+does not invariably have full permission to all system parameters, because
+some of them are designed not to be changed ever.
+
+
+sysctl returns a zero return value if it succeeds.  Otherwise, it
+returns -1 and sets errno appropriately.  Besides the
+failures that apply to all system calls, the following are the
+errno codes for all possible failures:
+
+
+EPERM
+The process is not permitted to access one of the components of the
+path of the system parameter or is not permitted to access the system parameter
+itself in the way (read or write) that it requested.
+
+ENOTDIR
+There is no system parameter corresponding to name.
+
+EFAULT
+oldval is not null, which means the process wanted to read the parameter,
+but *oldlenp is zero, so there is no place to return it.
+
+EINVAL
+
+ The process attempted to set a system parameter to a value that is not valid
+for that parameter.
+ The space provided for the return of the system parameter is not the right
+size for that parameter.
+
+
+ENOMEM
+This value may be returned instead of the more correct EINVAL in some
+cases where the space provided for the return of the system parameter is too
+small.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//System-Parameters.html#System-Parameters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/System-Parameters/sysctl.txt

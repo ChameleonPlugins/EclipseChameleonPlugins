@@ -1,0 +1,68 @@
+//\\ //// code completion entries (1+ lines):
+function forces all i/o operations operating queued at (the,) time of (the,) function call operating on (the,) file descriptor aiocbp-&gt
+//\\ //// ==> completion hint (1 line):
+function forces all I/O operations operating queued at the time of the function call operating on the file descriptor aiocbp-&gt
+//\\ //// Replacement text (1+ lines):
+int aio_fsync (int op, struct aiocb *aiocbp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int aio_fsync (int op, struct aiocb *aiocbp)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock heap
+| AC-Unsafe lock mem
+| See POSIX Safety Concepts.
+
+
+Calling this function forces all I/O operations operating queued at the
+time of the function call operating on the file descriptor
+aiocbp-&gt;aio_fildes into the synchronized I/O completion state
+(see Synchronizing I/O).  The aio_fsync function returns
+immediately but the notification through the method described in
+aiocbp-&gt;aio_sigevent will happen only after all requests for this
+file descriptor have terminated and the file is synchronized.  This also
+means that requests for this very same file descriptor which are queued
+after the synchronization request are not affected.
+
+If op is O_DSYNC the synchronization happens as with a call
+to fdatasync.  Otherwise op should be O_SYNC and
+the synchronization happens as with fsync.
+
+As long as the synchronization has not happened, a call to
+aio_error with the reference to the object pointed to by
+aiocbp returns EINPROGRESS.  Once the synchronization is
+done aio_error return 0 if the synchronization was not
+successful.  Otherwise the value returned is the value to which the
+fsync or fdatasync function would have set the
+errno variable.  In this case nothing can be assumed about the
+consistency for the data written to this file descriptor.
+
+The return value of this function is 0 if the request was
+successfully enqueued.  Otherwise the return value is -1 and
+errno is set to one of the following values:
+
+
+EAGAIN
+The request could not be enqueued due to temporary lack of resources.
+
+EBADF
+The file descriptor aiocbp-&gt;aio_fildes is not valid.
+
+EINVAL
+The implementation does not support I/O synchronization or the op
+parameter is other than O_DSYNC and O_SYNC.
+
+ENOSYS
+This function is not implemented.
+
+
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 this
+function is in fact aio_fsync64 since the LFS interface
+transparently replaces the normal implementation.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Synchronizing-AIO-Operations.html#Synchronizing-AIO-Operations
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Synchronizing-AIO-Operations/aio_fsync.txt

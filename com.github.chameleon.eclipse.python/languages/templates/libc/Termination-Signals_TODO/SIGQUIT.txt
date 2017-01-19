@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+see program error signals, for information about core dumps
+//\\ //// ==> completion hint (1 line):
+See Program Error Signals, for information about core dumps
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGQUIT
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGQUIT
+
+
+The SIGQUIT signal is similar to SIGINT, except that it’s
+controlled by a different key—the QUIT character, usually
+C-\—and produces a core dump when it terminates the process,
+just like a program error signal.  You can think of this as a
+program error condition “detected” by the user.
+
+See Program Error Signals, for information about core dumps.
+See Special Characters, for information about terminal driver
+support.
+
+Certain kinds of cleanups are best omitted in handling SIGQUIT.
+For example, if the program creates temporary files, it should handle
+the other termination requests by deleting the temporary files.  But it
+is better for SIGQUIT not to delete them, so that the user can
+examine them in conjunction with the core dump.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Termination-Signals.html#Termination-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Termination-Signals/SIGQUIT.txt

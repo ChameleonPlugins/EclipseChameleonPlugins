@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(chomp,chop,delete,destroy,drop,pop,remove) all entries from (the,) environment
+//\\ //// ==> completion hint (1 line):
+removes all entries from the environment
+//\\ //// Replacement text (1+ lines):
+X1learenv (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int clearenv (void)
+Preliminary:
+| MT-Unsafe const:env
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem
+| See POSIX Safety Concepts.
+
+
+The clearenv function removes all entries from the environment.
+Using putenv and setenv new entries can be added again
+later.
+
+If the function is successful it returns 0.  Otherwise the return
+value is nonzero.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Environment-Access.html#Environment-Access
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Environment-Access/clearenv.txt

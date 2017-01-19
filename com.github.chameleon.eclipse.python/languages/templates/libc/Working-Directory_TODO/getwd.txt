@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+this is similar to getcwd, but has no way to (indicate,select,specify) (the,) size of (the,) buffer
+//\\ //// ==> completion hint (1 line):
+This is similar to getcwd, but has no way to specify the size of the buffer
+//\\ //// Replacement text (1+ lines):
+Deprecated Function: char * getwd (char *buffer)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Deprecated Function: char * getwd (char *buffer)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap i18n
+| AC-Unsafe mem fd
+| See POSIX Safety Concepts.
+
+
+This is similar to getcwd, but has no way to specify the size of
+the buffer.  The GNU C Library provides getwd only
+for backwards compatibility with BSD.
+
+The buffer argument should be a pointer to an array at least
+PATH_MAX bytes long (see Limits for Files).  On GNU/Hurd systems
+there is no limit to the size of a file name, so this is not
+necessarily enough space to contain the directory name.  That is why
+this function is deprecated.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Working-Directory.html#Working-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Working-Directory/getwd.txt

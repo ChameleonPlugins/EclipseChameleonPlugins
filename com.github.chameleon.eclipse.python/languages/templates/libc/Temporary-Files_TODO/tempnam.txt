@@ -1,0 +1,53 @@
+//\\ //// code completion entries (1+ lines):
+generates (a,) unique temporary file name
+//\\ //// ==> completion hint (1 line):
+generates a unique temporary file name
+//\\ //// Replacement text (1+ lines):
+char * tempnam (const char *dir, const char *prefix)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * tempnam (const char *dir, const char *prefix)
+Preliminary:
+| MT-Safe env
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+This function generates a unique temporary file name.  If prefix
+is not a null pointer, up to five characters of this string are used as
+a prefix for the file name.  The return value is a string newly
+allocated with malloc, so you should release its storage with
+free when it is no longer needed.
+
+Because the string is dynamically allocated this function is reentrant.
+
+The directory prefix for the temporary file name is determined by
+testing each of the following in sequence.  The directory must exist and
+be writable.
+
+
+ The environment variable TMPDIR, if it is defined.  For security
+reasons this only happens if the program is not SUID or SGID enabled.
+
+ The dir argument, if it is not a null pointer.
+
+ The value of the P_tmpdir macro.
+
+ The directory /tmp.
+
+
+This function is defined for SVID compatibility.
+
+Warning: Between the time the pathname is constructed and the
+file is created another process might have created a file with the same
+name using tempnam, leading to a possible security hole.  The
+implementation generates names which can hardly be predicted, but when
+opening the file you should use the O_EXCL flag.  Using
+tmpfile or mkstemp is a safe way to avoid this problem.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Temporary-Files.html#Temporary-Files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Temporary-Files/tempnam.txt

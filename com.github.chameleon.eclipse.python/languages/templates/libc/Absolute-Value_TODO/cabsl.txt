@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) absolute value of (the,) complex number z 
+//\\ //// ==> completion hint (1 line):
+These functions return the absolute value of the complex number z 
+//\\ //// Replacement text (1+ lines):
+Function: double cabs (complex double z)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double cabs (complex double z)
+Function: float cabsf (complex float z)
+Function: long double cabsl (complex long double z)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return the absolute  value of the complex number z
+(see Complex Numbers).  The absolute value of a complex number is:
+
+
+sqrt (creal (z) * creal (z) + cimag (z) * cimag (z))
+
+
+This function should always be used instead of the direct formula
+because it takes special care to avoid losing precision.  It may also
+take advantage of hardware support for this operation.  See hypot
+in Exponents and Logarithms.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Absolute-Value.html#Absolute-Value
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Absolute-Value/cabsl.txt

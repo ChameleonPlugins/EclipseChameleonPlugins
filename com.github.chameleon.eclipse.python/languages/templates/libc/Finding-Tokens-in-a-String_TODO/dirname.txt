@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+is (the,) compliment to (the,) xpg version of basename
+//\\ //// ==> completion hint (1 line):
+is the compliment to the XPG version of basename
+//\\ //// Replacement text (1+ lines):
+char * dirname (char *path)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * dirname (char *path)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The dirname function is the compliment to the XPG version of
+basename.  It returns the parent directory of the file specified
+by path.  If path is NULL, an empty string, or
+contains no ’/’ characters, then &quot;.&quot; is returned.  The prototype for this
+function can be found in libgen.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Finding-Tokens-in-a-String.html#Finding-Tokens-in-a-String
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Finding-Tokens-in-a-String/dirname.txt

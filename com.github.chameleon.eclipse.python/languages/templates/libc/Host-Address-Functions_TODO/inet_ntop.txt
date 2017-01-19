@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (an,) internet address form
+//\\ //// ==> completion hint (1 line):
+converts an Internet address form
+//\\ //// Replacement text (1+ lines):
+const char * inet_ntop (int af, const void *cp, char *buf, socklen_t len)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: const char * inet_ntop (int af, const void *cp, char *buf, socklen_t len)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function converts an Internet address (either IPv4 or IPv6) from
+network (binary) to presentation (textual) form.  af should be
+either AF_INET or AF_INET6, as appropriate.  cp is a
+pointer to the address to be converted.  buf should be a pointer
+to a buffer to hold the result, and len is the length of this
+buffer.  The return value from the function will be this buffer address.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Address-Functions.html#Host-Address-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Address-Functions/inet_ntop.txt

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<?eclipse version="3.4"?>  
+<plugin>
+
+ <extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer"  
+     id="chameleon_java_category"  
+     name="Chameleon Java programming languages mappings">
+     <proposalCategory icon="platform:/plugin/com.github.chameleon.eclipse.java/icons/Chameleon.gif"/>
+ </extension>  
+   
+ <extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer"
+       id="chameleon_java_proposal"
+       name="Chameleon Java programming languages mappings">  
+   <javaCompletionProposalComputer  
+      class="com.github.chameleon.eclipse.java.ChameleonJavaCompletionProposalComputer"  
+      categoryId="com.github.chameleon.eclipse.java.chameleon_java_category"
+      activate="true">  
+   </javaCompletionProposalComputer>
+ </extension>
+
+
+ 
+ <extension
+       name="Chameleon Java programming languages mappings"
+       point="org.eclipse.ui.preferencePages">
+    <page
+          class="com.github.chameleon.eclipse.java.preferences.ChameleonPreferencePage"
+          id="com.github.chameleon.eclipse.java.preferences.ChameleonPreferencePage"
+          name="Chameleon Preferences">
+    </page>
+ </extension>
+ 
+ <extension
+       point="org.eclipse.core.runtime.preferences">
+    <initializer
+          class="com.github.chameleon.eclipse.java.preferences.PreferenceInitializer">
+    </initializer>
+ </extension>  
+  
+</plugin> 

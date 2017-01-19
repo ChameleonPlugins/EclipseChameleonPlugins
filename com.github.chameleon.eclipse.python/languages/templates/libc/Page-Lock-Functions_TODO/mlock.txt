@@ -1,0 +1,72 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) range of (the,) calling process’ virtual pages
+//\\ //// ==> completion hint (1 line):
+locks a range of the calling process’ virtual pages
+//\\ //// Replacement text (1+ lines):
+int mlock (const X1, size_t len)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=buf
+
+//\\ //// Help/documentation (1+ lines):
+Function: int mlock (const void *addr, size_t len)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+mlock locks a range of the calling process’ virtual pages.
+
+The range of memory starts at address addr and is len bytes
+long.  Actually, since you must lock whole pages, it is the range of
+pages that include any part of the specified range.
+
+When the function returns successfully, each of those pages is backed by
+(connected to) a real frame (is resident) and is marked to stay that
+way.  This means the function may cause page-ins and have to wait for
+them.
+
+When the function fails, it does not affect the lock status of any
+pages.
+
+The return value is zero if the function succeeds.  Otherwise, it is
+-1 and errno is set accordingly.  errno values
+specific to this function are:
+
+
+ENOMEM
+
+ At least some of the specified address range does not exist in the
+calling process’ virtual address space.
+ The locking would cause the process to exceed its locked page limit.
+
+
+
+EPERM
+The calling process is not superuser.
+
+
+EINVAL
+len is not positive.
+
+
+ENOSYS
+The kernel does not provide mlock capability.
+
+
+
+
+You can lock all a process’ memory with mlockall.  You
+unlock memory with munlock or munlockall.
+
+To avoid all page faults in a C program, you have to use
+mlockall, because some of the memory a program uses is hidden
+from the C code, e.g. the stack and automatic variables, and you
+wouldn’t know what address to tell mlock.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Page-Lock-Functions.html#Page-Lock-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Page-Lock-Functions/mlock.txt

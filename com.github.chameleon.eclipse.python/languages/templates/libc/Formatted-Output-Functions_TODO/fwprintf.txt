@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+is just like wprintf, except that (the,) (output,print,show,say,type,write) is written to (the,) stream stream instead of stdout
+//\\ //// ==> completion hint (1 line):
+is just like wprintf, except that the output is written to the stream stream instead of stdout
+//\\ //// Replacement text (1+ lines):
+int fwprintf (FILE *stream, const wchar_t *template, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fwprintf (FILE *stream, const wchar_t *template, …)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe corrupt heap
+| AC-Unsafe mem lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function is just like wprintf, except that the output is
+written to the stream stream instead of stdout.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Formatted-Output-Functions.html#Formatted-Output-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Formatted-Output-Functions/fwprintf.txt

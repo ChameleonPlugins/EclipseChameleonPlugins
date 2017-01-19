@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is functionally identical to utmpname
+//\\ //// ==> completion hint (1 line):
+is functionally identical to utmpname
+//\\ //// Replacement text (1+ lines):
+int utmpxname (const char *file)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int utmpxname (const char *file)
+Preliminary:
+| MT-Unsafe race:utent
+| AS-Unsafe lock heap
+| AC-Unsafe lock mem
+| See POSIX Safety Concepts.
+
+
+The utmpxname function is functionally identical to
+utmpname.  In the GNU C Library, utmpxname is simply an
+alias for utmpname.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//XPG-Functions.html#XPG-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/XPG-Functions/utmpxname.txt

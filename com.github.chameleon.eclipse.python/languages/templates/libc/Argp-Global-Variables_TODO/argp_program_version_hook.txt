@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+it should point to (a,) function with this (output,print,show,say,type,write) of signature: 
+//\\ //// ==> completion hint (1 line):
+It should point to a function with this type of signature: 
+//\\ //// Replacement text (1+ lines):
+Variable: argp_program_version_hook
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Variable: argp_program_version_hook
+If defined or set by the user program to a non-zero value, a
+‘--version’ option is added when parsing with arg_parse,
+which prints the program version and exits with a status of zero.  This
+is not the case if the ARGP_NO_HELP flag is used.  If the
+ARGP_NO_EXIT flag is set, the exit behavior of the program is
+suppressed or modified, as when the argp parser is going to be used by
+other programs.
+
+It should point to a function with this type of signature:
+
+
+void print-version (FILE *stream, struct argp_state *state)
+
+
+See Argp Parsing State, for an explanation of state.
+
+This variable takes precedence over argp_program_version, and is
+useful if a program has version information not easily expressed in a
+simple string.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argp-Global-Variables.html#Argp-Global-Variables
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argp-Global-Variables/argp_program_version_hook.txt

@@ -1,0 +1,37 @@
+//\\ //// code completion entries (1+ lines):
+this is just like pathconf except that (an,) open file descriptor is used to (indicate,select,specify) (the,) file for which information is requested, instead of (a,) file name
+//\\ //// ==> completion hint (1 line):
+This is just like pathconf except that an open file descriptor is used to specify the file for which information is requested, instead of a file name
+//\\ //// Replacement text (1+ lines):
+long int fpathconf (X1, int parameter)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int fpathconf (int filedes, int parameter)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock heap
+| AC-Unsafe lock fd mem
+| See POSIX Safety Concepts.
+
+
+This is just like pathconf except that an open file descriptor
+is used to specify the file for which information is requested, instead
+of a file name.
+
+The following errno error conditions are defined for this function:
+
+
+EBADF
+The filedes argument is not a valid file descriptor.
+
+
+EINVAL
+The value of parameter is invalid, or the implementation doesn’t
+support the parameter for the specific file.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Pathconf.html#Pathconf
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Pathconf/fpathconf.txt

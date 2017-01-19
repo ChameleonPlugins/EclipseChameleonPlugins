@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is similar to wcscmp but uses (the,) collating sequence of (the,) current locale for collation 
+//\\ //// ==> completion hint (1 line):
+is similar to wcscmp but uses the collating sequence of the current locale for collation 
+//\\ //// Replacement text (1+ lines):
+int wcscoll (const wchar_t *ws1, const wchar_t *ws2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int wcscoll (const wchar_t *ws1, const wchar_t *ws2)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+The wcscoll function is similar to wcscmp but uses the
+collating sequence of the current locale for collation (the
+LC_COLLATE locale).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Collation-Functions.html#Collation-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Collation-Functions/wcscoll.txt

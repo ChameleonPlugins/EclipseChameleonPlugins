@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+is equivalent to (the,) getopt_long function but it allows to (indicate,select,specify) (the,) user of (the,) application to pass long options with only ‘-’ instead of ‘--’
+//\\ //// ==> completion hint (1 line):
+is equivalent to the getopt_long function but it allows to specify the user of the application to pass long options with only ‘-’ instead of ‘--’
+//\\ //// Replacement text (1+ lines):
+int getopt_long_only (int argc, char *const *argv, X1hortopts, const struct option *longopts, int *indexptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getopt_long_only (int argc, char *const *argv, const char *shortopts, const struct option *longopts, int *indexptr)
+Preliminary:
+| MT-Unsafe race:getopt env
+| AS-Unsafe heap i18n lock corrupt
+| AC-Unsafe mem lock corrupt
+| See POSIX Safety Concepts.
+
+
+
+The getopt_long_only function is equivalent to the
+getopt_long function but it allows to specify the user of the
+application to pass long options with only ‘-’ instead of
+‘--’.  The ‘--’ prefix is still recognized but instead of
+looking through the short options if a ‘-’ is seen it is first
+tried whether this parameter names a long option.  If not, it is parsed
+as a short option.
+
+Assuming getopt_long_only is used starting an application with
+
+
+  app -foo
+
+
+the getopt_long_only will first look for a long option named
+‘foo’.  If this is not found, the short options ‘f’, ‘o’,
+and again ‘o’ are recognized.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Getopt-Long-Options.html#Getopt-Long-Options
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Getopt-Long-Options/getopt_long_only.txt

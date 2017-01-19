@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+reads (a,) word 
+//\\ //// ==> completion hint (1 line):
+reads a word 
+//\\ //// Replacement text (1+ lines):
+int getw (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getw (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function reads a word (that is, an int) from stream.
+It’s provided for compatibility with SVID.  We recommend you use
+fread instead (see Block Input/Output).  Unlike getc,
+any int value could be a valid result.  getw returns
+EOF when it encounters end-of-file or an error, but there is no
+way to distinguish this from an input word with value -1.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Character-Input.html#Character-Input
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Character-Input/getw.txt

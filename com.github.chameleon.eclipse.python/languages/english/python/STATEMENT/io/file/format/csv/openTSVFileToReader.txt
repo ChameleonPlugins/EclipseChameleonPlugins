@@ -1,0 +1,20 @@
+//\\ //// code completion entries (1+ lines):
+open (tsv,tab separated values) file X:FILE to reader X:READER
+//\\ //// ==> completion hint (1 line):
+# open tab separated values (tsv) file for reading from
+//\\ //// Replacement text (1+ lines):
+# import csv # //// uncomment this if needed and move to top of file
+# //// 'with' causes file to be closed automatically at end of block
+# ////  no close statement needed
+with open(X1, 'rb') as tsvfile:
+    X2 = csv.reader(tsvfile, delimiter='\t')
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="file.txt"
+X2=myreader
+//\\ //// Help/documentation (1+ lines):
+open tsv (Tab Separated Value) file for reading
+Next steps:
+//// iterate over tsv rows for reader
+//\\ //// Tool tip (1 line):
+Next Steps: iterate over tsv rows for reader
+//\\

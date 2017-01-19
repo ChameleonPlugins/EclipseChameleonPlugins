@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+(the,) parameter (string,text) should contain (a,) (string,text) which was produced by (a,) call to l64a
+//\\ //// ==> completion hint (1 line):
+The parameter string should contain a string which was produced by a call to l64a
+//\\ //// Replacement text (1+ lines):
+long int a64l (X1tring)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int a64l (const char *string)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The parameter string should contain a string which was produced by
+a call to l64a.  The function processes at least 6 characters of
+this string, and decodes the characters it finds according to the table
+below.  It stops decoding when it finds a character not in the table,
+rather like atoi; if you have a buffer which has been broken into
+lines, you must be careful to skip over the end-of-line characters.
+
+The decoded number is returned as a long int value.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Encode-Binary-Data.html#Encode-Binary-Data
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Encode-Binary-Data/a64l.txt

@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+is defined in wchar
+//\\ //// ==> completion hint (1 line):
+is defined in wchar
+//\\ //// Replacement text (1+ lines):
+Data type: mbstate_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data type: mbstate_t
+
+A variable of type mbstate_t can contain all the information
+about the shift state needed from one call to a conversion
+function to another.
+
+
+mbstate_t is defined in wchar.h.  It was introduced in
+Amendment 1 to ISO C90.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Keeping-the-state.html#Keeping-the-state
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Keeping-the-state/mbstate_t.txt

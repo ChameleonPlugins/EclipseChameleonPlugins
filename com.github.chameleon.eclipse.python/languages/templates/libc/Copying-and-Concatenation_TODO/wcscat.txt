@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+is similar to wcscpy, except that (the,) characters from wfrom are concatenated or appended to (the,) (end,exit,quit,(halt,pause,stop,suspend)) of wto, instead of overwriting it
+//\\ //// ==> completion hint (1 line):
+is similar to wcscpy, except that the characters from wfrom are concatenated or appended to the end of wto, instead of overwriting it
+//\\ //// Replacement text (1+ lines):
+wchar_t * wcscat (wchar_t *restrict wto, const wchar_t *restrict wfrom)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wchar_t * wcscat (wchar_t *restrict wto, const wchar_t *restrict wfrom)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The wcscat function is similar to wcscpy, except that the
+characters from wfrom are concatenated or appended to the end of
+wto, instead of overwriting it.  That is, the first character from
+wfrom overwrites the null character marking the end of wto.
+
+An equivalent definition for wcscat would be:
+
+
+wchar_t *
+wcscat (wchar_t *wto, const wchar_t *wfrom)
+{
+  wcscpy (wto + wcslen (wto), wfrom);
+  return wto;
+}
+
+
+This function has undefined results if the strings overlap.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/wcscat.txt

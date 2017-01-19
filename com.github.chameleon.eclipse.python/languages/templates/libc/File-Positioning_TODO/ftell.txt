@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) current file (place,position) of (the,) stream stream
+//\\ //// ==> completion hint (1 line):
+returns the current file position of the stream stream
+//\\ //// Replacement text (1+ lines):
+long int ftell (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int ftell (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function returns the current file position of the stream
+stream.
+
+This function can fail if the stream doesn’t support file positioning,
+or if the file position can’t be represented in a long int, and
+possibly for other reasons as well.  If a failure occurs, a value of
+-1 is returned.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Positioning.html#File-Positioning
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Positioning/ftell.txt

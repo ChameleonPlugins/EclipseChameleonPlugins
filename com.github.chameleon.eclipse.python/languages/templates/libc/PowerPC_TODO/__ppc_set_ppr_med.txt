@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+set (the,) program priority register to medium value 
+//\\ //// ==> completion hint (1 line):
+Set the Program Priority Register to medium value 
+//\\ //// Replacement text (1+ lines):
+void __ppc_set_ppr_med (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void __ppc_set_ppr_med (void)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Set the Program Priority Register to medium value (default).
+
+The Program Priority Register (PPR) is a 64-bit register that controls
+the program’s priority.  By adjusting the PPR value the programmer may
+improve system throughput by causing the system resources to be used
+more efficiently, especially in contention situations.
+The three unprivileged states available are covered by the functions
+__ppc_set_ppr_med (medium – default), __ppc_set_ppc_low (low)
+and __ppc_set_ppc_med_low (medium low).  More information
+available in Power ISA 2.06b - Book II - Section 3.1.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//PowerPC.html#PowerPC
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/PowerPC/__ppc_set_ppr_med.txt

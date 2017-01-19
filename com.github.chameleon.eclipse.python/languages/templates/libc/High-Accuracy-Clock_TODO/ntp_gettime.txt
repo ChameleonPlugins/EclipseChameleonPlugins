@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) structure pointed to by tptr to current values
+//\\ //// ==> completion hint (1 line):
+sets the structure pointed to by tptr to current values
+//\\ //// Replacement text (1+ lines):
+int ntp_gettime (struct ntptimeval *tptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int ntp_gettime (struct ntptimeval *tptr)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The ntp_gettime function sets the structure pointed to by
+tptr to current values.  The elements of the structure afterwards
+contain the values the timer implementation in the kernel assumes.  They
+might or might not be correct.  If they are not a ntp_adjtime
+call is necessary.
+
+The return value is 0 on success and other values on failure.  The
+following errno error conditions are defined for this function:
+
+
+TIME_ERROR
+The precision clock model is not properly set up at the moment, thus the
+clock must be considered unsynchronized, and the values should be
+treated with care.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//High-Accuracy-Clock.html#High-Accuracy-Clock
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/High-Accuracy-Clock/ntp_gettime.txt

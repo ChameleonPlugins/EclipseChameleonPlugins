@@ -1,0 +1,45 @@
+//\\ //// code completion entries (1+ lines):
+voluntarily gives up (the,) process’ claim on (the,) cpu
+//\\ //// ==> completion hint (1 line):
+voluntarily gives up the process’ claim on the CPU
+//\\ //// Replacement text (1+ lines):
+int sched_yield (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sched_yield (void)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This function voluntarily gives up the process’ claim on the CPU.
+
+Technically, sched_yield causes the calling process to be made
+immediately ready to run (as opposed to running, which is what it was
+before).  This means that if it has absolute priority higher than 0, it
+gets pushed onto the tail of the queue of processes that share its
+absolute priority and are ready to run, and it will run again when its
+turn next arrives.  If its absolute priority is 0, it is more
+complicated, but still has the effect of yielding the CPU to other
+processes.
+
+If there are no other processes that share the calling process’ absolute
+priority, this function doesn’t have any effect.
+
+To the extent that the containing program is oblivious to what other
+processes in the system are doing and how fast it executes, this
+function appears as a no-op.
+
+The return value is 0 on success and in the pathological case
+that it fails, the return value is -1 and errno is set
+accordingly.  There is nothing specific that can go wrong with this
+function, so there are no specific errno values.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Basic-Scheduling-Functions.html#Basic-Scheduling-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Basic-Scheduling-Functions/sched_yield.txt

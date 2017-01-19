@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+behaves exactly like (the,) initstate function except that it uses and modifies (the,) state in (the,) object pointed to by (the,) fourth parameter instead of (the,) global state
+//\\ //// ==> completion hint (1 line):
+behaves exactly like the initstate function except that it uses and modifies the state in the object pointed to by the fourth parameter instead of the global state
+//\\ //// Replacement text (1+ lines):
+int initstate_r (unsigned int seed, char *restrict statebuf, size_t statelen, struct random_data *restrict buf)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int initstate_r (unsigned int seed, char *restrict statebuf, size_t statelen, struct random_data *restrict buf)
+Preliminary:
+| MT-Safe race:buf
+| AS-Safe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The initstate_r function behaves exactly like the initstate
+function except that it uses and modifies the state in the object
+pointed to by the fourth parameter instead of the global state.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//BSD-Random.html#BSD-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/BSD-Random/initstate_r.txt

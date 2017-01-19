@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) pointer to (a,) (string,text) containing (a,) user name associated with (the,) effective id of (the,) process
+//\\ //// ==> completion hint (1 line):
+returns a pointer to a string containing a user name associated with the effective ID of the process
+//\\ //// Replacement text (1+ lines):
+char * cuserid (char *string)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * cuserid (char *string)
+Preliminary:
+| MT-Unsafe race:cuserid/!string locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+The cuserid function returns a pointer to a string containing a
+user name associated with the effective ID of the process.  If
+string is not a null pointer, it should be an array that can hold
+at least L_cuserid characters; the string is returned in this
+array.  Otherwise, a pointer to a string in a static area is returned.
+This string is statically allocated and might be overwritten on
+subsequent calls to this function or to getlogin.
+
+The use of this function is deprecated since it is marked to be
+withdrawn in XPG4.2 and has already been removed from newer revisions of
+POSIX.1.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Who-Logged-In.html#Who-Logged-In
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Who-Logged-In/cuserid.txt

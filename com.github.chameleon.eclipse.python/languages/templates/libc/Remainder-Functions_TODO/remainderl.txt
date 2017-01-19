@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is another name for drem
+//\\ //// ==> completion hint (1 line):
+is another name for drem
+//\\ //// Replacement text (1+ lines):
+Function: double remainder (double numerator, double denominator)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double remainder (double numerator, double denominator)
+Function: float remainderf (float numerator, float denominator)
+Function: long double remainderl (long double numerator, long double denominator)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is another name for drem.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Remainder-Functions.html#Remainder-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Remainder-Functions/remainderl.txt

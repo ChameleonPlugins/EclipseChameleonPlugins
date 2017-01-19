@@ -1,0 +1,44 @@
+//\\ //// code completion entries (1+ lines):
+is similar to wcpcpy but copies always exactly wsize characters into wto
+//\\ //// ==> completion hint (1 line):
+is similar to wcpcpy but copies always exactly wsize characters into wto
+//\\ //// Replacement text (1+ lines):
+wchar_t * wcpncpy (wchar_t *restrict wto, const wchar_t *restrict wfrom, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wchar_t * wcpncpy (wchar_t *restrict wto, const wchar_t *restrict wfrom, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is similar to wcpcpy but copies always exactly
+wsize characters into wto.
+
+If the length of wfrom is more than size, then
+wcpncpy copies just the first size wide characters and
+returns a pointer to the wide character directly following the last
+non-null wide character which was copied last.  Note that in this case
+there is no null terminator written into wto.
+
+If the length of wfrom is less than size, then wcpncpy
+copies all of wfrom, followed by enough null characters to add up
+to size characters in all.  This behavior is rarely useful, but it
+is implemented to be useful in contexts where this behavior of the
+wcsncpy is used.  wcpncpy returns a pointer to the
+first written null character.
+
+This function is not part of ISO or POSIX but was found useful while
+developing the GNU C Library itself.
+
+Its behavior is undefined if the strings overlap.
+
+wcpncpy is a GNU extension and is declared in wchar.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/wcpncpy.txt

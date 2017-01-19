@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+is similar to lstat but it is also able to work on files larger than 2^31 bytes on 32-bit systems
+//\\ //// ==> completion hint (1 line):
+is similar to lstat but it is also able to work on files larger than 2^31 bytes on 32-bit systems
+//\\ //// Replacement text (1+ lines):
+int lstat64 (X1, struct stat64 *buf)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int lstat64 (const char *filename, struct stat64 *buf)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is similar to lstat but it is also able to work on
+files larger than 2^31 bytes on 32-bit systems.  To be able to do
+this the result is stored in a variable of type struct stat64 to
+which buf must point.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 this
+function is available under the name lstat and so transparently
+replaces the interface for small files on 32-bit machines.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Reading-Attributes.html#Reading-Attributes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Reading-Attributes/lstat64.txt

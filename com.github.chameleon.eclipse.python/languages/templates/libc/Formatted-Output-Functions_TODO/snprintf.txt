@@ -1,0 +1,75 @@
+//\\ //// code completion entries (1+ lines):
+is similar to sprintf, except that (the,) size argument (indicate,select,specify) (the,) maximum number of characters to produce
+//\\ //// ==> completion hint (1 line):
+is similar to sprintf, except that the size argument specifies the maximum number of characters to produce
+//\\ //// Replacement text (1+ lines):
+int snprintf (char *s, size_t size, const char *template, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int snprintf (char *s, size_t size, const char *template, …)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+The snprintf function is similar to sprintf, except that
+the size argument specifies the maximum number of characters to
+produce.  The trailing null character is counted towards this limit, so
+you should allocate at least size characters for the string s.
+If size is zero, nothing, not even the null byte, shall be written and
+s may be a null pointer.
+
+The return value is the number of characters which would be generated
+for the given input, excluding the trailing null.  If this value is
+greater or equal to size, not all characters from the result have
+been stored in s.  You should try again with a bigger output
+string.  Here is an example of doing this:
+
+
+/* Construct a message describing the value of a variable
+   whose name is name and whose value is value. */
+char *
+make_message (char *name, char *value)
+{
+  /* Guess we need no more than 100 chars of space. */
+  int size = 100;
+  char *buffer = (char *) xmalloc (size);
+  int nchars;
+  if (buffer == NULL)
+    return NULL;
+
+ /* Try to print in the allocated space. */
+  nchars = snprintf (buffer, size, &quot;value of %s is %s&quot;,
+       name, value);
+  if (nchars &gt;= size)
+    {
+      /* Reallocate buffer now that we know
+  how much space is needed. */
+      size = nchars + 1;
+      buffer = (char *) xrealloc (buffer, size);
+
+      if (buffer != NULL)
+ /* Try again. */
+ snprintf (buffer, size, &quot;value of %s is %s&quot;,
+    name, value);
+    }
+  /* The last call worked, return the string. */
+  return buffer;
+}
+
+
+In practice, it is often easier just to use asprintf, below.
+
+Attention: In versions of the GNU C Library prior to 2.1 the
+return value is the number of characters stored, not including the
+terminating null; unless there was not enough space in s to
+store the result in which case -1 is returned.  This was
+changed in order to comply with the ISO C99 standard.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Formatted-Output-Functions.html#Formatted-Output-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Formatted-Output-Functions/snprintf.txt

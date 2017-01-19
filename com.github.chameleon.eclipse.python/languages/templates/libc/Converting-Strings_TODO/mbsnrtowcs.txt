@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+is very similar to (the,) mbsrtowcs function
+//\\ //// ==> completion hint (1 line):
+is very similar to the mbsrtowcs function
+//\\ //// Replacement text (1+ lines):
+size_t size=mbsnrtowcs (wchar_t *restrict dst, const char **restrict src, size_t nmc, size_t len, mbstate_t *restrict ps)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t mbsnrtowcs (wchar_t *restrict dst, const char **restrict src, size_t nmc, size_t len, mbstate_t *restrict ps)
+Preliminary:
+| MT-Unsafe race:mbsnrtowcs/!ps
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The mbsnrtowcs function is very similar to the mbsrtowcs
+function.  All the parameters are the same except for nmc, which is
+new.  The return value is the same as for mbsrtowcs.
+
+This new parameter specifies how many bytes at most can be used from the
+multibyte character string.  In other words, the multibyte character
+string *src need not be NUL-terminated.  But if a NUL byte
+is found within the nmc first bytes of the string, the conversion
+stops here.
+
+This function is a GNU extension.  It is meant to work around the
+problems mentioned above.  Now it is possible to convert a buffer with
+multibyte character text piece for piece without having to care about
+inserting NUL bytes and the effect of NUL bytes on the conversion state.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Converting-Strings.html#Converting-Strings
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Converting-Strings/mbsnrtowcs.txt

@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) ipv4 internet (box,computer,system,node,host,target) address name from (the,) standard numbers-and-dots notation into binary data
+//\\ //// ==> completion hint (1 line):
+converts the IPv4 Internet host address name from the standard numbers-and-dots notation into binary data
+//\\ //// Replacement text (1+ lines):
+uint32_t inet_addr (const char *name)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: uint32_t inet_addr (const char *name)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function converts the IPv4 Internet host address name from the
+standard numbers-and-dots notation into binary data.  If the input is
+not valid, inet_addr returns INADDR_NONE.  This is an
+obsolete interface to inet_aton, described immediately above.  It
+is obsolete because INADDR_NONE is a valid address
+(255.255.255.255), and inet_aton provides a cleaner way to
+indicate error return.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Address-Functions.html#Host-Address-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Address-Functions/inet_addr.txt

@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(the,) (new,) functionality is made available by (a,) (new,) set of (output,print,show,say,type,write) and functions which (convert,change,replace) (the,) existing ones
+//\\ //// ==> completion hint (1 line):
+The new functionality is made available by a new set of types and functions which replace the existing ones
+//\\ //// Replacement text (1+ lines):
+Macro: _LARGEFILE64_SOURCE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: _LARGEFILE64_SOURCE
+If you define this macro an additional set of functions is made available
+which enables 32 bit systems to use files of sizes beyond
+the usual limit of 2GB.  This interface is not available if the system
+does not support files that large.  On systems where the natural file
+size limit is greater than 2GB (i.e., on 64 bit systems) the new
+functions are identical to the replaced functions.
+
+The new functionality is made available by a new set of types and
+functions which replace the existing ones.  The names of these new objects
+contain 64 to indicate the intention, e.g., off_t
+vs. off64_t and fseeko vs. fseeko64.
+
+This macro was introduced as part of the Large File Support extension
+(LFS).  It is a transition interface for the period when 64 bit
+offsets are not generally used (see _FILE_OFFSET_BITS).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Feature-Test-Macros.html#Feature-Test-Macros
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Feature-Test-Macros/_LARGEFILE64_SOURCE.txt

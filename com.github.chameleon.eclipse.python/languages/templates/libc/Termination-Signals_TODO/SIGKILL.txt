@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+this signal is usually generated only by explicit request
+//\\ //// ==> completion hint (1 line):
+This signal is usually generated only by explicit request
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGKILL
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGKILL
+The SIGKILL signal is used to cause immediate program termination.
+It cannot be handled or ignored, and is therefore always fatal.  It is
+also not possible to block this signal.
+
+This signal is usually generated only by explicit request.  Since it
+cannot be handled, you should generate it only as a last resort, after
+first trying a less drastic method such as C-c or SIGTERM.
+If a process does not respond to any other termination signals, sending
+it a SIGKILL signal will almost always cause it to go away.
+
+In fact, if SIGKILL fails to terminate a process, that by itself
+constitutes an operating system bug which you should report.
+
+The system will generate SIGKILL for a process itself under some
+unusual conditions where the program cannot possibly continue to run
+(even to run a signal handler).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Termination-Signals.html#Termination-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Termination-Signals/SIGKILL.txt

@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+is similar to fseek but it corrects (a,) problem with fseek in (a,) (box,computer,system,node,host,target) with posix (output,print,show,say,type,write)
+//\\ //// ==> completion hint (1 line):
+is similar to fseek but it corrects a problem with fseek in a system with POSIX types
+//\\ //// Replacement text (1+ lines):
+int fseeko (FILE *stream, X2, int whence)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2=0
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fseeko (FILE *stream, off_t offset, int whence)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function is similar to fseek but it corrects a problem with
+fseek in a system with POSIX types.  Using a value of type
+long int for the offset is not compatible with POSIX.
+fseeko uses the correct type off_t for the offset
+parameter.
+
+For this reason it is a good idea to prefer ftello whenever it is
+available since its functionality is (if different at all) closer the
+underlying definition.
+
+The functionality and return value is the same as for fseek.
+
+The function is an extension defined in the Unix Single Specification
+version 2.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 on a
+32 bit system this function is in fact fseeko64.  I.e., the
+LFS interface transparently replaces the old interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Positioning.html#File-Positioning
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Positioning/fseeko.txt

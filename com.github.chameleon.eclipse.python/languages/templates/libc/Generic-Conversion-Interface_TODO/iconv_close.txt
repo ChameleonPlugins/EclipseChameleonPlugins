@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+(deallocate,free,release) all resources associated with (the,) handle cd, which must have been returned by (a,) successful call to (the,) iconv_open function
+//\\ //// ==> completion hint (1 line):
+frees all resources associated with the handle cd, which must have been returned by a successful call to the iconv_open function
+//\\ //// Replacement text (1+ lines):
+int iconv_close (iconv_t cd)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int iconv_close (iconv_t cd)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem
+| See POSIX Safety Concepts.
+
+
+
+The iconv_close function frees all resources associated with the
+handle cd, which must have been returned by a successful call to
+the iconv_open function.
+
+If the function call was successful the return value is 0.
+Otherwise it is -1 and errno is set appropriately.
+Defined error are:
+
+
+EBADF
+The conversion descriptor is invalid.
+
+
+
+
+The iconv_close function was introduced together with the rest
+of the iconv functions in XPG2 and is declared in iconv.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Generic-Conversion-Interface.html#Generic-Conversion-Interface
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Generic-Conversion-Interface/iconv_close.txt

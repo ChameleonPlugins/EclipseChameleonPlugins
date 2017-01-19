@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+(chop,chomp,delete,destroy,drop,remove) whitespace from X:TEXT
+//\\ //// ==> completion hint (1 line):
+remove whitespace from text
+//\\ //// Replacement text (1+ lines):
+X1 = X1.rstrip()
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=myvariable
+//\\ //// Help/documentation (1+ lines):
+rstrip() removes all whitespace.
+rstrip("\n") removes just newlines.
+//\\ //// Tool tip (1 line):
+Replace the variable with your own variable name if you want...
+//\\

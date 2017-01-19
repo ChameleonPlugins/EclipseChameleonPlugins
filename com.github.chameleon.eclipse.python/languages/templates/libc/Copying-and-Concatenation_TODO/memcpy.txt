@@ -1,0 +1,38 @@
+//\\ //// code completion entries (1+ lines):
+copies size bytes from (the,) object beginning at from into (the,) object beginning at to
+//\\ //// ==> completion hint (1 line):
+copies size bytes from the object beginning at from into the object beginning at to
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = memcpy (void *restrict to, const void *restrict from, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * memcpy (void *restrict to, const void *restrict from, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The memcpy function copies size bytes from the object
+beginning at from into the object beginning at to.  The
+behavior of this function is undefined if the two arrays to and
+from overlap; use memmove instead if overlapping is possible.
+
+The value returned by memcpy is the value of to.
+
+Here is an example of how you might use memcpy to copy the
+contents of an array:
+
+
+struct foo *oldarray, *newarray;
+int arraysize;
+…
+memcpy (new, old, arraysize * sizeof (struct foo));
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/memcpy.txt

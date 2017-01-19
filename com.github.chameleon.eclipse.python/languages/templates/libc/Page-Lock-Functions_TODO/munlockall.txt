@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+unlocks every page in (the,) calling process’ virtual address space and turn off mcl_future future locking mode
+//\\ //// ==> completion hint (1 line):
+unlocks every page in the calling process’ virtual address space and turn off MCL_FUTURE future locking mode
+//\\ //// Replacement text (1+ lines):
+int munlockall (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int munlockall (void)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+munlockall unlocks every page in the calling process’ virtual
+address space and turn off MCL_FUTURE future locking mode.
+
+The return value is zero if the function succeeds.  Otherwise, it is
+-1 and errno is set accordingly.  The only way this
+function can fail is for generic reasons that all functions and system
+calls can fail, so there are no specific errno values.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Page-Lock-Functions.html#Page-Lock-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Page-Lock-Functions/munlockall.txt

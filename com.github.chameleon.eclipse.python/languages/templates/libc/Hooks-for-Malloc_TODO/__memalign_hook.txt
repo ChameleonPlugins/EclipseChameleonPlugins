@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(the,) value of caller is (the,) (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) address found on (the,) stack when (the,) aligned_alloc, memalign, posix_memalign or valloc functions are called
+//\\ //// ==> completion hint (1 line):
+The value of caller is the return address found on the stack when the aligned_alloc, memalign, posix_memalign or valloc functions are called
+//\\ //// Replacement text (1+ lines):
+Variable: __memalign_hook
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Variable: __memalign_hook
+The value of this variable is a pointer to function that aligned_alloc,
+memalign, posix_memalign and valloc use whenever they
+are called.  You should define this function to look like aligned_alloc;
+that is, like:
+
+
+void *function (size_t alignment, size_t size, const void *caller)
+
+
+The value of caller is the return address found on the stack when
+the aligned_alloc, memalign, posix_memalign or
+valloc functions are called.  This value allows you to trace the
+memory consumption of the program.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Hooks-for-Malloc.html#Hooks-for-Malloc
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Hooks-for-Malloc/__memalign_hook.txt

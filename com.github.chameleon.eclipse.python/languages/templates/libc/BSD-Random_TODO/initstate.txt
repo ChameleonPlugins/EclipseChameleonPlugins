@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+is used to initialize (the,) random number generator state
+//\\ //// ==> completion hint (1 line):
+is used to initialize the random number generator state
+//\\ //// Replacement text (1+ lines):
+char * initstate (unsigned int seed, char *state, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * initstate (unsigned int seed, char *state, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+The initstate function is used to initialize the random number
+generator state.  The argument state is an array of size
+bytes, used to hold the state information.  It is initialized based on
+seed.  The size must be between 8 and 256 bytes, and should be a
+power of two.  The bigger the state array, the better.
+
+The return value is the previous value of the state information array.
+You can use this value later as an argument to setstate to
+restore that state.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//BSD-Random.html#BSD-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/BSD-Random/initstate.txt

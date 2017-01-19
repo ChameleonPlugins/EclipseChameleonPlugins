@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(deallocate,free,release) all (the,) storage that * points to
+//\\ //// ==> completion hint (1 line):
+frees all the storage that * points to
+//\\ //// Replacement text (1+ lines):
+void regfree (regex_t *compiled)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void regfree (regex_t *compiled)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+Calling regfree frees all the storage that *compiled
+points to.  This includes various internal fields of the regex_t
+structure that aren’t documented in this manual.
+
+regfree does not free the object *compiled itself.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Regexp-Cleanup.html#Regexp-Cleanup
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Regexp-Cleanup/regfree.txt

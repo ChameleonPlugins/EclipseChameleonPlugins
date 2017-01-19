@@ -1,0 +1,59 @@
+//\\ //// code completion entries (1+ lines):
+ (convert,change,replace) (the,) next multibyte character in (the,) (string,text) pointed to by s into (a,) wide character and stores it in (the,) wide character (string,text) pointed to by pwc
+//\\ //// ==> completion hint (1 line):
+ converts the next multibyte character in the string pointed to by s into a wide character and stores it in the wide character string pointed to by pwc
+//\\ //// Replacement text (1+ lines):
+size_t size=mbrtowc (wchar_t *restrict pwc, const char *restrict s, size_t n, mbstate_t *restrict ps)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t mbrtowc (wchar_t *restrict pwc, const char *restrict s, size_t n, mbstate_t *restrict ps)
+Preliminary:
+| MT-Unsafe race:mbrtowc/!ps
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+
+The mbrtowc function (“multibyte restartable to wide
+character”) converts the next multibyte character in the string pointed
+to by s into a wide character and stores it in the wide character
+string pointed to by pwc.  The conversion is performed according
+to the locale currently selected for the LC_CTYPE category.  If
+the conversion for the character set used in the locale requires a state,
+the multibyte string is interpreted in the state represented by the
+object pointed to by ps.  If ps is a null pointer, a static,
+internal state variable used only by the mbrtowc function is
+used.
+
+If the next multibyte character corresponds to the NUL wide character,
+the return value of the function is 0 and the state object is
+afterwards in the initial state.  If the next n or fewer bytes
+form a correct multibyte character, the return value is the number of
+bytes starting from s that form the multibyte character.  The
+conversion state is updated according to the bytes consumed in the
+conversion.  In both cases the wide character (either the L'\0'
+or the one found in the conversion) is stored in the string pointed to
+by pwc if pwc is not null.
+
+If the first n bytes of the multibyte string possibly form a valid
+multibyte character but there are more than n bytes needed to
+complete it, the return value of the function is (size_t) -2 and
+no value is stored.  Please note that this can happen even if n
+has a value greater than or equal to MB_CUR_MAX since the input
+might contain redundant shift sequences.
+
+If the first n bytes of the multibyte string cannot possibly form
+a valid multibyte character, no value is stored, the global variable
+errno is set to the value EILSEQ, and the function returns
+(size_t) -1.  The conversion state is afterwards undefined.
+
+
+mbrtowc was introduced in Amendment 1 to ISO C90 and
+is declared in wchar.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Converting-a-Character.html#Converting-a-Character
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Converting-a-Character/mbrtowc.txt

@@ -1,0 +1,44 @@
+//\\ //// code completion entries (1+ lines):
+fix ImportError: No module named X
+//\\ //// ==> completion hint (1 line):
+how to easy_install a python module
+//\\ //// Replacement text (1+ lines):
+#
+# Steps to easy_install a Python module:
+# 
+# Run the following from a shell:
+# $ easy_install X1
+#
+# To run a shell command from Eclipse, if needed:
+# * Run | External Tools | External Tools Configuration...
+# * Press the 'New' button on the left to create a new external tool
+# * Supply needed values:
+# *  Name:
+# *  Location:
+# *  Working Directory:
+# *  Arguments:
+# * Environment tab: Set http_proxy, https_proxy, and ftp_proxy
+#    if needed...
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+#
+# Steps to easy_install a Python module:
+# 
+# Run the following from a shell:
+# $ easy_install X1
+#
+# To run a shell command from Eclipse, if needed:
+# * Run | External Tools | External Tools Configuration...
+# * Press the 'New' button on the left to create a new external tool
+# * Supply needed values:
+# *  Name:
+# *  Location:
+# *  Working Directory:
+# *  Arguments:
+# * Environment tab: Set http_proxy, https_proxy, and ftp_proxy
+#    if needed...
+//\\ //// Tool tip (1 line):
+Run these steps and try again...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):      
+fix/importX.txt

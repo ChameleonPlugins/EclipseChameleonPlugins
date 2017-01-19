@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+objects of this (output,print,show,say,type,write) can (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) assigned handles for (the,) conversions using (the,) iconv functions
+//\\ //// ==> completion hint (1 line):
+Objects of this type can get assigned handles for the conversions using the iconv functions
+//\\ //// Replacement text (1+ lines):
+Data Type: iconv_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: iconv_t
+This data type is an abstract type defined in iconv.h.  The user
+must not assume anything about the definition of this type; it must be
+completely opaque.
+
+Objects of this type can get assigned handles for the conversions using
+the iconv functions.  The objects themselves need not be freed, but
+the conversions for which the handles stand for have to.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Generic-Conversion-Interface.html#Generic-Conversion-Interface
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Generic-Conversion-Interface/iconv_t.txt

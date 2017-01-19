@@ -1,0 +1,82 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) length of (the,) null-terminated (string,text) X:TEXT in bytes
+//\\ //// ==> completion hint (1 line):
+returns the length of the null-terminated string s in bytes
+//\\ //// Replacement text (1+ lines):
+size_t size=strlen (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t strlen (const char *s)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The strlen function returns the length of the null-terminated
+string s in bytes.  (In other words, it returns the offset of the
+terminating null character within the array.)
+
+For example,
+
+strlen (&quot;hello, world&quot;)
+    ? 12
+
+
+When applied to a character array, the strlen function returns
+the length of the string stored there, not its allocated size.  You can
+get the allocated size of the character array that holds a string using
+the sizeof operator:
+
+
+char string[32] = &quot;hello, world&quot;;
+sizeof (string)
+    ? 32
+strlen (string)
+    ? 12
+
+
+But beware, this will not work unless string is the character
+array itself, not a pointer to it.  For example:
+
+
+char string[32] = &quot;hello, world&quot;;
+char *ptr = string;
+sizeof (string)
+    ? 32
+sizeof (ptr)
+    ? 4  /* (on a machine with 4 byte pointers) */
+
+
+This is an easy mistake to make when you are working with functions that
+take string arguments; those arguments are always pointers, not arrays.
+
+It must also be noted that for multibyte encoded strings the return
+value does not have to correspond to the number of characters in the
+string.  To get this value the string can be converted to wide
+characters and wcslen can be used or something like the following
+code can be used:
+
+
+/* The input is in string.
+   The length is expected in n.  */
+{
+  mbstate_t t;
+  char *scopy = string;
+  /* In initial state.  */
+  memset (&amp;t, '\0', sizeof (t));
+  /* Determine number of characters.  */
+  n = mbsrtowcs (NULL, &amp;scopy, strlen (scopy), &amp;t);
+}
+
+
+This is cumbersome to do so if the number of characters (as opposed to
+bytes) is needed often it is better to work with wide characters.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//String-Length.html#String-Length
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/String-Length/strlen.txt

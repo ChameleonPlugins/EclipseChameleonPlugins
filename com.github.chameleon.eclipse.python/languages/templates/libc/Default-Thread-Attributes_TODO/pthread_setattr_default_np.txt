@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+set (the,) default attribute values to match (the,) values in attr
+//\\ //// ==> completion hint (1 line):
+Set the default attribute values to match the values in attr
+//\\ //// Replacement text (1+ lines):
+int pthread_setattr_default_np (pthread_attr_t *attr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int pthread_setattr_default_np (pthread_attr_t *attr)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem
+| See POSIX Safety Concepts.
+
+
+Set the default attribute values to match the values in attr.  The
+function returns 0 on success and a non-zero error code on failure.
+The following error codes are defined for this function:
+
+
+EINVAL
+At least one of the values in attr does not qualify as valid for the
+attributes or the stack address is set in the attribute.
+
+ENOMEM
+The system does not have sufficient memory.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Default-Thread-Attributes.html#Default-Thread-Attributes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Default-Thread-Attributes/pthread_setattr_default_np.txt

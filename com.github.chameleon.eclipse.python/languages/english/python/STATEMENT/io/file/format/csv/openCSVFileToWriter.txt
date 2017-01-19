@@ -1,0 +1,18 @@
+//\\ //// code completion entries (1+ lines):
+open (csv,comma separated values) file X:FILE to writer X:WRITER
+//\\ //// ==> completion hint (1 line):
+# open comma separated values (csv) file for writing to
+//\\ //// Replacement text (1+ lines):
+# import csv # //// uncomment this if needed and move to top of file
+# //// 'with' causes file to be closed automatically at end of block
+# ////  no close statement needed
+with open(X1, 'wb') as csvfile:
+    X2 = csv.writer(csvfile)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="file.txt"
+X2=mywriter
+//\\ //// Help/documentation (1+ lines):
+open csv (Comma Separated Value) file for writing
+//\\ //// Tool tip (1 line):
+Update 'mywriter' and "file.txt" if needed...
+//\\

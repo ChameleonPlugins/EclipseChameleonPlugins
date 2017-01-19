@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+closes (the,) internal stream used by getpwent or getpwent_r
+//\\ //// ==> completion hint (1 line):
+closes the internal stream used by getpwent or getpwent_r
+//\\ //// Replacement text (1+ lines):
+void endpwent (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void endpwent (void)
+Preliminary:
+| MT-Unsafe race:pwent locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function closes the internal stream used by getpwent or
+getpwent_r.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Scanning-All-Users.html#Scanning-All-Users
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Scanning-All-Users/endpwent.txt

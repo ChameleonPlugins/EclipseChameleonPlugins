@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+is (text ,string ,)X:TEXT less than or equal to X:TEXT
+//\\ //// ==> completion hint (1 line):
+is one string of text less than or equal to the other?
+//\\ //// Replacement text (1+ lines):
+X1 <= X2
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="Hello"
+X2="Goodbye"
+//\\ //// Help/documentation (1+ lines):
+Returns true if one string is less than or equal to the other, false if not
+//\\ //// Tool tip (1 line):
+Returns true if one string is less than or equal to the other, false if not
+//\\

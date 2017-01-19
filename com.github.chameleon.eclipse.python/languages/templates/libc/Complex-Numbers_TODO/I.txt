@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+if you need i for your own purposes
+//\\ //// ==> completion hint (1 line):
+if you need I for your own purposes
+//\\ //// Replacement text (1+ lines):
+Macro: const float complex I
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: const float complex I
+This macro has exactly the same value as _Complex_I.  Most of the
+time it is preferable.  However, it causes problems if you want to use
+the identifier I for something else.  You can safely write
+
+
+#include &lt;complex.h&gt;
+#undef I
+
+
+if you need I for your own purposes.  (In that case we recommend
+you also define some other short name for _Complex_I, such as
+J.)
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Complex-Numbers.html#Complex-Numbers
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Complex-Numbers/I.txt

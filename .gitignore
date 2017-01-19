@@ -1,0 +1,7 @@
+.metadata
+*.class
+*.jar
+*.orig
+RemoteSystemsTempFiles/*
+*~
+bin

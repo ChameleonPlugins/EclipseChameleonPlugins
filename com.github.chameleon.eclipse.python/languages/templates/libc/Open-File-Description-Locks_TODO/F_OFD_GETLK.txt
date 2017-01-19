@@ -1,0 +1,56 @@
+//\\ //// code completion entries (1+ lines):
+if there is (a,) (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) already in (place,position) that would block (the,) (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) described by (the,) lockp argument, information about that (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) is written to *
+//\\ //// ==> completion hint (1 line):
+If there is a lock already in place that would block the lock described by the lockp argument, information about that lock is written to *
+//\\ //// Replacement text (1+ lines):
+Macro: int F_OFD_GETLK
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int F_OFD_GETLK
+This macro is used as the command argument to fcntl, to
+specify that it should get information about a lock.  This command
+requires a third argument of type struct flock * to be passed
+to fcntl, so that the form of the call is:
+
+
+fcntl (filedes, F_OFD_GETLK, lockp)
+
+
+If there is a lock already in place that would block the lock described
+by the lockp argument, information about that lock is written to
+*lockp.  Existing locks are not reported if they are
+compatible with making a new lock as specified.  Thus, you should
+specify a lock type of F_WRLCK if you want to find out about both
+read and write locks, or F_RDLCK if you want to find out about
+write locks only.
+
+There might be more than one lock affecting the region specified by the
+lockp argument, but fcntl only returns information about
+one of them. Which lock is returned in this situation is undefined.
+
+The l_whence member of the lockp structure are set to
+SEEK_SET and the l_start and l_len fields are set
+to identify the locked region.
+
+If no conflicting lock exists, the only change to the lockp structure
+is to update the l_type field to the value F_UNLCK.
+
+The normal return value from fcntl with this command is either 0
+on success or -1, which indicates an error. The following errno
+error conditions are defined for this command:
+
+
+EBADF
+The filedes argument is invalid.
+
+
+EINVAL
+Either the lockp argument doesn’t specify valid lock information,
+the operating system kernel doesn’t support open file description locks, or the file
+associated with filedes doesn’t support locks.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Open-File-Description-Locks.html#Open-File-Description-Locks
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Open-File-Description-Locks/F_OFD_GETLK.txt

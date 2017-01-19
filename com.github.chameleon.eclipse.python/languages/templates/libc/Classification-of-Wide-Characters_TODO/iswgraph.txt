@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) true if X:WIDE_CHARACTER is (a,) graphic character
+//\\ //// ==> completion hint (1 line):
+Returns true if wc is a graphic character
+//\\ //// Replacement text (1+ lines):
+bool result=iswgraph (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int iswgraph (wint_t wc)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Returns true if wc is a graphic character; that is, a character
+that has a glyph associated with it.  The whitespace characters are not
+considered graphic.
+
+This function can be implemented using
+
+
+iswctype (wc, wctype (&quot;graph&quot;))
+
+
+
+It is declared in wctype.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Classification-of-Wide-Characters.html#Classification-of-Wide-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Classification-of-Wide-Characters/iswgraph.txt

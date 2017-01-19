@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) pointer to (a,) statically-allocated structure containing information about (the,) user whose user name is name
+//\\ //// ==> completion hint (1 line):
+returns a pointer to a statically-allocated structure containing information about the user whose user name is name
+//\\ //// Replacement text (1+ lines):
+struct passwd * getpwnam (const char *name)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct passwd * getpwnam (const char *name)
+Preliminary:
+| MT-Unsafe race:pwnam locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function returns a pointer to a statically-allocated structure
+containing information about the user whose user name is name.
+This structure may be overwritten on subsequent calls to
+getpwnam.
+
+A null pointer return indicates there is no user named name.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Lookup-User.html#Lookup-User
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Lookup-User/getpwnam.txt

@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(deallocate,free,release) (the,) resources associated with (a,) message catalog which previously was opened by (a,) call to catopen
+//\\ //// ==> completion hint (1 line):
+free the resources associated with a message catalog which previously was opened by a call to catopen
+//\\ //// Replacement text (1+ lines):
+X1atclose (nl_catd catalog_desc)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int catclose (nl_catd catalog_desc)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+The catclose function can be used to free the resources
+associated with a message catalog which previously was opened by a call
+to catopen.  If the resources can be successfully freed the
+function returns 0.  Otherwise it return -1 and the
+global variable errno is set.  Errors can occur if the catalog
+descriptor catalog_desc is not valid in which case errno is
+set to EBADF.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//The-catgets-Functions.html#The-catgets-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/The-catgets-Functions/catclose.txt

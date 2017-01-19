@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) projection of (the,) complex value z onto (the,) riemann sphere
+//\\ //// ==> completion hint (1 line):
+These functions return the projection of the complex value z onto the Riemann sphere
+//\\ //// Replacement text (1+ lines):
+Function: complex double cproj (complex double z)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: complex double cproj (complex double z)
+Function: complex float cprojf (complex float z)
+Function: complex long double cprojl (complex long double z)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return the projection of the complex value z onto
+the Riemann sphere.  Values with an infinite imaginary part are projected
+to positive infinity on the real axis, even if the real part is NaN.  If
+the real part is infinite, the result is equivalent to
+
+
+INFINITY + I * copysign (0.0, cimag (z))
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Operations-on-Complex.html#Operations-on-Complex
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Operations-on-Complex/cprojl.txt

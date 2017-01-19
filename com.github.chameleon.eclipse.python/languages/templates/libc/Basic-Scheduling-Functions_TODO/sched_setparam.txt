@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+sets (a,) process’ absolute priority
+//\\ //// ==> completion hint (1 line):
+sets a process’ absolute priority
+//\\ //// Replacement text (1+ lines):
+int sched_setparam (pid_t pid, const struct sched_param *param)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sched_setparam (pid_t pid, const struct sched_param *param)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This function sets a process’ absolute priority.
+
+It is functionally identical to sched_setscheduler with
+policy = -1.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Basic-Scheduling-Functions.html#Basic-Scheduling-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Basic-Scheduling-Functions/sched_setparam.txt

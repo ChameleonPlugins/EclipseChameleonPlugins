@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+fix NameError: name 'X' is not defined
+//\\ //// ==> completion hint (1 line):
+how to import a file
+//\\ //// Replacement text (1+ lines):
+import X1
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=filename_without_extension
+//\\ //// Help/documentation (1+ lines):
+# import a file...
+//\\ //// Tool tip (1 line):
+imports should be placed at the top of the file...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):      
+fix/nameError.txt

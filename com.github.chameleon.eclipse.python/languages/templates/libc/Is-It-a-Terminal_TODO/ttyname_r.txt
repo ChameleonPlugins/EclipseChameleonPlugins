@@ -1,0 +1,43 @@
+//\\ //// code completion entries (1+ lines):
+is similar to (the,) ttyname function except that it (place,position) its result into (the,) user-specified buffer starting at buf with length len
+//\\ //// ==> completion hint (1 line):
+is similar to the ttyname function except that it places its result into the user-specified buffer starting at buf with length len
+//\\ //// Replacement text (1+ lines):
+int ttyname_r (X1, char *buf, size_t len)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int ttyname_r (int filedes, char *buf, size_t len)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem fd
+| See POSIX Safety Concepts.
+
+
+The ttyname_r function is similar to the ttyname function
+except that it places its result into the user-specified buffer starting
+at buf with length len.
+
+The normal return value from ttyname_r is 0.  Otherwise an
+error number is returned to indicate the error.  The following
+errno error conditions are defined for this function:
+
+
+EBADF
+The filedes argument is not a valid file descriptor.
+
+
+ENOTTY
+The filedes is not associated with a terminal.
+
+
+ERANGE
+The buffer length len is too small to store the string to be
+returned.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Is-It-a-Terminal.html#Is-It-a-Terminal
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Is-It-a-Terminal/ttyname_r.txt

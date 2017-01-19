@@ -1,0 +1,46 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function strxfrm transforms (the,) (string,text) from using (the,) collation transformation determined by (the,) locale currently selected for collation, and stores (the,) transformed (string,text) in (the,) array to
+//\\ //// ==> completion hint (1 line):
+The function strxfrm transforms the string from using the collation transformation determined by the locale currently selected for collation, and stores the transformed string in the array to
+//\\ //// Replacement text (1+ lines):
+size_t size=strxfrm (char *restrict to, const char *restrict from, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t strxfrm (char *restrict to, const char *restrict from, size_t size)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+The function strxfrm transforms the string from using the
+collation transformation determined by the locale currently selected for
+collation, and stores the transformed string in the array to.  Up
+to size characters (including a terminating null character) are
+stored.
+
+The behavior is undefined if the strings to and from
+overlap; see Copying and Concatenation.
+
+The return value is the length of the entire transformed string.  This
+value is not affected by the value of size, but if it is greater
+or equal than size, it means that the transformed string did not
+entirely fit in the array to.  In this case, only as much of the
+string as actually fits was stored.  To get the whole transformed
+string, call strxfrm again with a bigger output array.
+
+The transformed string may be longer than the original string, and it
+may also be shorter.
+
+If size is zero, no characters are stored in to.  In this
+case, strxfrm simply returns the number of characters that would
+be the length of the transformed string.  This is useful for determining
+what size the allocated array should be.  It does not matter what
+to is if size is zero; to may even be a null pointer.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Collation-Functions.html#Collation-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Collation-Functions/strxfrm.txt

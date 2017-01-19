@@ -1,0 +1,46 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) true if X:WIDE_CHARACTER is (a,) digit 
+//\\ //// ==> completion hint (1 line):
+Returns true if wc is a digit 
+//\\ //// Replacement text (1+ lines):
+bool result=iswdigit (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int iswdigit (wint_t wc)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Returns true if wc is a digit (e.g., ‘0’ through ‘9’).
+Please note that this function does not only return a nonzero value for
+decimal digits, but for all kinds of digits.  A consequence is
+that code like the following will not work unconditionally for
+wide characters:
+
+
+n = 0;
+while (iswdigit (*wc))
+  {
+    n *= 10;
+    n += *wc++ - L'0';
+  }
+
+
+This function can be implemented using
+
+
+iswctype (wc, wctype (&quot;digit&quot;))
+
+
+
+It is declared in wctype.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Classification-of-Wide-Characters.html#Classification-of-Wide-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Classification-of-Wide-Characters/iswdigit.txt

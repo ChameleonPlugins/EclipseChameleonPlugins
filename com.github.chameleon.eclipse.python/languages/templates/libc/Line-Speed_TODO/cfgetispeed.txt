@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) input line speed stored in (the,) structure *
+//\\ //// ==> completion hint (1 line):
+returns the input line speed stored in the structure *
+//\\ //// Replacement text (1+ lines):
+speed_t cfgetispeed (const struct termios *termios-p)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: speed_t cfgetispeed (const struct termios *termios-p)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function returns the input line speed stored in the structure
+*termios-p.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Line-Speed.html#Line-Speed
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Line-Speed/cfgetispeed.txt

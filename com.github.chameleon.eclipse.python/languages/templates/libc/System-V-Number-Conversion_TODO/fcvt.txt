@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function fcvt is like ecvt, but ndigit (indicate,select,specify) (the,) number of digits after (the,) decimal point
+//\\ //// ==> completion hint (1 line):
+The function fcvt is like ecvt, but ndigit specifies the number of digits after the decimal point
+//\\ //// Replacement text (1+ lines):
+char * fcvt (double value, int ndigit, int *decpt, int *neg)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * fcvt (double value, int ndigit, int *decpt, int *neg)
+Preliminary:
+| MT-Unsafe race:fcvt
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+The function fcvt is like ecvt, but ndigit specifies
+the number of digits after the decimal point.  If ndigit is less
+than zero, value is rounded to the ndigit+1’th place to the
+left of the decimal point.  For example, if ndigit is -1,
+value will be rounded to the nearest 10.  If ndigit is
+negative and larger than the number of digits to the left of the decimal
+point in value, value will be rounded to one significant digit.
+
+If ndigit decimal digits would exceed the precision of a
+double it is reduced to a system-specific value.
+
+The returned string is statically allocated and overwritten by each call
+to fcvt.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//System-V-Number-Conversion.html#System-V-Number-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/System-V-Number-Conversion/fcvt.txt

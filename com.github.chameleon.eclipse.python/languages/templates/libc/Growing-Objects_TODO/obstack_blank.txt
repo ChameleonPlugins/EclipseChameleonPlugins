@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(the,) most basic function for adding to (a,) growing object is obstack_blank, which (add,append,construct,create,define,insert,make,push) space without initializing it
+//\\ //// ==> completion hint (1 line):
+The most basic function for adding to a growing object is obstack_blank, which adds space without initializing it
+//\\ //// Replacement text (1+ lines):
+void obstack_blank (struct obstack *obstack-ptr, int size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void obstack_blank (struct obstack *obstack-ptr, int size)
+Preliminary:
+| MT-Safe race:obstack-ptr
+| AS-Safe 
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+The most basic function for adding to a growing object is
+obstack_blank, which adds space without initializing it.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Growing-Objects.html#Growing-Objects
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Growing-Objects/obstack_blank.txt

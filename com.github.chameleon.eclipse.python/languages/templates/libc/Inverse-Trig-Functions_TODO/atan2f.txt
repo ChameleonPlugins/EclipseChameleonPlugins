@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+computes (the,) arc tangent of y/x, but (the,) signs of both arguments are used to determine (the,) quadrant of (the,) result, and x is permitted to be zero
+//\\ //// ==> completion hint (1 line):
+computes the arc tangent of y/x, but the signs of both arguments are used to determine the quadrant of the result, and x is permitted to be zero
+//\\ //// Replacement text (1+ lines):
+Function: double atan2 (double y, double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double atan2 (double y, double x)
+Function: float atan2f (float y, float x)
+Function: long double atan2l (long double y, long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function computes the arc tangent of y/x, but the signs
+of both arguments are used to determine the quadrant of the result, and
+x is permitted to be zero.  The return value is given in radians
+and is in the range -pi to pi, inclusive.
+
+If x and y are coordinates of a point in the plane,
+atan2 returns the signed angle between the line from the origin
+to that point and the x-axis.  Thus, atan2 is useful for
+converting Cartesian coordinates to polar coordinates.  (To compute the
+radial coordinate, use hypot; see Exponents and Logarithms.)
+
+If both x and y are zero, atan2 returns zero.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Inverse-Trig-Functions.html#Inverse-Trig-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Inverse-Trig-Functions/atan2f.txt

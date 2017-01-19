@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+is similar to setutent
+//\\ //// ==> completion hint (1 line):
+is similar to setutent
+//\\ //// Replacement text (1+ lines):
+void setutxent (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void setutxent (void)
+Preliminary:
+| MT-Unsafe race:utent
+| AS-Unsafe lock
+| AC-Unsafe lock fd
+| See POSIX Safety Concepts.
+
+
+This function is similar to setutent.  In the GNU C Library it is
+simply an alias for setutent.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//XPG-Functions.html#XPG-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/XPG-Functions/setutxent.txt

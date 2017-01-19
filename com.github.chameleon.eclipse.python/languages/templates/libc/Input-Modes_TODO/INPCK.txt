@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+parity checking on input processing is independent of whether parity detection and generation on (the,) underlying terminal hardware is enabled
+//\\ //// ==> completion hint (1 line):
+Parity checking on input processing is independent of whether parity detection and generation on the underlying terminal hardware is enabled
+//\\ //// Replacement text (1+ lines):
+Macro: tcflag_t INPCK
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: tcflag_t INPCK
+
+If this bit is set, input parity checking is enabled.  If it is not set,
+no checking at all is done for parity errors on input; the
+characters are simply passed through to the application.
+
+Parity checking on input processing is independent of whether parity
+detection and generation on the underlying terminal hardware is enabled;
+see Control Modes.  For example, you could clear the INPCK
+input mode flag and set the PARENB control mode flag to ignore
+parity errors on input, but still generate parity on output.
+
+If this bit is set, what happens when a parity error is detected depends
+on whether the IGNPAR or PARMRK bits are set.  If neither
+of these bits are set, a byte with a parity error is passed to the
+application as a '\0' character.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Input-Modes.html#Input-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Input-Modes/INPCK.txt

@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+there are several other fields, but we don’t describe them here, because only (the,) functions in (the,) library should use them
+//\\ //// ==> completion hint (1 line):
+There are several other fields, but we don’t describe them here, because only the functions in the library should use them
+//\\ //// Replacement text (1+ lines):
+Data Type: regex_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: regex_t
+This type of object holds a compiled regular expression.
+It is actually a structure.  It has just one field that your programs
+should look at:
+
+
+re_nsub
+This field holds the number of parenthetical subexpressions in the
+regular expression that was compiled.
+
+
+
+There are several other fields, but we don’t describe them here, because
+only the functions in the library should use them.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//POSIX-Regexp-Compilation.html#POSIX-Regexp-Compilation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/POSIX-Regexp-Compilation/regex_t.txt

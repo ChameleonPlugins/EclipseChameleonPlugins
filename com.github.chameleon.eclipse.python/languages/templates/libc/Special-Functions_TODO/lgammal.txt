@@ -1,0 +1,46 @@
+//\\ //// code completion entries (1+ lines):
+lgamma (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) natural logarithm of (the,) absolute value of (the,) gamma function of x
+//\\ //// ==> completion hint (1 line):
+lgamma returns the natural logarithm of the absolute value of the gamma function of x
+//\\ //// Replacement text (1+ lines):
+Function: double lgamma (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double lgamma (double x)
+Function: float lgammaf (float x)
+Function: long double lgammal (long double x)
+Preliminary:
+| MT-Unsafe race:signgam
+| AS-Unsafe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+lgamma returns the natural logarithm of the absolute value of
+the gamma function of x.  The gamma function is defined as
+
+gamma (x) = integral from 0 to &amp;infin; of t^(x-1) e^-t dt
+
+
+
+The sign of the gamma function is stored in the global variable
+signgam, which is declared in math.h.  It is 1 if
+the intermediate result was positive or zero, or -1 if it was
+negative.
+
+To compute the real gamma function you can use the tgamma
+function or you can compute the values as follows:
+
+lgam = lgamma(x);
+gam  = signgam*exp(lgam);
+
+
+The gamma function has singularities at the non-positive integers.
+lgamma will raise the zero divide exception if evaluated at a
+singularity.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Special-Functions.html#Special-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Special-Functions/lgammal.txt

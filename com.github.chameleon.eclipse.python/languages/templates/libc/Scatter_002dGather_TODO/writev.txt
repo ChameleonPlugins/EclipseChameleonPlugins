@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+gathers data from (the,) buffers described in vector, which is taken to be count structures long, and (output,print,show,say,type,write) them to X:FILEDESCRIPTOR
+//\\ //// ==> completion hint (1 line):
+gathers data from the buffers described in vector, which is taken to be count structures long, and writes them to filedes
+//\\ //// Replacement text (1+ lines):
+ssize_t writev (X1, const struct iovec *vector, X3ount)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X3='a'
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: ssize_t writev (int filedes, const struct iovec *vector, int count)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+
+The writev function gathers data from the buffers described in
+vector, which is taken to be count structures long, and writes
+them to filedes.  As each buffer is written, it moves on to the
+next.
+
+Like readv, writev may stop midstream under the same
+conditions write would.
+
+The return value is a count of bytes written, or -1 indicating an
+error.  The possible errors are the same as in write.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Scatter_002dGather.html#Scatter_002dGather
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Scatter_002dGather/writev.txt

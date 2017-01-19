@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+(the,) dgettext functions acts just like (the,) gettext function
+//\\ //// ==> completion hint (1 line):
+The dgettext functions acts just like the gettext function
+//\\ //// Replacement text (1+ lines):
+char * dgettext (const char *domainname, const char *msgid)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * dgettext (const char *domainname, const char *msgid)
+Preliminary:
+| MT-Safe env
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+The dgettext functions acts just like the gettext
+function.  It only takes an additional first argument domainname
+which guides the selection of the message catalogs which are searched
+for the translation.  If the domainname parameter is the null
+pointer the dgettext function is exactly equivalent to
+gettext since the default value for the domain name is used.
+
+As for gettext the return value type is char * which is an
+anachronism.  The returned string must never be modified.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Translation-with-gettext.html#Translation-with-gettext
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Translation-with-gettext/dgettext.txt

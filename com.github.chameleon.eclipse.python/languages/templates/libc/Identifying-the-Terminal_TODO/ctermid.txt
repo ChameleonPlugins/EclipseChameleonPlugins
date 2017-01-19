@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) (string,text) containing (the,) file name of (the,) controlling terminal for (the,) current process
+//\\ //// ==> completion hint (1 line):
+returns a string containing the file name of the controlling terminal for the current process
+//\\ //// Replacement text (1+ lines):
+char * ctermid (char *string)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * ctermid (char *string)
+Preliminary:
+| MT-Safe !posix/!string
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The ctermid function returns a string containing the file name of
+the controlling terminal for the current process.  If string is
+not a null pointer, it should be an array that can hold at least
+L_ctermid characters; the string is returned in this array.
+Otherwise, a pointer to a string in a static area is returned, which
+might get overwritten on subsequent calls to this function.
+
+An empty string is returned if the file name cannot be determined for
+any reason.  Even if a file name is returned, access to the file it
+represents is not guaranteed.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Identifying-the-Terminal.html#Identifying-the-Terminal
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Identifying-the-Terminal/ctermid.txt

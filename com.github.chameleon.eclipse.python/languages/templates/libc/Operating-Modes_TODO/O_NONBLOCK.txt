@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+note that (the,) o_nonblock flag is overloaded as both (an,) i/o operating mode and (a,) file name translation flag
+//\\ //// ==> completion hint (1 line):
+Note that the O_NONBLOCK flag is overloaded as both an I/O operating mode and a file name translation flag
+//\\ //// Replacement text (1+ lines):
+Macro: int O_NONBLOCK
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int O_NONBLOCK
+The bit that enables nonblocking mode for the file.  If this bit is set,
+read requests on the file can return immediately with a failure
+status if there is no input immediately available, instead of blocking.
+Likewise, write requests can also return immediately with a
+failure status if the output can’t be written immediately.
+
+Note that the O_NONBLOCK flag is overloaded as both an I/O
+operating mode and a file name translation flag; see Open-time Flags.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Operating-Modes.html#Operating-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Operating-Modes/O_NONBLOCK.txt

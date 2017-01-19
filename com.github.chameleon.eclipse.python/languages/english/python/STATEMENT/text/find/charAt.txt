@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+(find,get,grab,obtain,retrieve) character X:NUMBER of (text,string,) X:TEXT
+//\\ //// ==> completion hint (1 line):
+get character at position
+//\\ //// Replacement text (1+ lines):
+X2[X1]
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=2
+X2="text"
+//\\ //// Help/documentation (1+ lines):
+!!! Python is ZERO based, so start with item # 0...
+//\\ //// Tool tip (1 line):
+!!! Python is ZERO based, so start with item # 0...
+//\\

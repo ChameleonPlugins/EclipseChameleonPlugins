@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+in (the,) gnu c library, fpos_t is (an,) opaque data structure that contains internal data to represent file offset and conversion state information
+//\\ //// ==> completion hint (1 line):
+In the GNU C Library, fpos_t is an opaque data structure that contains internal data to represent file offset and conversion state information
+//\\ //// Replacement text (1+ lines):
+Data Type: fpos_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: fpos_t
+This is the type of an object that can encode information about the
+file position of a stream, for use by the functions fgetpos and
+fsetpos.
+
+In the GNU C Library, fpos_t is an opaque data structure that
+contains internal data to represent file offset and conversion state
+information.  In other systems, it might have a different internal
+representation.
+
+When compiling with _FILE_OFFSET_BITS == 64 on a 32 bit machine
+this type is in fact equivalent to fpos64_t since the LFS
+interface transparently replaces the old interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Portable-Positioning.html#Portable-Positioning
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Portable-Positioning/fpos_t.txt

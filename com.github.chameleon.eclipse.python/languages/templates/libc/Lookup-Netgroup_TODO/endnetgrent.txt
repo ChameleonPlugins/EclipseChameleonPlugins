@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(deallocate,free,release) all buffers which were allocated to process (the,) last selected netgroup
+//\\ //// ==> completion hint (1 line):
+frees all buffers which were allocated to process the last selected netgroup
+//\\ //// Replacement text (1+ lines):
+void endnetgrent (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void endnetgrent (void)
+Preliminary:
+| MT-Unsafe race:netgrent
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function frees all buffers which were allocated to process the last
+selected netgroup.  As a result all string pointers returned by calls
+to getnetgrent are invalid afterwards.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Lookup-Netgroup.html#Lookup-Netgroup
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Lookup-Netgroup/endnetgrent.txt

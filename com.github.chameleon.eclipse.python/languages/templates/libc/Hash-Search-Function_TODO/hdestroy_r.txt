@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(deallocate,free,release) all resources allocated by (the,) hcreate_r function for this very same object htab
+//\\ //// ==> completion hint (1 line):
+frees all resources allocated by the hcreate_r function for this very same object htab
+//\\ //// Replacement text (1+ lines):
+void hdestroy_r (struct hsearch_data *htab)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void hdestroy_r (struct hsearch_data *htab)
+Preliminary:
+| MT-Safe race:htab
+| AS-Unsafe heap
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+
+The hdestroy_r function frees all resources allocated by the
+hcreate_r function for this very same object htab.  As for
+hdestroy it is the programs responsibility to free the strings
+for the elements of the table.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Hash-Search-Function.html#Hash-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Hash-Search-Function/hdestroy_r.txt

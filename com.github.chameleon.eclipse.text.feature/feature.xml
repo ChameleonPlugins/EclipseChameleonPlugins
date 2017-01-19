@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.github.chameleon.eclipse.text.feature"
+      label="Chameleon Text Support"
+      version="1.0.0.qualifier"
+      provider-name="Chameleon">
+
+   <description url="http://www.example.com/description">
+      Chameleon support for the Text.
+
+Type what you want to do instead of how to do it, and code completion
+drop-down proposals will be presented.  Select what you want
+to do and code will be generated for you.
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      Copyright 2015 Hewlett Packard Enterprise
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      Hewlett Packard Enterprise *internal tool only*
+
+Please do not distribute outside of Hewlett Packard Enterprise.
+
+Chameleon has passed the open-source review board, and could go open source, but we do not want to distribute it as external open source until we have decided if we should keep it as internal intellectual property for Hewlett Packard Enterprise or if we should open source it to the world.
+   </license>
+
+   <plugin
+         id="com.github.chameleon.eclipse.text"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+</feature>

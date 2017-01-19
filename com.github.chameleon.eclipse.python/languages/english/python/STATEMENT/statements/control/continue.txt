@@ -1,0 +1,13 @@
+//\\ //// code completion entries (1+ lines):
+(continue,cycle,next) loop
+//\\ //// ==> completion hint (1 line):
+continue with another loop
+//\\ //// Replacement text (1+ lines):
+continue
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+continue help...
+//\\ //// Tool tip (1 line):
+continue statement...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):

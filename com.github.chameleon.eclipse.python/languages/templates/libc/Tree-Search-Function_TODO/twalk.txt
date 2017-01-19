@@ -1,0 +1,37 @@
+//\\ //// code completion entries (1+ lines):
+for each (box,computer,system,node,host,target) in (the,) tree with (a,) (box,computer,system,node,host,target) pointed to by root, (the,) twalk function calls (the,) function provided by (the,) parameter action
+//\\ //// ==> completion hint (1 line):
+For each node in the tree with a node pointed to by root, the twalk function calls the function provided by the parameter action
+//\\ //// Replacement text (1+ lines):
+void twalk (const void *root, __action_fn_t action)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void twalk (const void *root, __action_fn_t action)
+Preliminary:
+| MT-Safe race:root
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+For each node in the tree with a node pointed to by root, the
+twalk function calls the function provided by the parameter
+action.  For leaf nodes the function is called exactly once with
+value set to leaf.  For internal nodes the function is
+called three times, setting the value parameter or action to
+the appropriate value.  The level argument for the action
+function is computed while descending the tree with increasing the value
+by one for the descend to a child, starting with the value 0 for
+the root node.
+
+Since the functions used for the action parameter to twalk
+must not modify the tree data, it is safe to run twalk in more
+than one thread at the same time, working on the same tree.  It is also
+safe to call tfind in parallel.  Functions which modify the tree
+must not be used, otherwise the behavior is undefined.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Tree-Search-Function.html#Tree-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Tree-Search-Function/twalk.txt

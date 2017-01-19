@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+similar to (the,) standard gnu error-reporting function error, this (output,print,show,say,type,write) (the,) program name and ‘:’, (the,) printf format (string,text) fmt, and (the,) appropriate following args
+//\\ //// ==> completion hint (1 line):
+Similar to the standard gnu error-reporting function error, this prints the program name and ‘:’, the printf format string fmt, and the appropriate following args
+//\\ //// Replacement text (1+ lines):
+void argp_failure (const struct argp_state *state, int status, int errnum, const char *fmt, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void argp_failure (const struct argp_state *state, int status, int errnum, const char *fmt, …)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt heap
+| AC-Unsafe lock corrupt mem
+| See POSIX Safety Concepts.
+
+
+Similar to the standard gnu error-reporting function error, this
+prints the program name and ‘:’, the printf format string
+fmt, and the appropriate following args.  If it is non-zero, the
+standard unix error text for errnum is printed.  If status is
+non-zero, it terminates the program with that value as its exit status.
+
+The difference between argp_failure and argp_error is that
+argp_error is for parsing errors, whereas
+argp_failure is for other problems that occur during parsing but
+don’t reflect a syntactic problem with the input, such as illegal values
+for options, bad phase of the moon, etc.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argp-Helper-Functions.html#Argp-Helper-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argp-Helper-Functions/argp_failure.txt

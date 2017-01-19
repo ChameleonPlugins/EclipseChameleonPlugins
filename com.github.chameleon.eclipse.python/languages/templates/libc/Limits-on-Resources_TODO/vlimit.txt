@@ -1,0 +1,54 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) current limit for (a,) resource for (a,) process
+//\\ //// ==> completion hint (1 line):
+sets the current limit for a resource for a process
+//\\ //// Replacement text (1+ lines):
+int vlimit (int resource, int limit)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int vlimit (int resource, int limit)
+Preliminary:
+| MT-Unsafe race:setrlimit
+| AS-Unsafe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+vlimit sets the current limit for a resource for a process.
+
+resource identifies the resource:
+
+
+LIM_CPU
+Maximum CPU time.  Same as RLIMIT_CPU for setrlimit.
+
+LIM_FSIZE
+Maximum file size.  Same as RLIMIT_FSIZE for setrlimit.
+
+LIM_DATA
+Maximum data memory.  Same as RLIMIT_DATA for setrlimit.
+
+LIM_STACK
+Maximum stack size.  Same as RLIMIT_STACK for setrlimit.
+
+LIM_CORE
+Maximum core file size.  Same as RLIMIT_COR for setrlimit.
+
+LIM_MAXRSS
+Maximum physical memory.  Same as RLIMIT_RSS for setrlimit.
+
+
+
+The return value is zero for success, and -1 with errno set
+accordingly for failure:
+
+
+EPERM
+The process tried to set its current limit beyond its maximum limit.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Limits-on-Resources.html#Limits-on-Resources
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Limits-on-Resources/vlimit.txt

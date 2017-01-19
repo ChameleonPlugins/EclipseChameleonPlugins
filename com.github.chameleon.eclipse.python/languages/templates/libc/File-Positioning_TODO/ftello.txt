@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+is similar to ftell, except that it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) value of (output,print,show,say,type,write) off_t
+//\\ //// ==> completion hint (1 line):
+is similar to ftell, except that it returns a value of type off_t
+//\\ //// Replacement text (1+ lines):
+off_t ftello (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: off_t ftello (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+The ftello function is similar to ftell, except that it
+returns a value of type off_t.  Systems which support this type
+use it to describe all file positions, unlike the POSIX specification
+which uses a long int.  The two are not necessarily the same size.
+Therefore, using ftell can lead to problems if the implementation is
+written on top of a POSIX compliant low-level I/O implementation, and using
+ftello is preferable whenever it is available.
+
+If this function fails it returns (off_t) -1.  This can happen due
+to missing support for file positioning or internal errors.  Otherwise
+the return value is the current file position.
+
+The function is an extension defined in the Unix Single Specification
+version 2.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 on a
+32 bit system this function is in fact ftello64.  I.e., the
+LFS interface transparently replaces the old interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Positioning.html#File-Positioning
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Positioning/ftello.txt

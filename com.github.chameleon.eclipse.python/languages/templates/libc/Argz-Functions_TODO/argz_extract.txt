@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) argz vector argz and argz_len into (a,) unix-style argument vector stored in argv, by putting pointers to every element in argz into successive (place,position) in argv, followed by (a,) terminator of 0
+//\\ //// ==> completion hint (1 line):
+converts the argz vector argz and argz_len into a Unix-style argument vector stored in argv, by putting pointers to every element in argz into successive positions in argv, followed by a terminator of 0
+//\\ //// Replacement text (1+ lines):
+void argz_extract (const char *argz, size_t argz_len, char **argv)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void argz_extract (const char *argz, size_t argz_len, char **argv)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The argz_extract function converts the argz vector argz and
+argz_len into a Unix-style argument vector stored in argv,
+by putting pointers to every element in argz into successive
+positions in argv, followed by a terminator of 0.
+Argv must be pre-allocated with enough space to hold all the
+elements in argz plus the terminating (char *)0
+((argz_count (argz, argz_len) + 1) * sizeof (char *)
+bytes should be enough).  Note that the string pointers stored into
+argv point into argz—they are not copies—and so
+argz must be copied if it will be changed while argv is
+still active.  This function is useful for passing the elements in
+argz to an exec function (see Executing a File).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argz-Functions.html#Argz-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argz-Functions/argz_extract.txt

@@ -1,0 +1,56 @@
+//\\ //// code completion entries (1+ lines):
+(the,) mbstowcs function (convert,change,replace) (the,) null-terminated (string,text) of multibyte characters (string,text) to (an,) array of wide character codes, storing not more than size wide characters into (the,) array beginning at wstring
+//\\ //// ==> completion hint (1 line):
+The mbstowcs function converts the null-terminated string of multibyte characters string to an array of wide character codes, storing not more than size wide characters into the array beginning at wstring
+//\\ //// Replacement text (1+ lines):
+size_t size=mbstowcs (wchar_t *wstring, X1tring, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t mbstowcs (wchar_t *wstring, const char *string, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The mbstowcs (“multibyte string to wide character string”)
+function converts the null-terminated string of multibyte characters
+string to an array of wide character codes, storing not more than
+size wide characters into the array beginning at wstring.
+The terminating null character counts towards the size, so if size
+is less than the actual number of wide characters resulting from
+string, no terminating null character is stored.
+
+The conversion of characters from string begins in the initial
+shift state.
+
+If an invalid multibyte character sequence is found, the mbstowcs
+function returns a value of -1.  Otherwise, it returns the number
+of wide characters stored in the array wstring.  This number does
+not include the terminating null character, which is present if the
+number is less than size.
+
+Here is an example showing how to convert a string of multibyte
+characters, allocating enough space for the result.
+
+
+wchar_t *
+mbstowcs_alloc (const char *string)
+{
+  size_t size = strlen (string) + 1;
+  wchar_t *buf = xmalloc (size * sizeof (wchar_t));
+
+  size = mbstowcs (buf, string, size);
+  if (size == (size_t) -1)
+    return NULL;
+  buf = xrealloc (buf, (size + 1) * sizeof (wchar_t));
+  return buf;
+}
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Non_002dreentrant-String-Conversion.html#Non_002dreentrant-String-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Non_002dreentrant-String-Conversion/mbstowcs.txt

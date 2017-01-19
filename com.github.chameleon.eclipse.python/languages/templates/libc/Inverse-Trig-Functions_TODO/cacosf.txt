@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+these functions compute (the,) complex arc cosine of z—that is, (the,) value whose cosine is z
+//\\ //// ==> completion hint (1 line):
+These functions compute the complex arc cosine of z—that is, the value whose cosine is z
+//\\ //// Replacement text (1+ lines):
+Function: complex double cacos (complex double z)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: complex double cacos (complex double z)
+Function: complex float cacosf (complex float z)
+Function: complex long double cacosl (complex long double z)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions compute the complex arc cosine of z—that is, the
+value whose cosine is z.  The value returned is in radians.
+
+Unlike the real-valued functions, cacos is defined for all
+values of z.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Inverse-Trig-Functions.html#Inverse-Trig-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Inverse-Trig-Functions/cacosf.txt

@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+is similar to srand48_r but like seed48 it initializes all 48 bits of (the,) state from (the,) parameter seed16v
+//\\ //// ==> completion hint (1 line):
+is similar to srand48_r but like seed48 it initializes all 48 bits of the state from the parameter seed16v
+//\\ //// Replacement text (1+ lines):
+int seed48_r (unsigned short int seed16v[3], struct drand48_data *buffer)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int seed48_r (unsigned short int seed16v[3], struct drand48_data *buffer)
+Preliminary:
+| MT-Safe race:buffer
+| AS-Safe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+This function is similar to srand48_r but like seed48 it
+initializes all 48 bits of the state from the parameter seed16v.
+
+If the return value is non-negative the function call succeeded.  It
+does not return a pointer to the previous state of the random number
+generator like the seed48 function does.  If the user wants to
+preserve the state for a later re-run s/he can copy the whole buffer
+pointed to by buffer.
+
+This function is a GNU extension and should not be used in portable
+programs.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/seed48_r.txt

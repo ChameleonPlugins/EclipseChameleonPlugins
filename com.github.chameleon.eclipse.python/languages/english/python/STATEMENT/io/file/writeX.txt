@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+write X:TEXT, to X:FILE, without a new line
+//\\ //// ==> completion hint (1 line):
+# write text to an open file without a new line
+//\\ //// Replacement text (1+ lines):
+X2.write(X1+"\n")
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="hi"
+X2=myfile
+//\\ //// Help/documentation (1+ lines):
+myfile.write(X1)
+//\\ //// Tool tip (1 line):
+Change 'myfile' to the file variable being used, if needed...
+//\\

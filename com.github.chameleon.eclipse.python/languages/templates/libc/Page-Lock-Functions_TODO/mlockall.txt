@@ -1,0 +1,95 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) all (the,) pages in (a,) process’ virtual memory address space, and/or any that are added to it in (the,) future
+//\\ //// ==> completion hint (1 line):
+locks all the pages in a process’ virtual memory address space, and/or any that are added to it in the future
+//\\ //// Replacement text (1+ lines):
+int mlockall (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=MAP_SHARED
+
+//\\ //// Help/documentation (1+ lines):
+Function: int mlockall (int flags)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+mlockall locks all the pages in a process’ virtual memory address
+space, and/or any that are added to it in the future.  This includes the
+pages of the code, data and stack segment, as well as shared libraries,
+user space kernel data, shared memory, and memory mapped files.
+
+flags is a string of single bit flags represented by the following
+macros.  They tell mlockall which of its functions you want.  All
+other bits must be zero.
+
+
+MCL_CURRENT
+Lock all pages which currently exist in the calling process’ virtual
+address space.
+
+
+MCL_FUTURE
+Set a mode such that any pages added to the process’ virtual address
+space in the future will be locked from birth.  This mode does not
+affect future address spaces owned by the same process so exec, which
+replaces a process’ address space, wipes out MCL_FUTURE.
+See Executing a File.
+
+
+
+
+When the function returns successfully, and you specified
+MCL_CURRENT, all of the process’ pages are backed by (connected
+to) real frames (they are resident) and are marked to stay that way.
+This means the function may cause page-ins and have to wait for them.
+
+When the process is in MCL_FUTURE mode because it successfully
+executed this function and specified MCL_CURRENT, any system call
+by the process that requires space be added to its virtual address space
+fails with errno = ENOMEM if locking the additional space
+would cause the process to exceed its locked page limit.  In the case
+that the address space addition that can’t be accommodated is stack
+expansion, the stack expansion fails and the kernel sends a
+SIGSEGV signal to the process.
+
+When the function fails, it does not affect the lock status of any pages
+or the future locking mode.
+
+The return value is zero if the function succeeds.  Otherwise, it is
+-1 and errno is set accordingly.  errno values
+specific to this function are:
+
+
+ENOMEM
+
+ At least some of the specified address range does not exist in the
+calling process’ virtual address space.
+ The locking would cause the process to exceed its locked page limit.
+
+
+
+EPERM
+The calling process is not superuser.
+
+
+EINVAL
+Undefined bits in flags are not zero.
+
+
+ENOSYS
+The kernel does not provide mlockall capability.
+
+
+
+
+You can lock just specific pages with mlock.  You unlock pages
+with munlockall and munlock.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Page-Lock-Functions.html#Page-Lock-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Page-Lock-Functions/mlockall.txt

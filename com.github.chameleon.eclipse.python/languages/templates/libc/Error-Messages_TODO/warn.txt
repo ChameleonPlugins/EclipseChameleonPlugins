@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+is roughly equivalent to (a,) call like 
+//\\ //// ==> completion hint (1 line):
+is roughly equivalent to a call like 
+//\\ //// Replacement text (1+ lines):
+void warn (const char *format, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void warn (const char *format, …)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe corrupt heap i18n
+| AC-Unsafe corrupt lock mem
+| See POSIX Safety Concepts.
+
+
+The warn function is roughly equivalent to a call like
+
+  error (0, errno, format, the parameters)
+
+except that the global variables error respects and modifies
+are not used.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Error-Messages.html#Error-Messages
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Error-Messages/warn.txt

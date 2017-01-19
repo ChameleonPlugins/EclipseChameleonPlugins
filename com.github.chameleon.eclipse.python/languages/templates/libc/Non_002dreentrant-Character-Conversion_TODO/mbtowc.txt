@@ -1,0 +1,51 @@
+//\\ //// code completion entries (1+ lines):
+(the,) mbtowc function when called with non-null (string,text) (convert,change,replace) (the,) first multibyte character beginning at (string,text) to its corresponding wide character code
+//\\ //// ==> completion hint (1 line):
+The mbtowc function when called with non-null string converts the first multibyte character beginning at string to its corresponding wide character code
+//\\ //// Replacement text (1+ lines):
+int mbtowc (wchar_t *restrict result, const char *restrict string, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int mbtowc (wchar_t *restrict result, const char *restrict string, size_t size)
+Preliminary:
+| MT-Unsafe race
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The mbtowc (“multibyte to wide character”) function when called
+with non-null string converts the first multibyte character
+beginning at string to its corresponding wide character code.  It
+stores the result in *result.
+
+mbtowc never examines more than size bytes.  (The idea is
+to supply for size the number of bytes of data you have in hand.)
+
+mbtowc with non-null string distinguishes three
+possibilities: the first size bytes at string start with
+valid multibyte characters, they start with an invalid byte sequence or
+just part of a character, or string points to an empty string (a
+null character).
+
+For a valid multibyte character, mbtowc converts it to a wide
+character and stores that in *result, and returns the
+number of bytes in that character (always at least 1 and never
+more than size).
+
+For an invalid byte sequence, mbtowc returns -1.  For an
+empty string, it returns 0, also storing '\0' in
+*result.
+
+If the multibyte character code uses shift characters, then
+mbtowc maintains and updates a shift state as it scans.  If you
+call mbtowc with a null pointer for string, that
+initializes the shift state to its standard initial value.  It also
+returns nonzero if the multibyte character code in use actually has a
+shift state.  See Shift State.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Non_002dreentrant-Character-Conversion.html#Non_002dreentrant-Character-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Non_002dreentrant-Character-Conversion/mbtowc.txt

@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+is similar to lrand48, but in addition it takes (a,) pointer to (a,) buffer describing (the,) state of (the,) random number generator just like drand48
+//\\ //// ==> completion hint (1 line):
+is similar to lrand48, but in addition it takes a pointer to a buffer describing the state of the random number generator just like drand48
+//\\ //// Replacement text (1+ lines):
+int lrand48_r (struct drand48_data *buffer, long int *result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int lrand48_r (struct drand48_data *buffer, long int *result)
+Preliminary:
+| MT-Safe race:buffer
+| AS-Safe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+This function is similar to lrand48, but in addition it takes a
+pointer to a buffer describing the state of the random number generator
+just like drand48.
+
+If the return value of the function is non-negative the variable pointed
+to by result contains the result.  Otherwise an error occurred.
+
+This function is a GNU extension and should not be used in portable
+programs.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/lrand48_r.txt

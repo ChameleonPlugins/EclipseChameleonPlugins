@@ -1,0 +1,37 @@
+//\\ //// code completion entries (1+ lines):
+has to be used to (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) out whether (a,) named mapping is defined in (the,) current locale selected for (the,) lc_ctype category
+//\\ //// ==> completion hint (1 line):
+has to be used to find out whether a named mapping is defined in the current locale selected for the LC_CTYPE category
+//\\ //// Replacement text (1+ lines):
+wctrans_t wctrans (const char *property)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wctrans_t wctrans (const char *property)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The wctrans function has to be used to find out whether a named
+mapping is defined in the current locale selected for the
+LC_CTYPE category.  If the returned value is non-zero, you can use
+it afterwards in calls to towctrans.  If the return value is
+zero no such mapping is known in the current locale.
+
+Beside locale-specific mappings there are two mappings which are
+guaranteed to be available in every locale:
+
+
+&quot;tolower&quot;&quot;toupper&quot;
+
+
+
+These functions are declared in wctype.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Wide-Character-Case-Conversion.html#Wide-Character-Case-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Wide-Character-Case-Conversion/wctrans.txt

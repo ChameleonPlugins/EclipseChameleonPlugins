@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) true if X:CHARACTER is (a,) hexadecimal digit
+//\\ //// ==> completion hint (1 line):
+Returns true if c is a hexadecimal digit
+//\\ //// Replacement text (1+ lines):
+bool result=isxdigit (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int isxdigit (int c)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Returns true if c is a hexadecimal digit.
+Hexadecimal digits include the normal decimal digits ‘0’ through
+‘9’ and the letters ‘A’ through ‘F’ and
+‘a’ through ‘f’.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Classification-of-Characters.html#Classification-of-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Classification-of-Characters/isxdigit.txt

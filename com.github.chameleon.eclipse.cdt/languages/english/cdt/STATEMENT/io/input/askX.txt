@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+ask X to the user
+//\\ //// ==> completion hint (1 line):
+// ask the user for text, including a question for them to answer
+//\\ //// Replacement text (1+ lines):
+char answer[256];
+printf( X1 );
+gets( answer );
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="What is your name? "
+//\\ //// Help/documentation (1+ lines):
+
+//\\ //// Tool tip (1 line):
+
+//\\

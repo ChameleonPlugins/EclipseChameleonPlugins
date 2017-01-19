@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+is another name for strchr
+//\\ //// ==> completion hint (1 line):
+is another name for strchr
+//\\ //// Replacement text (1+ lines):
+char * index (X1tring, X2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2='a'
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * index (const char *string, int c)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+index is another name for strchr; they are exactly the same.
+New code should always use strchr since this name is defined in
+ISO C while index is a BSD invention which never was available
+on System V derived systems.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Search-Functions/index.txt

@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+iterate over (tsv,tab separated values) reader X:READER now
+//\\ //// ==> completion hint (1 line):
+# iterate over tab separated values in reader
+//\\ //// Replacement text (1+ lines):
+for row in X1:
+    print ("First item: "+row[0])
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=myreader
+//\\ //// Help/documentation (1+ lines):
+iterate over tab separated values in reader
+//\\ //// Tool tip (1 line):
+Replace the block with code such as text=row[0]...
+//\\

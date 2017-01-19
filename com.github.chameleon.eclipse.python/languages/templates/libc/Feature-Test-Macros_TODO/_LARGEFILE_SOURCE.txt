@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+was introduced as part of (the,) large file support extension 
+//\\ //// ==> completion hint (1 line):
+was introduced as part of the Large File Support extension 
+//\\ //// Replacement text (1+ lines):
+Macro: _LARGEFILE_SOURCE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: _LARGEFILE_SOURCE
+If this macro is defined some extra functions are available which
+rectify a few shortcomings in all previous standards.  Specifically,
+the functions fseeko and ftello are available.  Without
+these functions the difference between the ISO C interface
+(fseek, ftell) and the low-level POSIX interface
+(lseek) would lead to problems.
+
+This macro was introduced as part of the Large File Support extension (LFS).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Feature-Test-Macros.html#Feature-Test-Macros
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Feature-Test-Macros/_LARGEFILE_SOURCE.txt

@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) file (place,position) indicator for (the,) stream stream to (the,) (place,position) (place,position), which must have been set by (a,) previous call to fgetpos on (the,) same stream
+//\\ //// ==> completion hint (1 line):
+sets the file position indicator for the stream stream to the position position, which must have been set by a previous call to fgetpos on the same stream
+//\\ //// Replacement text (1+ lines):
+int fsetpos (FILE *stream, const fpos_t *position)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fsetpos (FILE *stream, const fpos_t *position)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function sets the file position indicator for the stream stream
+to the position position, which must have been set by a previous
+call to fgetpos on the same stream.  If successful, fsetpos
+clears the end-of-file indicator on the stream, discards any characters
+that were “pushed back” by the use of ungetc, and returns a value
+of zero.  Otherwise, fsetpos returns a nonzero value and stores
+an implementation-defined positive value in errno.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 on a
+32 bit system the function is in fact fsetpos64.  I.e., the LFS
+interface transparently replaces the old interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Portable-Positioning.html#Portable-Positioning
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Portable-Positioning/fsetpos.txt

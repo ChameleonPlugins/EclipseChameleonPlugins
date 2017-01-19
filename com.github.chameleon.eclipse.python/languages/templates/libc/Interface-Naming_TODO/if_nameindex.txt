@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (an,) array of if_nameindex structures, one for every interface that is present
+//\\ //// ==> completion hint (1 line):
+returns an array of if_nameindex structures, one for every interface that is present
+//\\ //// Replacement text (1+ lines):
+struct if_nameindex * if_nameindex (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct if_nameindex * if_nameindex (void)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap lock/hurd
+| AC-Unsafe lock/hurd fd mem
+| See POSIX Safety Concepts.
+
+
+This function returns an array of if_nameindex structures, one
+for every interface that is present.  The end of the list is indicated
+by a structure with an interface of 0 and a null name pointer.  If an
+error occurs, this function returns a null pointer.
+
+The returned structure must be freed with if_freenameindex after
+use.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Interface-Naming.html#Interface-Naming
+//\\ //// Tool tip (1 line):
+!! Python is ZERO based, so lists start at 0
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Interface-Naming/if_nameindex.txt

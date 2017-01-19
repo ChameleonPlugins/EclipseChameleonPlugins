@@ -1,0 +1,42 @@
+//\\ //// code completion entries (1+ lines):
+is equivalent to (the,) strftime function with (the,) difference that it operates on wide character strings
+//\\ //// ==> completion hint (1 line):
+is equivalent to the strftime function with the difference that it operates on wide character strings
+//\\ //// Replacement text (1+ lines):
+size_t size=wcsftime (wchar_t *s, size_t size, const wchar_t *template, const struct tm *brokentime)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t wcsftime (wchar_t *s, size_t size, const wchar_t *template, const struct tm *brokentime)
+Preliminary:
+| MT-Safe env locale
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The wcsftime function is equivalent to the strftime
+function with the difference that it operates on wide character
+strings.  The buffer where the result is stored, pointed to by s,
+must be an array of wide characters.  The parameter size which
+specifies the size of the output buffer gives the number of wide
+character, not the number of bytes.
+
+Also the format string template is a wide character string.  Since
+all characters needed to specify the format string are in the basic
+character set it is portably possible to write format strings in the C
+source code using the L&quot;…&quot; notation.  The parameter
+brokentime has the same meaning as in the strftime call.
+
+The wcsftime function supports the same flags, modifiers, and
+format specifiers as the strftime function.
+
+The return value of wcsftime is the number of wide characters
+stored in s.  When more characters would have to be written than
+can be placed in the buffer s the return value is zero, with the
+same problems indicated in the strftime documentation.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Formatting-Calendar-Time.html#Formatting-Calendar-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Formatting-Calendar-Time/wcsftime.txt

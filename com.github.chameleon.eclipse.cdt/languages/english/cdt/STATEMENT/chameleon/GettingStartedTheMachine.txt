@@ -1,0 +1,135 @@
+//\\ //// code completion entries (1+ lines):
+Getting started with TheMachine
+Help with TheMachine
+Quick start with TheMachine
+//\\
+# tutorial showing how to code TheMachine using Chameleon
+//\\
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <sys/mman.h>
+#include <sys/utsname.h>
+
+int main(int argc, char *argv[]) {
+	/**********************************************************************
+	 **********************************************************************
+	 * Getting started with TheMachine (for Chameleon)
+	 *
+	 * In this tutorial, you will create a short program that asks your name
+	 * and says hello to you. Use the key words below to perform the
+	 * actions...
+	 *
+	 * Start at the first set of BLANK LINES and follow the comments
+	 * to fill the blank lines with the appropriate text.
+	 * Change the text as prompted, and SAVE (Ctrl-S) often,
+	 * especially after each step.  Each set of BLANK LINES should be
+	 * filled in with text by the time you are done with the tutorial.
+	 * Let's get started...
+	 **********************************************************************/
+	// 1.     TYPE: open file "/mnt/fabric_emulation"
+	//  and SELECT: open file "/mnt/fabric_emulation"
+
+
+	// 2.     TYPE: map buffer to file
+	//  and SELECT: map buffer to file
+
+
+	// 3.     TYPE: print "Hello TheMachine!" to buffer
+	//  and SELECT: print "Hello TheMachine!" to buffer BUFFER and go to the next line
+
+
+	// 4.     TYPE: unmap memory
+	//  and SELECT: unmap memory BUFFER with size SIZE
+
+
+	// 5.     TYPE: print "On the VM host, examine /dev/shm/fabric_emulation"
+	//  and SELECT: print "On the VM host, examine /dev/shm/fabric_emulation" and go to the next line
+
+
+	// 6. After running it successfully and seeing the output in TheMachine,
+	//    change the text in step 3, run it again, and watch it change...
+
+	/***********************************************************************
+	 * Now run it with the following, from the menu:
+	 * Run | Run (Or press Ctrl-F11)
+	 *
+	 * A window should pop up with your question. Click anywhere in that
+	 * window and type your name (green text) and press Enter.
+	 *
+	 * You should see your response. Congratulations!
+	 *
+	 * If you want to add file input/output, add the tutorial2 comment
+	 * below this comment and follow those instructions...
+	 ***********************************************************************/
+}
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+        <pre>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <sys/mman.h>
+#include <sys/utsname.h>
+
+int main(int argc, char *argv[]) {
+	/**********************************************************************
+	 **********************************************************************
+	 * Getting started with TheMachine (for Chameleon)
+	 *
+	 * In this tutorial, you will create a short program that asks your name
+	 * and says hello to you. Use the key words below to perform the
+	 * actions...
+	 *
+	 * Start at the first set of BLANK LINES and follow the comments
+	 * to fill the blank lines with the appropriate text.
+	 * Change the text as prompted, and SAVE (Ctrl-S) often,
+	 * especially after each step.  Each set of BLANK LINES should be
+	 * filled in with text by the time you are done with the tutorial.
+	 * Let's get started...
+	 **********************************************************************/
+	// 1.     TYPE: open file "/mnt/fabric_emulation"
+	//  and SELECT: open file "/mnt/fabric_emulation"
+
+
+	// 2.     TYPE: map buffer to file
+	//  and SELECT: map buffer to file
+
+
+	// 3.     TYPE: print "Hello TheMachine!" to buffer
+	//  and SELECT: print "Hello TheMachine!" to buffer BUFFER and go to the next line
+
+
+	// 4.     TYPE: unmap memory
+	//  and SELECT: unmap memory BUFFER with size SIZE
+
+
+	// 5.     TYPE: print "On the VM host, examine /dev/shm/fabric_emulation"
+	//  and SELECT: print "On the VM host, examine /dev/shm/fabric_emulation" and go to the next line
+
+
+
+	/***********************************************************************
+	 * Now run it with the following, from the menu:
+	 * Run | Run (Or press Ctrl-F11)
+	 *
+	 * A window should pop up with your question. Click anywhere in that
+	 * window and type your name (green text) and press Enter.
+	 *
+	 * You should see your response. Congratulations!
+	 *
+	 * If you want to add file input/output, add the tutorial2 comment
+	 * below this comment and follow those instructions...
+	 ***********************************************************************/
+}
+         </pre>
+         
+         
+//\\ //// Tool tip (1 line):
+Scroll to top and follow instructions to get started with TheMachine...
+//\\

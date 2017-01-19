@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+causes (the,) buffer of (the,) stream stream to be emptied
+//\\ //// ==> completion hint (1 line):
+causes the buffer of the stream stream to be emptied
+//\\ //// Replacement text (1+ lines):
+void __fpurge (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void __fpurge (FILE *stream)
+Preliminary:
+| MT-Safe race:stream
+| AS-Unsafe corrupt
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The __fpurge function causes the buffer of the stream
+stream to be emptied.  If the stream is currently in read mode all
+input in the buffer is lost.  If the stream is in output mode the
+buffered output is not written to the device (or whatever other
+underlying storage) and the buffer the cleared.
+
+This function is declared in stdio_ext.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Flushing-Buffers.html#Flushing-Buffers
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Flushing-Buffers/__fpurge.txt

@@ -1,0 +1,13 @@
+//\\ //// code completion entries (1+ lines):
+get length of array X:ARRAY
+//\\ //// ==> completion hint (1 line):
+get length of array
+//\\ //// Replacement text (1+ lines):
+len(X1)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=myarray
+//\\ //// Help/documentation (1+ lines):
+e.g. mylength=len(myarray)
+//\\ //// Tool tip (1 line):
+change "myarray" as needed...
+//\\

@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+(a,) call to realpath where (the,) resolved parameter is null behaves exactly like canonicalize_file_name
+//\\ //// ==> completion hint (1 line):
+A call to realpath where the resolved parameter is NULL behaves exactly like canonicalize_file_name
+//\\ //// Replacement text (1+ lines):
+char * realpath (const char *restrict name, char *restrict resolved)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * realpath (const char *restrict name, char *restrict resolved)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem fd
+| See POSIX Safety Concepts.
+
+
+
+A call to realpath where the resolved parameter is
+NULL behaves exactly like canonicalize_file_name.  The
+function allocates a buffer for the file name and returns a pointer to
+it.  If resolved is not NULL it points to a buffer into
+which the result is copied.  It is the callers responsibility to
+allocate a buffer which is large enough.  On systems which define
+PATH_MAX this means the buffer must be large enough for a
+pathname of this size.  For systems without limitations on the pathname
+length the requirement cannot be met and programs should not call
+realpath with anything but NULL for the second parameter.
+
+One other difference is that the buffer resolved (if nonzero) will
+contain the part of the path component which does not exist or is not
+readable if the function returns NULL and errno is set to
+EACCES or ENOENT.
+
+This function is declared in stdlib.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Symbolic-Links.html#Symbolic-Links
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Symbolic-Links/realpath.txt

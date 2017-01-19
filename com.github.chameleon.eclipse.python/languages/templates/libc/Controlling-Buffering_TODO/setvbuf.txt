@@ -1,0 +1,47 @@
+//\\ //// code completion entries (1+ lines):
+is used to (indicate,select,specify) that (the,) stream stream should have (the,) buffering mode mode, which can be either _iofbf 
+//\\ //// ==> completion hint (1 line):
+is used to specify that the stream stream should have the buffering mode mode, which can be either _IOFBF 
+//\\ //// Replacement text (1+ lines):
+int setvbuf (FILE *stream, char *buf, int mode, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setvbuf (FILE *stream, char *buf, int mode, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function is used to specify that the stream stream should
+have the buffering mode mode, which can be either _IOFBF
+(for full buffering), _IOLBF (for line buffering), or
+_IONBF (for unbuffered input/output).
+
+If you specify a null pointer as the buf argument, then setvbuf
+allocates a buffer itself using malloc.  This buffer will be freed
+when you close the stream.
+
+Otherwise, buf should be a character array that can hold at least
+size characters.  You should not free the space for this array as
+long as the stream remains open and this array remains its buffer.  You
+should usually either allocate it statically, or malloc
+(see Unconstrained Allocation) the buffer.  Using an automatic array
+is not a good idea unless you close the file before exiting the block
+that declares the array.
+
+While the array remains a stream buffer, the stream I/O functions will
+use the buffer for their internal purposes.  You shouldn’t try to access
+the values in the array directly while the stream is using it for
+buffering.
+
+The setvbuf function returns zero on success, or a nonzero value
+if the value of mode is not valid or if the request could not
+be honored.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Controlling-Buffering.html#Controlling-Buffering
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Controlling-Buffering/setvbuf.txt

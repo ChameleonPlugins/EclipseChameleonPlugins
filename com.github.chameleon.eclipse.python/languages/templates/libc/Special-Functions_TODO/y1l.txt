@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+y1 (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) bessel function of (the,) second kind of order 1 of x
+//\\ //// ==> completion hint (1 line):
+y1 returns the Bessel function of the second kind of order 1 of x
+//\\ //// Replacement text (1+ lines):
+Function: double y1 (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double y1 (double x)
+Function: float y1f (float x)
+Function: long double y1l (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+y1 returns the Bessel function of the second kind of order 1 of
+x.  It may signal underflow if x is too large.  If x
+is negative, y1 signals a domain error; if it is zero,
+y1 signals overflow and returns -&amp;infin;.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Special-Functions.html#Special-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Special-Functions/y1l.txt

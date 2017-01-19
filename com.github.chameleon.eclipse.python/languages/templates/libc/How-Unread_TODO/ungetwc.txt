@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+behaves just like ungetc just that it (add,append,construct,create,define,insert,make,push) back (a,) wide character
+//\\ //// ==> completion hint (1 line):
+behaves just like ungetc just that it pushes back a wide character
+//\\ //// Replacement text (1+ lines):
+wint_t ungetwc (X1, FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: wint_t ungetwc (wint_t wc, FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+The ungetwc function behaves just like ungetc just that it
+pushes back a wide character.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//How-Unread.html#How-Unread
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/How-Unread/ungetwc.txt

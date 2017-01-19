@@ -1,0 +1,47 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) buffer of size bytes aligned to (a,) multiple of alignment
+//\\ //// ==> completion hint (1 line):
+returns a buffer of size bytes aligned to a multiple of alignment
+//\\ //// Replacement text (1+ lines):
+int posix_memalign (void **memptr, size_t alignment, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int posix_memalign (void **memptr, size_t alignment, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock fd mem
+| See POSIX Safety Concepts.
+
+
+The posix_memalign function is similar to the memalign
+function in that it returns a buffer of size bytes aligned to a
+multiple of alignment.  But it adds one requirement to the
+parameter alignment: the value must be a power of two multiple of
+sizeof (void *).
+
+If the function succeeds in allocation memory a pointer to the allocated
+memory is returned in *memptr and the return value is zero.
+Otherwise the function returns an error value indicating the problem.
+The possible error values returned are:
+
+
+ENOMEM
+There was insufficient memory available to satisfy the request.
+
+
+EINVAL
+alignment is not a power of two multiple of sizeof (void *).
+
+
+
+
+This function was introduced in POSIX 1003.1d.  Although this function is
+superseded by aligned_alloc, it is more portable to older POSIX
+systems that do not support ISO C11.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Aligned-Memory-Blocks.html#Aligned-Memory-Blocks
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Aligned-Memory-Blocks/posix_memalign.txt

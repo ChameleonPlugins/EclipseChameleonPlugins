@@ -1,0 +1,16 @@
+//\\ //// code completion entries (1+ lines):
+(output,print,show,say,write) X:VALUE to X:LOCATION of worksheet X:NAME
+//\\ //// ==> completion hint (1 line):
+Write a value to a location in a spreadsheet
+//\\ //// Replacement text (1+ lines):
+X3.write(X2, X1)
+# //// example Next Step: close worksheet
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1='Hello World'
+X2='A1'
+X3=worksheet
+//\\ //// Help/documentation (1+ lines):
+https://xlsxwriter.readthedocs.org/getting_started.html#running-a-sample-program
+//\\ //// Tool tip (1 line):
+# //// example Next Step: close worksheet
+//\\

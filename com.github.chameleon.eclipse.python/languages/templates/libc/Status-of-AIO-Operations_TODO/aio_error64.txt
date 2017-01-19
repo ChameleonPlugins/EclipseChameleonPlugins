@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+is similar to aio_error with (the,) only difference that (the,) argument is (a,) reference to (a,) variable of (output,print,show,say,type,write) struct aiocb64
+//\\ //// ==> completion hint (1 line):
+is similar to aio_error with the only difference that the argument is a reference to a variable of type struct aiocb64
+//\\ //// Replacement text (1+ lines):
+int aio_error64 (const struct aiocb64 *aiocbp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int aio_error64 (const struct aiocb64 *aiocbp)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is similar to aio_error with the only difference
+that the argument is a reference to a variable of type struct
+aiocb64.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 this
+function is available under the name aio_error and so
+transparently replaces the interface for small files on 32 bit
+machines.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Status-of-AIO-Operations.html#Status-of-AIO-Operations
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Status-of-AIO-Operations/aio_error64.txt

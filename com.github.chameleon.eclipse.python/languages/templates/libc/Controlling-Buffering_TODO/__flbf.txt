@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+will (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) nonzero value in case (the,) stream stream is line buffered
+//\\ //// ==> completion hint (1 line):
+will return a nonzero value in case the stream stream is line buffered
+//\\ //// Replacement text (1+ lines):
+int __flbf (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int __flbf (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The __flbf function will return a nonzero value in case the
+stream stream is line buffered.  Otherwise the return value is
+zero.
+
+This function is declared in the stdio_ext.h header.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Controlling-Buffering.html#Controlling-Buffering
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Controlling-Buffering/__flbf.txt

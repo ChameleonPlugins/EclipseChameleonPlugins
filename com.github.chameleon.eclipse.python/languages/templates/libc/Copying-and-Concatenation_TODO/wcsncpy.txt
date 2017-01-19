@@ -1,0 +1,43 @@
+//\\ //// code completion entries (1+ lines):
+is similar to wcscpy but always copies exactly size wide characters into wto
+//\\ //// ==> completion hint (1 line):
+is similar to wcscpy but always copies exactly size wide characters into wto
+//\\ //// Replacement text (1+ lines):
+wchar_t * wcsncpy (wchar_t *restrict wto, const wchar_t *restrict wfrom, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wchar_t * wcsncpy (wchar_t *restrict wto, const wchar_t *restrict wfrom, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is similar to wcscpy but always copies exactly
+size wide characters into wto.
+
+If the length of wfrom is more than size, then
+wcsncpy copies just the first size wide characters.  Note
+that in this case there is no null terminator written into wto.
+
+If the length of wfrom is less than size, then
+wcsncpy copies all of wfrom, followed by enough null wide
+characters to add up to size wide characters in all.  This
+behavior is rarely useful, but it is specified by the ISO C
+standard.
+
+The behavior of wcsncpy is undefined if the strings overlap.
+
+Using wcsncpy as opposed to wcscpy is a way to avoid bugs
+relating to writing past the end of the allocated space for wto.
+However, it can also make your program much slower in one common case:
+copying a string which is probably small into a potentially large buffer.
+In this case, size may be large, and when it is, wcsncpy will
+waste a considerable amount of time copying null wide characters.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/wcsncpy.txt

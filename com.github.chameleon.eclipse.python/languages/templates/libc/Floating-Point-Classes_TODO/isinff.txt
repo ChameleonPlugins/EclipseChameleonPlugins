@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) -1 if x represents negative infinity, 1 if x represents positive infinity, and 0 otherwise
+//\\ //// ==> completion hint (1 line):
+returns -1 if x represents negative infinity, 1 if x represents positive infinity, and 0 otherwise
+//\\ //// Replacement text (1+ lines):
+Function: int isinf (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int isinf (double x)
+Function: int isinff (float x)
+Function: int isinfl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function returns -1 if x represents negative infinity,
+1 if x represents positive infinity, and 0 otherwise.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Floating-Point-Classes.html#Floating-Point-Classes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Floating-Point-Classes/isinff.txt

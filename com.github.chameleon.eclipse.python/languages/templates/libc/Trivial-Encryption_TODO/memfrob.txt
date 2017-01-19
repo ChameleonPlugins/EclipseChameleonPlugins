@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+transforms each byte of (the,) data structure at mem, which is X:LENGTH bytes long, by bitwise exclusive oring it with binary 00101010
+//\\ //// ==> completion hint (1 line):
+transforms each byte of the data structure at mem, which is length bytes long, by bitwise exclusive oring it with binary 00101010
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = memfrob (void *mem, X2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2=256
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * memfrob (void *mem, size_t length)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+memfrob transforms (frobnicates) each byte of the data structure
+at mem, which is length bytes long, by bitwise exclusive
+oring it with binary 00101010.  It does the transformation in place and
+its return value is always mem.
+
+Note that memfrob a second time on the same data structure
+returns it to its original state.
+
+This is a good function for hiding information from someone who doesn’t
+want to see it or doesn’t want to see it very much.  To really prevent
+people from retrieving the information, use stronger encryption such as
+that described in See Cryptographic Functions.
+
+Portability Note:  This function is unique to the GNU C Library.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Trivial-Encryption.html#Trivial-Encryption
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Trivial-Encryption/memfrob.txt

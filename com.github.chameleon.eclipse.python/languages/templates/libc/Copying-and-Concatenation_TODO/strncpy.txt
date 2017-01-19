@@ -1,0 +1,42 @@
+//\\ //// code completion entries (1+ lines):
+is similar to strcpy but always copies exactly size characters into to
+//\\ //// ==> completion hint (1 line):
+is similar to strcpy but always copies exactly size characters into to
+//\\ //// Replacement text (1+ lines):
+char * strncpy (char *restrict to, const char *restrict from, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strncpy (char *restrict to, const char *restrict from, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is similar to strcpy but always copies exactly
+size characters into to.
+
+If the length of from is more than size, then strncpy
+copies just the first size characters.  Note that in this case
+there is no null terminator written into to.
+
+If the length of from is less than size, then strncpy
+copies all of from, followed by enough null characters to add up
+to size characters in all.  This behavior is rarely useful, but it
+is specified by the ISO C standard.
+
+The behavior of strncpy is undefined if the strings overlap.
+
+Using strncpy as opposed to strcpy is a way to avoid bugs
+relating to writing past the end of the allocated space for to.
+However, it can also make your program much slower in one common case:
+copying a string which is probably small into a potentially large buffer.
+In this case, size may be large, and when it is, strncpy will
+waste a considerable amount of time copying null characters.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/strncpy.txt

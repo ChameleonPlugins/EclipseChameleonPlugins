@@ -1,0 +1,47 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) process group id of (the,) foreground process group associated with (the,) terminal open on descriptor X:FILEDESCRIPTOR
+//\\ //// ==> completion hint (1 line):
+returns the process group ID of the foreground process group associated with the terminal open on descriptor filedes
+//\\ //// Replacement text (1+ lines):
+pid_t tcgetpgrp (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: pid_t tcgetpgrp (int filedes)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function returns the process group ID of the foreground process
+group associated with the terminal open on descriptor filedes.
+
+If there is no foreground process group, the return value is a number
+greater than 1 that does not match the process group ID of any
+existing process group.  This can happen if all of the processes in the
+job that was formerly the foreground job have terminated, and no other
+job has yet been moved into the foreground.
+
+In case of an error, a value of -1 is returned.  The
+following errno error conditions are defined for this function:
+
+
+EBADF
+The filedes argument is not a valid file descriptor.
+
+
+ENOSYS
+The system doesn’t support job control.
+
+
+ENOTTY
+The terminal file associated with the filedes argument isn’t the
+controlling terminal of the calling process.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Terminal-Access-Functions.html#Terminal-Access-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Terminal-Access-Functions/tcgetpgrp.txt

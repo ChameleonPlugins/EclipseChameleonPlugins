@@ -1,0 +1,144 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (a,) (new,) mapping, connected to bytes in (the,) file open on X:FILEDESCRIPTOR
+//\\ //// ==> completion hint (1 line):
+creates a new mapping, connected to bytes in the file open on filedes
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = mmap (X1, X2, X3, X4, X5, X6)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X5=fd
+X2=256
+X1=NULL
+X4=MAP_SHARED
+X3=PROT_WRITE
+X6=0
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * mmap (void *address, size_t length, int protect, int flags, int filedes, off_t offset)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+The mmap function creates a new mapping, connected to bytes
+(offset) to (offset + length - 1) in the file open on
+filedes.  A new reference for the file specified by filedes
+is created, which is not removed by closing the file.
+
+address gives a preferred starting address for the mapping.
+NULL expresses no preference.  Any previous mapping at that
+address is automatically removed.  The address you give may still be
+changed, unless you use the MAP_FIXED flag.
+
+
+
+
+protect contains flags that control what kind of access is
+permitted.  They include PROT_READ, PROT_WRITE, and
+PROT_EXEC, which permit reading, writing, and execution,
+respectively.  Inappropriate access will cause a segfault (see Program Error Signals).
+
+Note that most hardware designs cannot support write permission without
+read permission, and many do not distinguish read and execute permission.
+Thus, you may receive wider permissions than you ask for, and mappings of
+write-only files may be denied even if you do not use PROT_READ.
+
+flags contains flags that control the nature of the map.
+One of MAP_SHARED or MAP_PRIVATE must be specified.
+
+They include:
+
+
+MAP_PRIVATE
+
+
+This specifies that writes to the region should never be written back
+to the attached file.  Instead, a copy is made for the process, and the
+region will be swapped normally if memory runs low.  No other process will
+see the changes.
+
+Since private mappings effectively revert to ordinary memory
+when written to, you must have enough virtual memory for a copy of
+the entire mmapped region if you use this mode with PROT_WRITE.
+
+
+MAP_SHARED
+
+
+This specifies that writes to the region will be written back to the
+file.  Changes made will be shared immediately with other processes
+mmaping the same file.
+
+Note that actual writing may take place at any time.  You need to use
+msync, described below, if it is important that other processes
+using conventional I/O get a consistent view of the file.
+
+
+MAP_FIXED
+
+
+This forces the system to use the exact mapping address specified in
+address and fail if it can’t.
+
+
+MAP_ANONYMOUS
+
+
+MAP_ANON
+
+
+This flag tells the system to create an anonymous mapping, not connected
+to a file.  filedes and off are ignored, and the region is
+initialized with zeros.
+
+Anonymous maps are used as the basic primitive to extend the heap on some
+systems.  They are also useful to share data between multiple tasks
+without creating a file.
+
+On some systems using private anonymous mmaps is more efficient than using
+malloc for large blocks.  This is not an issue with the GNU C Library,
+as the included malloc automatically uses mmap where appropriate.
+
+
+
+
+
+mmap returns the address of the new mapping, or
+MAP_FAILED for an error.
+
+Possible errors include:
+
+
+EINVAL
+
+Either address was unusable, or inconsistent flags were
+given.
+
+
+EACCES
+
+filedes was not open for the type of access specified in protect.
+
+
+ENOMEM
+
+Either there is not enough memory for the operation, or the process is
+out of address space.
+
+
+ENODEV
+
+This file is of a type that doesn’t support mapping.
+
+
+ENOEXEC
+
+The file is on a filesystem that doesn’t support mapping.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Memory_002dmapped-I_002fO.html#Memory_002dmapped-I_002fO
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Memory_002dmapped-I_002fO/mmap.txt

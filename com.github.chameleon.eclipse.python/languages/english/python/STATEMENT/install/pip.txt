@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+(pip ,)install X:LIBRARY using pip
+//\\ //// ==> completion hint (1 line):
+generate code for a one-time pip install
+//\\ //// Replacement text (1+ lines):
+# from subprocess import call #//// uncomment if needed
+call(["pip", "install", X1])
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="pip"
+//\\ //// Help/documentation (1+ lines):
+Remove this code after successful install...
+//\\ //// Tool tip (1 line):
+Remove this code after successful install...
+//\\

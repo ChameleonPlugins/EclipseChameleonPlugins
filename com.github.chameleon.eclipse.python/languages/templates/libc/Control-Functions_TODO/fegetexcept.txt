@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) bitmask of all currently enabled exceptions
+//\\ //// ==> completion hint (1 line):
+The function returns a bitmask of all currently enabled exceptions
+//\\ //// Replacement text (1+ lines):
+int fegetexcept (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fegetexcept (void)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The function returns a bitmask of all currently enabled exceptions.  It
+returns -1 in case of failure.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Control-Functions.html#Control-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Control-Functions/fegetexcept.txt

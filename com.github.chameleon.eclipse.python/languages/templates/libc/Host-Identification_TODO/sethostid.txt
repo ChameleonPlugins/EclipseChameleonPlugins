@@ -1,0 +1,45 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) “(box,computer,system,node,host,target) id” of (the,) (box,computer,system,node,host,target) machine to id
+//\\ //// ==> completion hint (1 line):
+sets the “host ID” of the host machine to id
+//\\ //// Replacement text (1+ lines):
+int sethostid (long int id)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sethostid (long int id)
+Preliminary:
+| MT-Unsafe const:hostid
+| AS-Unsafe 
+| AC-Unsafe corrupt fd
+| See POSIX Safety Concepts.
+
+
+The sethostid function sets the “host ID” of the host machine
+to id.  Only privileged processes are permitted to do this.  Usually
+it happens just once, at system boot time.
+
+The proper way to establish the primary IP address of a system
+is to configure the IP address resolver to associate that IP address with
+the system’s host name as returned by gethostname.  For example,
+put a record for the system in /etc/hosts.
+
+See gethostid above for more information on host ids.
+
+The return value is 0 on success and -1 on failure.
+The following errno error conditions are defined for this function:
+
+
+EPERM
+This process cannot set the host name because it is not privileged.
+
+
+ENOSYS
+The operating system does not support setting the host ID.  On some
+systems, the host ID is a meaningless but unique number hard-coded for
+each machine.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Identification.html#Host-Identification
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Identification/sethostid.txt

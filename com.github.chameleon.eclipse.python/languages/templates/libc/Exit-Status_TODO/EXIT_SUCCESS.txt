@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+on posix systems, (the,) value of this macro is 0
+//\\ //// ==> completion hint (1 line):
+On POSIX systems, the value of this macro is 0
+//\\ //// Replacement text (1+ lines):
+Macro: int EXIT_SUCCESS
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int EXIT_SUCCESS
+This macro can be used with the exit function to indicate
+successful program completion.
+
+On POSIX systems, the value of this macro is 0.  On other
+systems, the value might be some other (possibly non-constant) integer
+expression.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Exit-Status.html#Exit-Status
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Exit-Status/EXIT_SUCCESS.txt

@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) result of multiplying (the,) floating-point number value by 2 raised to (the,) power exponent
+//\\ //// ==> completion hint (1 line):
+These functions return the result of multiplying the floating-point number value by 2 raised to the power exponent
+//\\ //// Replacement text (1+ lines):
+double ldexp (double value, int exponent)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double ldexp (double value, int exponent)
+Function: float ldexpf (float value, int exponent)
+Function: long double ldexpl (long double value, int exponent)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return the result of multiplying the floating-point
+number value by 2 raised to the power exponent.  (It can
+be used to reassemble floating-point numbers that were taken apart
+by frexp.)
+
+For example, ldexp (0.8, 4) returns 12.8.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Normalization-Functions.html#Normalization-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Normalization-Functions/ldexp.txt

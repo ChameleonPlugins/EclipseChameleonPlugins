@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+reads characters from (the,) stream stream up to and including (a,) newline character and stores them in (the,) (string,text) s, adding (a,) null character to mark (the,) (end,exit,quit,(halt,pause,stop,suspend)) of (the,) (string,text)
+//\\ //// ==> completion hint (1 line):
+reads characters from the stream stream up to and including a newline character and stores them in the string s, adding a null character to mark the end of the string
+//\\ //// Replacement text (1+ lines):
+char * fgets (char *s, X2ount, FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * fgets (char *s, int count, FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+The fgets function reads characters from the stream stream
+up to and including a newline character and stores them in the string
+s, adding a null character to mark the end of the string.  You
+must supply count characters worth of space in s, but the
+number of characters read is at most count - 1.  The extra
+character space is used to hold the null character at the end of the
+string.
+
+If the system is already at end of file when you call fgets, then
+the contents of the array s are unchanged and a null pointer is
+returned.  A null pointer is also returned if a read error occurs.
+Otherwise, the return value is the pointer s.
+
+Warning:  If the input data has a null character, you can’t tell.
+So don’t use fgets unless you know the data cannot contain a null.
+Don’t use it to read files edited by the user because, if the user inserts
+a null character, you should either handle it properly or print a clear
+error message.  We recommend using getline instead of fgets.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Line-Input.html#Line-Input
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Line-Input/fgets.txt

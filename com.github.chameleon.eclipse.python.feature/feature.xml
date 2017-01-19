@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.github.chameleon.eclipse.python.feature"
+      label="Chameleon Python Support"
+      version="1.0.0.qualifier"
+      provider-name="Chameleon">
+
+   <description url="http://www.example.com/description">
+      Chameleon support for the Python programming language.
+
+Type what you want to do instead of how to do it, and code completion
+drop-down proposals will be presented.  Select what you want
+to do and code will be generated for you.
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      Copyright 2015 Hewlett Packard Enterprise
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      Hewlett Packard Enterprise *internal tool only*
+
+Please do not distribute outside of Hewlett Packard Enterprise.
+
+Chameleon has passed the open-source review board, and could go open source, but we do not want to distribute it as external open source until we have decided if we should keep it as internal intellectual property for Hewlett Packard Enterprise or if we should open source it to the world.
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime" version="3.8.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface.text" version="3.8.101" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.python.pydev"/>
+      <import plugin="org.junit"/>
+      <import plugin="org.eclipse.core.filesystem" version="1.4.100" match="greaterOrEqual"/>
+      <import plugin="org.python.pydev.core"/>
+      <import plugin="org.eclipse.ui.ide" version="3.10.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.console" version="3.5.300" match="greaterOrEqual"/>
+      <import plugin="com.python.pydev.codecompletion" version="4.1.0" match="greaterOrEqual"/>
+      <import plugin="org.python.pydev.shared_interactive_console" version="4.2.0" match="greaterOrEqual"/>
+      <import plugin="org.python.pydev.debug" version="4.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.python.pydev.shared_ui"/>
+      <import feature="com.github.chameleon.eclipse.python.feature" version="1.0.0.201505121212" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="com.github.chameleon.eclipse.python"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+</feature>

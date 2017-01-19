@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) “(box,computer,system,node,host,target) id” of (the,) machine (the,) program is running on
+//\\ //// ==> completion hint (1 line):
+returns the “host ID” of the machine the program is running on
+//\\ //// Replacement text (1+ lines):
+long int gethostid (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int gethostid (void)
+Preliminary:
+| MT-Safe hostid env locale
+| AS-Unsafe dlopen plugin corrupt heap lock
+| AC-Unsafe lock corrupt mem fd
+| See POSIX Safety Concepts.
+
+
+This function returns the “host ID” of the machine the program is
+running on.  By convention, this is usually the primary Internet IP address
+of that machine, converted to a long int.  However, on some
+systems it is a meaningless but unique number which is hard-coded for
+each machine.
+
+This is not widely used.  It arose in BSD 4.2, but was dropped in BSD 4.4.
+It is not required by POSIX.
+
+The proper way to query the IP address is to use gethostbyname
+on the results of gethostname.  For more information on IP addresses,
+See Host Addresses.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Identification.html#Host-Identification
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Identification/gethostid.txt

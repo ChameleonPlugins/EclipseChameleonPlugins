@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) complex tangent of z
+//\\ //// ==> completion hint (1 line):
+These functions return the complex tangent of z
+//\\ //// Replacement text (1+ lines):
+Function: complex double ctan (complex double z)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: complex double ctan (complex double z)
+Function: complex float ctanf (complex float z)
+Function: complex long double ctanl (complex long double z)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return the complex tangent of z.
+The mathematical definition of the complex tangent is
+
+tan (z) = -i * (exp (z*i) - exp (-z*i)) / (exp (z*i) + exp (-z*i))
+
+The complex tangent has poles at pi/2 + 2n, where n is an
+integer.  ctan may signal overflow if z is too close to a
+pole.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Trig-Functions.html#Trig-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Trig-Functions/ctanl.txt

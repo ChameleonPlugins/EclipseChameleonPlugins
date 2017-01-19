@@ -1,0 +1,52 @@
+//\\ //// code completion entries (1+ lines):
+is like strcpy, except that it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) pointer to (the,) (end,exit,quit,(halt,pause,stop,suspend)) of (the,) (string,text) to rather than (the,) beginning
+//\\ //// ==> completion hint (1 line):
+is like strcpy, except that it returns a pointer to the end of the string to rather than the beginning
+//\\ //// Replacement text (1+ lines):
+char * stpcpy (char *restrict to, const char *restrict from)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * stpcpy (char *restrict to, const char *restrict from)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is like strcpy, except that it returns a pointer to
+the end of the string to (that is, the address of the terminating
+null character to + strlen (from)) rather than the beginning.
+
+For example, this program uses stpcpy to concatenate ‘foo’
+and ‘bar’ to produce ‘foobar’, which it then prints.
+
+
+
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+
+int
+main (void)
+{
+  char buffer[10];
+  char *to = buffer;
+  to = stpcpy (to, &quot;foo&quot;);
+  to = stpcpy (to, &quot;bar&quot;);
+  puts (buffer);
+  return 0;
+}
+
+
+This function is not part of the ISO or POSIX standards, and is not
+customary on Unix systems, but we did not invent it either.  Perhaps it
+comes from MS-DOG.
+
+Its behavior is undefined if the strings overlap.  The function is
+declared in string.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/stpcpy.txt

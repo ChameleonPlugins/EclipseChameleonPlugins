@@ -1,0 +1,42 @@
+//\\ //// code completion entries (1+ lines):
+instead of accessing these members directly, you should use (the,) equivalent macros
+//\\ //// ==> completion hint (1 line):
+Instead of accessing these members directly, you should use the equivalent macros
+//\\ //// Replacement text (1+ lines):
+Data Type: union wait
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: union wait
+This data type represents program termination status values.  It has
+the following members:
+
+
+int w_termsig
+The value of this member is the same as that of the
+WTERMSIG macro.
+
+
+int w_coredump
+The value of this member is the same as that of the
+WCOREDUMP macro.
+
+
+int w_retcode
+The value of this member is the same as that of the
+WEXITSTATUS macro.
+
+
+int w_stopsig
+The value of this member is the same as that of the
+WSTOPSIG macro.
+
+
+
+Instead of accessing these members directly, you should use the
+equivalent macros.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//BSD-Wait-Functions.html#BSD-Wait-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/BSD-Wait-Functions/union wait.txt

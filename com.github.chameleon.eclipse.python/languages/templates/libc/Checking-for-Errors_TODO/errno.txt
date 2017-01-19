@@ -1,0 +1,52 @@
+//\\ //// code completion entries (1+ lines):
+since errno is declared volatile, it might be changed asynchronously by (a,) signal handler
+//\\ //// ==> completion hint (1 line):
+Since errno is declared volatile, it might be changed asynchronously by a signal handler
+//\\ //// Replacement text (1+ lines):
+Variable: volatile int errno
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Variable: volatile int errno
+The variable errno contains the system error number.  You can
+change the value of errno.
+
+Since errno is declared volatile, it might be changed
+asynchronously by a signal handler; see Defining Handlers.
+However, a properly written signal handler saves and restores the value
+of errno, so you generally do not need to worry about this
+possibility except when writing signal handlers.
+
+The initial value of errno at program startup is zero.  Many
+library functions are guaranteed to set it to certain nonzero values
+when they encounter certain kinds of errors.  These error conditions are
+listed for each function.  These functions do not change errno
+when they succeed; thus, the value of errno after a successful
+call is not necessarily zero, and you should not use errno to
+determine whether a call failed.  The proper way to do that is
+documented for each function.  If the call failed, you can
+examine errno.
+
+Many library functions can set errno to a nonzero value as a
+result of calling other library functions which might fail.  You should
+assume that any library function might alter errno when the
+function returns an error.
+
+Portability Note: ISO C specifies errno as a
+“modifiable lvalue” rather than as a variable, permitting it to be
+implemented as a macro.  For example, its expansion might involve a
+function call, like *__errno_location ().  In fact, that is
+what it is
+on GNU/Linux and GNU/Hurd systems.  The GNU C Library, on each system, does
+whatever is right for the particular system.
+
+There are a few library functions, like sqrt and atan,
+that return a perfectly legitimate value in case of an error, but also
+set errno.  For these functions, if you want to check to see
+whether an error occurred, the recommended method is to set errno
+to zero before calling the function, and then check its value afterward.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Checking-for-Errors.html#Checking-for-Errors
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Checking-for-Errors/errno.txt

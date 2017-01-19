@@ -1,0 +1,57 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) current calendar time in (the,) (box,computer,system,node,host,target) clock according to (the,) arguments
+//\\ //// ==> completion hint (1 line):
+sets the current calendar time in the system clock according to the arguments
+//\\ //// Replacement text (1+ lines):
+int settimeofday (const struct timeval *tp, const struct timezone *tzp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int settimeofday (const struct timeval *tp, const struct timezone *tzp)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The settimeofday function sets the current calendar time in the
+system clock according to the arguments.  As for gettimeofday,
+the calendar time is represented as the elapsed time since the epoch.
+As for gettimeofday, time zone information is ignored if
+tzp is a null pointer.
+
+You must be a privileged user in order to use settimeofday.
+
+Some kernels automatically set the system clock from some source such as
+a hardware clock when they start up.  Others, including Linux, place the
+system clock in an “invalid” state (in which attempts to read the clock
+fail).  A call of stime removes the system clock from an invalid
+state, and system startup scripts typically run a program that calls
+stime.
+
+settimeofday causes a sudden jump forwards or backwards, which
+can cause a variety of problems in a system.  Use adjtime (below)
+to make a smooth transition from one time to another by temporarily
+speeding up or slowing down the clock.
+
+With a Linux kernel, adjtimex does the same thing and can also
+make permanent changes to the speed of the system clock so it doesn’t
+need to be corrected as often.
+
+The return value is 0 on success and -1 on failure.  The
+following errno error conditions are defined for this function:
+
+
+EPERM
+This process cannot set the clock because it is not privileged.
+
+
+ENOSYS
+The operating system does not support setting time zone information, and
+tzp is not a null pointer.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//High_002dResolution-Calendar.html#High_002dResolution-Calendar
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/High_002dResolution-Calendar/settimeofday.txt

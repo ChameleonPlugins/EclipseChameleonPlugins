@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+this (output,print,show,say,type,write) is defined in wchar
+//\\ //// ==> completion hint (1 line):
+This type is defined in wchar
+//\\ //// Replacement text (1+ lines):
+Data type: wint_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data type: wint_t
+wint_t is a data type used for parameters and variables that
+contain a single wide character.  As the name suggests this type is the
+equivalent of int when using the normal char strings.  The
+types wchar_t and wint_t often have the same
+representation if their size is 32 bits wide but if wchar_t is
+defined as char the type wint_t must be defined as
+int due to the parameter promotion.
+
+
+This type is defined in wchar.h and was introduced in
+Amendment 1 to ISO C90.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Extended-Char-Intro.html#Extended-Char-Intro
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Extended-Char-Intro/wint_t.txt

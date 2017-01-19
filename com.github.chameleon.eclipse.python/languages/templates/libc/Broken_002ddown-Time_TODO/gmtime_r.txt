@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+is similar to localtime_r, except that it (convert,change,replace) just like gmtime (the,) given time as coordinated universal time
+//\\ //// ==> completion hint (1 line):
+is similar to localtime_r, except that it converts just like gmtime the given time as Coordinated Universal Time
+//\\ //// Replacement text (1+ lines):
+struct tm * gmtime_r (const time_t *time, struct tm *resultp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct tm * gmtime_r (const time_t *time, struct tm *resultp)
+Preliminary:
+| MT-Safe env locale
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+This function is similar to localtime_r, except that it converts
+just like gmtime the given time as Coordinated Universal Time.
+
+If the conversion is successful the function returns a pointer to the
+object the result was written into, i.e., it returns resultp.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Broken_002ddown-Time.html#Broken_002ddown-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Broken_002ddown-Time/gmtime_r.txt

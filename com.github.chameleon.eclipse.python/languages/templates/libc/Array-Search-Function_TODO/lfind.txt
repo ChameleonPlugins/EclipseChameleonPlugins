@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+searches in (the,) array with * elements of size bytes pointed to by base for (an,) element which matches (the,) one pointed to by key
+//\\ //// ==> completion hint (1 line):
+searches in the array with * elements of size bytes pointed to by base for an element which matches the one pointed to by key
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = lfind (const void *key, const void *base, size_t *nmemb, size_t size, comparison_fn_t compar)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * lfind (const void *key, const void *base, size_t *nmemb, size_t size, comparison_fn_t compar)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The lfind function searches in the array with *nmemb
+elements of size bytes pointed to by base for an element
+which matches the one pointed to by key.  The function pointed to
+by compar is used decide whether two elements match.
+
+The return value is a pointer to the matching element in the array
+starting at base if it is found.  If no matching element is
+available NULL is returned.
+
+The mean runtime of this function is *nmemb/2.  This
+function should only be used if elements often get added to or deleted from
+the array in which case it might not be useful to sort the array before
+searching.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Array-Search-Function.html#Array-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Array-Search-Function/lfind.txt

@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+this is (a,) gnu extension
+//\\ //// ==> completion hint (1 line):
+This is a GNU extension
+//\\ //// Replacement text (1+ lines):
+Macro: int O_NOATIME
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int O_NOATIME
+If this bit is set, read will not update the access time of the
+file.  See File Times.  This is used by programs that do backups, so
+that backing a file up does not count as reading it.
+Only the owner of the file or the superuser may use this bit.
+
+This is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Operating-Modes.html#Operating-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Operating-Modes/O_NOATIME.txt

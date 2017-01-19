@@ -1,0 +1,19 @@
+//\\ //// code completion entries (1+ lines):
+set proxy
+//\\ //// ==> completion hint (1 line):
+# set proxy
+//\\ //// Replacement text (1+ lines):
+# set proxy
+#import os
+os.environ['http.proxyHost'] = "web-proxy.fc.hp.com"
+os.environ['http.proxyPort'] = "8088"
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+# set proxy
+#import os
+os.environ['http.proxyHost'] = "web-proxy.fc.hp.com"
+os.environ['http.proxyPort'] = "8088"
+//\\ //// Tool tip (1 line):
+Change your specific proxy settings as needed...
+//\\

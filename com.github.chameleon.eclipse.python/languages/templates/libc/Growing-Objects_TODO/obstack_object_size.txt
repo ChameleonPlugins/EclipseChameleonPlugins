@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) current size of (the,) growing object, in bytes
+//\\ //// ==> completion hint (1 line):
+returns the current size of the growing object, in bytes
+//\\ //// Replacement text (1+ lines):
+int obstack_object_size (struct obstack *obstack-ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int obstack_object_size (struct obstack *obstack-ptr)
+Preliminary:
+| MT-Safe race:obstack-ptr
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function returns the current size of the growing object, in bytes.
+Remember to call this function before finishing the object.
+After it is finished, obstack_object_size will return zero.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Growing-Objects.html#Growing-Objects
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Growing-Objects/obstack_object_size.txt

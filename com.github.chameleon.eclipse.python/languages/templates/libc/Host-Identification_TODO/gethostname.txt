@@ -1,0 +1,48 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) host name of (the,) (box,computer,system,node,host,target) on which it is called, in (the,) array name
+//\\ //// ==> completion hint (1 line):
+returns the host name of the system on which it is called, in the array name
+//\\ //// Replacement text (1+ lines):
+int gethostname (char *name, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int gethostname (char *name, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function returns the host name of the system on which it is called,
+in the array name.  The size argument specifies the size of
+this array, in bytes.  Note that this is not the DNS hostname.
+If the system participates in DNS, this is the FQDN (see above).
+
+The return value is 0 on success and -1 on failure.  In
+the GNU C Library, gethostname fails if size is not large
+enough; then you can try again with a larger array.  The following
+errno error condition is defined for this function:
+
+
+ENAMETOOLONG
+The size argument is less than the size of the host name plus one.
+
+
+
+
+On some systems, there is a symbol for the maximum possible host name
+length: MAXHOSTNAMELEN.  It is defined in sys/param.h.
+But you can’t count on this to exist, so it is cleaner to handle
+failure and try again.
+
+gethostname stores the beginning of the host name in name
+even if the host name won’t entirely fit.  For some purposes, a
+truncated host name is good enough.  If it is, you can ignore the
+error code.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Identification.html#Host-Identification
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Identification/gethostname.txt

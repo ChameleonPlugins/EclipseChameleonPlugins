@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+if (the,) file descriptor X:FILEDESCRIPTOR is associated with (a,) master pseudo-terminal device, (the,) ptsname function (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) pointer to (a,) statically-allocated, null-terminated (string,text) containing (the,) file name of (the,) associated slave pseudo-terminal file
+//\\ //// ==> completion hint (1 line):
+If the file descriptor filedes is associated with a master pseudo-terminal device, the ptsname function returns a pointer to a statically-allocated, null-terminated string containing the file name of the associated slave pseudo-terminal file
+//\\ //// Replacement text (1+ lines):
+char * ptsname (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * ptsname (int filedes)
+Preliminary:
+| MT-Unsafe race:ptsname
+| AS-Unsafe heap/bsd
+| AC-Unsafe mem fd
+| See POSIX Safety Concepts.
+
+
+If the file descriptor filedes is associated with a
+master pseudo-terminal device, the ptsname function returns a
+pointer to a statically-allocated, null-terminated string containing the
+file name of the associated slave pseudo-terminal file.  This string
+might be overwritten by subsequent calls to ptsname.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Allocation.html#Allocation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Allocation/ptsname.txt

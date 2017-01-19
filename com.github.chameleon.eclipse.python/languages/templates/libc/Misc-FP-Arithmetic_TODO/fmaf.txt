@@ -1,0 +1,44 @@
+//\\ //// code completion entries (1+ lines):
+performs floating-point multiply-(add,append,construct,create,define,insert,make,push)
+//\\ //// ==> completion hint (1 line):
+performs floating-point multiply-add
+//\\ //// Replacement text (1+ lines):
+Function: double fma (double x, double y, double z)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double fma (double x, double y, double z)
+Function: float fmaf (float x, float y, float z)
+Function: long double fmal (long double x, long double y, long double z)
+
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The fma function performs floating-point multiply-add.  This is
+the operation (x &amp;middot; y) + z, but the
+intermediate result is not rounded to the destination type.  This can
+sometimes improve the precision of a calculation.
+
+This function was introduced because some processors have a special
+instruction to perform multiply-add.  The C compiler cannot use it
+directly, because the expression ‘x*y + z’ is defined to round the
+intermediate result.  fma lets you choose when you want to round
+only once.
+
+
+On processors which do not implement multiply-add in hardware,
+fma can be very slow since it must avoid intermediate rounding.
+math.h defines the symbols FP_FAST_FMA,
+FP_FAST_FMAF, and FP_FAST_FMAL when the corresponding
+version of fma is no slower than the expression ‘x*y + z’.
+In the GNU C Library, this always means the operation is implemented in
+hardware.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Misc-FP-Arithmetic.html#Misc-FP-Arithmetic
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Misc-FP-Arithmetic/fmaf.txt

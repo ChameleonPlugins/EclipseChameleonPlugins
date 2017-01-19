@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) pointer to (a,) statically-allocated (string,text) containing (a,) message describing (the,) signal signum
+//\\ //// ==> completion hint (1 line):
+returns a pointer to a statically-allocated string containing a message describing the signal signum
+//\\ //// Replacement text (1+ lines):
+char * strsignal (int signum)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strsignal (int signum)
+Preliminary:
+| MT-Unsafe race:strsignal locale
+| AS-Unsafe init i18n corrupt heap
+| AC-Unsafe init corrupt mem
+| See POSIX Safety Concepts.
+
+
+This function returns a pointer to a statically-allocated string
+containing a message describing the signal signum.  You
+should not modify the contents of this string; and, since it can be
+rewritten on subsequent calls, you should save a copy of it if you need
+to reference it later.
+
+
+This function is a GNU extension, declared in the header file
+string.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signal-Messages.html#Signal-Messages
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signal-Messages/strsignal.txt

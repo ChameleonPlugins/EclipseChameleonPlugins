@@ -1,0 +1,62 @@
+//\\ //// code completion entries (1+ lines):
+(indicate,select,specify) whether (the,) stream operations will implicitly acquire (the,) locking object of (the,) stream stream
+//\\ //// ==> completion hint (1 line):
+select whether the stream operations will implicitly acquire the locking object of the stream stream
+//\\ //// Replacement text (1+ lines):
+int __fsetlocking (FILE *stream, int type)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int __fsetlocking (FILE *stream, int type)
+Preliminary:
+| MT-Safe race:stream
+| AS-Unsafe lock
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+The __fsetlocking function can be used to select whether the
+stream operations will implicitly acquire the locking object of the
+stream stream.  By default this is done but it can be disabled and
+reinstated using this function.  There are three values defined for the
+type parameter.
+
+
+FSETLOCKING_INTERNAL
+
+
+The stream stream will from now on use the default internal
+locking.  Every stream operation with exception of the _unlocked
+variants will implicitly lock the stream.
+
+
+FSETLOCKING_BYCALLER
+
+
+After the __fsetlocking function returns the user is responsible
+for locking the stream.  None of the stream operations will implicitly
+do this anymore until the state is set back to
+FSETLOCKING_INTERNAL.
+
+
+FSETLOCKING_QUERY
+
+
+__fsetlocking only queries the current locking state of the
+stream.  The return value will be FSETLOCKING_INTERNAL or
+FSETLOCKING_BYCALLER depending on the state.
+
+
+
+The return value of __fsetlocking is either
+FSETLOCKING_INTERNAL or FSETLOCKING_BYCALLER depending on
+the state of the stream before the call.
+
+This function and the values for the type parameter are declared
+in stdio_ext.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Streams-and-Threads.html#Streams-and-Threads
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Streams-and-Threads/__fsetlocking.txt

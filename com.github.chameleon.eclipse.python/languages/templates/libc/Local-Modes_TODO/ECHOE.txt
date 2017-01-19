@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+this bit only controls (the,) display behavior
+//\\ //// ==> completion hint (1 line):
+This bit only controls the display behavior
+//\\ //// Replacement text (1+ lines):
+Macro: tcflag_t ECHOE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: tcflag_t ECHOE
+If this bit is set, echoing indicates erasure of input with the ERASE
+character by erasing the last character in the current line from the
+screen.  Otherwise, the character erased is re-echoed to show what has
+happened (suitable for a printing terminal).
+
+This bit only controls the display behavior; the ICANON bit by
+itself controls actual recognition of the ERASE character and erasure of
+input, without which ECHOE is simply irrelevant.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Local-Modes.html#Local-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Local-Modes/ECHOE.txt

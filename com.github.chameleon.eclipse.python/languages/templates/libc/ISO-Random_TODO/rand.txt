@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) next pseudo-random number in (the,) series
+//\\ //// ==> completion hint (1 line):
+returns the next pseudo-random number in the series
+//\\ //// Replacement text (1+ lines):
+int rand (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int rand (void)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+The rand function returns the next pseudo-random number in the
+series.  The value ranges from 0 to RAND_MAX.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//ISO-Random.html#ISO-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/ISO-Random/rand.txt

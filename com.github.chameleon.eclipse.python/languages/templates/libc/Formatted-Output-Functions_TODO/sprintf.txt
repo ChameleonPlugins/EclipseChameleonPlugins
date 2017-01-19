@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+this is like printf, except that (the,) (output,print,show,say,type,write) is stored in (the,) character array s instead of written to (a,) stream
+//\\ //// ==> completion hint (1 line):
+This is like printf, except that the output is stored in the character array s instead of written to a stream
+//\\ //// Replacement text (1+ lines):
+int sprintf (char *s, const char *template, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sprintf (char *s, const char *template, …)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+This is like printf, except that the output is stored in the character
+array s instead of written to a stream.  A null character is written
+to mark the end of the string.
+
+The sprintf function returns the number of characters stored in
+the array s, not including the terminating null character.
+
+The behavior of this function is undefined if copying takes place
+between objects that overlap—for example, if s is also given
+as an argument to be printed under control of the ‘%s’ conversion.
+See Copying and Concatenation.
+
+Warning: The sprintf function can be dangerous
+because it can potentially output more characters than can fit in the
+allocation size of the string s.  Remember that the field width
+given in a conversion specification is only a minimum value.
+
+To avoid this problem, you can use snprintf or asprintf,
+described below.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Formatted-Output-Functions.html#Formatted-Output-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Formatted-Output-Functions/sprintf.txt

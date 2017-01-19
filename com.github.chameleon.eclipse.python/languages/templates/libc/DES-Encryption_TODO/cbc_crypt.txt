@@ -1,0 +1,44 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function cbc_crypt encrypts or decrypts one or more blocks using des in cipher block chaining mode
+//\\ //// ==> completion hint (1 line):
+The function cbc_crypt encrypts or decrypts one or more blocks using DES in Cipher Block Chaining mode
+//\\ //// Replacement text (1+ lines):
+X1bc_crypt (char *key, char *blocks, unsigned len, unsigned mode, char *ivec)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int cbc_crypt (char *key, char *blocks, unsigned len, unsigned mode, char *ivec)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+The function cbc_crypt encrypts or decrypts one or more blocks
+using DES in Cipher Block Chaining mode.
+
+For encryption in CBC mode, each block is exclusive-ored with ivec
+before being encrypted, then ivec is replaced with the result of
+the encryption, then the next block is processed.  Decryption is the
+reverse of this process.
+
+This has the advantage that blocks which are the same before being
+encrypted are very unlikely to be the same after being encrypted, making
+it much harder to detect patterns in the data.
+
+Usually, ivec is set to 8 random bytes before encryption starts.
+Then the 8 random bytes are transmitted along with the encrypted data
+(without themselves being encrypted), and passed back in as ivec
+for decryption.  Another possibility is to set ivec to 8 zeroes
+initially, and have the first the block encrypted consist of 8 random
+bytes.
+
+Otherwise, all the parameters are similar to those for ecb_crypt.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//DES-Encryption.html#DES-Encryption
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/DES-Encryption/cbc_crypt.txt

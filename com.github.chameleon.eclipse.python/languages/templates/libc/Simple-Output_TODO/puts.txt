@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+(output,print,show,say,type,write) (the,) (string,text) X:TEXT to (the,) stream stdout followed by (a,) newline
+//\\ //// ==> completion hint (1 line):
+writes the string s to the stream stdout followed by a newline
+//\\ //// Replacement text (1+ lines):
+int puts (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int puts (const char *s)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+The puts function writes the string s to the stream
+stdout followed by a newline.  The terminating null character of
+the string is not written.  (Note that fputs does not
+write a newline as this function does.)
+
+puts is the most convenient function for printing simple
+messages.  For example:
+
+
+puts (&quot;This is a message.&quot;);
+
+
+outputs the text ‘This is a message.’ followed by a newline.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Simple-Output.html#Simple-Output
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Simple-Output/puts.txt

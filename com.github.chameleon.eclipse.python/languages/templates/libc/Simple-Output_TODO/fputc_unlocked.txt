@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is equivalent to (the,) fputc function except that it does not implicitly (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) stream
+//\\ //// ==> completion hint (1 line):
+is equivalent to the fputc function except that it does not implicitly lock the stream
+//\\ //// Replacement text (1+ lines):
+int fputc_unlocked (X1, FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fputc_unlocked (int c, FILE *stream)
+Preliminary:
+| MT-Safe race:stream
+| AS-Unsafe corrupt
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The fputc_unlocked function is equivalent to the fputc
+function except that it does not implicitly lock the stream.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Simple-Output.html#Simple-Output
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Simple-Output/fputc_unlocked.txt

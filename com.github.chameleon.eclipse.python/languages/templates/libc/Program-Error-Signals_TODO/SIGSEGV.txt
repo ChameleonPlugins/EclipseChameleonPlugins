@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+common ways of getting (a,) sigsegv condition include dereferencing (a,) null or uninitialized pointer, or when you use (a,) pointer to step through (an,) array, but fail to check for (the,) (end,exit,quit,(halt,pause,stop,suspend)) of (the,) array
+//\\ //// ==> completion hint (1 line):
+Common ways of getting a SIGSEGV condition include dereferencing a null or uninitialized pointer, or when you use a pointer to step through an array, but fail to check for the end of the array
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGSEGV
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGSEGV
+
+This signal is generated when a program tries to read or write outside
+the memory that is allocated for it, or to write memory that can only be
+read.  (Actually, the signals only occur when the program goes far
+enough outside to be detected by the system’s memory protection
+mechanism.)  The name is an abbreviation for “segmentation violation”.
+
+Common ways of getting a SIGSEGV condition include dereferencing
+a null or uninitialized pointer, or when you use a pointer to step
+through an array, but fail to check for the end of the array.  It varies
+among systems whether dereferencing a null pointer generates
+SIGSEGV or SIGBUS.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Program-Error-Signals.html#Program-Error-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Program-Error-Signals/SIGSEGV.txt

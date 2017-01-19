@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+(the,) state of _posix_source is irrelevant if you (add,append,construct,create,define,insert,make,push) (the,) macro _posix_c_source to (a,) positive integer
+//\\ //// ==> completion hint (1 line):
+The state of _POSIX_SOURCE is irrelevant if you define the macro _POSIX_C_SOURCE to a positive integer
+//\\ //// Replacement text (1+ lines):
+Macro: _POSIX_SOURCE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: _POSIX_SOURCE
+If you define this macro, then the functionality from the POSIX.1
+standard (IEEE Standard 1003.1) is available, as well as all of the
+ISO C facilities.
+
+The state of _POSIX_SOURCE is irrelevant if you define the
+macro _POSIX_C_SOURCE to a positive integer.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Feature-Test-Macros.html#Feature-Test-Macros
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Feature-Test-Macros/_POSIX_SOURCE.txt

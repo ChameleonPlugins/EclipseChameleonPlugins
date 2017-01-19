@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+reads (the,) next entry from (the,) stream initialized by setgrent
+//\\ //// ==> completion hint (1 line):
+reads the next entry from the stream initialized by setgrent
+//\\ //// Replacement text (1+ lines):
+struct group * getgrent (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct group * getgrent (void)
+Preliminary:
+| MT-Unsafe race:grent race:grentbuf locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+The getgrent function reads the next entry from the stream
+initialized by setgrent.  It returns a pointer to the entry.  The
+structure is statically allocated and is overwritten on subsequent calls
+to getgrent.  You must copy the contents of the structure if you
+wish to save the information.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Scanning-All-Groups.html#Scanning-All-Groups
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Scanning-All-Groups/getgrent.txt

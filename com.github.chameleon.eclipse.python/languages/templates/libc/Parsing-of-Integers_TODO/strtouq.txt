@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+is (the,) bsd name for strtoull
+//\\ //// ==> completion hint (1 line):
+is the BSD name for strtoull
+//\\ //// Replacement text (1+ lines):
+unsigned long long int strtouq (const char *restrict string, char **restrict tailptr, int base)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: unsigned long long int strtouq (const char *restrict string, char **restrict tailptr, int base)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+strtouq is the BSD name for strtoull.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Parsing-of-Integers.html#Parsing-of-Integers
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Parsing-of-Integers/strtouq.txt

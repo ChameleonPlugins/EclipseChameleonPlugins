@@ -1,0 +1,55 @@
+//\\ //// code completion entries (1+ lines):
+searches (the,) currently selected message catalogs for (a,) (string,text) which is equal to msgid
+//\\ //// ==> completion hint (1 line):
+searches the currently selected message catalogs for a string which is equal to msgid
+//\\ //// Replacement text (1+ lines):
+char * gettext (const char *msgid)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * gettext (const char *msgid)
+Preliminary:
+| MT-Safe env
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+The gettext function searches the currently selected message
+catalogs for a string which is equal to msgid.  If there is such a
+string available it is returned.  Otherwise the argument string
+msgid is returned.
+
+Please note that although the return value is char * the
+returned string must not be changed.  This broken type results from the
+history of the function and does not reflect the way the function should
+be used.
+
+Please note that above we wrote “message catalogs” (plural).  This is
+a specialty of the GNU implementation of these functions and we will
+say more about this when we talk about the ways message catalogs are
+selected (see Locating gettext catalog).
+
+The gettext function does not modify the value of the global
+errno variable.  This is necessary to make it possible to write
+something like
+
+
+  printf (gettext (&quot;Operation failed: %m\n&quot;));
+
+
+Here the errno value is used in the printf function while
+processing the %m format element and if the gettext
+function would change this value (it is called before printf is
+called) we would get a wrong message.
+
+So there is no easy way to detect a missing message catalog beside
+comparing the argument string with the result.  But it is normally the
+task of the user to react on missing catalogs.  The program cannot guess
+when a message catalog is really necessary since for a user who speaks
+the language the program was developed in does not need any translation.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Translation-with-gettext.html#Translation-with-gettext
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Translation-with-gettext/gettext.txt

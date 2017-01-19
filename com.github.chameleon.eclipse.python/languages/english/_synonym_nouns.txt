@@ -1,0 +1,2 @@
+box,computer,system,node,host,target
+string,text

@@ -1,0 +1,52 @@
+//\\ //// code completion entries (1+ lines):
+(the,) wctomb function (convert,change,replace) (the,) wide character code wchar to its corresponding multibyte character sequence, and stores (the,) result in bytes starting at (string,text)
+//\\ //// ==> completion hint (1 line):
+The wctomb function converts the wide character code wchar to its corresponding multibyte character sequence, and stores the result in bytes starting at string
+//\\ //// Replacement text (1+ lines):
+int wctomb (char *string, wchar_t wchar)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int wctomb (char *string, wchar_t wchar)
+Preliminary:
+| MT-Unsafe race
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The wctomb (“wide character to multibyte”) function converts
+the wide character code wchar to its corresponding multibyte
+character sequence, and stores the result in bytes starting at
+string.  At most MB_CUR_MAX characters are stored.
+
+wctomb with non-null string distinguishes three
+possibilities for wchar: a valid wide character code (one that can
+be translated to a multibyte character), an invalid code, and
+L'\0'.
+
+Given a valid code, wctomb converts it to a multibyte character,
+storing the bytes starting at string.  Then it returns the number
+of bytes in that character (always at least 1 and never more
+than MB_CUR_MAX).
+
+If wchar is an invalid wide character code, wctomb returns
+-1.  If wchar is L'\0', it returns 0, also
+storing '\0' in *string.
+
+If the multibyte character code uses shift characters, then
+wctomb maintains and updates a shift state as it scans.  If you
+call wctomb with a null pointer for string, that
+initializes the shift state to its standard initial value.  It also
+returns nonzero if the multibyte character code in use actually has a
+shift state.  See Shift State.
+
+Calling this function with a wchar argument of zero when
+string is not null has the side-effect of reinitializing the
+stored shift state as well as storing the multibyte character
+'\0' and returning 0.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Non_002dreentrant-Character-Conversion.html#Non_002dreentrant-Character-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Non_002dreentrant-Character-Conversion/wctomb.txt

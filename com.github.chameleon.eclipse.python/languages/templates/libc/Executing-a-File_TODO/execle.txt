@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+this is similar to execl, but permits you to (indicate,select,specify) (the,) environment for (the,) (new,) program explicitly
+//\\ //// ==> completion hint (1 line):
+This is similar to execl, but permits you to specify the environment for the new program explicitly
+//\\ //// Replacement text (1+ lines):
+int execle (X1, const char *arg0, …, char *const env[])
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int execle (const char *filename, const char *arg0, …, char *const env[])
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+This is similar to execl, but permits you to specify the
+environment for the new program explicitly.  The environment argument is
+passed following the null pointer that marks the last argv
+argument, and should be an array of strings in the same format as for
+the environ variable.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Executing-a-File.html#Executing-a-File
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Executing-a-File/execle.txt

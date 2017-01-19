@@ -1,0 +1,20 @@
+//\\ //// code completion entries (1+ lines):
+map buffer to file
+//\\ //// ==> completion hint (1 line):
+// map memory to an open file
+//\\ //// Replacement text (1+ lines):
+const int MAX_BUF = 256;
+char* buffer = malloc(MAX_BUF);
+if ((buffer = mmap(NULL, MAX_BUF, PROT_WRITE, MAP_SHARED, fd, 0)) == MAP_FAILED) {
+	perror("mmap failed");
+	exit(1);
+}
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=buffer
+X2=fd
+
+//\\ //// Help/documentation (1+ lines):
+Documentation
+//\\ //// Tool tip (1 line):
+Next: print TEXT to buffer
+//\\

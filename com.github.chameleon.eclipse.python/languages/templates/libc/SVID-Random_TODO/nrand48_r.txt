@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+works like nrand48 in that it produces (a,) random number in (the,) range 0 to 2^31
+//\\ //// ==> completion hint (1 line):
+works like nrand48 in that it produces a random number in the range 0 to 2^31
+//\\ //// Replacement text (1+ lines):
+int nrand48_r (unsigned short int xsubi[3], struct drand48_data *buffer, long int *result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int nrand48_r (unsigned short int xsubi[3], struct drand48_data *buffer, long int *result)
+Preliminary:
+| MT-Safe race:buffer
+| AS-Safe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The nrand48_r function works like nrand48 in that it
+produces a random number in the range 0 to 2^31.  But instead
+of using the global parameters for the congruential formula it uses the
+information from the buffer pointed to by buffer.  The state is
+described by the values in xsubi.
+
+If the return value is non-negative the variable pointed to by
+result contains the result.
+
+This function is a GNU extension and should not be used in portable
+programs.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/nrand48_r.txt

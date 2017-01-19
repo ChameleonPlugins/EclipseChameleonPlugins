@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) number of available processors
+//\\ //// ==> completion hint (1 line):
+returns the number of available processors
+//\\ //// Replacement text (1+ lines):
+int get_nprocs (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int get_nprocs (void)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe fd
+| See POSIX Safety Concepts.
+
+
+The get_nprocs function returns the number of available processors.
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Processor-Resources.html#Processor-Resources
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Processor-Resources/get_nprocs.txt

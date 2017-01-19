@@ -1,0 +1,49 @@
+//\\ //// code completion entries (1+ lines):
+in (the,) gnu c library, struct utmpx is identical to struct utmp except for (the,) fact that including utmpx
+//\\ //// ==> completion hint (1 line):
+In the GNU C Library, struct utmpx is identical to struct utmp except for the fact that including utmpx
+//\\ //// Replacement text (1+ lines):
+Data Type: struct utmpx
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: struct utmpx
+The utmpx data structure contains at least the following members:
+
+
+short int ut_type
+Specifies the type of login; one of EMPTY, RUN_LVL,
+BOOT_TIME, OLD_TIME, NEW_TIME, INIT_PROCESS,
+LOGIN_PROCESS, USER_PROCESS or DEAD_PROCESS.
+
+
+pid_t ut_pid
+The process ID number of the login process.
+
+
+char ut_line[]
+The device name of the tty (without /dev/).
+
+
+char ut_id[]
+The inittab ID of the process.
+
+
+char ut_user[]
+The user’s login name.
+
+
+struct timeval ut_tv
+Time the entry was made.  For entries of type OLD_TIME this is
+the time when the system clock changed, and for entries of type
+NEW_TIME this is the time the system clock was set to.
+
+
+In the GNU C Library, struct utmpx is identical to struct
+utmp except for the fact that including utmpx.h does not make
+visible the declaration of struct exit_status.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//XPG-Functions.html#XPG-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/XPG-Functions/struct utmpx.txt

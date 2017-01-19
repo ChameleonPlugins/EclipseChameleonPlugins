@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(the,) status character’s effect is to (output,print,show,say,type,write) out (a,) status message about how (the,) current process is running
+//\\ //// ==> completion hint (1 line):
+The STATUS character’s effect is to print out a status message about how the current process is running
+//\\ //// Replacement text (1+ lines):
+Macro: int VSTATUS
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int VSTATUS
+
+This is the subscript for the STATUS character in the special control
+character array.  termios.c_cc[VSTATUS] holds the character
+itself.
+
+The STATUS character’s effect is to print out a status message about how
+the current process is running.
+
+The STATUS character is recognized only in canonical mode, and only if
+NOKERNINFO is not set.
+
+This character is available only on BSD systems and GNU/Hurd systems.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Other-Special.html#Other-Special
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Other-Special/VSTATUS.txt

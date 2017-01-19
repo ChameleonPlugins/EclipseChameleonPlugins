@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function obstack_blank_fast (add,append,construct,create,define,insert,make,push) size bytes to (the,) growing object in obstack obstack-ptr without initializing them
+//\\ //// ==> completion hint (1 line):
+The function obstack_blank_fast adds size bytes to the growing object in obstack obstack-ptr without initializing them
+//\\ //// Replacement text (1+ lines):
+void obstack_blank_fast (struct obstack *obstack-ptr, int size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void obstack_blank_fast (struct obstack *obstack-ptr, int size)
+Preliminary:
+| MT-Safe race:obstack-ptr
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The function obstack_blank_fast adds size bytes to the
+growing object in obstack obstack-ptr without initializing them.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Extra-Fast-Growing.html#Extra-Fast-Growing
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Extra-Fast-Growing/obstack_blank_fast.txt

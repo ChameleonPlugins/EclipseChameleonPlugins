@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) nonnegative square root of x
+//\\ //// ==> completion hint (1 line):
+These functions return the nonnegative square root of x
+//\\ //// Replacement text (1+ lines):
+Function: double sqrt (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double sqrt (double x)
+Function: float sqrtf (float x)
+Function: long double sqrtl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return the nonnegative square root of x.
+
+If x is negative, sqrt signals a domain error.
+Mathematically, it should return a complex number.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Exponents-and-Logarithms.html#Exponents-and-Logarithms
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Exponents-and-Logarithms/sqrtl.txt

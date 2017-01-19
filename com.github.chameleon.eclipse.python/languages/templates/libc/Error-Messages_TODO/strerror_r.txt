@@ -1,0 +1,38 @@
+//\\ //// code completion entries (1+ lines):
+works like strerror but instead of returning (the,) error message in (a,) statically allocated buffer shared by all threads in (the,) process, it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) private copy for (the,) thread
+//\\ //// ==> completion hint (1 line):
+works like strerror but instead of returning the error message in a statically allocated buffer shared by all threads in the process, it returns a private copy for the thread
+//\\ //// Replacement text (1+ lines):
+char * strerror_r (int errnum, char *buf, size_t n)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strerror_r (int errnum, char *buf, size_t n)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe i18n
+| AC-Unsafe 
+| See POSIX Safety Concepts.
+
+
+The strerror_r function works like strerror but instead of
+returning the error message in a statically allocated buffer shared by
+all threads in the process, it returns a private copy for the
+thread.  This might be either some permanent global data or a message
+string in the user supplied buffer starting at buf with the
+length of n bytes.
+
+At most n characters are written (including the NUL byte) so it is
+up to the user to select the buffer large enough.
+
+This function should always be used in multi-threaded programs since
+there is no way to guarantee the string returned by strerror
+really belongs to the last call of the current thread.
+
+This function strerror_r is a GNU extension and it is declared in
+string.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Error-Messages.html#Error-Messages
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Error-Messages/strerror_r.txt

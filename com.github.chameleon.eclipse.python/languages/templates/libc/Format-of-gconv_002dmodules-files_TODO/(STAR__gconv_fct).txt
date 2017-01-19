@@ -1,0 +1,256 @@
+//\\ //// code completion entries (1+ lines):
+common to both modes is where (the,) (output,print,show,say,type,write) buffer can be found
+//\\ //// ==> completion hint (1 line):
+Common to both modes is where the output buffer can be found
+//\\ //// Replacement text (1+ lines):
+Data type: int (*__gconv_fct) (struct __gconv_step *, struct __gconv_step_data *, const char **, const char *, size_t *, int)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data type: int (*__gconv_fct) (struct __gconv_step *, struct __gconv_step_data *, const char **, const char *, size_t *, int)
+The conversion function can be called for two basic reason: to convert
+text or to reset the state.  From the description of the iconv
+function it can be seen why the flushing mode is necessary.  What mode
+is selected is determined by the sixth argument, an integer.  This
+argument being nonzero means that flushing is selected.
+
+Common to both modes is where the output buffer can be found.  The
+information about this buffer is stored in the conversion step data.  A
+pointer to this information is passed as the second argument to this
+function.  The description of the struct __gconv_step_data
+structure has more information on the conversion step data.
+
+
+What has to be done for flushing depends on the source character set.
+If the source character set is not stateful, nothing has to be done.
+Otherwise the function has to emit a byte sequence to bring the state
+object into the initial state.  Once this all happened the other
+conversion modules in the chain of conversions have to get the same
+chance.  Whether another step follows can be determined from the
+__is_last element of the step data structure to which the first
+parameter points.
+
+The more interesting mode is when actual text has to be converted.  The
+first step in this case is to convert as much text as possible from the
+input buffer and store the result in the output buffer.  The start of the
+input buffer is determined by the third argument, which is a pointer to a
+pointer variable referencing the beginning of the buffer.  The fourth
+argument is a pointer to the byte right after the last byte in the buffer.
+
+The conversion has to be performed according to the current state if the
+character set is stateful.  The state is stored in an object pointed to
+by the __statep element of the step data (second argument).  Once
+either the input buffer is empty or the output buffer is full the
+conversion stops.  At this point, the pointer variable referenced by the
+third parameter must point to the byte following the last processed
+byte (i.e., if all of the input is consumed, this pointer and the fourth
+parameter have the same value).
+
+What now happens depends on whether this step is the last one.  If it is
+the last step, the only thing that has to be done is to update the
+__outbuf element of the step data structure to point after the
+last written byte.  This update gives the caller the information on how
+much text is available in the output buffer.  In addition, the variable
+pointed to by the fifth parameter, which is of type size_t, must
+be incremented by the number of characters (not bytes) that were
+converted in a non-reversible way.  Then, the function can return.
+
+In case the step is not the last one, the later conversion functions have
+to get a chance to do their work.  Therefore, the appropriate conversion
+function has to be called.  The information about the functions is
+stored in the conversion data structures, passed as the first parameter.
+This information and the step data are stored in arrays, so the next
+element in both cases can be found by simple pointer arithmetic:
+
+
+int
+gconv (struct __gconv_step *step, struct __gconv_step_data *data,
+       const char **inbuf, const char *inbufend, size_t *written,
+       int do_flush)
+{
+  struct __gconv_step *next_step = step + 1;
+  struct __gconv_step_data *next_data = data + 1;
+  …
+
+
+The next_step pointer references the next step information and
+next_data the next data record.  The call of the next function
+therefore will look similar to this:
+
+
+  next_step-&gt;__fct (next_step, next_data, &amp;outerr, outbuf,
+                    written, 0)
+
+
+But this is not yet all.  Once the function call returns the conversion
+function might have some more to do.  If the return value of the function
+is __GCONV_EMPTY_INPUT, more room is available in the output
+buffer.  Unless the input buffer is empty the conversion, functions start
+all over again and process the rest of the input buffer.  If the return
+value is not __GCONV_EMPTY_INPUT, something went wrong and we have
+to recover from this.
+
+A requirement for the conversion function is that the input buffer
+pointer (the third argument) always point to the last character that
+was put in converted form into the output buffer.  This is trivially
+true after the conversion performed in the current step, but if the
+conversion functions deeper downstream stop prematurely, not all
+characters from the output buffer are consumed and, therefore, the input
+buffer pointers must be backed off to the right position.
+
+Correcting the input buffers is easy to do if the input and output
+character sets have a fixed width for all characters.  In this situation
+we can compute how many characters are left in the output buffer and,
+therefore, can correct the input buffer pointer appropriately with a
+similar computation.  Things are getting tricky if either character set
+has characters represented with variable length byte sequences, and it
+gets even more complicated if the conversion has to take care of the
+state.  In these cases the conversion has to be performed once again, from
+the known state before the initial conversion (i.e., if necessary the
+state of the conversion has to be reset and the conversion loop has to be
+executed again).  The difference now is that it is known how much input
+must be created, and the conversion can stop before converting the first
+unused character.  Once this is done the input buffer pointers must be
+updated again and the function can return.
+
+One final thing should be mentioned.  If it is necessary for the
+conversion to know whether it is the first invocation (in case a prolog
+has to be emitted), the conversion function should increment the
+__invocation_counter element of the step data structure just
+before returning to the caller.  See the description of the struct
+__gconv_step_data structure above for more information on how this can
+be used.
+
+The return value must be one of the following values:
+
+
+__GCONV_EMPTY_INPUT
+All input was consumed and there is room left in the output buffer.
+
+__GCONV_FULL_OUTPUT
+No more room in the output buffer.  In case this is not the last step
+this value is propagated down from the call of the next conversion
+function in the chain.
+
+__GCONV_INCOMPLETE_INPUT
+The input buffer is not entirely empty since it contains an incomplete
+character sequence.
+
+
+
+The following example provides a framework for a conversion function.
+In case a new conversion has to be written the holes in this
+implementation have to be filled and that is it.
+
+
+int
+gconv (struct __gconv_step *step, struct __gconv_step_data *data,
+       const char **inbuf, const char *inbufend, size_t *written,
+       int do_flush)
+{
+  struct __gconv_step *next_step = step + 1;
+  struct __gconv_step_data *next_data = data + 1;
+  gconv_fct fct = next_step-&gt;__fct;
+  int status;
+
+  /* If the function is called with no input this means we have
+     to reset to the initial state.  The possibly partly
+     converted input is dropped.  */
+  if (do_flush)
+    {
+      status = __GCONV_OK;
+
+      /* Possible emit a byte sequence which put the state object
+         into the initial state.  */
+
+      /* Call the steps down the chain if there are any but only
+         if we successfully emitted the escape sequence.  */
+      if (status == __GCONV_OK &amp;&amp; ! data-&gt;__is_last)
+        status = fct (next_step, next_data, NULL, NULL,
+                      written, 1);
+    }
+  else
+    {
+      /* We preserve the initial values of the pointer variables.  */
+      const char *inptr = *inbuf;
+      char *outbuf = data-&gt;__outbuf;
+      char *outend = data-&gt;__outbufend;
+      char *outptr;
+
+      do
+        {
+          /* Remember the start value for this round.  */
+          inptr = *inbuf;
+          /* The outbuf buffer is empty.  */
+          outptr = outbuf;
+
+          /* For stateful encodings the state must be safe here.  */
+
+          /* Run the conversion loop.  status is set
+             appropriately afterwards.  */
+
+          /* If this is the last step, leave the loop.  There is
+             nothing we can do.  */
+          if (data-&gt;__is_last)
+            {
+              /* Store information about how many bytes are
+                 available.  */
+              data-&gt;__outbuf = outbuf;
+
+             /* If any non-reversible conversions were performed,
+                add the number to *written.  */
+
+             break;
+           }
+
+          /* Write out all output that was produced.  */
+          if (outbuf &gt; outptr)
+            {
+              const char *outerr = data-&gt;__outbuf;
+              int result;
+
+              result = fct (next_step, next_data, &amp;outerr,
+                            outbuf, written, 0);
+
+              if (result != __GCONV_EMPTY_INPUT)
+                {
+                  if (outerr != outbuf)
+                    {
+                      /* Reset the input buffer pointer.  We
+                         document here the complex case.  */
+                      size_t nstatus;
+
+                      /* Reload the pointers.  */
+                      *inbuf = inptr;
+                      outbuf = outptr;
+
+                      /* Possibly reset the state.  */
+
+                      /* Redo the conversion, but this time
+                         the end of the output buffer is at
+                         outerr.  */
+                    }
+
+                  /* Change the status.  */
+                  status = result;
+                }
+              else
+                /* All the output is consumed, we can make
+                    another run if everything was ok.  */
+                if (status == __GCONV_FULL_OUTPUT)
+                  status = __GCONV_OK;
+           }
+        }
+      while (status == __GCONV_OK);
+
+      /* We finished one use of this step.  */
+      ++data-&gt;__invocation_counter;
+    }
+
+  return status;
+}
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//glibc-iconv-Implementation.html#Format-of-gconv_002dmodules-files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Format-of-gconv_002dmodules-files/(*__gconv_fct).txt

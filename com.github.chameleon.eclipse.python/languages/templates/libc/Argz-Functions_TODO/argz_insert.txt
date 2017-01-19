@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (the,) (string,text) entry into (the,) argz vector * at (a,) point just before (the,) existing element pointed to by before, reallocating * and updating * and *
+//\\ //// ==> completion hint (1 line):
+inserts the string entry into the argz vector * at a point just before the existing element pointed to by before, reallocating * and updating * and *
+//\\ //// Replacement text (1+ lines):
+error_t argz_insert (char **argz, size_t *argz_len, char *before, const char *entry)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: error_t argz_insert (char **argz, size_t *argz_len, char *before, const char *entry)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+The argz_insert function inserts the string entry into the
+argz vector *argz at a point just before the existing
+element pointed to by before, reallocating *argz and
+updating *argz and *argz_len.  If before
+is 0, entry is added to the end instead (as if by
+argz_add).  Since the first element is in fact the same as
+*argz, passing in *argz as the value of
+before will result in entry being inserted at the beginning.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argz-Functions.html#Argz-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argz-Functions/argz_insert.txt

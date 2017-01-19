@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+this command requires (a,) third argument of (output,print,show,say,type,write) struct flock *, as for (the,) f_setlk command
+//\\ //// ==> completion hint (1 line):
+This command requires a third argument of type struct flock *, as for the F_SETLK command
+//\\ //// Replacement text (1+ lines):
+Macro: int F_SETLKW
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int F_SETLKW
+This macro is used as the command argument to fcntl, to
+specify that it should set or clear a lock.  It is just like the
+F_SETLK command, but causes the process to block (or wait)
+until the request can be specified.
+
+This command requires a third argument of type struct flock *, as
+for the F_SETLK command.
+
+The fcntl return values and errors are the same as for the
+F_SETLK command, but these additional errno error conditions
+are defined for this command:
+
+
+EINTR
+The function was interrupted by a signal while it was waiting.
+See Interrupted Primitives.
+
+
+EDEADLK
+The specified region is being locked by another process.  But that
+process is waiting to lock a region which the current process has
+locked, so waiting for the lock would result in deadlock.  The system
+does not guarantee that it will detect all such conditions, but it lets
+you know if it notices one.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Locks.html#File-Locks
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Locks/F_SETLKW.txt

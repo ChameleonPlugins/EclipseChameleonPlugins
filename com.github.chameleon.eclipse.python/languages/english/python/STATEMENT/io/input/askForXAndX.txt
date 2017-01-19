@@ -1,0 +1,19 @@
+//\\ //// code completion entries (1+ lines):
+ask for X and X
+//\\ //// ==> completion hint (1 line):
+# ask the user for two values and set them to the names given
+//\\ //// Replacement text (1+ lines):
+# ask the user for two values and set them to the names given
+X1 = raw_input("X1? ")
+X2 = raw_input("X2? ")
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=name
+X2=age
+//\\ //// Help/documentation (1+ lines):
+Inputs:
+X1 & X2
+Outputs:
+X1 & X2
+//\\ //// Tool tip (1 line):
+
+//\\

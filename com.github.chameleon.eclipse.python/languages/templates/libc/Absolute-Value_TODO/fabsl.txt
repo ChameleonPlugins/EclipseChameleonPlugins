@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) absolute value of (the,) floating-point number number
+//\\ //// ==> completion hint (1 line):
+returns the absolute value of the floating-point number number
+//\\ //// Replacement text (1+ lines):
+Function: double fabs (double number)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double fabs (double number)
+Function: float fabsf (float number)
+Function: long double fabsl (long double number)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function returns the absolute value of the floating-point number
+number.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Absolute-Value.html#Absolute-Value
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Absolute-Value/fabsl.txt

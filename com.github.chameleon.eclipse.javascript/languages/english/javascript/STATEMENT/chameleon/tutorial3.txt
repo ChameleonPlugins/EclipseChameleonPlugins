@@ -1,0 +1,90 @@
+//\\ //// code completion entries (1+ lines):
+tutorial3
+//\\ //// ==> completion hint (1 line):
+// tutorial3 showing how to extend tutorial1's hello world program to include file i/o using Chameleon
+//\\ //// Replacement text (1+ lines):
+		
+		
+		
+		/**********************************************************************
+		 **********************************************************************
+		 * tutorial3 (for Chameleon)
+		 * 
+		 * In this tutorial we add a web (REST) call to look up a stock price,
+		 * and save that to the file. If you just finished tutorial2, delete or
+		 * comment out that code, or add this new code before or after the
+		 * existing code.
+		 *********************************************************************/
+		// 1.       HINT: You can use cut-and-paste if needed, then press a space 
+		// start to TYPE: ask "Stock Ticker (like hpq): " to ticker		
+		//    and SELECT: ask "Stock Ticker (like hpq): " to ticker variable
+ 		
+ 		
+		// 2.    HINT: You can use cut-and-paste if needed, then press a space 
+		//       TYPE: get from "http://finance.yahoo.com/d/quotes.csv?f=sb2b3jk&s="+ticker
+		// and SELECT: get from "http://finance.yahoo.com/d/quotes.csv?f=sb2b3jk&s="+ticker URL (using a web REST get call)		
+  		
+  		
+		// 3.    TYPE: say results  
+		// and SELECT: say results and go to the next line
+		
+		
+ 		/**********************************************************************
+         * Now run it with the following, from the menu:
+         * Run | Run (Or press Ctrl-F11)
+         *  
+         * A window should pop up with your question. Click anywhere in that
+         * window and enter the stock ticker (green text) and press Enter.
+         *  
+         * You should see your response.  Congratulations!
+         *   
+         * BONUS: See if you can use get date and get time to print the date
+         * and time that the stock price was obtained...
+		 **********************************************************************/
+         
+         
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+        <pre>
+		/**********************************************************************
+		 **********************************************************************
+		 * tutorial3 (for Chameleon)
+		 * 
+		 * In this tutorial we add a web (REST) call to look up a stock price,
+		 * and save that to the file. If you just finished tutorial2, delete or
+		 * comment out that code, or add this new code before or after the
+		 * existing code.
+		 *********************************************************************/
+		// 1.       HINT: You can use cut-and-paste if needed, then press a space 
+		// start to TYPE: ask "Stock Ticker (like hpq): " to ticker		
+		//    and SELECT: ask "Stock Ticker (like hpq): " to ticker variable
+ 		
+ 		
+		// 2.    HINT: You can use cut-and-paste if needed, then press a space 
+		//       TYPE: get from "http://finance.yahoo.com/d/quotes.csv?f=sb2b3jk&s="+ticker
+		// and SELECT: get from "http://finance.yahoo.com/d/quotes.csv?f=sb2b3jk&s="+ticker URL (using a web REST get call)		
+  		
+  		
+		// 3.    TYPE: say results  
+		// and SELECT: say results and go to the next line
+		
+		
+ 		/**********************************************************************
+         * Now run it with the following, from the menu:
+         * Run | Run (Or press Ctrl-F11)
+         *  
+         * A window should pop up with your question. Click anywhere in that
+         * window and enter the stock ticker (green text) and press Enter.
+         *  
+         * You should see your response.  Congratulations!
+         *   
+         * BONUS: See if you can use get date and get time to print the date
+         * and time that the stock price was obtained...
+		 **********************************************************************/
+         </pre>
+         
+         
+//\\ //// Tool tip (1 line):
+Save (Ctrl-S) then Scroll to tutorial3 (for Chameleon)
+//\\

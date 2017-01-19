@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(the,) default action for this signal is to ignore it
+//\\ //// ==> completion hint (1 line):
+The default action for this signal is to ignore it
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGCHLD
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGCHLD
+
+This signal is sent to a parent process whenever one of its child
+processes terminates or stops.
+
+The default action for this signal is to ignore it.  If you establish a
+handler for this signal while there are child processes that have
+terminated but not reported their status via wait or
+waitpid (see Process Completion), whether your new handler
+applies to those processes or not depends on the particular operating
+system.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Job-Control-Signals.html#Job-Control-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Job-Control-Signals/SIGCHLD.txt

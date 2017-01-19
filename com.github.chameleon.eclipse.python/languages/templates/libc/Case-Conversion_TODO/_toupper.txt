@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+this is identical to toupper, and is provided for compatibility with (the,) svid
+//\\ //// ==> completion hint (1 line):
+This is identical to toupper, and is provided for compatibility with the SVID
+//\\ //// Replacement text (1+ lines):
+int _toupper (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int _toupper (int c)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is identical to toupper, and is provided for compatibility
+with the SVID.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Case-Conversion.html#Case-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Case-Conversion/_toupper.txt

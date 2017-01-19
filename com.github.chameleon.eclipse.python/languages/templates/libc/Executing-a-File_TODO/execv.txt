@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+(run,execute,start) (the,) file named by X:FILENAME as (a,) (new,) process image
+//\\ //// ==> completion hint (1 line):
+executes the file named by filename as a new process image
+//\\ //// Replacement text (1+ lines):
+int execv (X1, char *const argv[])
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int execv (const char *filename, char *const argv[])
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The execv function executes the file named by filename as a
+new process image.
+
+The argv argument is an array of null-terminated strings that is
+used to provide a value for the argv argument to the main
+function of the program to be executed.  The last element of this array
+must be a null pointer.  By convention, the first element of this array
+is the file name of the program sans directory names.  See Program Arguments, for full details on how programs can access these arguments.
+
+The environment for the new process image is taken from the
+environ variable of the current process image; see
+Environment Variables, for information about environments.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Executing-a-File.html#Executing-a-File
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Executing-a-File/execv.txt

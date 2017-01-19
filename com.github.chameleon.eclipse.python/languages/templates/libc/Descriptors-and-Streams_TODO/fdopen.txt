@@ -1,0 +1,43 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) (new,) stream for (the,) file descriptor X:FILEDESCRIPTOR
+//\\ //// ==> completion hint (1 line):
+returns a new stream for the file descriptor filedes
+//\\ //// Replacement text (1+ lines):
+FILE * fdopen (X1, const char *opentype)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: FILE * fdopen (int filedes, const char *opentype)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap lock
+| AC-Unsafe mem lock
+| See POSIX Safety Concepts.
+
+
+The fdopen function returns a new stream for the file descriptor
+filedes.
+
+The opentype argument is interpreted in the same way as for the
+fopen function (see Opening Streams), except that
+the ‘b’ option is not permitted; this is because GNU systems make no
+distinction between text and binary files.  Also, &quot;w&quot; and
+&quot;w+&quot; do not cause truncation of the file; these have an effect only
+when opening a file, and in this case the file has already been opened.
+You must make sure that the opentype argument matches the actual
+mode of the open file descriptor.
+
+The return value is the new stream.  If the stream cannot be created
+(for example, if the modes for the file indicated by the file descriptor
+do not permit the access specified by the opentype argument), a
+null pointer is returned instead.
+
+In some other systems, fdopen may fail to detect that the modes
+for file descriptor do not permit the access specified by
+opentype.  The GNU C Library always checks for this.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Descriptors-and-Streams.html#Descriptors-and-Streams
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Descriptors-and-Streams/fdopen.txt

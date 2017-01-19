@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+encrypts block if edflag is 0, otherwise it decrypts block, using (a,) key previously set by setkey
+//\\ //// ==> completion hint (1 line):
+encrypts block if edflag is 0, otherwise it decrypts block, using a key previously set by setkey
+//\\ //// Replacement text (1+ lines):
+void encrypt (char *block, int edflag)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void encrypt (char *block, int edflag)
+Preliminary:
+| MT-Unsafe race:crypt
+| AS-Unsafe corrupt lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+
+The encrypt function encrypts block if
+edflag is 0, otherwise it decrypts block, using a key
+previously set by setkey.  The result is
+placed in block.
+
+Like setkey, block is specified as an array of 64 bits each
+stored in a char, but there are no parity bits in block.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//DES-Encryption.html#DES-Encryption
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/DES-Encryption/encrypt.txt

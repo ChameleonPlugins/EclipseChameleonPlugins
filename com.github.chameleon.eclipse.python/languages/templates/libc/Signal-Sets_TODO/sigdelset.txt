@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(chomp,chop,delete,destroy,drop,pop,remove) (the,) signal signum from (the,) signal set set
+//\\ //// ==> completion hint (1 line):
+removes the signal signum from the signal set set
+//\\ //// Replacement text (1+ lines):
+int sigdelset (sigset_t *set, int signum)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sigdelset (sigset_t *set, int signum)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function removes the signal signum from the signal set
+set.  All sigdelset does is modify set; it does not
+block or unblock any signals.  The return value and error conditions are
+the same as for sigaddset.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signal-Sets.html#Signal-Sets
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signal-Sets/sigdelset.txt

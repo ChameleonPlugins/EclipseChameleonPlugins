@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+there is (an,) example showing (the,) use of sigusr1 and sigusr2 in signaling another process
+//\\ //// ==> completion hint (1 line):
+There is an example showing the use of SIGUSR1 and SIGUSR2 in Signaling Another Process
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGUSR1
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGUSR1
+Macro: int SIGUSR2
+
+The SIGUSR1 and SIGUSR2 signals are set aside for you to
+use any way you want.  They’re useful for simple interprocess
+communication, if you write a signal handler for them in the program
+that receives the signal.
+
+There is an example showing the use of SIGUSR1 and SIGUSR2
+in Signaling Another Process.
+
+The default action is to terminate the process.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Miscellaneous-Signals.html#Miscellaneous-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Miscellaneous-Signals/SIGUSR1.txt

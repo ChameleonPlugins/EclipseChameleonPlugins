@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) current calendar time as (the,) elapsed time since (the,) epoch in (the,) struct timeval structure indicated by tp
+//\\ //// ==> completion hint (1 line):
+returns the current calendar time as the elapsed time since the epoch in the struct timeval structure indicated by tp
+//\\ //// Replacement text (1+ lines):
+int gettimeofday (struct timeval *tp, struct timezone *tzp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int gettimeofday (struct timeval *tp, struct timezone *tzp)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The gettimeofday function returns the current calendar time as
+the elapsed time since the epoch in the struct timeval structure
+indicated by tp.  (see Elapsed Time for a description of
+struct timeval).  Information about the time zone is returned in
+the structure pointed at tzp.  If the tzp argument is a null
+pointer, time zone information is ignored.
+
+The return value is 0 on success and -1 on failure.  The
+following errno error condition is defined for this function:
+
+
+ENOSYS
+The operating system does not support getting time zone information, and
+tzp is not a null pointer.  GNU systems do not
+support using struct timezone to represent time zone
+information; that is an obsolete feature of 4.3 BSD.
+Instead, use the facilities described in Time Zone Functions.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//High_002dResolution-Calendar.html#High_002dResolution-Calendar
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/High_002dResolution-Calendar/gettimeofday.txt

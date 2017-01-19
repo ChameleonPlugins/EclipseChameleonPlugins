@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+reads data from X:FILEDESCRIPTOR and scatters it into (the,) buffers described in vector, which is taken to be count structures long
+//\\ //// ==> completion hint (1 line):
+reads data from filedes and scatters it into the buffers described in vector, which is taken to be count structures long
+//\\ //// Replacement text (1+ lines):
+ssize_t readv (X1, const struct iovec *vector, X3ount)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X3='a'
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: ssize_t readv (int filedes, const struct iovec *vector, int count)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+
+The readv function reads data from filedes and scatters it
+into the buffers described in vector, which is taken to be
+count structures long.  As each buffer is filled, data is sent to the
+next.
+
+Note that readv is not guaranteed to fill all the buffers.
+It may stop at any point, for the same reasons read would.
+
+The return value is a count of bytes (not buffers) read, 0
+indicating end-of-file, or -1 indicating an error.  The possible
+errors are the same as in read.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Scatter_002dGather.html#Scatter_002dGather
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Scatter_002dGather/readv.txt

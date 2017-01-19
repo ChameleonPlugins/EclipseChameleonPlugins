@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+if (the,) file descriptor X:FILEDESCRIPTOR is associated with (a,) terminal device, (the,) ttyname function (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) pointer to (a,) statically-allocated, null-terminated (string,text) containing (the,) file name of (the,) terminal file
+//\\ //// ==> completion hint (1 line):
+If the file descriptor filedes is associated with a terminal device, the ttyname function returns a pointer to a statically-allocated, null-terminated string containing the file name of the terminal file
+//\\ //// Replacement text (1+ lines):
+char * ttyname (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * ttyname (int filedes)
+Preliminary:
+| MT-Unsafe race:ttyname
+| AS-Unsafe heap lock
+| AC-Unsafe lock fd mem
+| See POSIX Safety Concepts.
+
+
+If the file descriptor filedes is associated with a terminal
+device, the ttyname function returns a pointer to a
+statically-allocated, null-terminated string containing the file name of
+the terminal file.  The value is a null pointer if the file descriptor
+isn’t associated with a terminal, or the file name cannot be determined.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Is-It-a-Terminal.html#Is-It-a-Terminal
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Is-It-a-Terminal/ttyname.txt

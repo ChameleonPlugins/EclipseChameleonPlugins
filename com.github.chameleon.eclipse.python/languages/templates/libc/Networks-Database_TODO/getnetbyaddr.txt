@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) information about (the,) network of (output,print,show,say,type,write) (output,print,show,say,type,write) with number net
+//\\ //// ==> completion hint (1 line):
+returns information about the network of type type with number net
+//\\ //// Replacement text (1+ lines):
+struct netent * getnetbyaddr (uint32_t net, int type)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct netent * getnetbyaddr (uint32_t net, int type)
+Preliminary:
+| MT-Unsafe race:netbyaddr locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+The getnetbyaddr function returns information about the network
+of type type with number net.  You should specify a value of
+AF_INET for the type argument for Internet networks.
+
+getnetbyaddr returns a null pointer if there is no such
+network.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Networks-Database.html#Networks-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Networks-Database/getnetbyaddr.txt

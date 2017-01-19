@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+(the,) time slot is only meaningful in noncanonical input mode
+//\\ //// ==> completion hint (1 line):
+The TIME slot is only meaningful in noncanonical input mode
+//\\ //// Replacement text (1+ lines):
+Macro: int VTIME
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int VTIME
+
+This is the subscript for the TIME slot in the c_cc array.  Thus,
+termios.c_cc[VTIME] is the value itself.
+
+The TIME slot is only meaningful in noncanonical input mode; it
+specifies how long to wait for input before returning, in units of 0.1
+seconds.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Noncanonical-Input.html#Noncanonical-Input
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Noncanonical-Input/VTIME.txt

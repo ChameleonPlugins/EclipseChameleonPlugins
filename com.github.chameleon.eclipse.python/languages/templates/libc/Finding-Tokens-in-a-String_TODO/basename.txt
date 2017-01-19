@@ -1,0 +1,91 @@
+//\\ //// code completion entries (1+ lines):
+(the,) gnu version of (the,) basename function (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) last component of (the,) path in X:FILENAME
+//\\ //// ==> completion hint (1 line):
+The GNU version of the basename function returns the last component of the path in filename
+//\\ //// Replacement text (1+ lines):
+char * basename (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * basename (const char *filename)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The GNU version of the basename function returns the last
+component of the path in filename.  This function is the preferred
+usage, since it does not modify the argument, filename, and
+respects trailing slashes.  The prototype for basename can be
+found in string.h.  Note, this function is overriden by the XPG
+version, if libgen.h is included.
+
+Example of using GNU basename:
+
+
+#include &lt;string.h&gt;
+
+int
+main (int argc, char *argv[])
+{
+  char *prog = basename (argv[0]);
+
+  if (argc &lt; 2)
+    {
+      fprintf (stderr, &quot;Usage %s &lt;arg&gt;\n&quot;, prog);
+      exit (1);
+    }
+
+  …
+}
+
+
+Portability Note: This function may produce different results
+on different systems.
+
+
+Function: char * basename (char *path)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is the standard XPG defined basename.  It is similar in
+spirit to the GNU version, but may modify the path by removing
+trailing ’/’ characters.  If the path is made up entirely of ’/’
+characters, then &quot;/&quot; will be returned.  Also, if path is
+NULL or an empty string, then &quot;.&quot; is returned.  The prototype for
+the XPG version can be found in libgen.h.
+
+Example of using XPG basename:
+
+
+#include &lt;libgen.h&gt;
+
+int
+main (int argc, char *argv[])
+{
+  char *prog;
+  char *path = strdupa (argv[0]);
+
+  prog = basename (path);
+
+  if (argc &lt; 2)
+    {
+      fprintf (stderr, &quot;Usage %s &lt;arg&gt;\n&quot;, prog);
+      exit (1);
+    }
+
+  …
+
+}
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Finding-Tokens-in-a-String.html#Finding-Tokens-in-a-String
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Finding-Tokens-in-a-String/basename.txt

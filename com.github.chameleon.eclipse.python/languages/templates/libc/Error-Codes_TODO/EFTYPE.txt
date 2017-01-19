@@ -1,0 +1,20 @@
+//\\ //// code completion entries (1+ lines):
+on some systems chmod (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) this error if you try to set (the,) sticky bit on (a,) non-directory file
+//\\ //// ==> completion hint (1 line):
+On some systems chmod returns this error if you try to set the sticky bit on a non-directory file
+//\\ //// Replacement text (1+ lines):
+Macro: int EFTYPE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int EFTYPE
+Inappropriate file type or format.  The file was the wrong type for the
+operation, or a data file had the wrong format.
+
+On some systems chmod returns this error if you try to set the
+sticky bit on a non-directory file; see Setting Permissions.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Error-Codes.html#Error-Codes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Error-Codes/EFTYPE.txt

@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+is similar to (the,) ftruncate function
+//\\ //// ==> completion hint (1 line):
+is similar to the ftruncate function
+//\\ //// Replacement text (1+ lines):
+int ftruncate64 (int id, off64_t length)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int ftruncate64 (int id, off64_t length)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is similar to the ftruncate function.  The
+difference is that the length argument is 64 bits wide even on 32
+bits machines which allows the handling of files with sizes up to
+2^63 bytes.
+
+When the source file is compiled with _FILE_OFFSET_BITS == 64 on a
+32 bits machine this function is actually available under the name
+ftruncate and so transparently replaces the 32 bits interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Size.html#File-Size
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Size/ftruncate64.txt

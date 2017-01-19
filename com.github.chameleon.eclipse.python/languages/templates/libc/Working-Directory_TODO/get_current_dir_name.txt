@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+this get_current_dir_name function is basically equivalent to getcwd  /@w 
+//\\ //// ==> completion hint (1 line):
+This get_current_dir_name function is basically equivalent to getcwd  /@w 
+//\\ //// Replacement text (1+ lines):
+char * get_current_dir_name (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * get_current_dir_name (void)
+Preliminary:
+| MT-Safe env
+| AS-Unsafe heap
+| AC-Unsafe mem fd
+| See POSIX Safety Concepts.
+
+
+
+This get_current_dir_name function is basically equivalent to
+getcwd (NULL, 0).  The only difference is that the value of
+the PWD variable is returned if this value is correct.  This is a
+subtle difference which is visible if the path described by the
+PWD value is using one or more symbol links in which case the
+value returned by getcwd can resolve the symbol links and
+therefore yield a different result.
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Working-Directory.html#Working-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Working-Directory/get_current_dir_name.txt

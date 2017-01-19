@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+some (box,computer,system,node,host,target) have (a,) quite low limit such as 9 for (box,computer,system,node,host,target) v /@w systems
+//\\ //// ==> completion hint (1 line):
+Some system have a quite low limit such as 9 for System V /@w systems
+//\\ //// Replacement text (1+ lines):
+Macro: NL_ARGMAX
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: NL_ARGMAX
+The value of NL_ARGMAX is the maximum value allowed for the
+specification of a positional parameter in a printf call.  The
+actual value in effect at runtime can be retrieved by using
+sysconf using the _SC_NL_ARGMAX parameter see Sysconf Definition.
+
+Some system have a quite low limit such as 9 for System V
+systems.  The GNU C Library has no real limit.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Output-Conversion-Syntax.html#Output-Conversion-Syntax
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Output-Conversion-Syntax/NL_ARGMAX.txt

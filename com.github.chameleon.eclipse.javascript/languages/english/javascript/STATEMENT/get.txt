@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+get web information (a REST get call)
+//\\ //// ==> completion hint (1 line):
+// get web information (REST call)
+//\\ //// Replacement text (1+ lines):
+// get web information (REST call)
+String results = "";
+final String url = "http://YOUR_URL_GOES_HERE";
+ 
+final URLConnection urlc = new URL(url).openConnection();
+final BufferedReader br = new BufferedReader(new InputStreamReader(urlc.getInputStream()));
+String l = null;
+while ((l = br.readLine()) != null)
+{
+    results += l;
+}
+br.close();
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+// REST get
+String results = "";
+final String url = "http://finance.yahoo.com/d/quotes.csv?f=sb2b3jk&s=HPQ";
+ 
+final URLConnection urlc = new URL(url).openConnection();
+final BufferedReader br = new BufferedReader(new InputStreamReader(urlc.getInputStream()));
+String l = null;
+while ((l = br.readLine()) != null)
+{
+    results += l;
+}
+br.close();
+//\\ //// Tool tip (1 line):
+Change 'YOUR_URL_GOES_HERE' to the approrpiate url.  The results will end up in the results variable...
+//\\

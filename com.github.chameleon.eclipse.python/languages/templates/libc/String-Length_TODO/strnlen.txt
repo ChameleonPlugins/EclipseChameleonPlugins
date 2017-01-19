@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) length of (the,) (string,text) X:TEXT in bytes if this length is smaller than X:LENGTH bytes
+//\\ //// ==> completion hint (1 line):
+returns the length of the string s in bytes if this length is smaller than maxlen bytes
+//\\ //// Replacement text (1+ lines):
+size_t size=strnlen (X1, X2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+X2=20
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t strnlen (const char *s, size_t maxlen)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The strnlen function returns the length of the string s in
+bytes if this length is smaller than maxlen bytes.  Otherwise it
+returns maxlen.  Therefore this function is equivalent to
+(strlen (s) &lt; maxlen ? strlen (s) : maxlen)
+but it
+is more efficient and works even if the string s is not
+null-terminated.
+
+
+char string[32] = &quot;hello, world&quot;;
+strnlen (string, 32)
+    ? 12
+strnlen (string, 5)
+    ? 5
+
+
+This function is a GNU extension and is declared in string.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//String-Length.html#String-Length
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/String-Length/strnlen.txt

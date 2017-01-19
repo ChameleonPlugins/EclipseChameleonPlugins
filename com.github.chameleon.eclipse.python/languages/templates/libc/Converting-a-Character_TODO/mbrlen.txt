@@ -1,0 +1,43 @@
+//\\ //// code completion entries (1+ lines):
+ computes (the,) number of at most n bytes starting at s, which form (the,) next valid and complete multibyte character
+//\\ //// ==> completion hint (1 line):
+ computes the number of at most n bytes starting at s, which form the next valid and complete multibyte character
+//\\ //// Replacement text (1+ lines):
+size_t size=mbrlen (const char *restrict s, size_t n, mbstate_t *ps)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t mbrlen (const char *restrict s, size_t n, mbstate_t *ps)
+Preliminary:
+| MT-Unsafe race:mbrlen/!ps
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The mbrlen function (“multibyte restartable length”) computes
+the number of at most n bytes starting at s, which form the
+next valid and complete multibyte character.
+
+If the next multibyte character corresponds to the NUL wide character,
+the return value is 0.  If the next n bytes form a valid
+multibyte character, the number of bytes belonging to this multibyte
+character byte sequence is returned.
+
+If the first n bytes possibly form a valid multibyte
+character but the character is incomplete, the return value is
+(size_t) -2.  Otherwise the multibyte character sequence is invalid
+and the return value is (size_t) -1.
+
+The multibyte sequence is interpreted in the state represented by the
+object pointed to by ps.  If ps is a null pointer, a state
+object local to mbrlen is used.
+
+
+mbrlen was introduced in Amendment 1 to ISO C90 and
+is declared in wchar.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Converting-a-Character.html#Converting-a-Character
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Converting-a-Character/mbrlen.txt

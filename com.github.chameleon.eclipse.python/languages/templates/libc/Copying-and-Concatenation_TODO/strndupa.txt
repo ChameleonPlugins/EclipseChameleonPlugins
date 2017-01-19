@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+is similar to strndup but like strdupa it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) (new,) (string,text) using alloca see variable size automatic
+//\\ //// ==> completion hint (1 line):
+is similar to strndup but like strdupa it allocates the new string using alloca see Variable Size Automatic
+//\\ //// Replacement text (1+ lines):
+Macro: char * strndupa (X1, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Macro: char * strndupa (const char *s, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is similar to strndup but like strdupa it
+allocates the new string using alloca
+see Variable Size Automatic.  The same advantages and limitations
+of strdupa are valid for strndupa, too.
+
+This function is implemented only as a macro, just like strdupa.
+Just as strdupa this macro also must not be used inside the
+parameter list in a function call.
+
+strndupa is only available if GNU CC is used.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/strndupa.txt

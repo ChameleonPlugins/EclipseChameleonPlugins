@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+this (output,print,show,say,type,write) is (a,) gnu extension and is defined in sched
+//\\ //// ==> completion hint (1 line):
+This type is a GNU extension and is defined in sched
+//\\ //// Replacement text (1+ lines):
+Data Type: cpu_set_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: cpu_set_t
+This data set is a bitset where each bit represents a CPU.  How the
+system’s CPUs are mapped to bits in the bitset is system dependent.
+The data type has a fixed size; in the unlikely case that the number
+of bits are not sufficient to describe the CPUs of the system a
+different interface has to be used.
+
+This type is a GNU extension and is defined in sched.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//CPU-Affinity.html#CPU-Affinity
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/CPU-Affinity/cpu_set_t.txt

@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) each entry in envz2 to envz, as if with envz_add, updating * and *
+//\\ //// ==> completion hint (1 line):
+adds each entry in envz2 to envz, as if with envz_add, updating * and *
+//\\ //// Replacement text (1+ lines):
+error_t envz_merge (char **envz, size_t *envz_len, const char *envz2, size_t envz2_len, int override)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: error_t envz_merge (char **envz, size_t *envz_len, const char *envz2, size_t envz2_len, int override)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+The envz_merge function adds each entry in envz2 to envz,
+as if with envz_add, updating *envz and
+*envz_len.  If override is true, then values in envz2
+will supersede those with the same name in envz, otherwise not.
+
+Null entries are treated just like other entries in this respect, so a null
+entry in envz can prevent an entry of the same name in envz2 from
+being added to envz, if override is false.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Envz-Functions.html#Envz-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Envz-Functions/envz_merge.txt

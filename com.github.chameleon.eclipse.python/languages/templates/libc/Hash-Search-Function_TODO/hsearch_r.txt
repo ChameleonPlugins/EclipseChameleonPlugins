@@ -1,0 +1,45 @@
+//\\ //// code completion entries (1+ lines):
+is equivalent to hsearch
+//\\ //// ==> completion hint (1 line):
+is equivalent to hsearch
+//\\ //// Replacement text (1+ lines):
+int hsearch_r (ENTRY item, ACTION action, ENTRY **retval, struct hsearch_data *htab)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int hsearch_r (ENTRY item, ACTION action, ENTRY **retval, struct hsearch_data *htab)
+Preliminary:
+| MT-Safe race:htab
+| AS-Safe 
+| AC-Unsafe corrupt/action==ENTER
+| See POSIX Safety Concepts.
+
+
+
+The hsearch_r function is equivalent to hsearch.  The
+meaning of the first two arguments is identical.  But instead of
+operating on a single global hashing table the function works on the
+table described by the object pointed to by htab (which is
+initialized by a call to hcreate_r).
+
+Another difference to hcreate is that the pointer to the found
+entry in the table is not the return value of the functions.  It is
+returned by storing it in a pointer variables pointed to by the
+retval parameter.  The return value of the function is an integer
+value indicating success if it is non-zero and failure if it is zero.
+In the latter case the global variable errno signals the reason for
+the failure.
+
+
+ENOMEM
+The table is filled and hsearch_r was called with a so far
+unknown key and action set to ENTER.
+
+ESRCH
+The action parameter is FIND and no corresponding element
+is found in the table.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Hash-Search-Function.html#Hash-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Hash-Search-Function/hsearch_r.txt

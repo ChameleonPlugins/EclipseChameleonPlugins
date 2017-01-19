@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(the,) value of this symbol (output,print,show,say,type,write) nothing about (the,) utilities installed on (the,) (box,computer,system,node,host,target)
+//\\ //// ==> completion hint (1 line):
+The value of this symbol says nothing about the utilities installed on the system
+//\\ //// Replacement text (1+ lines):
+Macro: long int _POSIX2_C_VERSION
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: long int _POSIX2_C_VERSION
+This constant represents the version of the POSIX.2 standard which the
+library and system kernel support.  We don’t know what value this will
+be for the first version of the POSIX.2 standard, because the value is
+based on the year and month in which the standard is officially adopted.
+
+The value of this symbol says nothing about the utilities installed on
+the system.
+
+Usage Note: You can use this macro to tell whether a POSIX.1
+system library supports POSIX.2 as well.  Any POSIX.1 system contains
+unistd.h, so include that file and then test defined
+(_POSIX2_C_VERSION).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Version-Supported.html#Version-Supported
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Version-Supported/_POSIX2_C_VERSION.txt

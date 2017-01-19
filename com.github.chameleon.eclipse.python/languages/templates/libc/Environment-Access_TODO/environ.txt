@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+this variable is declared in (the,) header file unistd
+//\\ //// ==> completion hint (1 line):
+This variable is declared in the header file unistd
+//\\ //// Replacement text (1+ lines):
+Variable: char ** environ
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Variable: char ** environ
+The environment is represented as an array of strings.  Each string is
+of the format ‘name=value’.  The order in which
+strings appear in the environment is not significant, but the same
+name must not appear more than once.  The last element of the
+array is a null pointer.
+
+This variable is declared in the header file unistd.h.
+
+If you just want to get the value of an environment variable, use
+getenv.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Environment-Access.html#Environment-Access
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Environment-Access/environ.txt

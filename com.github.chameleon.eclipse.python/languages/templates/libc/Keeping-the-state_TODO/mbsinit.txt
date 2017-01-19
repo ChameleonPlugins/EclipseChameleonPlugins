@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+determines whether (the,) state object pointed to by ps is in (the,) initial state
+//\\ //// ==> completion hint (1 line):
+determines whether the state object pointed to by ps is in the initial state
+//\\ //// Replacement text (1+ lines):
+int mbsinit (const mbstate_t *ps)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int mbsinit (const mbstate_t *ps)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The mbsinit function determines whether the state object pointed
+to by ps is in the initial state.  If ps is a null pointer or
+the object is in the initial state the return value is nonzero.  Otherwise
+it is zero.
+
+
+mbsinit was introduced in Amendment 1 to ISO C90 and is
+declared in wchar.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Keeping-the-state.html#Keeping-the-state
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Keeping-the-state/mbsinit.txt

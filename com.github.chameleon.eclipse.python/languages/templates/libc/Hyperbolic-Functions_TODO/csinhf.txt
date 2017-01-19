@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) complex hyperbolic sine of z, defined mathematically as (exp ( /@w 
+//\\ //// ==> completion hint (1 line):
+These functions return the complex hyperbolic sine of z, defined mathematically as (exp ( /@w 
+//\\ //// Replacement text (1+ lines):
+Function: complex double csinh (complex double z)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: complex double csinh (complex double z)
+Function: complex float csinhf (complex float z)
+Function: complex long double csinhl (complex long double z)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return the complex hyperbolic sine of z, defined
+mathematically as (exp (z) - exp (-z)) / 2.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Hyperbolic-Functions.html#Hyperbolic-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Hyperbolic-Functions/csinhf.txt

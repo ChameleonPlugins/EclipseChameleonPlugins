@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) null-terminated (string,text) (string,text) into (an,) argz vector by splitting it into elements at every occurrence of (the,) character sep
+//\\ //// ==> completion hint (1 line):
+converts the null-terminated string string into an argz vector by splitting it into elements at every occurrence of the character sep
+//\\ //// Replacement text (1+ lines):
+error_t argz_create_sep (X1tring, int sep, char **argz, size_t *argz_len)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: error_t argz_create_sep (const char *string, int sep, char **argz, size_t *argz_len)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+The argz_create_sep function converts the null-terminated string
+string into an argz vector (returned in argz and
+argz_len) by splitting it into elements at every occurrence of the
+character sep.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argz-Functions.html#Argz-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argz-Functions/argz_create_sep.txt

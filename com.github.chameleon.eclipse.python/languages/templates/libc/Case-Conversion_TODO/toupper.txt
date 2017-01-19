@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+if X:CHARACTER is (a,) lower-case letter, toupper (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) corresponding upper-case letter
+//\\ //// ==> completion hint (1 line):
+If c is a lower-case letter, toupper returns the corresponding upper-case letter
+//\\ //// Replacement text (1+ lines):
+int mychar=toupper (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int toupper (int c)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+If c is a lower-case letter, toupper returns the corresponding
+upper-case letter.  Otherwise c is returned unchanged.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Case-Conversion.html#Case-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Case-Conversion/toupper.txt

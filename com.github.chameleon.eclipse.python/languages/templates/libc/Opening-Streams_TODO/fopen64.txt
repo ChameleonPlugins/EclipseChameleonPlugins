@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+is similar to fopen but (the,) stream it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) pointer for is opened using open64
+//\\ //// ==> completion hint (1 line):
+is similar to fopen but the stream it returns a pointer for is opened using open64
+//\\ //// Replacement text (1+ lines):
+FILE * fopen64 (X1, const char *opentype)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: FILE * fopen64 (const char *filename, const char *opentype)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap lock
+| AC-Unsafe mem fd lock
+| See POSIX Safety Concepts.
+
+
+This function is similar to fopen but the stream it returns a
+pointer for is opened using open64.  Therefore this stream can be
+used even on files larger than 2^31 bytes on 32 bit machines.
+
+Please note that the return type is still FILE *.  There is no
+special FILE type for the LFS interface.
+
+If the sources are compiled with _FILE_OFFSET_BITS == 64 on a 32
+bits machine this function is available under the name fopen
+and so transparently replaces the old interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Opening-Streams.html#Opening-Streams
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Opening-Streams/fopen64.txt

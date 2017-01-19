@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+generates (a,) unique file name by modifying template as described above
+//\\ //// ==> completion hint (1 line):
+generates a unique file name by modifying template as described above
+//\\ //// Replacement text (1+ lines):
+char * mktemp (char *template)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * mktemp (char *template)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The mktemp function generates a unique file name by modifying
+template as described above.  If successful, it returns
+template as modified.  If mktemp cannot find a unique file
+name, it makes template an empty string and returns that.  If
+template does not end with ‘XXXXXX’, mktemp returns a
+null pointer.
+
+Warning: Between the time the pathname is constructed and the
+file is created another process might have created a file with the same
+name using mktemp, leading to a possible security hole.  The
+implementation generates names which can hardly be predicted, but when
+opening the file you should use the O_EXCL flag.  Using
+mkstemp is a safe way to avoid this problem.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Temporary-Files.html#Temporary-Files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Temporary-Files/mktemp.txt

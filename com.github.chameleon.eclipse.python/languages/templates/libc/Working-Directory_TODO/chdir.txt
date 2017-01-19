@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+is used to set (the,) process’s working directory to X:FILENAME
+//\\ //// ==> completion hint (1 line):
+is used to set the process’s working directory to filename
+//\\ //// Replacement text (1+ lines):
+X1hdir (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int chdir (const char *filename)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is used to set the process’s working directory to
+filename.
+
+The normal, successful return value from chdir is 0.  A
+value of -1 is returned to indicate an error.  The errno
+error conditions defined for this function are the usual file name
+syntax errors (see File Name Errors), plus ENOTDIR if the
+file filename is not a directory.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Working-Directory.html#Working-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Working-Directory/chdir.txt

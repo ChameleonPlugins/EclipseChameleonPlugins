@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(instruct,tell) (the,) (box,computer,system,node,host,target) that (the,) program is done, which causes it to terminate (the,) process
+//\\ //// ==> completion hint (1 line):
+tells the system that the program is done, which causes it to terminate the process
+//\\ //// Replacement text (1+ lines):
+void exit (int status)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void exit (int status)
+Preliminary:
+| MT-Unsafe race:exit
+| AS-Unsafe corrupt
+| AC-Unsafe corrupt lock
+| See POSIX Safety Concepts.
+
+
+The exit function tells the system that the program is done, which
+causes it to terminate the process.
+
+status is the program’s exit status, which becomes part of the
+process’ termination status.  This function does not return.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Normal-Termination.html#Normal-Termination
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Normal-Termination/exit.txt

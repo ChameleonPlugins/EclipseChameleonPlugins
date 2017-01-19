@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+initializes (the,) cpu set set to be (the,) empty set
+//\\ //// ==> completion hint (1 line):
+initializes the CPU set set to be the empty set
+//\\ //// Replacement text (1+ lines):
+Macro: void CPU_ZERO (cpu_set_t *set)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: void CPU_ZERO (cpu_set_t *set)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This macro initializes the CPU set set to be the empty set.
+
+This macro is a GNU extension and is defined in sched.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//CPU-Affinity.html#CPU-Affinity
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/CPU-Affinity/CPU_ZERO.txt

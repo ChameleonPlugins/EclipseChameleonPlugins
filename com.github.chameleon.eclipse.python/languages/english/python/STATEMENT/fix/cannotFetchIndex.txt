@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+fix -bash: X: command not found
+//\\ //// ==> completion hint (1 line):
+pip install file
+//\\ //// Replacement text (1+ lines):
+# Run from shell:
+# pip install X1
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=file_to_install
+//\\ //// Help/documentation (1+ lines):
+install a pip installable file
+//\\ //// Tool tip (1 line):
+try it now...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):      
+fix/commandNotFound.txt

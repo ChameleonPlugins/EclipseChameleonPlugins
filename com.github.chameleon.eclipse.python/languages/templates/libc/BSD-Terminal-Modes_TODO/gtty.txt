@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) attributes of (a,) terminal
+//\\ //// ==> completion hint (1 line):
+gets the attributes of a terminal
+//\\ //// Replacement text (1+ lines):
+int gtty (X1, struct sgttyb *attributes)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int gtty (int filedes, struct sgttyb *attributes)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function gets the attributes of a terminal.
+
+gtty sets *attributes to describe the terminal attributes
+of the terminal which is open with file descriptor filedes.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//BSD-Terminal-Modes.html#BSD-Terminal-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/BSD-Terminal-Modes/gtty.txt

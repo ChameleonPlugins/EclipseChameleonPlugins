@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+these functions are analogous to strtod, but (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) float and long double values respectively
+//\\ //// ==> completion hint (1 line):
+These functions are analogous to strtod, but return float and long double values respectively
+//\\ //// Replacement text (1+ lines):
+Function: float strtof (X1tring, char **tailptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: float strtof (const char *string, char **tailptr)
+Function: long double strtold (const char *string, char **tailptr)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions are analogous to strtod, but return float
+and long double values respectively.  They report errors in the
+same way as strtod.  strtof can be substantially faster
+than strtod, but has less precision; conversely, strtold
+can be much slower but has more precision (on systems where long
+double is a separate type).
+
+These functions have been GNU extensions and are new to ISO C99.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Parsing-of-Floats.html#Parsing-of-Floats
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Parsing-of-Floats/strtold.txt

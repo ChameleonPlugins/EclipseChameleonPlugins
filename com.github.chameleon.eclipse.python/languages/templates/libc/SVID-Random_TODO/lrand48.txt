@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (an,) integer value in (the,) range of 0 to 2^31 
+//\\ //// ==> completion hint (1 line):
+returns an integer value in the range of 0 to 2^31 
+//\\ //// Replacement text (1+ lines):
+long int lrand48 (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int lrand48 (void)
+Preliminary:
+| MT-Unsafe race:drand48
+| AS-Unsafe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The lrand48 function returns an integer value in the range of
+0 to 2^31 (exclusive).  Even if the size of the long
+int type can take more than 32 bits, no higher numbers are returned.
+The random bits are determined by the global state of the random number
+generator in the C library.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/lrand48.txt

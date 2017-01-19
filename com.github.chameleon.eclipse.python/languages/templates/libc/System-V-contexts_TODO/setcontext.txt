@@ -1,0 +1,49 @@
+//\\ //// code completion entries (1+ lines):
+restores (the,) context described by ucp
+//\\ //// ==> completion hint (1 line):
+restores the context described by ucp
+//\\ //// Replacement text (1+ lines):
+int setcontext (const ucontext_t *ucp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setcontext (const ucontext_t *ucp)
+Preliminary:
+| MT-Safe race:ucp
+| AS-Unsafe corrupt
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+
+The setcontext function restores the context described by
+ucp.  The context is not modified and can be reused as often as
+wanted.
+
+If the context was created by getcontext execution resumes with
+the registers filled with the same values and the same stack as if the
+getcontext call just returned.
+
+If the context was modified with a call to makecontext execution
+continues with the function passed to makecontext which gets the
+specified parameters passed.  If this function returns execution is
+resumed in the context which was referenced by the uc_link
+element of the context structure passed to makecontext at the
+time of the call.  If uc_link was a null pointer the application
+terminates normally with an exit status value of EXIT_SUCCESS
+(see Program Termination).
+
+If the context was created by a call to a signal handler or from any
+other source then the behaviour of setcontext is unspecified.
+
+Since the context contains information about the stack no two threads
+should use the same context at the same time.  The result in most cases
+would be disastrous.
+
+The setcontext function does not return unless an error occurred
+in which case it returns -1.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//System-V-contexts.html#System-V-contexts
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/System-V-contexts/setcontext.txt

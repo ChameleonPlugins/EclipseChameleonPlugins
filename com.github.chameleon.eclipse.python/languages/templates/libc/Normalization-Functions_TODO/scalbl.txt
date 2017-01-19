@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is (the,) bsd name for ldexp
+//\\ //// ==> completion hint (1 line):
+is the BSD name for ldexp
+//\\ //// Replacement text (1+ lines):
+Function: double scalb (double value, double exponent)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double scalb (double value, double exponent)
+Function: float scalbf (float value, float exponent)
+Function: long double scalbl (long double value, long double exponent)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The scalb function is the BSD name for ldexp.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Normalization-Functions.html#Normalization-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Normalization-Functions/scalbl.txt

@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+reads formatted input from (the,) stream stdin under (the,) control of (the,) template (string,text) template
+//\\ //// ==> completion hint (1 line):
+reads formatted input from the stream stdin under the control of the template string template
+//\\ //// Replacement text (1+ lines):
+int wscanf (const wchar_t *template, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int wscanf (const wchar_t *template, …)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe corrupt heap
+| AC-Unsafe mem lock corrupt
+| See POSIX Safety Concepts.
+
+
+The wscanf function reads formatted input from the stream
+stdin under the control of the template string template.
+The optional arguments are pointers to the places which receive the
+resulting values.
+
+The return value is normally the number of successful assignments.  If
+an end-of-file condition is detected before any matches are performed,
+including matches against whitespace and literal characters in the
+template, then WEOF is returned.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Formatted-Input-Functions.html#Formatted-Input-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Formatted-Input-Functions/wscanf.txt

@@ -1,0 +1,131 @@
+//\\ //// code completion entries (1+ lines):
+settings
+//\\ //// ==> completion hint (1 line):
+# Show settings that need to be set in Eclipse IDE for using Chameleon 
+//\\ //// Replacement text (1+ lines):
+ """
+Settings--What Eclipse settings to set for Chameleon use...
+To configure Eclipse to support Chameleon,
+bring up the appropriate settings menu from the menu bar:
+Windows | Preferences | Java | Code Style | Clean Up
+New... & create a new "Clean up" profile (preferred--e.g. named "Chameleon") or Edit... (existing one)
+Code Organization Tab:        
+ Formatter Section:
+  [x] Format source code
+  [x] Remove trailing whitespace
+      (*) All lines
+  [x] Correct indentation
+ 
+ Code Style Tab:
+  Control statements Section:
+   [x] Use blocks in if/while/for/do statements
+       (*) Always
+
+New... & create a new "Formatter" profile (preferred--e.g. named "Chameleon") or Edit... (existing one)
+ Comments Tab:
+  General settings section:
+   [x] Enable Javadoc commented formatting
+   [ ] Enable block comment formatting
+   [x] Enable line comment formatting
+       [ ] Format line comments on first column
+   [ ] Enable header comment formatting
+   [X] Preserve white space between code and line comments
+   [ ] Never indent line comments on first column
+   [ ] Never indent block comments on first column
+   [x] Never join lines 
+
+Windows | Preferences | Java | Editor | Content Assist
+ Insertion Section:
+  [ ] Insert proposals automatically
+  [ ] Insert common proposals automatically
+ Auto Activation Section:
+  [x] Enable auto activation
+      Auto activation delay (ms): 200
+      Auto activation triggers for Java: .abcdefghijklmnopqrstuvwxyz
+
+ Windows | Preferences | Java | Editor | Content Assist | Advanced
+   Uncheck *ALL* Checkboxes
+   Check *BOTH* Chameleon entries.
+
+ Windows | Preferences | Java | Editor | Save Actions
+ [x] Perform the selected actions on save
+     [x] Format source code
+         (*) Format all lines
+     [x] Organize imports
+     [x] Additional actions...
+         . Add missing '@Override' annotations
+         . Add missing '@Override' annotations to implementations of interface methods
+         . Add missing '@Deprecated' annotations
+         . Remove unnecessary casts
+
+To set space to NOT trigger autocomplete, get jar found here: http://stackoverflow.com/questions/14297735/stop-spacebar-keypress-from-triggering-autocomplete-in-eclipse
+For out-of-memory issues: http://www.freshblurbs.com/blog/2005/05/19/explaining-java-lang-outofmemoryerror-permgen-space.html          
+"""         
+
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+<pre>
+Settings--What Eclipse settings to set for Chameleon use...
+To configure Eclipse to support Chameleon,
+bring up the appropriate settings menu from the menu bar:
+Windows | Preferences | Java | Code Style | Clean Up
+New... & create a new "Clean up" profile (preferred--e.g. named "Chameleon") or Edit... (existing one)
+Code Organization Tab:        
+ Formatter Section:
+  [x] Format source code
+  [x] Remove trailing whitespace
+      (*) All lines
+  [x] Correct indentation
+ 
+ Code Style Tab:
+  Control statements Section:
+   [x] Use blocks in if/while/for/do statements
+       (*) Always
+
+New... & create a new "Formatter" profile (preferred--e.g. named "Chameleon") or Edit... (existing one)
+ Comments Tab:
+  General settings section:
+   [x] Enable Javadoc commented formatting
+   [ ] Enable block comment formatting
+   [x] Enable line comment formatting
+       [ ] Format line comments on first column
+   [ ] Enable header comment formatting
+   [X] Preserve white space between code and line comments
+   [ ] Never indent line comments on first column
+   [ ] Never indent block comments on first column
+   [x] Never join lines 
+
+Windows | Preferences | Java | Editor | Content Assist
+ Insertion Section:
+  [ ] Insert proposals automatically
+  [ ] Insert common proposals automatically
+ Auto Activation Section:
+  [x] Enable auto activation
+      Auto activation delay (ms): 200
+      Auto activation triggers for Java: .abcdefghijklmnopqrstuvwxyz
+
+ Windows | Preferences | Java | Editor | Content Assist | Advanced
+   Uncheck *ALL* Checkboxes
+   Check *BOTH* Chameleon entries.
+
+ Windows | Preferences | Java | Editor | Save Actions
+ [x] Perform the selected acitons on save
+     [x] Format source code
+         (*) Format all lines
+     [x] Organize imports
+     [x] Additional actions...
+         . Add missing '@Override' annotations
+         . Add missing '@Override' annotations to implementations of interface methods
+         . Add missing '@Deprecated' annotations
+         . Remove unnecessary casts
+
+To set space to NOT trigger autocomplete, get jar found here: http://stackoverflow.com/questions/14297735/stop-spacebar-keypress-from-triggering-autocomplete-in-eclipse
+For out-of-memory issues: http://www.freshblurbs.com/blog/2005/05/19/explaining-java-lang-outofmemoryerror-permgen-space.html          
+</pre>
+
+
+//\\ //// Tool tip (1 line):
+Menu:  Windows | Preferences | Java | Code Style
+//\\
+

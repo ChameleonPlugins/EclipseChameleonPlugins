@@ -1,0 +1,20 @@
+//\\ //// code completion entries (1+ lines):
+when compiling with _file_offset_bits == 64 this (output,print,show,say,type,write) is available under (the,) name blkcnt_t
+//\\ //// ==> completion hint (1 line):
+When compiling with _FILE_OFFSET_BITS == 64 this type is available under the name blkcnt_t
+//\\ //// Replacement text (1+ lines):
+Data Type: blkcnt64_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: blkcnt64_t
+This is a signed integer type used to represent block counts for the
+use in LFS.  In the GNU C Library, this type is no narrower than int.
+
+When compiling with _FILE_OFFSET_BITS == 64 this type is
+available under the name blkcnt_t.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Attribute-Meanings.html#Attribute-Meanings
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Attribute-Meanings/blkcnt64_t.txt

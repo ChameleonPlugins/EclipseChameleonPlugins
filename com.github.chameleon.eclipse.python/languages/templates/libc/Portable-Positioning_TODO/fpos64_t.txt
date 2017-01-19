@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+in (the,) gnu c library, fpos64_t is (an,) opaque data structure that contains internal data to represent file offset and conversion state information
+//\\ //// ==> completion hint (1 line):
+In the GNU C Library, fpos64_t is an opaque data structure that contains internal data to represent file offset and conversion state information
+//\\ //// Replacement text (1+ lines):
+Data Type: fpos64_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: fpos64_t
+This is the type of an object that can encode information about the
+file position of a stream, for use by the functions fgetpos64 and
+fsetpos64.
+
+In the GNU C Library, fpos64_t is an opaque data structure that
+contains internal data to represent file offset and conversion state
+information.  In other systems, it might have a different internal
+representation.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Portable-Positioning.html#Portable-Positioning
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Portable-Positioning/fpos64_t.txt

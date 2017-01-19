@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) pointer to (a,) statically-allocated structure containing information about (the,) group whose group id is gid
+//\\ //// ==> completion hint (1 line):
+returns a pointer to a statically-allocated structure containing information about the group whose group ID is gid
+//\\ //// Replacement text (1+ lines):
+struct group * getgrgid (gid_t gid)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct group * getgrgid (gid_t gid)
+Preliminary:
+| MT-Unsafe race:grgid locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function returns a pointer to a statically-allocated structure
+containing information about the group whose group ID is gid.
+This structure may be overwritten by subsequent calls to
+getgrgid.
+
+A null pointer indicates there is no group with ID gid.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Lookup-Group.html#Lookup-Group
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Lookup-Group/getgrgid.txt

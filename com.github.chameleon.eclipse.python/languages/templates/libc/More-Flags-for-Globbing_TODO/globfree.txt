@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(deallocate,free,release) all resources allocated by previous calls to glob associated with (the,) object pointed to by pglob
+//\\ //// ==> completion hint (1 line):
+frees all resources allocated by previous calls to glob associated with the object pointed to by pglob
+//\\ //// Replacement text (1+ lines):
+void globfree (glob_t *pglob)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void globfree (glob_t *pglob)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt heap
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+The globfree function frees all resources allocated by previous
+calls to glob associated with the object pointed to by
+pglob.  This function should be called whenever the currently used
+glob_t typed object isn’t used anymore.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//More-Flags-for-Globbing.html#More-Flags-for-Globbing
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/More-Flags-for-Globbing/globfree.txt

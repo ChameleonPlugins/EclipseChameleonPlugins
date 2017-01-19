@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+this command requires (a,) third argument of (output,print,show,say,type,write) struct flock *, as for (the,) f_ofd_setlk command
+//\\ //// ==> completion hint (1 line):
+This command requires a third argument of type struct flock *, as for the F_OFD_SETLK command
+//\\ //// Replacement text (1+ lines):
+Macro: int F_OFD_SETLKW
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int F_OFD_SETLKW
+This macro is used as the command argument to fcntl, to
+specify that it should set or clear a lock.  It is just like the
+F_OFD_SETLK command, but causes the process to wait until the request
+can be completed.
+
+This command requires a third argument of type struct flock *, as
+for the F_OFD_SETLK command.
+
+The fcntl return values and errors are the same as for the
+F_OFD_SETLK command, but these additional errno error conditions
+are defined for this command:
+
+
+EINTR
+The function was interrupted by a signal while it was waiting.
+See Interrupted Primitives.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Open-File-Description-Locks.html#Open-File-Description-Locks
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Open-File-Description-Locks/F_OFD_SETLKW.txt

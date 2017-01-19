@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+this is (a,) bsd extension
+//\\ //// ==> completion hint (1 line):
+This is a BSD extension
+//\\ //// Replacement text (1+ lines):
+Macro: tcflag_t IXANY
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: tcflag_t IXANY
+If this bit is set, any input character restarts output when output has
+been suspended with the STOP character.  Otherwise, only the START
+character restarts output.
+
+This is a BSD extension; it exists only on BSD systems and
+GNU/Linux and GNU/Hurd systems.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Input-Modes.html#Input-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Input-Modes/IXANY.txt

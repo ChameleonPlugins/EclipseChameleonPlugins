@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+this (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) number of bytes that can be added safely to (the,) current growing object in obstack obstack using (the,) fast growth functions
+//\\ //// ==> completion hint (1 line):
+This returns the number of bytes that can be added safely to the current growing object in obstack obstack using the fast growth functions
+//\\ //// Replacement text (1+ lines):
+int obstack_room (struct obstack *obstack-ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int obstack_room (struct obstack *obstack-ptr)
+Preliminary:
+| MT-Safe race:obstack-ptr
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This returns the number of bytes that can be added safely to the current
+growing object (or to an object about to be started) in obstack
+obstack using the fast growth functions.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Extra-Fast-Growing.html#Extra-Fast-Growing
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Extra-Fast-Growing/obstack_room.txt

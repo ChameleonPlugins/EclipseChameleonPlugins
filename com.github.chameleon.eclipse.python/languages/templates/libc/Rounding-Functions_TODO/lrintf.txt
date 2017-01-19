@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+these functions are just like rint, but they (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) long int instead of (a,) floating-point number
+//\\ //// ==> completion hint (1 line):
+These functions are just like rint, but they return a long int instead of a floating-point number
+//\\ //// Replacement text (1+ lines):
+Function: long int lrint (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int lrint (double x)
+Function: long int lrintf (float x)
+Function: long int lrintl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions are just like rint, but they return a
+long int instead of a floating-point number.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Rounding-Functions.html#Rounding-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Rounding-Functions/lrintf.txt

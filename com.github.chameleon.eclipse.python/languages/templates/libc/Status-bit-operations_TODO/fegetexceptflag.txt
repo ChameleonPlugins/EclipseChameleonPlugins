@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+stores in (the,) variable pointed to by flagp (an,) implementation-defined value representing (the,) current setting of (the,) exception flags indicated by excepts
+//\\ //// ==> completion hint (1 line):
+stores in the variable pointed to by flagp an implementation-defined value representing the current setting of the exception flags indicated by excepts
+//\\ //// Replacement text (1+ lines):
+int fegetexceptflag (fexcept_t *flagp, int excepts)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fegetexceptflag (fexcept_t *flagp, int excepts)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function stores in the variable pointed to by flagp an
+implementation-defined value representing the current setting of the
+exception flags indicated by excepts.
+
+The function returns zero in case the operation was successful, a
+non-zero value otherwise.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Status-bit-operations.html#Status-bit-operations
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Status-bit-operations/fegetexceptflag.txt

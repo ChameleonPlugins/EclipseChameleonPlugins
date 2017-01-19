@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is (the,) equivalent of obstack_printf with (the,) variable argument list specified directly as for vprintf
+//\\ //// ==> completion hint (1 line):
+is the equivalent of obstack_printf with the variable argument list specified directly as for vprintf
+//\\ //// Replacement text (1+ lines):
+int obstack_vprintf (struct obstack *obstack, const char *template, va_list ap)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int obstack_vprintf (struct obstack *obstack, const char *template, va_list ap)
+Preliminary:
+| MT-Safe race:obstack locale
+| AS-Unsafe corrupt heap
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+The obstack_vprintf function is the equivalent of
+obstack_printf with the variable argument list specified directly
+as for vprintf.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Variable-Arguments-Output.html#Variable-Arguments-Output
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Variable-Arguments-Output/obstack_vprintf.txt

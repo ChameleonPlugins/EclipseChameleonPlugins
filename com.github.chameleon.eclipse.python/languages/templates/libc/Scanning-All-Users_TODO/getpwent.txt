@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+reads (the,) next entry from (the,) stream initialized by setpwent
+//\\ //// ==> completion hint (1 line):
+reads the next entry from the stream initialized by setpwent
+//\\ //// Replacement text (1+ lines):
+struct passwd * getpwent (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct passwd * getpwent (void)
+Preliminary:
+| MT-Unsafe race:pwent race:pwentbuf locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+The getpwent function reads the next entry from the stream
+initialized by setpwent.  It returns a pointer to the entry.  The
+structure is statically allocated and is rewritten on subsequent calls
+to getpwent.  You must copy the contents of the structure if you
+wish to save the information.
+
+A null pointer is returned when no more entries are available.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Scanning-All-Users.html#Scanning-All-Users
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Scanning-All-Users/getpwent.txt

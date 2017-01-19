@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(the,) susp 
+//\\ //// ==> completion hint (1 line):
+The SUSP 
+//\\ //// Replacement text (1+ lines):
+Macro: int VSUSP
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int VSUSP
+
+
+This is the subscript for the SUSP character in the special control
+character array.  termios.c_cc[VSUSP] holds the character
+itself.
+
+The SUSP (suspend) character is recognized only if the implementation
+supports job control (see Job Control).  It causes a SIGTSTP
+signal to be sent to all processes in the foreground job associated with
+the terminal.  The SUSP character itself is then discarded.
+See Signal Handling, for more information about signals.
+
+Typically, the SUSP character is C-z.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signal-Characters.html#Signal-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signal-Characters/VSUSP.txt

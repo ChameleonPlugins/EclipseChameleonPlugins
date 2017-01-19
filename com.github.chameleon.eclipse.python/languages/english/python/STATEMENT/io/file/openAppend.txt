@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push,open) (a )?file X:FILE as X:NAME to (write,append) to 
+//\\ //// ==> completion hint (1 line):
+# open a file in append mode for writing text to it
+//\\ //// Replacement text (1+ lines):
+X2 = open(X1, "a")
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="file.txt"
+X2=myfile
+//\\ //// Help/documentation (1+ lines):
+# open a file in append mode for writing text to it
+X2 = open(X1, "a")
+//\\ //// Tool tip (1 line):
+Update 'file' and "file.txt" if needed...
+//\\

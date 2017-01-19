@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) file access and modification times of (the,) file X:FILENAME
+//\\ //// ==> completion hint (1 line):
+sets the file access and modification times of the file filename
+//\\ //// Replacement text (1+ lines):
+int utimes (X1, const struct timeval tvp[2])
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int utimes (const char *filename, const struct timeval tvp[2])
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function sets the file access and modification times of the file
+filename.  The new file access time is specified by
+tvp[0], and the new modification time by
+tvp[1].  Similar to utime, if tvp is a null
+pointer then the access and modification times of the file are set to
+the current time.  This function comes from BSD.
+
+The return values and error conditions are the same as for the utime
+function.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Times.html#File-Times
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Times/utimes.txt

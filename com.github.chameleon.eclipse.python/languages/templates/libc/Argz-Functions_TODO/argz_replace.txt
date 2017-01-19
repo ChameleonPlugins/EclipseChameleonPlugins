@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) any occurrences of (the,) (string,text) str in argz with with, reallocating argz as necessary
+//\\ //// ==> completion hint (1 line):
+Replace any occurrences of the string str in argz with with, reallocating argz as necessary
+//\\ //// Replacement text (1+ lines):
+error_t argz_replace (char **argz, size_t *argz_len, const char *str, const char *with, unsigned *replace_count)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: error_t argz_replace (char **argz, size_t *argz_len, const char *str, const char *with, unsigned *replace_count)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+Replace any occurrences of the string str in argz with
+with, reallocating argz as necessary.  If
+replace_count is non-zero, *replace_count will be
+incremented by number of replacements performed.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argz-Functions.html#Argz-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argz-Functions/argz_replace.txt

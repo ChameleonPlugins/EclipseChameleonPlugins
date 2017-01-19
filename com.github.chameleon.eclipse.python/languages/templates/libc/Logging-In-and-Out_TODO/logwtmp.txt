@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (an,) entry to (the,) user accounting log file, for (the,) current time and (the,) information provided in (the,) ut_line, ut_name and ut_host arguments
+//\\ //// ==> completion hint (1 line):
+appends an entry to the user accounting log file, for the current time and the information provided in the ut_line, ut_name and ut_host arguments
+//\\ //// Replacement text (1+ lines):
+void logwtmp (const char *ut_line, const char *ut_name, const char *ut_host)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void logwtmp (const char *ut_line, const char *ut_name, const char *ut_host)
+Preliminary:
+| MT-Unsafe sig:ALRM timer
+| AS-Unsafe 
+| AC-Unsafe fd
+| See POSIX Safety Concepts.
+
+
+The logwtmp function appends an entry to the user accounting log
+file, for the current time and the information provided in the
+ut_line, ut_name and ut_host arguments.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Logging-In-and-Out.html#Logging-In-and-Out
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Logging-In-and-Out/logwtmp.txt

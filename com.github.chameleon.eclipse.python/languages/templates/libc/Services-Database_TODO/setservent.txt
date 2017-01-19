@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+opens (the,) services database to begin scanning it
+//\\ //// ==> completion hint (1 line):
+opens the services database to begin scanning it
+//\\ //// Replacement text (1+ lines):
+void setservent (int stayopen)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void setservent (int stayopen)
+Preliminary:
+| MT-Unsafe race:servent locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function opens the services database to begin scanning it.
+
+If the stayopen argument is nonzero, this sets a flag so that
+subsequent calls to getservbyname or getservbyport will
+not close the database (as they usually would).  This makes for more
+efficiency if you call those functions several times, by avoiding
+reopening the database for each call.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Services-Database.html#Services-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Services-Database/setservent.txt

@@ -1,0 +1,17 @@
+//\\ //// code completion entries (1+ lines):
+(create,write,make,start) (,an )excel (file,workbook) named X:NAME
+(create,write,make,start) (a ,)(workbook) named X:NAME
+//\\ //// ==> completion hint (1 line):
+Create an Excel file
+//\\ //// Replacement text (1+ lines):
+# //// One time install: $ sudo pip install XlsxWriter # https://xlsxwriter.readthedocs.org/getting_started.html#installing-xlsxwriter
+# import xlsxwriter # //// Uncomment this if needed
+workbook = xlsxwriter.Workbook(X1)
+# //// Next Step: create excel worksheet
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1='hello.xlsx'
+//\\ //// Help/documentation (1+ lines):
+https://xlsxwriter.readthedocs.org/getting_started.html#running-a-sample-program
+//\\ //// Tool tip (1 line):
+# //// Next Step: create excel worksheet
+//\\

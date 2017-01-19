@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+is similar to (the,) gettext function as it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) message catalogs in (the,) same way
+//\\ //// ==> completion hint (1 line):
+is similar to the gettext function as it finds the message catalogs in the same way
+//\\ //// Replacement text (1+ lines):
+char * ngettext (const char *msgid1, const char *msgid2, unsigned long int n)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * ngettext (const char *msgid1, const char *msgid2, unsigned long int n)
+Preliminary:
+| MT-Safe env
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+The ngettext function is similar to the gettext function
+as it finds the message catalogs in the same way.  But it takes two
+extra arguments.  The msgid1 parameter must contain the singular
+form of the string to be converted.  It is also used as the key for the
+search in the catalog.  The msgid2 parameter is the plural form.
+The parameter n is used to determine the plural form.  If no
+message catalog is found msgid1 is returned if n == 1,
+otherwise msgid2.
+
+An example for the us of this function is:
+
+
+  printf (ngettext (&quot;%d file removed&quot;, &quot;%d files removed&quot;, n), n);
+
+
+Please note that the numeric value n has to be passed to the
+printf function as well.  It is not sufficient to pass it only to
+ngettext.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Advanced-gettext-functions.html#Advanced-gettext-functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Advanced-gettext-functions/ngettext.txt

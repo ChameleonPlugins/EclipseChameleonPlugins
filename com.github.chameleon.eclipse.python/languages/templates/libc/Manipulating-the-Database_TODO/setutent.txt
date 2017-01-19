@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+opens (the,) user accounting database to begin scanning it
+//\\ //// ==> completion hint (1 line):
+opens the user accounting database to begin scanning it
+//\\ //// Replacement text (1+ lines):
+void setutent (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void setutent (void)
+Preliminary:
+| MT-Unsafe race:utent
+| AS-Unsafe lock
+| AC-Unsafe lock fd
+| See POSIX Safety Concepts.
+
+
+
+This function opens the user accounting database to begin scanning it.
+You can then call getutent, getutid or getutline to
+read entries and pututline to write entries.
+
+If the database is already open, it resets the input to the beginning of
+the database.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Manipulating-the-Database.html#Manipulating-the-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Manipulating-the-Database/setutent.txt

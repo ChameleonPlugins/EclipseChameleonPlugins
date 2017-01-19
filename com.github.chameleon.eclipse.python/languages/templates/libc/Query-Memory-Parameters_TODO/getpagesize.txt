@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) page size of (the,) process
+//\\ //// ==> completion hint (1 line):
+returns the page size of the process
+//\\ //// Replacement text (1+ lines):
+int getpagesize (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getpagesize (void)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The getpagesize function returns the page size of the process.
+This value is fixed for the runtime of the process but can vary in
+different runs of the application.
+
+The function is declared in unistd.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Query-Memory-Parameters.html#Query-Memory-Parameters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Query-Memory-Parameters/getpagesize.txt

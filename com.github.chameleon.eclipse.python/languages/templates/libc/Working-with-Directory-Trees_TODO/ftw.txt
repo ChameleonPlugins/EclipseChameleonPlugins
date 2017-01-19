@@ -1,0 +1,68 @@
+//\\ //// code completion entries (1+ lines):
+calls (the,) callback function given in (the,) parameter func for every item which is found in (the,) directory specified by X:FILENAME and all directories below
+//\\ //// ==> completion hint (1 line):
+calls the callback function given in the parameter func for every item which is found in the directory specified by filename and all directories below
+//\\ //// Replacement text (1+ lines):
+int ftw (X1, __ftw_func_t func, int descriptors)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int ftw (const char *filename, __ftw_func_t func, int descriptors)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem fd
+| See POSIX Safety Concepts.
+
+
+The ftw function calls the callback function given in the
+parameter func for every item which is found in the directory
+specified by filename and all directories below.  The function
+follows symbolic links if necessary but does not process an item twice.
+If filename is not a directory then it itself is the only object
+returned to the callback function.
+
+The file name passed to the callback function is constructed by taking
+the filename parameter and appending the names of all passed
+directories and then the local file name.  So the callback function can
+use this parameter to access the file.  ftw also calls
+stat for the file and passes that information on to the callback
+function.  If this stat call was not successful the failure is
+indicated by setting the third argument of the callback function to
+FTW_NS.  Otherwise it is set according to the description given
+in the account of __ftw_func_t above.
+
+The callback function is expected to return 0 to indicate that no
+error occurred and that processing should continue.  If an error
+occurred in the callback function or it wants ftw to return
+immediately, the callback function can return a value other than
+0.  This is the only correct way to stop the function.  The
+program must not use setjmp or similar techniques to continue
+from another place.  This would leave resources allocated by the
+ftw function unfreed.
+
+The descriptors parameter to ftw specifies how many file
+descriptors it is allowed to consume.  The function runs faster the more
+descriptors it can use.  For each level in the directory hierarchy at
+most one descriptor is used, but for very deep ones any limit on open
+file descriptors for the process or the system may be exceeded.
+Moreover, file descriptor limits in a multi-threaded program apply to
+all the threads as a group, and therefore it is a good idea to supply a
+reasonable limit to the number of open descriptors.
+
+The return value of the ftw function is 0 if all callback
+function calls returned 0 and all actions performed by the
+ftw succeeded.  If a function call failed (other than calling
+stat on an item) the function returns -1.  If a callback
+function returns a value other than 0 this value is returned as
+the return value of ftw.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 on a
+32-bit system this function is in fact ftw64, i.e., the LFS
+interface transparently replaces the old interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Working-with-Directory-Trees.html#Working-with-Directory-Trees
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Working-with-Directory-Trees/ftw.txt

@@ -1,0 +1,38 @@
+//\\ //// code completion entries (1+ lines):
+(the,) wcstombs function (convert,change,replace) (the,) null-terminated wide character array wstring into (a,) (string,text) containing multibyte characters, storing not more than size bytes starting at (string,text), followed by (a,) terminating null character if there is room
+//\\ //// ==> completion hint (1 line):
+The wcstombs function converts the null-terminated wide character array wstring into a string containing multibyte characters, storing not more than size bytes starting at string, followed by a terminating null character if there is room
+//\\ //// Replacement text (1+ lines):
+size_t size=wcstombs (char *string, const wchar_t *wstring, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t wcstombs (char *string, const wchar_t *wstring, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The wcstombs (“wide character string to multibyte string”)
+function converts the null-terminated wide character array wstring
+into a string containing multibyte characters, storing not more than
+size bytes starting at string, followed by a terminating
+null character if there is room.  The conversion of characters begins in
+the initial shift state.
+
+The terminating null character counts towards the size, so if size
+is less than or equal to the number of bytes needed in wstring, no
+terminating null character is stored.
+
+If a code that does not correspond to a valid multibyte character is
+found, the wcstombs function returns a value of -1.
+Otherwise, the return value is the number of bytes stored in the array
+string.  This number does not include the terminating null character,
+which is present if the number is less than size.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Non_002dreentrant-String-Conversion.html#Non_002dreentrant-String-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Non_002dreentrant-String-Conversion/wcstombs.txt

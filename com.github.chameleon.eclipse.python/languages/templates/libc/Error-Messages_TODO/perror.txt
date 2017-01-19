@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+(output,print,show,say,type,write) (an,) error message to (the,) stream stderr
+//\\ //// ==> completion hint (1 line):
+prints an error message to the stream stderr
+//\\ //// Replacement text (1+ lines):
+void perror (const char *message)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void perror (const char *message)
+Preliminary:
+| MT-Safe race:stderr
+| AS-Unsafe corrupt i18n heap lock
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+This function prints an error message to the stream stderr;
+see Standard Streams.  The orientation of stderr is not
+changed.
+
+If you call perror with a message that is either a null
+pointer or an empty string, perror just prints the error message
+corresponding to errno, adding a trailing newline.
+
+If you supply a non-null message argument, then perror
+prefixes its output with this string.  It adds a colon and a space
+character to separate the message from the error string corresponding
+to errno.
+
+The function perror is declared in stdio.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Error-Messages.html#Error-Messages
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Error-Messages/perror.txt

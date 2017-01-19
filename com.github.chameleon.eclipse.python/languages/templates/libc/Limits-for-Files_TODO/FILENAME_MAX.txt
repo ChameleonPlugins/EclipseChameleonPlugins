@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+unlike path_max, this macro is defined even if there is no actual limit imposed
+//\\ //// ==> completion hint (1 line):
+Unlike PATH_MAX, this macro is defined even if there is no actual limit imposed
+//\\ //// Replacement text (1+ lines):
+Macro: int FILENAME_MAX
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int FILENAME_MAX
+The value of this macro is an integer constant expression that
+represents the maximum length of a file name string.  It is defined in
+stdio.h.
+
+Unlike PATH_MAX, this macro is defined even if there is no actual
+limit imposed.  In such a case, its value is typically a very large
+number.  This is always the case on GNU/Hurd systems.
+
+Usage Note: Don’t use FILENAME_MAX as the size of an
+array in which to store a file name!  You can’t possibly make an array
+that big!  Use dynamic allocation (see Memory Allocation) instead.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Limits-for-Files.html#Limits-for-Files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Limits-for-Files/FILENAME_MAX.txt

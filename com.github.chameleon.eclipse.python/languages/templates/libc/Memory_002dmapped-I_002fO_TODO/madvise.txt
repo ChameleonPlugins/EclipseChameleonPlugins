@@ -1,0 +1,94 @@
+//\\ //// code completion entries (1+ lines):
+provide (the,) (box,computer,system,node,host,target) with advice about (the,) intended usage patterns of (the,) memory region starting at X:ADDRESS and extending X:LENGTH bytes
+//\\ //// ==> completion hint (1 line):
+provide the system with advice about the intended usage patterns of the memory region starting at addr and extending length bytes
+//\\ //// Replacement text (1+ lines):
+int madvise (X1, X2, int advice)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2=256
+X1=buf
+
+//\\ //// Help/documentation (1+ lines):
+Function: int madvise (void *addr, size_t length, int advice)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This function can be used to provide the system with advice about
+the intended usage patterns of the memory region starting at addr
+and extending length bytes.
+
+The valid BSD values for advice are:
+
+
+MADV_NORMAL
+The region should receive no further special treatment.
+
+
+MADV_RANDOM
+The region will be accessed via random page references.  The kernel
+should page-in the minimal number of pages for each page fault.
+
+
+MADV_SEQUENTIAL
+The region will be accessed via sequential page references.  This
+may cause the kernel to aggressively read-ahead, expecting further
+sequential references after any page fault within this region.
+
+
+MADV_WILLNEED
+The region will be needed.  The pages within this region may
+be pre-faulted in by the kernel.
+
+
+MADV_DONTNEED
+The region is no longer needed.  The kernel may free these pages,
+causing any changes to the pages to be lost, as well as swapped
+out pages to be discarded.
+
+
+
+
+The POSIX names are slightly different, but with the same meanings:
+
+
+POSIX_MADV_NORMAL
+This corresponds with BSD’s MADV_NORMAL.
+
+
+POSIX_MADV_RANDOM
+This corresponds with BSD’s MADV_RANDOM.
+
+
+POSIX_MADV_SEQUENTIAL
+This corresponds with BSD’s MADV_SEQUENTIAL.
+
+
+POSIX_MADV_WILLNEED
+This corresponds with BSD’s MADV_WILLNEED.
+
+
+POSIX_MADV_DONTNEED
+This corresponds with BSD’s MADV_DONTNEED.
+
+
+
+
+madvise returns 0 for success and -1 for
+error.  Errors include:
+
+EINVAL
+An invalid region was given, or the advice was invalid.
+
+
+EFAULT
+There is no existing mapping in at least part of the given region.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Memory_002dmapped-I_002fO.html#Memory_002dmapped-I_002fO
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Memory_002dmapped-I_002fO/madvise.txt

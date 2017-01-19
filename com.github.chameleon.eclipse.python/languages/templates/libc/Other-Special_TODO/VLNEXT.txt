@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(the,) lnext character is recognized only when iexten is set, but in both canonical and noncanonical mode
+//\\ //// ==> completion hint (1 line):
+The LNEXT character is recognized only when IEXTEN is set, but in both canonical and noncanonical mode
+//\\ //// Replacement text (1+ lines):
+Macro: int VLNEXT
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int VLNEXT
+
+This is the subscript for the LNEXT character in the special control
+character array.  termios.c_cc[VLNEXT] holds the character
+itself.
+
+The LNEXT character is recognized only when IEXTEN is set, but in
+both canonical and noncanonical mode.  It disables any special
+significance of the next character the user types.  Even if the
+character would normally perform some editing function or generate a
+signal, it is read as a plain character.  This is the analogue of the
+C-q command in Emacs.  “LNEXT” stands for “literal next.”
+
+The LNEXT character is usually C-v.
+
+This character is available on BSD systems and GNU/Linux and GNU/Hurd systems.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Other-Special.html#Other-Special
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Other-Special/VLNEXT.txt

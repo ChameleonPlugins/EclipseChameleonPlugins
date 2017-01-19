@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) 1, 5 and 15 minute load averages of (the,) (box,computer,system,node,host,target)
+//\\ //// ==> completion hint (1 line):
+gets the 1, 5 and 15 minute load averages of the system
+//\\ //// Replacement text (1+ lines):
+int getloadavg (double loadavg[], int nelem)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getloadavg (double loadavg[], int nelem)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe fd
+| See POSIX Safety Concepts.
+
+
+This function gets the 1, 5 and 15 minute load averages of the
+system.  The values are placed in loadavg.  getloadavg will
+place at most nelem elements into the array but never more than
+three elements.  The return value is the number of elements written to
+loadavg, or -1 on error.
+
+This function is declared in stdlib.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Processor-Resources.html#Processor-Resources
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Processor-Resources/getloadavg.txt

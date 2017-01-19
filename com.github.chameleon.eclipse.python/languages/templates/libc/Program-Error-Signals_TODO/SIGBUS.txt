@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(the,) name of this signal is (an,) abbreviation for “bus error”
+//\\ //// ==> completion hint (1 line):
+The name of this signal is an abbreviation for “bus error”
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGBUS
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGBUS
+This signal is generated when an invalid pointer is dereferenced.  Like
+SIGSEGV, this signal is typically the result of dereferencing an
+uninitialized pointer.  The difference between the two is that
+SIGSEGV indicates an invalid access to valid memory, while
+SIGBUS indicates an access to an invalid address.  In particular,
+SIGBUS signals often result from dereferencing a misaligned
+pointer, such as referring to a four-word integer at an address not
+divisible by four.  (Each kind of computer has its own requirements for
+address alignment.)
+
+The name of this signal is an abbreviation for “bus error”.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Program-Error-Signals.html#Program-Error-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Program-Error-Signals/SIGBUS.txt

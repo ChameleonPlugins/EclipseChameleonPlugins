@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (the,) entry *utmp to (the,) database specified by wtmp_file
+//\\ //// ==> completion hint (1 line):
+appends the entry *utmp to the database specified by wtmp_file
+//\\ //// Replacement text (1+ lines):
+void updwtmp (const char *wtmp_file, const struct utmp *utmp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void updwtmp (const char *wtmp_file, const struct utmp *utmp)
+Preliminary:
+| MT-Unsafe sig:ALRM timer
+| AS-Unsafe 
+| AC-Unsafe fd
+| See POSIX Safety Concepts.
+
+
+The updwtmp function appends the entry *utmp to the
+database specified by wtmp_file.  For possible values for the
+wtmp_file argument see the utmpname function.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Manipulating-the-Database.html#Manipulating-the-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Manipulating-the-Database/updwtmp.txt

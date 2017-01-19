@@ -1,0 +1,45 @@
+//\\ //// code completion entries (1+ lines):
+(the,) struct option structure has these fields: 
+//\\ //// ==> completion hint (1 line):
+The struct option structure has these fields: 
+//\\ //// Replacement text (1+ lines):
+Data Type: struct option
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: struct option
+This structure describes a single long option name for the sake of
+getopt_long.  The argument longopts must be an array of
+these structures, one for each long option.  Terminate the array with an
+element containing all zeros.
+
+The struct option structure has these fields:
+
+
+const char *name
+This field is the name of the option.  It is a string.
+
+
+int has_arg
+This field says whether the option takes an argument.  It is an integer,
+and there are three legitimate values: no_argument,
+required_argument and optional_argument.
+
+
+int *flag
+int val
+These fields control how to report or act on the option when it occurs.
+
+If flag is a null pointer, then the val is a value which
+identifies this option.  Often these values are chosen to uniquely
+identify particular long options.
+
+If flag is not a null pointer, it should be the address of an
+int variable which is the flag for this option.  The value in
+val is the value to store in the flag to indicate that the option
+was seen.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Getopt-Long-Options.html#Getopt-Long-Options
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Getopt-Long-Options/struct option.txt

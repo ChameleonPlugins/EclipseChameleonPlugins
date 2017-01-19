@@ -1,0 +1,37 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) information about (the,) number and (output,print,show,say,type,write) of arguments expected by (the,) printf template (string,text) template
+//\\ //// ==> completion hint (1 line):
+returns information about the number and types of arguments expected by the printf template string template
+//\\ //// Replacement text (1+ lines):
+size_t size=parse_printf_format (const char *template, size_t n, int *argtypes)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t parse_printf_format (const char *template, size_t n, int *argtypes)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function returns information about the number and types of
+arguments expected by the printf template string template.
+The information is stored in the array argtypes; each element of
+this array describes one argument.  This information is encoded using
+the various ‘PA_’ macros, listed below.
+
+The argument n specifies the number of elements in the array
+argtypes.  This is the maximum number of elements that
+parse_printf_format will try to write.
+
+parse_printf_format returns the total number of arguments required
+by template.  If this number is greater than n, then the
+information returned describes only the first n arguments.  If you
+want information about additional arguments, allocate a bigger
+array and call parse_printf_format again.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Parsing-a-Template-String.html#Parsing-a-Template-String
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Parsing-a-Template-String/parse_printf_format.txt

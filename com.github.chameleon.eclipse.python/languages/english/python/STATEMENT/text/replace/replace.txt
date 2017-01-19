@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+replace X:OLD with X:NEW in X:STRING to X:RESULTS
+//\\ //// ==> completion hint (1 line):
+replace old value with new value in string
+//\\ //// Replacement text (1+ lines):
+X4 = X3.replace(X1, X2)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="old"
+X2="new"
+X3="my old hat is very old"
+X4=output
+//\\ //// Help/documentation (1+ lines):
+//\\ //// Tool tip (1 line):
+You can set this equal to something if you wish... X=...
+//\\

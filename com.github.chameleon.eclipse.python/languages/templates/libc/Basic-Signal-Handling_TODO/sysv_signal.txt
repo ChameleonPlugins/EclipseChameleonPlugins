@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(the,) sysv_signal implements (the,) behavior of (the,) standard signal function as found on svid systems
+//\\ //// ==> completion hint (1 line):
+The sysv_signal implements the behavior of the standard signal function as found on SVID systems
+//\\ //// Replacement text (1+ lines):
+sighandler_t sysv_signal (int signum, sighandler_t action)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: sighandler_t sysv_signal (int signum, sighandler_t action)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The sysv_signal implements the behavior of the standard
+signal function as found on SVID systems.  The difference to BSD
+systems is that the handler is deinstalled after a delivery of a signal.
+
+Compatibility Note: As said above for signal, this
+function should be avoided when possible.  sigaction is the
+preferred method.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Basic-Signal-Handling.html#Basic-Signal-Handling
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Basic-Signal-Handling/sysv_signal.txt

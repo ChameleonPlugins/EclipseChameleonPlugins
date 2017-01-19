@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+(chomp,chop,delete,destroy,drop,pop,remove) any memory maps from 
+//\\ //// ==> completion hint (1 line):
+removes any memory maps from 
+//\\ //// Replacement text (1+ lines):
+munmap (X1, X2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2=256
+X1=buf
+
+//\\ //// Help/documentation (1+ lines):
+Function: int munmap (void *addr, size_t length)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+munmap removes any memory maps from (addr) to (addr +
+length).  length should be the length of the mapping.
+
+It is safe to unmap multiple mappings in one command, or include unmapped
+space in the range.  It is also possible to unmap only part of an existing
+mapping.  However, only entire pages can be removed.  If length is not
+an even number of pages, it will be rounded up.
+
+It returns 0 for success and -1 for an error.
+
+One error is possible:
+
+
+EINVAL
+The memory range given was outside the user mmap range or wasn’t page
+aligned.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Memory_002dmapped-I_002fO.html#Memory_002dmapped-I_002fO
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Memory_002dmapped-I_002fO/munmap.txt

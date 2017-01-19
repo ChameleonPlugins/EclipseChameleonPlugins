@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+is similar to getenv, but it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) null pointer if (the,) environment is untrusted
+//\\ //// ==> completion hint (1 line):
+is similar to getenv, but it returns a null pointer if the environment is untrusted
+//\\ //// Replacement text (1+ lines):
+char * secure_getenv (const char *name)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * secure_getenv (const char *name)
+Preliminary:
+| MT-Safe env
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is similar to getenv, but it returns a null
+pointer if the environment is untrusted.  This happens when the
+program file has SUID or SGID bits set.  General-purpose libraries
+should always prefer this function over getenv to avoid
+vulnerabilities if the library is referenced from a SUID/SGID program.
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Environment-Access.html#Environment-Access
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Environment-Access/secure_getenv.txt

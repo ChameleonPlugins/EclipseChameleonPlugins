@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+causes stream to be closed and (the,) connection to (the,) corresponding file to be broken
+//\\ //// ==> completion hint (1 line):
+causes stream to be closed and the connection to the corresponding file to be broken
+//\\ //// Replacement text (1+ lines):
+int fclose (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fclose (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+This function causes stream to be closed and the connection to
+the corresponding file to be broken.  Any buffered output is written
+and any buffered input is discarded.  The fclose function returns
+a value of 0 if the file was closed successfully, and EOF
+if an error was detected.
+
+It is important to check for errors when you call fclose to close
+an output stream, because real, everyday errors can be detected at this
+time.  For example, when fclose writes the remaining buffered
+output, it might get an error because the disk is full.  Even if you
+know the buffer is empty, errors can still occur when closing a file if
+you are using NFS.
+
+The function fclose is declared in stdio.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Closing-Streams.html#Closing-Streams
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Closing-Streams/fclose.txt

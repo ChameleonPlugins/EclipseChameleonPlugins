@@ -1,0 +1,49 @@
+//\\ //// code completion entries (1+ lines):
+translates (the,) information obtained from (the,) backtrace function into (an,) array of strings
+//\\ //// ==> completion hint (1 line):
+translates the information obtained from the backtrace function into an array of strings
+//\\ //// Replacement text (1+ lines):
+char ** backtrace_symbols (void *const *buffer, int size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char ** backtrace_symbols (void *const *buffer, int size)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem lock
+| See POSIX Safety Concepts.
+
+
+The backtrace_symbols function translates the information
+obtained from the backtrace function into an array of strings.
+The argument buffer should be a pointer to an array of addresses
+obtained via the backtrace function, and size is the number
+of entries in that array (the return value of backtrace).
+
+The return value is a pointer to an array of strings, which has
+size entries just like the array buffer.  Each string
+contains a printable representation of the corresponding element of
+buffer.  It includes the function name (if this can be
+determined), an offset into the function, and the actual return address
+(in hexadecimal).
+
+Currently, the function name and offset only be obtained on systems that
+use the ELF binary format for programs and libraries.  On other systems,
+only the hexadecimal return address will be present.  Also, you may need
+to pass additional flags to the linker to make the function names
+available to the program.  (For example, on systems using GNU ld, you
+must pass (-rdynamic.)
+
+The return value of backtrace_symbols is a pointer obtained via
+the malloc function, and it is the responsibility of the caller
+to free that pointer.  Note that only the return value need be
+freed, not the individual strings.
+
+The return value is NULL if sufficient memory for the strings
+cannot be obtained.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Backtraces.html#Backtraces
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Backtraces/backtrace_symbols.txt

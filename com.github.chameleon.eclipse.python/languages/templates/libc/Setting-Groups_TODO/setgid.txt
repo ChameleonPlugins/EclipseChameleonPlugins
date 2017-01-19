@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+sets both (the,) real and effective group id of (the,) process to newgid, provided that (the,) process is privileged
+//\\ //// ==> completion hint (1 line):
+sets both the real and effective group ID of the process to newgid, provided that the process is privileged
+//\\ //// Replacement text (1+ lines):
+int setgid (gid_t newgid)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setgid (gid_t newgid)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+This function sets both the real and effective group ID of the process
+to newgid, provided that the process is privileged.  It also
+deletes the file group ID, if any.
+
+If the process is not privileged, then setgid behaves like
+setegid.
+
+The return values and error conditions for setgid are the same
+as those for seteuid.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-Groups.html#Setting-Groups
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-Groups/setgid.txt

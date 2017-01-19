@@ -1,0 +1,75 @@
+//\\ //// code completion entries (1+ lines):
+reports resource usage totals for (a,) process
+//\\ //// ==> completion hint (1 line):
+reports resource usage totals for a process
+//\\ //// Replacement text (1+ lines):
+int vtimes (struct vtimes *current, struct vtimes *child)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int vtimes (struct vtimes *current, struct vtimes *child)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+vtimes reports resource usage totals for a process.
+
+If current is non-null, vtimes stores resource usage totals for
+the invoking process alone in the structure to which it points.  If
+child is non-null, vtimes stores resource usage totals for all
+past children (which have terminated) of the invoking process in the structure
+to which it points.
+
+
+Data Type: struct vtimes
+This data type contains information about the resource usage of a process.
+Each member corresponds to a member of the struct rusage data type
+described above.
+
+
+vm_utime
+User CPU time.  Analogous to ru_utime in struct rusage
+
+vm_stime
+System CPU time.  Analogous to ru_stime in struct rusage
+
+vm_idsrss
+Data and stack memory.  The sum of the values that would be reported as
+ru_idrss and ru_isrss in struct rusage
+
+vm_ixrss
+Shared memory.  Analogous to ru_ixrss in struct rusage
+
+vm_maxrss
+Maximent resident set size.  Analogous to ru_maxrss in
+struct rusage
+
+vm_majflt
+Major page faults.  Analogous to ru_majflt in struct rusage
+
+vm_minflt
+Minor page faults.  Analogous to ru_minflt in struct rusage
+
+vm_nswap
+Swap count.  Analogous to ru_nswap in struct rusage
+
+vm_inblk
+Disk reads.  Analogous to ru_inblk in struct rusage
+
+vm_oublk
+Disk writes.  Analogous to ru_oublk in struct rusage
+
+
+
+
+
+The return value is zero if the function succeeds; -1 otherwise.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Resource-Usage.html#Resource-Usage
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Resource-Usage/vtimes.txt

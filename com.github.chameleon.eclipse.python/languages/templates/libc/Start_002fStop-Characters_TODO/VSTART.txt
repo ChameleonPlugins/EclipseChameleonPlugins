@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+(the,) (run,execute,start) character is used to support (the,) ixon and ixoff input modes
+//\\ //// ==> completion hint (1 line):
+The START character is used to support the IXON and IXOFF input modes
+//\\ //// Replacement text (1+ lines):
+Macro: int VSTART
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int VSTART
+
+This is the subscript for the START character in the special control
+character array.  termios.c_cc[VSTART] holds the
+character itself.
+
+The START character is used to support the IXON and IXOFF
+input modes.  If IXON is set, receiving a START character resumes
+suspended output; the START character itself is discarded.  If
+IXANY is set, receiving any character at all resumes suspended
+output; the resuming character is not discarded unless it is the START
+character.  IXOFF is set, the system may also transmit START
+characters to the terminal.
+
+The usual value for the START character is C-q.  You may not be
+able to change this value—the hardware may insist on using C-q
+regardless of what you specify.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Start_002fStop-Characters.html#Start_002fStop-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Start_002fStop-Characters/VSTART.txt

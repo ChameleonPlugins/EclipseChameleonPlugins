@@ -1,0 +1,55 @@
+//\\ //// code completion entries (1+ lines):
+ (convert,change,replace) (a,) nul-terminated multibyte character (string,text) at * into (an,) equivalent wide character (string,text), including (the,) nul wide character at (the,) (end,exit,quit,(halt,pause,stop,suspend))
+//\\ //// ==> completion hint (1 line):
+ converts a NUL-terminated multibyte character string at * into an equivalent wide character string, including the NUL wide character at the end
+//\\ //// Replacement text (1+ lines):
+size_t size=mbsrtowcs (wchar_t *restrict dst, const char **restrict src, size_t len, mbstate_t *restrict ps)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t mbsrtowcs (wchar_t *restrict dst, const char **restrict src, size_t len, mbstate_t *restrict ps)
+Preliminary:
+| MT-Unsafe race:mbsrtowcs/!ps
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The mbsrtowcs function (“multibyte string restartable to wide
+character string”) converts a NUL-terminated multibyte character
+string at *src into an equivalent wide character string,
+including the NUL wide character at the end.  The conversion is started
+using the state information from the object pointed to by ps or
+from an internal object of mbsrtowcs if ps is a null
+pointer.  Before returning, the state object is updated to match the state
+after the last converted character.  The state is the initial state if the
+terminating NUL byte is reached and converted.
+
+If dst is not a null pointer, the result is stored in the array
+pointed to by dst; otherwise, the conversion result is not
+available since it is stored in an internal buffer.
+
+If len wide characters are stored in the array dst before
+reaching the end of the input string, the conversion stops and len
+is returned.  If dst is a null pointer, len is never checked.
+
+Another reason for a premature return from the function call is if the
+input string contains an invalid multibyte sequence.  In this case the
+global variable errno is set to EILSEQ and the function
+returns (size_t) -1.
+
+
+In all other cases the function returns the number of wide characters
+converted during this call.  If dst is not null, mbsrtowcs
+stores in the pointer pointed to by src either a null pointer (if
+the NUL byte in the input string was reached) or the address of the byte
+following the last converted multibyte character.
+
+
+mbsrtowcs was introduced in Amendment 1 to ISO C90 and is
+declared in wchar.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Converting-Strings.html#Converting-Strings
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Converting-Strings/mbsrtowcs.txt

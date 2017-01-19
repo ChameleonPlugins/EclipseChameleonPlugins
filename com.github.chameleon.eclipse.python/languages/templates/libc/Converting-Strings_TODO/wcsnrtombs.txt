@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+implements (the,) conversion from wide character strings to multibyte character strings
+//\\ //// ==> completion hint (1 line):
+implements the conversion from wide character strings to multibyte character strings
+//\\ //// Replacement text (1+ lines):
+size_t size=wcsnrtombs (char *restrict dst, const wchar_t **restrict src, size_t nwc, size_t len, mbstate_t *restrict ps)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t wcsnrtombs (char *restrict dst, const wchar_t **restrict src, size_t nwc, size_t len, mbstate_t *restrict ps)
+Preliminary:
+| MT-Unsafe race:wcsnrtombs/!ps
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The wcsnrtombs function implements the conversion from wide
+character strings to multibyte character strings.  It is similar to
+wcsrtombs but, just like mbsnrtowcs, it takes an extra
+parameter, which specifies the length of the input string.
+
+No more than nwc wide characters from the input string
+*src are converted.  If the input string contains a NUL
+wide character in the first nwc characters, the conversion stops at
+this place.
+
+The wcsnrtombs function is a GNU extension and just like
+mbsnrtowcs helps in situations where no NUL-terminated input
+strings are available.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Converting-Strings.html#Converting-Strings
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Converting-Strings/wcsnrtombs.txt

@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(output,print,show,say,type,write) (the,) word w 
+//\\ //// ==> completion hint (1 line):
+writes the word w 
+//\\ //// Replacement text (1+ lines):
+int putw (int w, FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int putw (int w, FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function writes the word w (that is, an int) to
+stream.  It is provided for compatibility with SVID, but we
+recommend you use fwrite instead (see Block Input/Output).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Simple-Output.html#Simple-Output
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Simple-Output/putw.txt

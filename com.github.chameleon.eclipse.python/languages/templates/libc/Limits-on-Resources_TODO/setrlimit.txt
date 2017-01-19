@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+store (the,) current and maximum limits for (the,) resource resource in *
+//\\ //// ==> completion hint (1 line):
+Store the current and maximum limits for the resource resource in *
+//\\ //// Replacement text (1+ lines):
+int setrlimit (int resource, const struct rlimit *rlp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setrlimit (int resource, const struct rlimit *rlp)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Store the current and maximum limits for the resource resource
+in *rlp.
+
+The return value is 0 on success and -1 on failure.  The
+following errno error condition is possible:
+
+
+EPERM
+
+ The process tried to raise a current limit beyond the maximum limit.
+
+ The process tried to raise a maximum limit, but is not superuser.
+
+
+
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 on a
+32-bit system this function is in fact setrlimit64.  Thus, the
+LFS interface transparently replaces the old interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Limits-on-Resources.html#Limits-on-Resources
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Limits-on-Resources/setrlimit.txt

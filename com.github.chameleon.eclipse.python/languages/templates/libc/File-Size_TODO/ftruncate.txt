@@ -1,0 +1,77 @@
+//\\ //// code completion entries (1+ lines):
+this is like truncate, but it works on (a,) file descriptor fd for (an,) opened file instead of (a,) file name to identify (the,) object
+//\\ //// ==> completion hint (1 line):
+This is like truncate, but it works on a file descriptor fd for an opened file instead of a file name to identify the object
+//\\ //// Replacement text (1+ lines):
+int ftruncate (int fd, off_t length)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int ftruncate (int fd, off_t length)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This is like truncate, but it works on a file descriptor fd
+for an opened file instead of a file name to identify the object.  The
+file must be opened for writing to successfully carry out the operation.
+
+The POSIX standard leaves it implementation defined what happens if the
+specified new length of the file is bigger than the original size.
+The ftruncate function might simply leave the file alone and do
+nothing or it can increase the size to the desired size.  In this later
+case the extended area should be zero-filled.  So using ftruncate
+is no reliable way to increase the file size but if it is possible it is
+probably the fastest way.  The function also operates on POSIX shared
+memory segments if these are implemented by the system.
+
+ftruncate is especially useful in combination with mmap.
+Since the mapped region must have a fixed size one cannot enlarge the
+file by writing something beyond the last mapped page.  Instead one has
+to enlarge the file itself and then remap the file with the new size.
+The example below shows how this works.
+
+When the source file is compiled with _FILE_OFFSET_BITS == 64 the
+ftruncate function is in fact ftruncate64 and the type
+off_t has 64 bits which makes it possible to handle files up to
+2^63 bytes in length.
+
+The return value is 0 for success, or -1 for an error.  The
+following errors may occur:
+
+
+EBADF
+fd does not correspond to an open file.
+
+
+EACCES
+fd is a directory or not open for writing.
+
+
+EINVAL
+length is negative.
+
+
+EFBIG
+The operation would extend the file beyond the limits of the operating system.
+
+
+EIO
+A hardware I/O error occurred.
+
+
+EPERM
+The file is &quot;append-only&quot; or &quot;immutable&quot;.
+
+
+EINTR
+The operation was interrupted by a signal.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Size.html#File-Size
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Size/ftruncate.txt

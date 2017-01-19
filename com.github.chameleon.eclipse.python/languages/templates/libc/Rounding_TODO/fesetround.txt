@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) currently selected rounding mode to round
+//\\ //// ==> completion hint (1 line):
+Changes the currently selected rounding mode to round
+//\\ //// Replacement text (1+ lines):
+int fesetround (int round)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fesetround (int round)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Changes the currently selected rounding mode to round.  If
+round does not correspond to one of the supported rounding modes
+nothing is changed.  fesetround returns zero if it changed the
+rounding mode, a nonzero value if the mode is not supported.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Rounding.html#Rounding
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Rounding/fesetround.txt

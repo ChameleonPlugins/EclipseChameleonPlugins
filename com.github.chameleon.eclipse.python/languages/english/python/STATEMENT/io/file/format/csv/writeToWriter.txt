@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+write to (csv,comma separated values) writer X:WRITER values X:VALUES separated by commas
+//\\ //// ==> completion hint (1 line):
+# write comma separated values (csv) to a writer
+//\\ //// Replacement text (1+ lines):
+X1.writerow([X2])	
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=mywriter
+X2='a', 'b', 'c'
+//\\ //// Help/documentation (1+ lines):
+write to csv (Comma Separated Value) file with writer
+//\\ //// Tool tip (1 line):
+Update 'mywriter' and 'a', 'b', 'c' if needed...
+//\\

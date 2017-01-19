@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+does (the,) same thing as crypt, but takes (an,) extra parameter which includes space for its result , so it can be reentrant
+//\\ //// ==> completion hint (1 line):
+does the same thing as crypt, but takes an extra parameter which includes space for its result , so it can be reentrant
+//\\ //// Replacement text (1+ lines):
+char * crypt_r (const char *key, X1alt, struct crypt_data * data)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * crypt_r (const char *key, const char *salt, struct crypt_data * data)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt lock heap dlopen
+| AC-Unsafe lock mem
+| See POSIX Safety Concepts.
+
+
+
+The crypt_r function does the same thing as crypt, but
+takes an extra parameter which includes space for its result (among
+other things), so it can be reentrant.  data-&gt;initialized must be
+cleared to zero before the first time crypt_r is called.
+
+The crypt_r function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//crypt.html#crypt
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/crypt/crypt_r.txt

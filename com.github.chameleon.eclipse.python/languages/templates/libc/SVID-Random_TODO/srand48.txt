@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) most significant 32 bits of (the,) internal state of (the,) random number generator to (the,) least significant 32 bits of (the,) seedval parameter
+//\\ //// ==> completion hint (1 line):
+sets the most significant 32 bits of the internal state of the random number generator to the least significant 32 bits of the seedval parameter
+//\\ //// Replacement text (1+ lines):
+void srand48 (long int seedval)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void srand48 (long int seedval)
+Preliminary:
+| MT-Unsafe race:drand48
+| AS-Unsafe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The srand48 function sets the most significant 32 bits of the
+internal state of the random number generator to the least
+significant 32 bits of the seedval parameter.  The lower 16 bits
+are initialized to the value 0x330E.  Even if the long
+int type contains more than 32 bits only the lower 32 bits are used.
+
+Owing to this limitation, initialization of the state of this
+function is not very useful.  But it makes it easy to use a construct
+like srand48 (time (0)).
+
+A side-effect of this function is that the values a and c
+from the internal state, which are used in the congruential formula,
+are reset to the default values given above.  This is of importance once
+the user has called the lcong48 function (see below).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/srand48.txt

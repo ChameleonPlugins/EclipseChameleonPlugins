@@ -1,0 +1,48 @@
+//\\ //// code completion entries (1+ lines):
+this is like chmod, except that it (convert,change,replace) (the,) permissions of (the,) currently open file given by X:FILEDESCRIPTOR
+//\\ //// ==> completion hint (1 line):
+This is like chmod, except that it changes the permissions of the currently open file given by filedes
+//\\ //// Replacement text (1+ lines):
+int fchmod (X1, mode_t mode)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fchmod (int filedes, mode_t mode)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is like chmod, except that it changes the permissions of the
+currently open file given by filedes.
+
+The return value from fchmod is 0 on success and -1
+on failure.  The following errno error codes are defined for this
+function:
+
+
+EBADF
+The filedes argument is not a valid file descriptor.
+
+
+EINVAL
+The filedes argument corresponds to a pipe or socket, or something
+else that doesn’t really have access permissions.
+
+
+EPERM
+This process does not have permission to change the access permissions
+of this file.  Only the file’s owner (as judged by the effective user ID
+of the process) or a privileged user can change them.
+
+
+EROFS
+The file resides on a read-only file system.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-Permissions.html#Setting-Permissions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-Permissions/fchmod.txt

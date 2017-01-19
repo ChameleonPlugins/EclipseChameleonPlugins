@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+lgamma_r is just like lgamma, but it stores (the,) sign of (the,) intermediate result in (the,) variable pointed to by signp instead of in (the,) signgam global
+//\\ //// ==> completion hint (1 line):
+lgamma_r is just like lgamma, but it stores the sign of the intermediate result in the variable pointed to by signp instead of in the signgam global
+//\\ //// Replacement text (1+ lines):
+Function: double lgamma_r (double x, int *signp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double lgamma_r (double x, int *signp)
+Function: float lgammaf_r (float x, int *signp)
+Function: long double lgammal_r (long double x, int *signp)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+lgamma_r is just like lgamma, but it stores the sign of
+the intermediate result in the variable pointed to by signp
+instead of in the signgam global.  This means it is reentrant.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Special-Functions.html#Special-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Special-Functions/lgammaf_r.txt

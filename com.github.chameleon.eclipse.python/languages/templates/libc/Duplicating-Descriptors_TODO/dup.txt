@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+copies descriptor old to (the,) first available descriptor number 
+//\\ //// ==> completion hint (1 line):
+copies descriptor old to the first available descriptor number 
+//\\ //// Replacement text (1+ lines):
+int dup (int old)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int dup (int old)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function copies descriptor old to the first available
+descriptor number (the first number not currently open).  It is
+equivalent to fcntl (old, F_DUPFD, 0).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Duplicating-Descriptors.html#Duplicating-Descriptors
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Duplicating-Descriptors/dup.txt

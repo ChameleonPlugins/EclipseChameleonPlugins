@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is similar to wprintf except that, instead of taking (a,) variable number of arguments directly, it takes (an,) argument list pointer ap
+//\\ //// ==> completion hint (1 line):
+is similar to wprintf except that, instead of taking a variable number of arguments directly, it takes an argument list pointer ap
+//\\ //// Replacement text (1+ lines):
+int vwprintf (const wchar_t *template, va_list ap)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int vwprintf (const wchar_t *template, va_list ap)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe corrupt heap
+| AC-Unsafe mem lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function is similar to wprintf except that, instead of taking
+a variable number of arguments directly, it takes an argument list
+pointer ap.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Variable-Arguments-Output.html#Variable-Arguments-Output
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Variable-Arguments-Output/vwprintf.txt

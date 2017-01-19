@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+if wifstopped is true of status, this macro (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) signal number of (the,) signal that caused (the,) child process to (end,exit,quit,(halt,pause,stop,suspend))
+//\\ //// ==> completion hint (1 line):
+If WIFSTOPPED is true of status, this macro returns the signal number of the signal that caused the child process to stop
+//\\ //// Replacement text (1+ lines):
+Macro: int WSTOPSIG (int status)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int WSTOPSIG (int status)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+If WIFSTOPPED is true of status, this macro returns the
+signal number of the signal that caused the child process to stop.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Process-Completion-Status.html#Process-Completion-Status
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Process-Completion-Status/WSTOPSIG.txt

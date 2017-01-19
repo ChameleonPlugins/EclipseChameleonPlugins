@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(chomp,chop,delete,destroy,drop,pop,remove) X:FILEDESCRIPTOR from (the,) file descriptor set set
+//\\ //// ==> completion hint (1 line):
+removes filedes from the file descriptor set set
+//\\ //// Replacement text (1+ lines):
+Macro: void FD_CLR (X1, fd_set *set)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Macro: void FD_CLR (int filedes, fd_set *set)
+Preliminary:
+| MT-Safe race:set
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This macro removes filedes from the file descriptor set set.
+
+The filedes parameter must not have side effects since it is
+evaluated more than once.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Waiting-for-I_002fO.html#Waiting-for-I_002fO
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Waiting-for-I_002fO/FD_CLR.txt

@@ -1,0 +1,47 @@
+//\\ //// code completion entries (1+ lines):
+this is like chown, except that it (convert,change,replace) (the,) owner of (the,) open file with descriptor X:FILEDESCRIPTOR
+//\\ //// ==> completion hint (1 line):
+This is like chown, except that it changes the owner of the open file with descriptor filedes
+//\\ //// Replacement text (1+ lines):
+int fchown (X1, uid_t owner, gid_t group)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fchown (int filedes, uid_t owner, gid_t group)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is like chown, except that it changes the owner of the open
+file with descriptor filedes.
+
+The return value from fchown is 0 on success and -1
+on failure.  The following errno error codes are defined for this
+function:
+
+
+EBADF
+The filedes argument is not a valid file descriptor.
+
+
+EINVAL
+The filedes argument corresponds to a pipe or socket, not an ordinary
+file.
+
+
+EPERM
+This process lacks permission to make the requested change.  For details
+see chmod above.
+
+
+EROFS
+The file resides on a read-only file system.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Owner.html#File-Owner
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Owner/fchown.txt

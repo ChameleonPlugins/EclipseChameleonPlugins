@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+if (the,) complete search tree has to be removed one can use tdestroy
+//\\ //// ==> completion hint (1 line):
+If the complete search tree has to be removed one can use tdestroy
+//\\ //// Replacement text (1+ lines):
+void tdestroy (void *vroot, __free_fn_t freefct)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void tdestroy (void *vroot, __free_fn_t freefct)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+If the complete search tree has to be removed one can use
+tdestroy.  It frees all resources allocated by the tsearch
+function to generate the tree pointed to by vroot.
+
+For the data in each tree node the function freefct is called.
+The pointer to the data is passed as the argument to the function.  If
+no such work is necessary freefct must point to a function doing
+nothing.  It is called in any case.
+
+This function is a GNU extension and not covered by the System V or
+X/Open specifications.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Tree-Search-Function.html#Tree-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Tree-Search-Function/tdestroy.txt

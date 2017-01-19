@@ -1,0 +1,18 @@
+//\\ //// code completion entries (1+ lines):
+set X:VARIABLE to X:TEXT
+//\\ //// ==> completion hint (1 line):
+set a variable to a text value
+//\\ //// Replacement text (1+ lines):
+X1 = X2
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=myvariable
+X2="text"
+//\\ //// Help/documentation (1+ lines):
+In Python variables do not need to be declared before setting them.
+In Python variables can be assigned to one data type then later
+assigned to a different data type.  For example:
+myvariable=1
+myvariable="apple"
+//\\ //// Tool tip (1 line):
+change "text" and "myvariable" as needed...
+//\\

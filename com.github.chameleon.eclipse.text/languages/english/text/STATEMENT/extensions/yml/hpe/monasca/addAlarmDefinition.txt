@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+(add,create) alarm definition
+//\\ //// ==> completion hint (1 line):
+add alarm definition
+//\\ //// Replacement text (1+ lines):
+- name: ////logging-monitor | alarm-definitions | Add alarm definition
+  monasca_alarm_definition:
+    name: "////Name of alarm definition"
+    description: "////Description for the alarm definition."
+    expression: "////Expression for the alarm definition"
+    keystone_url: "{{ kronos_monitoring_keystone_url }}"
+    keystone_user: "{{ kronos_monitoring_keystone_user }}"
+    keystone_password: "{{ kronos_monitoring_keystone_password | quote }}"
+    keystone_project: "{{ kronos_monitoring_keystone_project }}"
+    monasca_api_url: "{{ monasca_alarm_definition_api_url }}"
+    match_by: ["hostname"]
+    severity: "High"
+    ok_actions:
+      - "{{ default_notification.notification_method_id }}"
+    undetermined_actions:
+      - "{{ default_notification.notification_method_id }}"
+    alarm_actions:
+      - "{{ default_notification.notification_method_id }}"
+  run_once: true
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Help...
+//\\ //// Tool tip (1 line):
+Change 'currentDate' if you want...
+ //\\

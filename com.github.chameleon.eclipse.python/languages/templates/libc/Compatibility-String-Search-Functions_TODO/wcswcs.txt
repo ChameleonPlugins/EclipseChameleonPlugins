@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is (a,) deprecated alias for wcsstr
+//\\ //// ==> completion hint (1 line):
+is a deprecated alias for wcsstr
+//\\ //// Replacement text (1+ lines):
+wchar_t * wcswcs (const wchar_t *haystack, const wchar_t *needle)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wchar_t * wcswcs (const wchar_t *haystack, const wchar_t *needle)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+wcswcs is a deprecated alias for wcsstr.  This is the
+name originally used in the X/Open Portability Guide before the
+Amendment 1 to ISO C90 was published.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Compatibility-String-Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Compatibility-String-Search-Functions/wcswcs.txt

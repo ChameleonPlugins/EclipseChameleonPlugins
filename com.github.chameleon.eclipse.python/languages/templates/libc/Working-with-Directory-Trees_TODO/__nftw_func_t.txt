@@ -1,0 +1,43 @@
+//\\ //// code completion entries (1+ lines):
+(the,) last parameter of (the,) callback function is (a,) pointer to (a,) structure with some extra information as described below
+//\\ //// ==> completion hint (1 line):
+The last parameter of the callback function is a pointer to a structure with some extra information as described below
+//\\ //// Replacement text (1+ lines):
+Data Type: __nftw_func_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: __nftw_func_t
+
+
+int (*) (const char *, const struct stat *, int, struct FTW *)
+
+
+
+
+The first three arguments are the same as for the __ftw_func_t
+type.  However for the third argument some additional values are defined
+to allow finer differentiation:
+
+FTW_DP
+The current item is a directory and all subdirectories have already been
+visited and reported.  This flag is returned instead of FTW_D if
+the FTW_DEPTH flag is passed to nftw (see below).
+
+FTW_SLN
+The current item is a stale symbolic link.  The file it points to does
+not exist.
+
+
+
+The last parameter of the callback function is a pointer to a structure
+with some extra information as described below.
+
+If the sources are compiled with _FILE_OFFSET_BITS == 64 this
+type is in fact __nftw64_func_t since this mode changes
+struct stat to be struct stat64.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Working-with-Directory-Trees.html#Working-with-Directory-Trees
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Working-with-Directory-Trees/__nftw_func_t.txt

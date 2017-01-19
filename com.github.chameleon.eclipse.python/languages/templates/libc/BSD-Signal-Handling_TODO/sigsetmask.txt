@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+equivalent to sigprocmask with (a,) how argument of sig_setmask: it sets (the,) calling process’s signal mask to mask
+//\\ //// ==> completion hint (1 line):
+equivalent to sigprocmask with a how argument of SIG_SETMASK: it sets the calling process’s signal mask to mask
+//\\ //// Replacement text (1+ lines):
+int sigsetmask (int mask)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sigsetmask (int mask)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock/hurd
+| AC-Unsafe lock/hurd
+| See POSIX Safety Concepts.
+
+
+This function equivalent to sigprocmask (see Process Signal Mask) with a how argument of SIG_SETMASK: it sets
+the calling process’s signal mask to mask.  The return value is
+the previous set of blocked signals.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//BSD-Signal-Handling.html#BSD-Signal-Handling
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/BSD-Signal-Handling/sigsetmask.txt

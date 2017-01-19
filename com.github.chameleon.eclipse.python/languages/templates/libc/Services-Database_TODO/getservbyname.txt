@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) information about (the,) service named name using protocol proto
+//\\ //// ==> completion hint (1 line):
+returns information about the service named name using protocol proto
+//\\ //// Replacement text (1+ lines):
+struct servent * getservbyname (const char *name, const char *proto)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct servent * getservbyname (const char *name, const char *proto)
+Preliminary:
+| MT-Unsafe race:servbyname locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+The getservbyname function returns information about the
+service named name using protocol proto.  If it can’t find
+such a service, it returns a null pointer.
+
+This function is useful for servers as well as for clients; servers
+use it to determine which port they should listen on (see Listening).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Services-Database.html#Services-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Services-Database/getservbyname.txt

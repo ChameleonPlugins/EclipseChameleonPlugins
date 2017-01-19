@@ -1,0 +1,17 @@
+//\\ //// code completion entries (1+ lines):
+(create,write,make,start) (,a ) format X:VALUE named X:NAME in workbook X:NAME
+//\\ //// ==> completion hint (1 line):
+create a format to apply to cells
+//\\ //// Replacement text (1+ lines):
+X2 = X2.add_format()
+X2.set_num_format(X1)
+# //// example Next Step: close worksheet
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1='YYYY-mm-dd HH:MM:SS'
+X2=my_format
+X3=my_workbook
+//\\ //// Help/documentation (1+ lines):
+https://xlsxwriter.readthedocs.org/getting_started.html#running-a-sample-program
+//\\ //// Tool tip (1 line):
+# //// example Next Step: close worksheet
+//\\

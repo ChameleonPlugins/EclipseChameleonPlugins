@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+these functions are similar to rint, but they round halfway cases away from zero instead of to (the,) nearest integer 
+//\\ //// ==> completion hint (1 line):
+These functions are similar to rint, but they round halfway cases away from zero instead of to the nearest integer 
+//\\ //// Replacement text (1+ lines):
+Function: double round (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double round (double x)
+Function: float roundf (float x)
+Function: long double roundl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions are similar to rint, but they round halfway
+cases away from zero instead of to the nearest integer (or other
+current rounding mode).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Rounding-Functions.html#Rounding-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Rounding-Functions/roundl.txt

@@ -1,0 +1,13 @@
+//\\ //// code completion entries (1+ lines):
+select first user
+//\\ //// ==> completion hint (1 line):
+selected_user = users[0]['id']
+//\\ //// Replacement text (1+ lines):
+selected_user = users[0]['id']
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Select the first user and store it as selected_user variable
+//\\ //// Tool tip (1 line):
+Now use selected_user variable (and id) as needed for other commands...
+//\\

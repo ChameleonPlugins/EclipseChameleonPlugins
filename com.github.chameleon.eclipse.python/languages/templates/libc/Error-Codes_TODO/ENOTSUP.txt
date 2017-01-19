@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+if (the,) entire function is not available at all in (the,) implementation, it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) enosys instead
+//\\ //// ==> completion hint (1 line):
+If the entire function is not available at all in the implementation, it returns ENOSYS instead
+//\\ //// Replacement text (1+ lines):
+Macro: int ENOTSUP
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int ENOTSUP
+Not supported.  A function returns this error when certain parameter
+values are valid, but the functionality they request is not available.
+This can mean that the function does not implement a particular command
+or option value or flag bit at all.  For functions that operate on some
+object given in a parameter, such as a file descriptor or a port, it
+might instead mean that only that specific object (file
+descriptor, port, etc.) is unable to support the other parameters given;
+different file descriptors might support different ranges of parameter
+values.
+
+If the entire function is not available at all in the implementation,
+it returns ENOSYS instead.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Error-Codes.html#Error-Codes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Error-Codes/ENOTSUP.txt

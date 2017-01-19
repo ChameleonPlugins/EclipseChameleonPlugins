@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+like fesetenv, this function sets (the,) floating-point environment to that described by envp
+//\\ //// ==> completion hint (1 line):
+Like fesetenv, this function sets the floating-point environment to that described by envp
+//\\ //// Replacement text (1+ lines):
+int feupdateenv (const fenv_t *envp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int feupdateenv (const fenv_t *envp)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Like fesetenv, this function sets the floating-point environment
+to that described by envp.  However, if any exceptions were
+flagged in the status word before feupdateenv was called, they
+remain flagged after the call.  In other words, after feupdateenv
+is called, the status word is the bitwise OR of the previous status word
+and the one saved in envp.
+
+The function returns zero in case the operation was successful, a
+non-zero value otherwise.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Control-Functions.html#Control-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Control-Functions/feupdateenv.txt

@@ -1,0 +1,53 @@
+//\\ //// code completion entries (1+ lines):
+reads (an,) entire line from stream, storing (the,) (string,text) in (a,) buffer and storing (the,) buffer address in *
+//\\ //// ==> completion hint (1 line):
+reads an entire line from stream, storing the text in a buffer and storing the buffer address in *
+//\\ //// Replacement text (1+ lines):
+ssize_t getline (char **lineptr, size_t *n, FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: ssize_t getline (char **lineptr, size_t *n, FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt heap
+| AC-Unsafe lock corrupt mem
+| See POSIX Safety Concepts.
+
+
+This function reads an entire line from stream, storing the text
+(including the newline and a terminating null character) in a buffer
+and storing the buffer address in *lineptr.
+
+Before calling getline, you should place in *lineptr
+the address of a buffer *n bytes long, allocated with
+malloc.  If this buffer is long enough to hold the line,
+getline stores the line in this buffer.  Otherwise,
+getline makes the buffer bigger using realloc, storing the
+new buffer address back in *lineptr and the increased size
+back in *n.
+See Unconstrained Allocation.
+
+If you set *lineptr to a null pointer, and *n
+to zero, before the call, then getline allocates the initial
+buffer for you by calling malloc.  This buffer remains allocated
+even if getline encounters errors and is unable to read any bytes.
+
+In either case, when getline returns,  *lineptr is
+a char * which points to the text of the line.
+
+When getline is successful, it returns the number of characters
+read (including the newline, but not including the terminating null).
+This value enables you to distinguish null characters that are part of
+the line from the null character inserted as a terminator.
+
+This function is a GNU extension, but it is the recommended way to read
+lines from a stream.  The alternative standard functions are unreliable.
+
+If an error occurs or end of file is reached without any bytes read,
+getline returns -1.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Line-Input.html#Line-Input
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Line-Input/getline.txt

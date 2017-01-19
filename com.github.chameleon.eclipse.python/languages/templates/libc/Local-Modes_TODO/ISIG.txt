@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+you should use caution when disabling recognition of these characters
+//\\ //// ==> completion hint (1 line):
+You should use caution when disabling recognition of these characters
+//\\ //// Replacement text (1+ lines):
+Macro: tcflag_t ISIG
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: tcflag_t ISIG
+This bit controls whether the INTR, QUIT, and SUSP characters are
+recognized.  The functions associated with these characters are performed
+if and only if this bit is set.  Being in canonical or noncanonical
+input mode has no affect on the interpretation of these characters.
+
+You should use caution when disabling recognition of these characters.
+Programs that cannot be interrupted interactively are very
+user-unfriendly.  If you clear this bit, your program should provide
+some alternate interface that allows the user to interactively send the
+signals associated with these characters, or to escape from the program.
+
+
+See Signal Characters.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Local-Modes.html#Local-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Local-Modes/ISIG.txt

@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (a,) pseudorandom anagram of (a,) (string,text), replacing (the,) input with (the,) anagram in (place,position)
+//\\ //// ==> completion hint (1 line):
+creates a pseudorandom anagram of a string, replacing the input with the anagram in place
+//\\ //// Replacement text (1+ lines):
+char * strfry (char *string)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strfry (char *string)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+strfry creates a pseudorandom anagram of a string, replacing the
+input with the anagram in place.  For each position in the string,
+strfry swaps it with a position in the string selected at random
+(from a uniform distribution).  The two positions may be the same.
+
+The return value of strfry is always string.
+
+Portability Note:  This function is unique to the GNU C Library.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//strfry.html#strfry
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/strfry/strfry.txt

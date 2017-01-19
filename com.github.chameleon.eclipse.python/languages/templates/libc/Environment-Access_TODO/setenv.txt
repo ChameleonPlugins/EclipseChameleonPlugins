@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (a,) (new,) definition to (the,) environment
+//\\ //// ==> completion hint (1 line):
+add a new definition to the environment
+//\\ //// Replacement text (1+ lines):
+int setenv (const char *name, const char *value, int replace)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setenv (const char *name, const char *value, int replace)
+Preliminary:
+| MT-Unsafe const:env
+| AS-Unsafe heap lock
+| AC-Unsafe corrupt lock mem
+| See POSIX Safety Concepts.
+
+
+The setenv function can be used to add a new definition to the
+environment.  The entry with the name name is replaced by the
+value ‘name=value’.  Please note that this is also true
+if value is the empty string.  To do this a new string is created
+and the strings name and value are copied.  A null pointer
+for the value parameter is illegal.  If the environment already
+contains an entry with key name the replace parameter
+controls the action.  If replace is zero, nothing happens.  Otherwise
+the old entry is replaced by the new one.
+
+Please note that you cannot remove an entry completely using this function.
+
+If the function is successful it returns 0.  Otherwise the
+environment is unchanged and the return value is -1 and
+errno is set.
+
+This function was originally part of the BSD library but is now part of
+the Unix standard.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Environment-Access.html#Environment-Access
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Environment-Access/setenv.txt

@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+exit program with value X:VALUE
+//\\ //// ==> completion hint (1 line):
+exit program
+//\\ //// Replacement text (1+ lines):
+#import sys #//// uncomment and move to top of file if needed
+sys.exit(X1)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=0
+//\\ //// Help/documentation (1+ lines):
+sys.exit(0) # Exit program with 0 return value (OK)
+exit()      # Exit Python interpreter 
+//\\ //// Tool tip (1 line):
+Non-0 return value for errors
+//\\

@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+usage note: size_t is (the,) preferred way to declare any arguments or variables that hold (the,) size of (an,) object
+//\\ //// ==> completion hint (1 line):
+Usage Note: size_t is the preferred way to declare any arguments or variables that hold the size of an object
+//\\ //// Replacement text (1+ lines):
+Data Type: size_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: size_t
+This is an unsigned integer type used to represent the sizes of objects.
+The result of the sizeof operator is of this type, and functions
+such as malloc (see Unconstrained Allocation) and
+memcpy (see Copying and Concatenation) accept arguments of
+this type to specify object sizes.  On systems using the GNU C Library, this
+will be unsigned int or unsigned long int.
+
+Usage Note: size_t is the preferred way to declare any
+arguments or variables that hold the size of an object.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Important-Data-Types.html#Important-Data-Types
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Important-Data-Types/size_t.txt

@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) currently selected rounding mode, represented by one of (the,) values of (the,) defined rounding mode macros
+//\\ //// ==> completion hint (1 line):
+Returns the currently selected rounding mode, represented by one of the values of the defined rounding mode macros
+//\\ //// Replacement text (1+ lines):
+int fegetround (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fegetround (void)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Returns the currently selected rounding mode, represented by one of the
+values of the defined rounding mode macros.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Rounding.html#Rounding
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Rounding/fegetround.txt

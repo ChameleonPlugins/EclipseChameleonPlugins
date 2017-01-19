@@ -1,0 +1,57 @@
+//\\ //// code completion entries (1+ lines):
+shuts down (the,) connection of socket socket
+//\\ //// ==> completion hint (1 line):
+shuts down the connection of socket socket
+//\\ //// Replacement text (1+ lines):
+int shutdown (int socket, int how)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int shutdown (int socket, int how)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The shutdown function shuts down the connection of socket
+socket.  The argument how specifies what action to
+perform:
+
+
+0
+Stop receiving data for this socket.  If further data arrives,
+reject it.
+
+
+1
+Stop trying to transmit data from this socket.  Discard any data
+waiting to be sent.  Stop looking for acknowledgement of data already
+sent; don’t retransmit it if it is lost.
+
+
+2
+Stop both reception and transmission.
+
+
+
+The return value is 0 on success and -1 on failure.  The
+following errno error conditions are defined for this function:
+
+
+EBADF
+socket is not a valid file descriptor.
+
+
+ENOTSOCK
+socket is not a socket.
+
+
+ENOTCONN
+socket is not connected.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Closing-a-Socket.html#Closing-a-Socket
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Closing-a-Socket/shutdown.txt

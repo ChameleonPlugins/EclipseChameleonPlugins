@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+is roughly equivalent to (a,) call like 
+//\\ //// ==> completion hint (1 line):
+is roughly equivalent to a call like 
+//\\ //// Replacement text (1+ lines):
+void errx (int status, const char *format, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void errx (int status, const char *format, …)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe corrupt heap
+| AC-Unsafe corrupt lock mem
+| See POSIX Safety Concepts.
+
+
+The errx function is roughly equivalent to a call like
+
+  error (status, 0, format, the parameters)
+
+except that the global variables error respects and modifies
+are not used and that the program is exited even if status
+is zero.  The difference to err is that no error number
+string is printed.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Error-Messages.html#Error-Messages
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Error-Messages/errx.txt

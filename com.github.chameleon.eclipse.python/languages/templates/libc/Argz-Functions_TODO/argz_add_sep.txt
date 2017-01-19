@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+is similar to argz_add, but str is (divide,split,separate) into separate elements in (the,) result at occurrences of (the,) character delim
+//\\ //// ==> completion hint (1 line):
+is similar to argz_add, but str is split into separate elements in the result at occurrences of the character delim
+//\\ //// Replacement text (1+ lines):
+error_t argz_add_sep (char **argz, size_t *argz_len, X1tr, int delim)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: error_t argz_add_sep (char **argz, size_t *argz_len, const char *str, int delim)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+The argz_add_sep function is similar to argz_add, but
+str is split into separate elements in the result at occurrences of
+the character delim.  This is useful, for instance, for
+adding the components of a Unix search path to an argz vector, by using
+a value of ':' for delim.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argz-Functions.html#Argz-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argz-Functions/argz_add_sep.txt

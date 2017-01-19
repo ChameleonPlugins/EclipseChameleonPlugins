@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) nonzero if and only if (the,) (end,exit,quit,(halt,pause,stop,suspend))-of-file indicator for (the,) stream stream is set
+//\\ //// ==> completion hint (1 line):
+returns nonzero if and only if the end-of-file indicator for the stream stream is set
+//\\ //// Replacement text (1+ lines):
+int feof (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int feof (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+The feof function returns nonzero if and only if the end-of-file
+indicator for the stream stream is set.
+
+This symbol is declared in stdio.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//EOF-and-Errors.html#EOF-and-Errors
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/EOF-and-Errors/feof.txt

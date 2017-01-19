@@ -1,0 +1,13 @@
+//\\ //// code completion entries (1+ lines):
+save first users name as X
+//\\ //// ==> completion hint (1 line):
+X1 = users[0]['name']
+//\\ //// Replacement text (1+ lines):
+X1 = users[0]['name']
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=name
+//\\ //// Help/documentation (1+ lines):
+Store the first user's name to a given variable name
+//\\ //// Tool tip (1 line):
+
+//\\

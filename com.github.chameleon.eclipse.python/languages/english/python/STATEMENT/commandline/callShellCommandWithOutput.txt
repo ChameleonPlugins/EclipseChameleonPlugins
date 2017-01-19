@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+(call,run,execute) shell command X:COMMAND with X:LIST_OF_QUOTED_ARGS output to (string,text) X:OUTPUT
+//\\ //// ==> completion hint (1 line):
+run a shell command and get the output
+//\\ //// Replacement text (1+ lines):
+# import subprocess #//// uncomment if needed and move to top of file
+X3 = subprocess.Popen([X1, X2], stdout=subprocess.PIPE).communicate()[0]
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="pip"
+X2="--version"
+X3=output
+//\\ //// Help/documentation (1+ lines):
+read the values passed in on the command line and save the output to a variable
+//\\ //// Tool tip (1 line):
+//\\

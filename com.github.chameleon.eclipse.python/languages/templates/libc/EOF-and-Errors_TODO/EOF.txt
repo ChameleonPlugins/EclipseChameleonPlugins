@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+this symbol is declared in stdio
+//\\ //// ==> completion hint (1 line):
+This symbol is declared in stdio
+//\\ //// Replacement text (1+ lines):
+Macro: int EOF
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int EOF
+This macro is an integer value that is returned by a number of narrow
+stream functions to indicate an end-of-file condition, or some other
+error situation.  With the GNU C Library, EOF is -1.  In
+other libraries, its value may be some other negative number.
+
+This symbol is declared in stdio.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//EOF-and-Errors.html#EOF-and-Errors
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/EOF-and-Errors/EOF.txt

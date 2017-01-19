@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+this is (a,) partially obsolete alternative for memmove, derived from bsd
+//\\ //// ==> completion hint (1 line):
+This is a partially obsolete alternative for memmove, derived from BSD
+//\\ //// Replacement text (1+ lines):
+void bcopy (const void *from, void *to, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void bcopy (const void *from, void *to, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is a partially obsolete alternative for memmove, derived from
+BSD.  Note that it is not quite equivalent to memmove, because the
+arguments are not in the same order and there is no return value.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/bcopy.txt

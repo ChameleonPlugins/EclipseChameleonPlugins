@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+this is functionally identical to syslog, with (the,) bsd style variable length argument
+//\\ //// ==> completion hint (1 line):
+This is functionally identical to syslog, with the BSD style variable length argument
+//\\ //// Replacement text (1+ lines):
+void vsyslog (int facility_priority, const char *format, va_list arglist)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void vsyslog (int facility_priority, const char *format, va_list arglist)
+Preliminary:
+| MT-Safe env locale
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+
+This is functionally identical to syslog, with the BSD style variable
+length argument.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//syslog_003b-vsyslog.html#syslog_003b-vsyslog
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/syslog_003b-vsyslog/vsyslog.txt

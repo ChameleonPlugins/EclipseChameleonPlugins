@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+maps (the,) error code specified by (the,) errnum argument to (a,) descriptive error message (string,text)
+//\\ //// ==> completion hint (1 line):
+maps the error code specified by the errnum argument to a descriptive error message string
+//\\ //// Replacement text (1+ lines):
+char * strerror (int errnum)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strerror (int errnum)
+Preliminary:
+| MT-Unsafe race:strerror
+| AS-Unsafe heap i18n
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+The strerror function maps the error code (see Checking for Errors) specified by the errnum argument to a descriptive error
+message string.  The return value is a pointer to this string.
+
+The value errnum normally comes from the variable errno.
+
+You should not modify the string returned by strerror.  Also, if
+you make subsequent calls to strerror, the string might be
+overwritten.  (But it’s guaranteed that no library function ever calls
+strerror behind your back.)
+
+The function strerror is declared in string.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Error-Messages.html#Error-Messages
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Error-Messages/strerror.txt

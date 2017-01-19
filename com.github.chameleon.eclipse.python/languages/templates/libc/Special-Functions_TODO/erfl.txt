@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+erf (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) error function of x
+//\\ //// ==> completion hint (1 line):
+erf returns the error function of x
+//\\ //// Replacement text (1+ lines):
+Function: double erf (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double erf (double x)
+Function: float erff (float x)
+Function: long double erfl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+erf returns the error function of x.  The error
+function is defined as
+
+erf (x) = 2/sqrt(pi) * integral from 0 to x of exp(-t^2) dt
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Special-Functions.html#Special-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Special-Functions/erfl.txt

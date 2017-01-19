@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+modifies (the,) user accounting database to (indicate,select,specify) that (the,) user on ut_line has logged out
+//\\ //// ==> completion hint (1 line):
+modifies the user accounting database to indicate that the user on ut_line has logged out
+//\\ //// Replacement text (1+ lines):
+int logout (const char *ut_line)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int logout (const char *ut_line)
+Preliminary:
+| MT-Unsafe race:utent sig:ALRM timer
+| AS-Unsafe lock heap
+| AC-Unsafe lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function modifies the user accounting database to indicate that the
+user on ut_line has logged out.
+
+The logout function returns 1 if the entry was successfully
+written to the database, or 0 on error.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Logging-In-and-Out.html#Logging-In-and-Out
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Logging-In-and-Out/logout.txt

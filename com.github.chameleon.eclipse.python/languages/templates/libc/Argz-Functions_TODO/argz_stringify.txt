@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(the,) argz_stringify (convert,change,replace) argz into (a,) normal (string,text) with (the,) elements separated by (the,) character sep, by replacing each '\0' inside argz with sep
+//\\ //// ==> completion hint (1 line):
+The argz_stringify converts argz into a normal string with the elements separated by the character sep, by replacing each '\0' inside argz with sep
+//\\ //// Replacement text (1+ lines):
+void argz_stringify (char *argz, size_t len, int sep)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void argz_stringify (char *argz, size_t len, int sep)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The argz_stringify converts argz into a normal string with
+the elements separated by the character sep, by replacing each
+'\0' inside argz (except the last one, which terminates the
+string) with sep.  This is handy for printing argz in a
+readable manner.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argz-Functions.html#Argz-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argz-Functions/argz_stringify.txt

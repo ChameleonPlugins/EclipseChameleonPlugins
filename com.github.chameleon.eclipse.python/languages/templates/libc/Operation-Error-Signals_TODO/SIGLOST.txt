@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+on gnu/hurd systems, siglost is generated when any server program dies unexpectedly
+//\\ //// ==> completion hint (1 line):
+On GNU/Hurd systems, SIGLOST is generated when any server program dies unexpectedly
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGLOST
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGLOST
+
+Resource lost.  This signal is generated when you have an advisory lock
+on an NFS file, and the NFS server reboots and forgets about your lock.
+
+On GNU/Hurd systems, SIGLOST is generated when any server program
+dies unexpectedly.  It is usually fine to ignore the signal; whatever
+call was made to the server that died just returns an error.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Operation-Error-Signals.html#Operation-Error-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Operation-Error-Signals/SIGLOST.txt

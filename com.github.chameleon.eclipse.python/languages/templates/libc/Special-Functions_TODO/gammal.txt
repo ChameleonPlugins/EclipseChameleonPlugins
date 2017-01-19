@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+these functions exist for compatibility reasons
+//\\ //// ==> completion hint (1 line):
+These functions exist for compatibility reasons
+//\\ //// Replacement text (1+ lines):
+Function: double gamma (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double gamma (double x)
+Function: float gammaf (float x)
+Function: long double gammal (long double x)
+Preliminary:
+| MT-Unsafe race:signgam
+| AS-Unsafe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions exist for compatibility reasons.  They are equivalent to
+lgamma etc.  It is better to use lgamma since for one the
+name reflects better the actual computation, moreover lgamma is
+standardized in ISO C99 while gamma is not.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Special-Functions.html#Special-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Special-Functions/gammal.txt

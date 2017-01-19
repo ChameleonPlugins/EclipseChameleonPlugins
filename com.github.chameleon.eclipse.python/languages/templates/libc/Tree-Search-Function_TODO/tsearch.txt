@@ -1,0 +1,47 @@
+//\\ //// code completion entries (1+ lines):
+searches in (the,) tree pointed to by * for (an,) element matching key
+//\\ //// ==> completion hint (1 line):
+searches in the tree pointed to by * for an element matching key
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = tsearch (const void *key, void **rootp, comparison_fn_t compar)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * tsearch (const void *key, void **rootp, comparison_fn_t compar)
+Preliminary:
+| MT-Safe race:rootp
+| AS-Unsafe heap
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+The tsearch function searches in the tree pointed to by
+*rootp for an element matching key.  The function
+pointed to by compar is used to determine whether two elements
+match.  See Comparison Functions, for a specification of the functions
+which can be used for the compar parameter.
+
+If the tree does not contain a matching entry the key value will
+be added to the tree.  tsearch does not make a copy of the object
+pointed to by key (how could it since the size is unknown).
+Instead it adds a reference to this object which means the object must
+be available as long as the tree data structure is used.
+
+The tree is represented by a pointer to a pointer since it is sometimes
+necessary to change the root node of the tree.  So it must not be
+assumed that the variable pointed to by rootp has the same value
+after the call.  This also shows that it is not safe to call the
+tsearch function more than once at the same time using the same
+tree.  It is no problem to run it more than once at a time on different
+trees.
+
+The return value is a pointer to the matching element in the tree.  If a
+new element was created the pointer points to the new data (which is in
+fact key).  If an entry had to be created and the program ran out
+of space NULL is returned.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Tree-Search-Function.html#Tree-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Tree-Search-Function/tsearch.txt

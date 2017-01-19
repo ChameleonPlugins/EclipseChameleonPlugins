@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+this is like strchr, except that it searches haystack for (a,) substring needle rather than just (a,) single character
+//\\ //// ==> completion hint (1 line):
+This is like strchr, except that it searches haystack for a substring needle rather than just a single character
+//\\ //// Replacement text (1+ lines):
+char * strstr (const char *haystack, const char *needle)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strstr (const char *haystack, const char *needle)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is like strchr, except that it searches haystack for a
+substring needle rather than just a single character.  It
+returns a pointer into the string haystack that is the first
+character of the substring, or a null pointer if no match was found.  If
+needle is an empty string, the function returns haystack.
+
+For example,
+
+strstr (&quot;hello, world&quot;, &quot;l&quot;)
+    ? &quot;llo, world&quot;
+strstr (&quot;hello, world&quot;, &quot;wo&quot;)
+    ? &quot;world&quot;
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Compatibility-String-Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Compatibility-String-Search-Functions/strstr.txt

@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+using this function one can (chomp,chop,delete,destroy,drop,pop,remove) (an,) entry completely from (the,) environment
+//\\ //// ==> completion hint (1 line):
+Using this function one can remove an entry completely from the environment
+//\\ //// Replacement text (1+ lines):
+int unsetenv (const char *name)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int unsetenv (const char *name)
+Preliminary:
+| MT-Unsafe const:env
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+Using this function one can remove an entry completely from the
+environment.  If the environment contains an entry with the key
+name this whole entry is removed.  A call to this function is
+equivalent to a call to putenv when the value part of the
+string is empty.
+
+The function return -1 if name is a null pointer, points to
+an empty string, or points to a string containing a = character.
+It returns 0 if the call succeeded.
+
+This function was originally part of the BSD library but is now part of
+the Unix standard.  The BSD version had no return value, though.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Environment-Access.html#Environment-Access
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Environment-Access/unsetenv.txt

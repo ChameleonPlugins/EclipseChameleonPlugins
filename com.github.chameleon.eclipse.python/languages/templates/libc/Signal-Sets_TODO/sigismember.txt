@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+tests whether (the,) signal signum is (a,) member of (the,) signal set set
+//\\ //// ==> completion hint (1 line):
+tests whether the signal signum is a member of the signal set set
+//\\ //// Replacement text (1+ lines):
+int sigismember (const sigset_t *set, int signum)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sigismember (const sigset_t *set, int signum)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The sigismember function tests whether the signal signum is
+a member of the signal set set.  It returns 1 if the signal
+is in the set, 0 if not, and -1 if there is an error.
+
+The following errno error condition is defined for this function:
+
+
+EINVAL
+The signum argument doesn’t specify a valid signal.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signal-Sets.html#Signal-Sets
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signal-Sets/sigismember.txt

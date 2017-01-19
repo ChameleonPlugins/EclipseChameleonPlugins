@@ -1,0 +1,80 @@
+//\\ //// code completion entries (1+ lines):
+is (a,) version of readdir which performs internal locking
+//\\ //// ==> completion hint (1 line):
+is a version of readdir which performs internal locking
+//\\ //// Replacement text (1+ lines):
+int readdir_r (DIR *dirstream, struct dirent *entry, struct dirent **result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int readdir_r (DIR *dirstream, struct dirent *entry, struct dirent **result)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+This function is a version of readdir which performs internal
+locking.  Like readdir it returns the next entry from the
+directory.  To prevent conflicts between simultaneously running
+threads the result is stored inside the entry object.
+
+Portability Note: It is recommended to use readdir
+instead of readdir_r for the following reasons:
+
+
+ On systems which do not define NAME_MAX, it may not be possible
+to use readdir_r safely because the caller does not specify the
+length of the buffer for the directory entry.
+
+ On some systems, readdir_r cannot read directory entries with
+very long names.  If such a name is encountered, the GNU C Library
+implementation of readdir_r returns with an error code of
+ENAMETOOLONG after the final directory entry has been read.  On
+other systems, readdir_r may return successfully, but the
+d_name member may not be NUL-terminated or may be truncated.
+
+ POSIX-1.2008 does not guarantee that readdir is thread-safe,
+even when access to the same dirstream is serialized.  But in
+current implementations (including the GNU C Library), it is safe to call
+readdir concurrently on different dirstreams, so there is
+no need to use readdir_r in most multi-threaded programs.  In
+the rare case that multiple threads need to read from the same
+dirstream, it is still better to use readdir and external
+synchronization.
+
+ It is expected that future versions of POSIX will obsolete
+readdir_r and mandate the level of thread safety for
+readdir which is provided by the GNU C Library and other
+implementations today.
+
+
+Normally readdir_r returns zero and sets *result
+to entry.  If there are no more entries in the directory or an
+error is detected, readdir_r sets *result to a
+null pointer and returns a nonzero error code, also stored in
+errno, as described for readdir.
+
+It is also important to look at the definition of the struct
+dirent type.  Simply passing a pointer to an object of this type for
+the second parameter of readdir_r might not be enough.  Some
+systems don’t define the d_name element sufficiently long.  In
+this case the user has to provide additional space.  There must be room
+for at least NAME_MAX + 1 characters in the d_name array.
+Code to call readdir_r could look like this:
+
+
+  union
+  {
+    struct dirent d;
+    char b[offsetof (struct dirent, d_name) + NAME_MAX + 1];
+  } u;
+
+  if (readdir_r (dir, &amp;u.d, &amp;res) == 0)
+    …
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Reading_002fClosing-Directory.html#Reading_002fClosing-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Reading_002fClosing-Directory/readdir_r.txt

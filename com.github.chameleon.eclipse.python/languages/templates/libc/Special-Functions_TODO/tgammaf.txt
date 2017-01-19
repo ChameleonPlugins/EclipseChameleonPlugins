@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+tgamma applies (the,) gamma function to x
+//\\ //// ==> completion hint (1 line):
+tgamma applies the gamma function to x
+//\\ //// Replacement text (1+ lines):
+Function: double tgamma (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double tgamma (double x)
+Function: float tgammaf (float x)
+Function: long double tgammal (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+tgamma applies the gamma function to x.  The gamma
+function is defined as
+
+gamma (x) = integral from 0 to &amp;infin; of t^(x-1) e^-t dt
+
+
+This function was introduced in ISO C99.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Special-Functions.html#Special-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Special-Functions/tgammaf.txt

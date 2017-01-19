@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+if entry points to (the,) beginning of one of (the,) elements in (the,) argz vector *, (the,) argz_delete function will (chomp,chop,delete,destroy,drop,pop,remove) this entry and reallocate *, modifying * and * accordingly
+//\\ //// ==> completion hint (1 line):
+If entry points to the beginning of one of the elements in the argz vector *, the argz_delete function will remove this entry and reallocate *, modifying * and * accordingly
+//\\ //// Replacement text (1+ lines):
+void argz_delete (char **argz, size_t *argz_len, char *entry)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void argz_delete (char **argz, size_t *argz_len, char *entry)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+If entry points to the beginning of one of the elements in the
+argz vector *argz, the argz_delete function will
+remove this entry and reallocate *argz, modifying
+*argz and *argz_len accordingly.  Note that as
+destructive argz functions usually reallocate their argz argument,
+pointers into argz vectors such as entry will then become invalid.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argz-Functions.html#Argz-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argz-Functions/argz_delete.txt

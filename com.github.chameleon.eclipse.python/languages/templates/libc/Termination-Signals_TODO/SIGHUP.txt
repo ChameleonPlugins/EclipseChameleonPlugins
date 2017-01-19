@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+this signal is also used to report (the,) termination of (the,) controlling process on (a,) terminal to jobs associated with that session
+//\\ //// ==> completion hint (1 line):
+This signal is also used to report the termination of the controlling process on a terminal to jobs associated with that session
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGHUP
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGHUP
+
+The SIGHUP (“hang-up”) signal is used to report that the user’s
+terminal is disconnected, perhaps because a network or telephone
+connection was broken.  For more information about this, see Control Modes.
+
+This signal is also used to report the termination of the controlling
+process on a terminal to jobs associated with that session; this
+termination effectively disconnects all processes in the session from
+the controlling terminal.  For more information, see Termination Internals.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Termination-Signals.html#Termination-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Termination-Signals/SIGHUP.txt

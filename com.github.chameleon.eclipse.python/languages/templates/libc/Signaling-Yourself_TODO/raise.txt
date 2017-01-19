@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+sends (the,) signal signum to (the,) calling process
+//\\ //// ==> completion hint (1 line):
+sends the signal signum to the calling process
+//\\ //// Replacement text (1+ lines):
+int raise (int signum)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int raise (int signum)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The raise function sends the signal signum to the calling
+process.  It returns zero if successful and a nonzero value if it fails.
+About the only reason for failure would be if the value of signum
+is invalid.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signaling-Yourself.html#Signaling-Yourself
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signaling-Yourself/raise.txt

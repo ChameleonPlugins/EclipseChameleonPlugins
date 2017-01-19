@@ -1,0 +1,13 @@
+//\\ //// code completion entries (1+ lines):
+(assert,enforce,ensure,require) X:CONDITION
+//\\ //// ==> completion hint (1 line):
+make an assertion
+//\\ //// Replacement text (1+ lines):
+assert X1
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+assert help...
+//\\ //// Tool tip (1 line):
+assert statement...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):

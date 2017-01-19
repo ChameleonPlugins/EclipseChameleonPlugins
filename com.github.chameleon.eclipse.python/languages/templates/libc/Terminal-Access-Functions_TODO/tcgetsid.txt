@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+is used to (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) process group id of (the,) session for which (the,) terminal specified by fildes is (the,) controlling terminal
+//\\ //// ==> completion hint (1 line):
+is used to obtain the process group ID of the session for which the terminal specified by fildes is the controlling terminal
+//\\ //// Replacement text (1+ lines):
+pid_t tcgetsid (int fildes)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: pid_t tcgetsid (int fildes)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is used to obtain the process group ID of the session
+for which the terminal specified by fildes is the controlling terminal.
+If the call is successful the group ID is returned.  Otherwise the
+return value is (pid_t) -1 and the global variable errno
+is set to the following value:
+
+EBADF
+The filedes argument is not a valid file descriptor.
+
+
+ENOTTY
+The calling process does not have a controlling terminal, or the file
+is not the controlling terminal.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Terminal-Access-Functions.html#Terminal-Access-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Terminal-Access-Functions/tcgetsid.txt

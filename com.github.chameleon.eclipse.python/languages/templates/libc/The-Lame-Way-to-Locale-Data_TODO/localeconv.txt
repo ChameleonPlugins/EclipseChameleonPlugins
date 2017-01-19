@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) pointer to (a,) structure whose components contain information about how numeric and monetary values should be formatted in (the,) current locale
+//\\ //// ==> completion hint (1 line):
+returns a pointer to a structure whose components contain information about how numeric and monetary values should be formatted in the current locale
+//\\ //// Replacement text (1+ lines):
+struct lconv * localeconv (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct lconv * localeconv (void)
+Preliminary:
+| MT-Unsafe race:localeconv locale
+| AS-Unsafe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The localeconv function returns a pointer to a structure whose
+components contain information about how numeric and monetary values
+should be formatted in the current locale.
+
+You should not modify the structure or its contents.  The structure might
+be overwritten by subsequent calls to localeconv, or by calls to
+setlocale, but no other function in the library overwrites this
+value.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//The-Lame-Way-to-Locale-Data.html#The-Lame-Way-to-Locale-Data
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/The-Lame-Way-to-Locale-Data/localeconv.txt

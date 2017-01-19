@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+is similar to (the,) lio_listio function
+//\\ //// ==> completion hint (1 line):
+is similar to the lio_listio function
+//\\ //// Replacement text (1+ lines):
+int lio_listio64 (int mode, struct aiocb64 *const list[], int nent, struct sigevent *sig)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int lio_listio64 (int mode, struct aiocb64 *const list[], int nent, struct sigevent *sig)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock heap
+| AC-Unsafe lock mem
+| See POSIX Safety Concepts.
+
+
+This function is similar to the lio_listio function.  The only
+difference is that on 32 bit machines, the file descriptor should
+be opened in the large file mode.  Internally, lio_listio64 uses
+functionality equivalent to lseek64 (see File Position Primitive) to position the file descriptor correctly for the reading or
+writing, as opposed to lseek functionality used in
+lio_listio.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64, this
+function is available under the name lio_listio and so
+transparently replaces the interface for small files on 32 bit
+machines.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Asynchronous-Reads_002fWrites.html#Asynchronous-Reads_002fWrites
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Asynchronous-Reads_002fWrites/lio_listio64.txt

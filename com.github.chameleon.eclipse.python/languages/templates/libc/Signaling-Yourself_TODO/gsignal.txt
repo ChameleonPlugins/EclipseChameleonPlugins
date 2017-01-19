@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+does (the,) same thing as raise
+//\\ //// ==> completion hint (1 line):
+does the same thing as raise
+//\\ //// Replacement text (1+ lines):
+int gsignal (int signum)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int gsignal (int signum)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The gsignal function does the same thing as raise; it is
+provided only for compatibility with SVID.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signaling-Yourself.html#Signaling-Yourself
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signaling-Yourself/gsignal.txt

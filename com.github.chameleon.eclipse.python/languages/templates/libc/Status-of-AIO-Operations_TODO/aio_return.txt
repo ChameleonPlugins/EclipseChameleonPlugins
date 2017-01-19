@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) return status of (the,) operation carried out by (the,) request described in (the,) variable pointed to by aiocbp
+//\\ //// ==> completion hint (1 line):
+retrieve the return status of the operation carried out by the request described in the variable pointed to by aiocbp
+//\\ //// Replacement text (1+ lines):
+ssize_t aio_return (struct aiocb *aiocbp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: ssize_t aio_return (struct aiocb *aiocbp)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function can be used to retrieve the return status of the operation
+carried out by the request described in the variable pointed to by
+aiocbp.  As long as the error status of this request as returned
+by aio_error is EINPROGRESS the return of this function is
+undefined.
+
+Once the request is finished this function can be used exactly once to
+retrieve the return value.  Following calls might lead to undefined
+behavior.  The return value itself is the value which would have been
+returned by the read, write, or fsync call.
+
+The function can return ENOSYS if it is not implemented.  It
+could also return EINVAL if the aiocbp parameter does not
+refer to an asynchronous operation whose return status is not yet known.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 this
+function is in fact aio_return64 since the LFS interface
+transparently replaces the normal implementation.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Status-of-AIO-Operations.html#Status-of-AIO-Operations
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Status-of-AIO-Operations/aio_return.txt

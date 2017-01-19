@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+these functions round x to (an,) integer value according to (the,) current rounding mode
+//\\ //// ==> completion hint (1 line):
+These functions round x to an integer value according to the current rounding mode
+//\\ //// Replacement text (1+ lines):
+double rint (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double rint (double x)
+Function: float rintf (float x)
+Function: long double rintl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions round x to an integer value according to the
+current rounding mode.  See Floating Point Parameters, for
+information about the various rounding modes.  The default
+rounding mode is to round to the nearest integer; some machines
+support other modes, but round-to-nearest is always used unless
+you explicitly select another.
+
+If x was not initially an integer, these functions raise the
+inexact exception.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Rounding-Functions.html#Rounding-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Rounding-Functions/rint.txt

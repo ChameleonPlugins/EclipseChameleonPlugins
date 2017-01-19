@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+is similar to creat
+//\\ //// ==> completion hint (1 line):
+is similar to creat
+//\\ //// Replacement text (1+ lines):
+Obsolete function: X1reat64 (X1, mode_t mode)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Obsolete function: int creat64 (const char *filename, mode_t mode)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe fd
+| See POSIX Safety Concepts.
+
+
+This function is similar to creat.  It returns a file descriptor
+which can be used to access the file named by filename.  The only
+the difference is that on 32 bit systems the file is opened in the
+large file mode.  I.e., file length and file offsets can exceed 31 bits.
+
+To use this file descriptor one must not use the normal operations but
+instead the counterparts named *64, e.g., read64.
+
+When the sources are translated with _FILE_OFFSET_BITS == 64 this
+function is actually available under the name open.  I.e., the
+new, extended API using 64 bit file sizes and offsets transparently
+replaces the old API.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Opening-and-Closing-Files.html#Opening-and-Closing-Files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Opening-and-Closing-Files/creat64.txt

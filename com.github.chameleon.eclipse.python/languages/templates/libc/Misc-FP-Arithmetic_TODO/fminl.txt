@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) lesser of (the,) two values x and y
+//\\ //// ==> completion hint (1 line):
+returns the lesser of the two values x and y
+//\\ //// Replacement text (1+ lines):
+Function: double fmin (double x, double y)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double fmin (double x, double y)
+Function: float fminf (float x, float y)
+Function: long double fminl (long double x, long double y)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The fmin function returns the lesser of the two values x
+and y.  It is similar to the expression
+
+((x) &lt; (y) ? (x) : (y))
+
+except that x and y are only evaluated once.
+
+If an argument is NaN, the other argument is returned.  If both arguments
+are NaN, NaN is returned.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Misc-FP-Arithmetic.html#Misc-FP-Arithmetic
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Misc-FP-Arithmetic/fminl.txt

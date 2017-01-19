@@ -1,0 +1,45 @@
+//\\ //// code completion entries (1+ lines):
+(chomp,chop,delete,destroy,drop,pop,remove) (a,) directory
+//\\ //// ==> completion hint (1 line):
+deletes a directory
+//\\ //// Replacement text (1+ lines):
+int rmdir (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int rmdir (const char *filename)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+
+The rmdir function deletes a directory.  The directory must be
+empty before it can be removed; in other words, it can only contain
+entries for . and ...
+
+In most other respects, rmdir behaves like unlink.  There
+are two additional errno error conditions defined for
+rmdir:
+
+
+ENOTEMPTY
+EEXIST
+The directory to be deleted is not empty.
+
+
+
+These two error codes are synonymous; some systems use one, and some use
+the other.  GNU/Linux and GNU/Hurd systems always use ENOTEMPTY.
+
+The prototype for this function is declared in the header file
+unistd.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Deleting-Files.html#Deleting-Files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Deleting-Files/rmdir.txt

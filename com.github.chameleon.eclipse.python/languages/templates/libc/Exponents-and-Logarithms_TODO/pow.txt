@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+these are general exponentiation functions, returning base raised to power
+//\\ //// ==> completion hint (1 line):
+These are general exponentiation functions, returning base raised to power
+//\\ //// Replacement text (1+ lines):
+double pow (double base, double power)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double pow (double base, double power)
+Function: float powf (float base, float power)
+Function: long double powl (long double base, long double power)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These are general exponentiation functions, returning base raised
+to power.
+
+Mathematically, pow would return a complex number when base
+is negative and power is not an integral value.  pow can’t
+do that, so instead it signals a domain error. pow may also
+underflow or overflow the destination type.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Exponents-and-Logarithms.html#Exponents-and-Logarithms
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Exponents-and-Logarithms/pow.txt

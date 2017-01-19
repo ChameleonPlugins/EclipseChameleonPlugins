@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) host name of (the,) (box,computer,system,node,host,target) that calls it to name, (a,) (string,text) with X:LENGTH length
+//\\ //// ==> completion hint (1 line):
+sets the host name of the system that calls it to name, a string with length length
+//\\ //// Replacement text (1+ lines):
+int sethostname (const char *name, X2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2=256
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sethostname (const char *name, size_t length)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The sethostname function sets the host name of the system that
+calls it to name, a string with length length.  Only
+privileged processes are permitted to do this.
+
+Usually sethostname gets called just once, at system boot time.
+Often, the program that calls it sets it to the value it finds in the
+file /etc/hostname.
+
+
+Be sure to set the host name to the full host name, not just the DNS
+hostname (see above).
+
+The return value is 0 on success and -1 on failure.
+The following errno error condition is defined for this function:
+
+
+EPERM
+This process cannot set the host name because it is not privileged.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Identification.html#Host-Identification
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Identification/sethostname.txt

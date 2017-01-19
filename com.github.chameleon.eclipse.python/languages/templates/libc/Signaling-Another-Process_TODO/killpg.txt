@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+this is similar to kill, but sends signal signum to (the,) process group pgid
+//\\ //// ==> completion hint (1 line):
+This is similar to kill, but sends signal signum to the process group pgid
+//\\ //// Replacement text (1+ lines):
+int killpg (int pgid, int signum)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int killpg (int pgid, int signum)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is similar to kill, but sends signal signum to the
+process group pgid.  This function is provided for compatibility
+with BSD; using kill to do this is more portable.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signaling-Another-Process.html#Signaling-Another-Process
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signaling-Another-Process/killpg.txt

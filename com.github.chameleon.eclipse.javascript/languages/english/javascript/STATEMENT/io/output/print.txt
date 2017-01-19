@@ -1,0 +1,20 @@
+//\\ //// code completion entries (1+ lines):
+(output,print,show,say,write) a line of text but don't go to the next line
+//\\ //// ==> completion hint (1 line):
+System.out.print(String text);
+//\\ //// Replacement text (1+ lines):
+System.out.print(text);
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+function System.out.println(String text) http://www.w3.og/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html<br>
+<DL>
+  <DT><b>Parameters:</b></DT><br>
+   <DD>{String} text<br></DD>
+  <DT><b>Since:</b></DT><br>
+   <DD>StandardECMA-262 3rd. Edition</DD><br>
+   <DD>Level 2 Document Object Model HTML Specification.</DD>
+ </DL>
+//\\ //// Tool tip (1 line):
+Change the text to a variable or "literal string" (in quotes)
+//\\

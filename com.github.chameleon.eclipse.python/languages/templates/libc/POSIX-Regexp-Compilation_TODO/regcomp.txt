@@ -1,0 +1,51 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function regcomp “compiles” (a,) regular expression into (a,) data structure that you can use with regexec to match against (a,) (string,text)
+//\\ //// ==> completion hint (1 line):
+The function regcomp “compiles” a regular expression into a data structure that you can use with regexec to match against a string
+//\\ //// Replacement text (1+ lines):
+int regcomp (regex_t *restrict compiled, const char *restrict pattern, X3flags)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X3='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int regcomp (regex_t *restrict compiled, const char *restrict pattern, int cflags)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The function regcomp “compiles” a regular expression into a
+data structure that you can use with regexec to match against a
+string.  The compiled regular expression format is designed for
+efficient matching.  regcomp stores it into *compiled.
+
+It’s up to you to allocate an object of type regex_t and pass its
+address to regcomp.
+
+The argument cflags lets you specify various options that control
+the syntax and semantics of regular expressions.  See Flags for POSIX Regexps.
+
+If you use the flag REG_NOSUB, then regcomp omits from
+the compiled regular expression the information necessary to record
+how subexpressions actually match.  In this case, you might as well
+pass 0 for the matchptr and nmatch arguments when
+you call regexec.
+
+If you don’t use REG_NOSUB, then the compiled regular expression
+does have the capacity to record how subexpressions match.  Also,
+regcomp tells you how many subexpressions pattern has, by
+storing the number in compiled-&gt;re_nsub.  You can use that
+value to decide how long an array to allocate to hold information about
+subexpression matches.
+
+regcomp returns 0 if it succeeds in compiling the regular
+expression; otherwise, it returns a nonzero error code (see the table
+below).  You can use regerror to produce an error message string
+describing the reason for a nonzero value; see Regexp Cleanup.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//POSIX-Regexp-Compilation.html#POSIX-Regexp-Compilation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/POSIX-Regexp-Compilation/regcomp.txt

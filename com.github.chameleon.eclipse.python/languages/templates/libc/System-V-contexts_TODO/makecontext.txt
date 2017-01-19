@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+(the,) ucp parameter passed to makecontext shall be initialized by (a,) call to getcontext
+//\\ //// ==> completion hint (1 line):
+The ucp parameter passed to makecontext shall be initialized by a call to getcontext
+//\\ //// Replacement text (1+ lines):
+void makecontext (ucontext_t *ucp, void (*func) (void), int argc, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void makecontext (ucontext_t *ucp, void (*func) (void), int argc, …)
+Preliminary:
+| MT-Safe race:ucp
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+The ucp parameter passed to makecontext shall be
+initialized by a call to getcontext.  The context will be
+modified in a way such that if the context is resumed it will start by
+calling the function func which gets argc integer arguments
+passed.  The integer arguments which are to be passed should follow the
+argc parameter in the call to makecontext.
+
+Before the call to this function the uc_stack and uc_link
+element of the ucp structure should be initialized.  The
+uc_stack element describes the stack which is used for this
+context.  No two contexts which are used at the same time should use the
+same memory region for a stack.
+
+The uc_link element of the object pointed to by ucp should
+be a pointer to the context to be executed when the function func
+returns or it should be a null pointer.  See setcontext for more
+information about the exact use.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//System-V-contexts.html#System-V-contexts
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/System-V-contexts/makecontext.txt

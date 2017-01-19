@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+this occurs within reused_arena, when (a,) thread first tries to (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) memory or needs (a,) retry after (a,) failure to (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) from (the,) main arena, there isn’t any (deallocate,free,release) arena, (the,) maximum number of arenas has been reached, and (an,) existing arena was chosen for reuse, but its mutex could not be immediately acquired
+//\\ //// ==> completion hint (1 line):
+This occurs within reused_arena, when a thread first tries to allocate memory or needs a retry after a failure to allocate from the main arena, there isn’t any free arena, the maximum number of arenas has been reached, and an existing arena was chosen for reuse, but its mutex could not be immediately acquired
+//\\ //// Replacement text (1+ lines):
+Probe: memory_arena_reuse_wait (void *$arg1, void *$arg2, void *$arg3)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Probe: memory_arena_reuse_wait (void *$arg1, void *$arg2, void *$arg3)
+This probe is triggered when malloc is about to wait for an arena
+to become available for reuse.  Argument $arg1 holds a pointer to
+the mutex the thread is going to wait on, $arg2 is a pointer to a
+newly-chosen arena to be reused, and $arg3 is a pointer to the
+arena previously used by that thread.
+
+This occurs within
+reused_arena, when a thread first tries to allocate memory or
+needs a retry after a failure to allocate from the main arena, there
+isn’t any free arena, the maximum number of arenas has been reached, and
+an existing arena was chosen for reuse, but its mutex could not be
+immediately acquired.  The mutex in $arg1 is the mutex of the
+selected arena.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Memory-Allocation-Probes.html#Memory-Allocation-Probes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Memory-Allocation-Probes/memory_arena_reuse_wait.txt

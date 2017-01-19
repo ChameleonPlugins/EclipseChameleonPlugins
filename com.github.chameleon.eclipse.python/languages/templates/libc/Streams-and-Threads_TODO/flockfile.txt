@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+acquires (the,) internal locking object associated with (the,) stream stream
+//\\ //// ==> completion hint (1 line):
+acquires the internal locking object associated with the stream stream
+//\\ //// Replacement text (1+ lines):
+void flockfile (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void flockfile (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+The flockfile function acquires the internal locking object
+associated with the stream stream.  This ensures that no other
+thread can explicitly through flockfile/ftrylockfile or
+implicit through a call of a stream function lock the stream.  The
+thread will block until the lock is acquired.  An explicit call to
+funlockfile has to be used to release the lock.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Streams-and-Threads.html#Streams-and-Threads
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Streams-and-Threads/flockfile.txt

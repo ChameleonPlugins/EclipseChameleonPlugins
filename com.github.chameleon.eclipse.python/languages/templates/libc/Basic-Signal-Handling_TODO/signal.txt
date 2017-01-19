@@ -1,0 +1,90 @@
+//\\ //// code completion entries (1+ lines):
+establishes action as (the,) action for (the,) signal signum
+//\\ //// ==> completion hint (1 line):
+establishes action as the action for the signal signum
+//\\ //// Replacement text (1+ lines):
+sighandler_t signal (int signum, sighandler_t action)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: sighandler_t signal (int signum, sighandler_t action)
+Preliminary:
+| MT-Safe sigintr
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The signal function establishes action as the action for
+the signal signum.
+
+The first argument, signum, identifies the signal whose behavior
+you want to control, and should be a signal number.  The proper way to
+specify a signal number is with one of the symbolic signal names
+(see Standard Signals)—don’t use an explicit number, because
+the numerical code for a given kind of signal may vary from operating
+system to operating system.
+
+The second argument, action, specifies the action to use for the
+signal signum.  This can be one of the following:
+
+
+SIG_DFL
+
+
+SIG_DFL specifies the default action for the particular signal.
+The default actions for various kinds of signals are stated in
+Standard Signals.
+
+
+SIG_IGN
+
+
+SIG_IGN specifies that the signal should be ignored.
+
+Your program generally should not ignore signals that represent serious
+events or that are normally used to request termination.  You cannot
+ignore the SIGKILL or SIGSTOP signals at all.  You can
+ignore program error signals like SIGSEGV, but ignoring the error
+won’t enable the program to continue executing meaningfully.  Ignoring
+user requests such as SIGINT, SIGQUIT, and SIGTSTP
+is unfriendly.
+
+When you do not wish signals to be delivered during a certain part of
+the program, the thing to do is to block them, not ignore them.
+See Blocking Signals.
+
+
+handler
+Supply the address of a handler function in your program, to specify
+running this handler as the way to deliver the signal.
+
+For more information about defining signal handler functions,
+see Defining Handlers.
+
+
+
+If you set the action for a signal to SIG_IGN, or if you set it
+to SIG_DFL and the default action is to ignore that signal, then
+any pending signals of that type are discarded (even if they are
+blocked).  Discarding the pending signals means that they will never be
+delivered, not even if you subsequently specify another action and
+unblock this kind of signal.
+
+The signal function returns the action that was previously in
+effect for the specified signum.  You can save this value and
+restore it later by calling signal again.
+
+If signal can’t honor the request, it returns SIG_ERR
+instead.  The following errno error conditions are defined for
+this function:
+
+
+EINVAL
+You specified an invalid signum; or you tried to ignore or provide
+a handler for SIGKILL or SIGSTOP.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Basic-Signal-Handling.html#Basic-Signal-Handling
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Basic-Signal-Handling/signal.txt

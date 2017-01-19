@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) attributes of (a,) terminal
+//\\ //// ==> completion hint (1 line):
+sets the attributes of a terminal
+//\\ //// Replacement text (1+ lines):
+int stty (X1, const struct sgttyb *attributes)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int stty (int filedes, const struct sgttyb *attributes)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This function sets the attributes of a terminal.
+
+stty sets the terminal attributes of the terminal which is open with
+file descriptor filedes to those described by *filedes.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//BSD-Terminal-Modes.html#BSD-Terminal-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/BSD-Terminal-Modes/stty.txt

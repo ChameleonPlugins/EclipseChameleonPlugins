@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+is equivalent to (the,) drand48 function with (the,) difference that it does not modify (the,) global random number generator parameters but instead (the,) parameters in (the,) buffer supplied through (the,) pointer buffer
+//\\ //// ==> completion hint (1 line):
+is equivalent to the drand48 function with the difference that it does not modify the global random number generator parameters but instead the parameters in the buffer supplied through the pointer buffer
+//\\ //// Replacement text (1+ lines):
+int drand48_r (struct drand48_data *buffer, double *result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int drand48_r (struct drand48_data *buffer, double *result)
+Preliminary:
+| MT-Safe race:buffer
+| AS-Safe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+This function is equivalent to the drand48 function with the
+difference that it does not modify the global random number generator
+parameters but instead the parameters in the buffer supplied through the
+pointer buffer.  The random number is returned in the variable
+pointed to by result.
+
+The return value of the function indicates whether the call succeeded.
+If the value is less than 0 an error occurred and errno is
+set to indicate the problem.
+
+This function is a GNU extension and should not be used in portable
+programs.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/drand48_r.txt

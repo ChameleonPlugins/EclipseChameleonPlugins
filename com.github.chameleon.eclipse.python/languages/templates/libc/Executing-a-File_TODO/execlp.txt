@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is like execl, except that it performs (the,) same file name searching as (the,) execvp function
+//\\ //// ==> completion hint (1 line):
+is like execl, except that it performs the same file name searching as the execvp function
+//\\ //// Replacement text (1+ lines):
+int execlp (X1, const char *arg0, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int execlp (const char *filename, const char *arg0, …)
+Preliminary:
+| MT-Safe env
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+This function is like execl, except that it performs the same
+file name searching as the execvp function.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Executing-a-File.html#Executing-a-File
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Executing-a-File/execlp.txt

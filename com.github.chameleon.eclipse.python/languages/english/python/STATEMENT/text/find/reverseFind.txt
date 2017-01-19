@@ -1,0 +1,17 @@
+//\\ //// code completion entries (1+ lines):
+reverse (find,get) where X:TEXT is located inside X:TEXT
+//\\ //// ==> completion hint (1 line):
+find where one piece of text is inside another starting at the end
+//\\ //// Replacement text (1+ lines):
+X2.rfind(X1)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="bye"
+X2="goodbye bye"
+//\\ //// Help/documentation (1+ lines):
+All indexes in Python are ZERO BASED,
+so the first character in text will be at
+position 0.
+If no match is found, returns -1.
+//\\ //// Tool tip (1 line):
+Positions start at 0, not 1. If no match, returns -1.
+//\\

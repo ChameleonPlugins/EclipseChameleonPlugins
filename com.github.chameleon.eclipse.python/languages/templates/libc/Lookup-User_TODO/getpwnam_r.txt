@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+is similar to getpwnam in that is (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) information about (the,) user whose user name is name
+//\\ //// ==> completion hint (1 line):
+is similar to getpwnam in that is returns information about the user whose user name is name
+//\\ //// Replacement text (1+ lines):
+int getpwnam_r (const char *name, struct passwd *result_buf, char *buffer, size_t buflen, struct passwd **result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getpwnam_r (const char *name, struct passwd *result_buf, char *buffer, size_t buflen, struct passwd **result)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+
+This function is similar to getpwnam in that is returns
+information about the user whose user name is name.  However, like
+getpwuid_r, it fills the user supplied buffers in
+result_buf and buffer with the information instead of using
+a static buffer.
+
+The return values are the same as for getpwuid_r.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Lookup-User.html#Lookup-User
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Lookup-User/getpwnam_r.txt

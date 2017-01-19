@@ -1,0 +1,38 @@
+//\\ //// code completion entries (1+ lines):
+is (the,) reentrant counterpart of getdate
+//\\ //// ==> completion hint (1 line):
+is the reentrant counterpart of getdate
+//\\ //// Replacement text (1+ lines):
+int getdate_r (X1tring, struct tm *tp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getdate_r (const char *string, struct tm *tp)
+Preliminary:
+| MT-Safe env locale
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+The getdate_r function is the reentrant counterpart of
+getdate.  It does not use the global variable getdate_err
+to signal an error, but instead returns an error code.  The same error
+codes as described in the getdate_err documentation above are
+used, with 0 meaning success.
+
+Moreover, getdate_r stores the broken-down time in the variable
+of type struct tm pointed to by the second argument, rather than
+in a static variable.
+
+This function is not defined in the Unix standard.  Nevertheless it is
+available on some other Unix systems as well.
+
+The warning against using getdate in SUID-programs applies to
+getdate_r as well.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//General-Time-String-Parsing.html#General-Time-String-Parsing
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/General-Time-String-Parsing/getdate_r.txt

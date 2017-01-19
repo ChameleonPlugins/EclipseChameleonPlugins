@@ -1,0 +1,13 @@
+//\\ //// code completion entries (1+ lines):
+(chop,chomp,delete,destroy,drop,remove) last character of X:TEXT
+//\\ //// ==> completion hint (1 line):
+remove the last character from text
+//\\ //// Replacement text (1+ lines):
+X1 = X1[0:-1] # //// [0:-1] means start with character 0 and go to second to last (-1) character
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="text"
+//\\ //// Help/documentation (1+ lines):
+function string_to_search.index(what_to_look_for)
+//\\ //// Tool tip (1 line):
+Replace the variable with your own variable name if you want...
+//\\

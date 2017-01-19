@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+(the,) strcspn 
+//\\ //// ==> completion hint (1 line):
+The strcspn 
+//\\ //// Replacement text (1+ lines):
+size_t size=strcspn (X1tring, const char *stopset)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t strcspn (const char *string, const char *stopset)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The strcspn (“string complement span”) function returns the length
+of the initial substring of string that consists entirely of characters
+that are not members of the set specified by the string stopset.
+(In other words, it returns the offset of the first character in string
+that is a member of the set stopset.)
+
+For example,
+
+strcspn (&quot;hello, world&quot;, &quot; \t\n,.;!?&quot;)
+    ? 5
+
+
+Note that “character” is here used in the sense of byte.  In a string
+using a multibyte character encoding (abstract) character consisting of
+more than one byte are not treated as an entity.  Each byte is treated
+separately.  The function is not locale-dependent.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Search-Functions/strcspn.txt

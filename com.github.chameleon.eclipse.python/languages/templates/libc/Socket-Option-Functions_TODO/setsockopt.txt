@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is used to set (the,) socket option optname at level level for socket socket
+//\\ //// ==> completion hint (1 line):
+is used to set the socket option optname at level level for socket socket
+//\\ //// Replacement text (1+ lines):
+int setsockopt (int socket, int level, int optname, const void *optval, socklen_t optlen)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setsockopt (int socket, int level, int optname, const void *optval, socklen_t optlen)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is used to set the socket option optname at level
+level for socket socket.  The value of the option is passed
+in the buffer optval of size optlen.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Socket-Option-Functions.html#Socket-Option-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Socket-Option-Functions/setsockopt.txt

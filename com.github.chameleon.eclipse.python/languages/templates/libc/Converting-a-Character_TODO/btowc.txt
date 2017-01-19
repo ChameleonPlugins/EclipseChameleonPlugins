@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+ (convert,change,replace) (a,) valid single byte character X:CHARACTER in (the,) initial shift state into (the,) wide character equivalent using (the,) conversion rules from (the,) currently selected locale of (the,) lc_ctype category
+//\\ //// ==> completion hint (1 line):
+ converts a valid single byte character c in the initial shift state into the wide character equivalent using the conversion rules from the currently selected locale of the LC_CTYPE category
+//\\ //// Replacement text (1+ lines):
+wint_t btowc (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: wint_t btowc (int c)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The btowc function (“byte to wide character”) converts a valid
+single byte character c in the initial shift state into the wide
+character equivalent using the conversion rules from the currently
+selected locale of the LC_CTYPE category.
+
+If (unsigned char) c is no valid single byte multibyte
+character or if c is EOF, the function returns WEOF.
+
+Please note the restriction of c being tested for validity only in
+the initial shift state.  No mbstate_t object is used from
+which the state information is taken, and the function also does not use
+any static state.
+
+
+The btowc function was introduced in Amendment 1 to ISO C90
+and is declared in wchar.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Converting-a-Character.html#Converting-a-Character
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Converting-a-Character/btowc.txt

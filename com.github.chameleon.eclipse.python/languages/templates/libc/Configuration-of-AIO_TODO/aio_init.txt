@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+must be called before any other aio function
+//\\ //// ==> completion hint (1 line):
+must be called before any other AIO function
+//\\ //// Replacement text (1+ lines):
+void aio_init (const struct aioinit *init)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void aio_init (const struct aioinit *init)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+This function must be called before any other AIO function.  Calling it
+is completely voluntary, as it is only meant to help the AIO
+implementation perform better.
+
+Before calling the aio_init, function the members of a variable of
+type struct aioinit must be initialized.  Then a reference to
+this variable is passed as the parameter to aio_init which itself
+may or may not pay attention to the hints.
+
+The function has no return value and no error cases are defined.  It is
+a extension which follows a proposal from the SGI implementation in
+Irix 6.  It is not covered by POSIX.1b or Unix98.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Configuration-of-AIO.html#Configuration-of-AIO
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Configuration-of-AIO/aio_init.txt

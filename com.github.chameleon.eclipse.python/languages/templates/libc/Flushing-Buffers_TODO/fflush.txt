@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+causes any buffered (output,print,show,say,type,write) on stream to be delivered to (the,) file
+//\\ //// ==> completion hint (1 line):
+causes any buffered output on stream to be delivered to the file
+//\\ //// Replacement text (1+ lines):
+int fflush (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fflush (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function causes any buffered output on stream to be delivered
+to the file.  If stream is a null pointer, then
+fflush causes buffered output on all open output streams
+to be flushed.
+
+This function returns EOF if a write error occurs, or zero
+otherwise.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Flushing-Buffers.html#Flushing-Buffers
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Flushing-Buffers/fflush.txt

@@ -1,0 +1,50 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (an,) absolute file name representing (the,) current working directory, storing it in (the,) character array buffer that you provide
+//\\ //// ==> completion hint (1 line):
+returns an absolute file name representing the current working directory, storing it in the character array buffer that you provide
+//\\ //// Replacement text (1+ lines):
+char * getcwd (char *buffer, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * getcwd (char *buffer, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem fd
+| See POSIX Safety Concepts.
+
+
+
+The getcwd function returns an absolute file name representing
+the current working directory, storing it in the character array
+buffer that you provide.  The size argument is how you tell
+the system the allocation size of buffer.
+
+The GNU C Library version of this function also permits you to specify a
+null pointer for the buffer argument.  Then getcwd
+allocates a buffer automatically, as with malloc
+(see Unconstrained Allocation).  If the size is greater than
+zero, then the buffer is that large; otherwise, the buffer is as large
+as necessary to hold the result.
+
+The return value is buffer on success and a null pointer on failure.
+The following errno error conditions are defined for this function:
+
+
+EINVAL
+The size argument is zero and buffer is not a null pointer.
+
+
+ERANGE
+The size argument is less than the length of the working directory
+name.  You need to allocate a bigger array and try again.
+
+
+EACCES
+Permission to read or search a component of the file name was denied.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Working-Directory.html#Working-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Working-Directory/getcwd.txt

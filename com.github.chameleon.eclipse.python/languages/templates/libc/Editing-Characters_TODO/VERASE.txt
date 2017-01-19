@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(the,) erase character is recognized only in canonical input mode
+//\\ //// ==> completion hint (1 line):
+The ERASE character is recognized only in canonical input mode
+//\\ //// Replacement text (1+ lines):
+Macro: int VERASE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int VERASE
+
+This is the subscript for the ERASE character in the special control
+character array.  termios.c_cc[VERASE] holds the
+character itself.
+
+The ERASE character is recognized only in canonical input mode.  When
+the user types the erase character, the previous character typed is
+discarded.  (If the terminal generates multibyte character sequences,
+this may cause more than one byte of input to be discarded.)  This
+cannot be used to erase past the beginning of the current line of text.
+The ERASE character itself is discarded.
+
+Usually, the ERASE character is DEL.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Editing-Characters.html#Editing-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Editing-Characters/VERASE.txt

@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is similar to getutid, but uses struct utmpx instead of struct utmp
+//\\ //// ==> completion hint (1 line):
+is similar to getutid, but uses struct utmpx instead of struct utmp
+//\\ //// Replacement text (1+ lines):
+struct utmpx * getutxid (const struct utmpx *id)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct utmpx * getutxid (const struct utmpx *id)
+Preliminary:
+| MT-Unsafe init race:utent sig:ALRM timer
+| AS-Unsafe lock heap
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+This function is similar to getutid, but uses struct utmpx
+instead of struct utmp.  In the GNU C Library it is simply an alias
+for getutid.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//XPG-Functions.html#XPG-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/XPG-Functions/getutxid.txt

@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+this is like strstr, but needle and haystack are byte arrays rather than null-terminated strings
+//\\ //// ==> completion hint (1 line):
+This is like strstr, but needle and haystack are byte arrays rather than null-terminated strings
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = memmem (const void *haystack, size_t haystack-len,const void *needle, size_t needle-len)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * memmem (const void *haystack, size_t haystack-len,const void *needle, size_t needle-len)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is like strstr, but needle and haystack are byte
+arrays rather than null-terminated strings.  needle-len is the
+length of needle and haystack-len is the length of
+haystack.
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Compatibility-String-Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Compatibility-String-Search-Functions/memmem.txt

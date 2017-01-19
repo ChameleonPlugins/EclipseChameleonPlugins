@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+determines whether (the,) stream stream was last read from or whether it is opened read-only
+//\\ //// ==> completion hint (1 line):
+determines whether the stream stream was last read from or whether it is opened read-only
+//\\ //// Replacement text (1+ lines):
+int __freading (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int __freading (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The __freading function determines whether the stream
+stream was last read from or whether it is opened read-only.  In
+this case the return value is nonzero, otherwise it is zero.
+Determining whether a stream opened for reading and writing was last
+used for writing allows to draw conclusions about the content about the
+buffer, among other things.
+
+This function is declared in stdio_ext.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Opening-Streams.html#Opening-Streams
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Opening-Streams/__freading.txt

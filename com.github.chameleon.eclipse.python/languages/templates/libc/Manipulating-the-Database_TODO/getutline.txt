@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+searches forward from (the,) current point in (the,) database until it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (an,) entry whose ut_type value is login_process or user_process, and whose ut_line member matches (the,) ut_line member of (the,) line structure
+//\\ //// ==> completion hint (1 line):
+searches forward from the current point in the database until it finds an entry whose ut_type value is LOGIN_PROCESS or USER_PROCESS, and whose ut_line member matches the ut_line member of the line structure
+//\\ //// Replacement text (1+ lines):
+struct utmp * getutline (const struct utmp *line)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct utmp * getutline (const struct utmp *line)
+Preliminary:
+| MT-Unsafe init race:utent sig:ALRM timer
+| AS-Unsafe heap lock
+| AC-Unsafe lock fd mem
+| See POSIX Safety Concepts.
+
+
+
+This function searches forward from the current point in the database
+until it finds an entry whose ut_type value is
+LOGIN_PROCESS or USER_PROCESS, and whose ut_line
+member matches the ut_line member of the line structure.
+If it finds such an entry, it returns a pointer to the entry which is
+statically allocated, and may be overwritten by a subsequent call to
+getutent, getutid or getutline.  You must copy the
+contents of the structure if you wish to save the information.
+
+A null pointer is returned in case the end of the database is reached
+without a match.
+
+The getutline function may cache the last read entry.  Therefore
+if you are using getutline to search for multiple occurrences, it
+is necessary to zero out the static data after each call.  Otherwise
+getutline could just return a pointer to the same entry over and
+over again.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Manipulating-the-Database.html#Manipulating-the-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Manipulating-the-Database/getutline.txt

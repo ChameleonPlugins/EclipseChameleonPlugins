@@ -1,0 +1,46 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (a,) hashing table which can contain at least nel elements
+//\\ //// ==> completion hint (1 line):
+creates a hashing table which can contain at least nel elements
+//\\ //// Replacement text (1+ lines):
+int hcreate (size_t nel)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int hcreate (size_t nel)
+Preliminary:
+| MT-Unsafe race:hsearch
+| AS-Unsafe heap
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+The hcreate function creates a hashing table which can contain at
+least nel elements.  There is no possibility to grow this table so
+it is necessary to choose the value for nel wisely.  The method
+used to implement this function might make it necessary to make the
+number of elements in the hashing table larger than the expected maximal
+number of elements.  Hashing tables usually work inefficiently if they are
+filled 80% or more.  The constant access time guaranteed by hashing can
+only be achieved if few collisions exist.  See Knuth’s “The Art of
+Computer Programming, Part 3: Searching and Sorting” for more
+information.
+
+The weakest aspect of this function is that there can be at most one
+hashing table used through the whole program.  The table is allocated
+in local memory out of control of the programmer.  As an extension the GNU C Library
+provides an additional set of functions with a reentrant
+interface which provide a similar interface but which allow to keep
+arbitrarily many hashing tables.
+
+It is possible to use more than one hashing table in the program run if
+the former table is first destroyed by a call to hdestroy.
+
+The function returns a non-zero value if successful.  If it return zero
+something went wrong.  This could either mean there is already a hashing
+table in use or the program runs out of memory.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Hash-Search-Function.html#Hash-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Hash-Search-Function/hcreate.txt

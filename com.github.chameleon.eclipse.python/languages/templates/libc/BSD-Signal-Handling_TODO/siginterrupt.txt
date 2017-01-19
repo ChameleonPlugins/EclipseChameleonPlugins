@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(indicate,select,specify) which approach to use when certain primitives are interrupted by handling signal signum
+//\\ //// ==> completion hint (1 line):
+specifies which approach to use when certain primitives are interrupted by handling signal signum
+//\\ //// Replacement text (1+ lines):
+int siginterrupt (int signum, int failflag)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int siginterrupt (int signum, int failflag)
+Preliminary:
+| MT-Unsafe const:sigintr
+| AS-Unsafe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+This function specifies which approach to use when certain primitives
+are interrupted by handling signal signum.  If failflag is
+false, signal signum restarts primitives.  If failflag is
+true, handling signum causes these primitives to fail with error
+code EINTR.  See Interrupted Primitives.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//BSD-Signal-Handling.html#BSD-Signal-Handling
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/BSD-Signal-Handling/siginterrupt.txt

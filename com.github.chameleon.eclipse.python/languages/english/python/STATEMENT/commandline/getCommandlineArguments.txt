@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+(get,read) commandline arguments to X:VARIABLE 
+//\\ //// ==> completion hint (1 line):
+read commandline arguments to a variable
+//\\ //// Replacement text (1+ lines):
+# import sys #//// uncomment if needed and move to top of file
+X1=sys.argv #//// sys.argv[0] is always script name...
+print (str(X1)) #//// Remove this if you want...
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=myarguments
+//\\ //// Help/documentation (1+ lines):
+read the values passed in on the command line
+//\\ //// Tool tip (1 line):
+Remove print statement if you want...
+//\\

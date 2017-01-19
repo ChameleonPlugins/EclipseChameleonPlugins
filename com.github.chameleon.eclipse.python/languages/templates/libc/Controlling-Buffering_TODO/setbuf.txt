@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+if buf is (a,) null pointer, (the,) effect of this function is equivalent to calling setvbuf with (a,) mode argument of _ionbf
+//\\ //// ==> completion hint (1 line):
+If buf is a null pointer, the effect of this function is equivalent to calling setvbuf with a mode argument of _IONBF
+//\\ //// Replacement text (1+ lines):
+void setbuf (FILE *stream, char *buf)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void setbuf (FILE *stream, char *buf)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+If buf is a null pointer, the effect of this function is
+equivalent to calling setvbuf with a mode argument of
+_IONBF.  Otherwise, it is equivalent to calling setvbuf
+with buf, and a mode of _IOFBF and a size
+argument of BUFSIZ.
+
+The setbuf function is provided for compatibility with old code;
+use setvbuf in all new programs.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Controlling-Buffering.html#Controlling-Buffering
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Controlling-Buffering/setbuf.txt

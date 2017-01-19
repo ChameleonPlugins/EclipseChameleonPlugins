@@ -1,0 +1,43 @@
+//\\ //// code completion entries (1+ lines):
+generates (a,) break condition by transmitting (a,) stream of zero bits on (the,) terminal associated with (the,) file descriptor X:FILEDESCRIPTOR
+//\\ //// ==> completion hint (1 line):
+generates a break condition by transmitting a stream of zero bits on the terminal associated with the file descriptor filedes
+//\\ //// Replacement text (1+ lines):
+int tcsendbreak (X1, int duration)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int tcsendbreak (int filedes, int duration)
+Preliminary:
+| MT-Unsafe race:tcattr(filedes)/bsd
+| AS-Unsafe 
+| AC-Unsafe corrupt/bsd
+| See POSIX Safety Concepts.
+
+
+This function generates a break condition by transmitting a stream of
+zero bits on the terminal associated with the file descriptor
+filedes.  The duration of the break is controlled by the
+duration argument.  If zero, the duration is between 0.25 and 0.5
+seconds.  The meaning of a nonzero value depends on the operating system.
+
+This function does nothing if the terminal is not an asynchronous serial
+data port.
+
+The return value is normally zero.  In the event of an error, a value
+of -1 is returned.  The following errno error conditions
+are defined for this function:
+
+
+EBADF
+The filedes is not a valid file descriptor.
+
+
+ENOTTY
+The filedes is not associated with a terminal device.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Line-Control.html#Line-Control
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Line-Control/tcsendbreak.txt

@@ -1,0 +1,49 @@
+//\\ //// code completion entries (1+ lines):
+is used to set (the,) process’s working directory to directory associated with (the,) file descriptor X:FILEDESCRIPTOR
+//\\ //// ==> completion hint (1 line):
+is used to set the process’s working directory to directory associated with the file descriptor filedes
+//\\ //// Replacement text (1+ lines):
+int fchdir (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fchdir (int filedes)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is used to set the process’s working directory to
+directory associated with the file descriptor filedes.
+
+The normal, successful return value from fchdir is 0.  A
+value of -1 is returned to indicate an error.  The following
+errno error conditions are defined for this function:
+
+
+EACCES
+Read permission is denied for the directory named by dirname.
+
+
+EBADF
+The filedes argument is not a valid file descriptor.
+
+
+ENOTDIR
+The file descriptor filedes is not associated with a directory.
+
+
+EINTR
+The function call was interrupt by a signal.
+
+
+EIO
+An I/O error occurred.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Working-Directory.html#Working-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Working-Directory/fchdir.txt

@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+copies (the,) information, insofar as (the,) structures are compatible, from utmp to utmpx
+//\\ //// ==> completion hint (1 line):
+copies the information, insofar as the structures are compatible, from utmp to utmpx
+//\\ //// Replacement text (1+ lines):
+int getutmpx (const struct utmp *utmp, struct utmpx *utmpx)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getutmpx (const struct utmp *utmp, struct utmpx *utmpx)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+getutmpx copies the information, insofar as the structures are
+compatible, from utmp to utmpx.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//XPG-Functions.html#XPG-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/XPG-Functions/getutmpx.txt

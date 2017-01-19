@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+is (the,) same as strchr except that if it does not (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) character, it returns (a,) pointer to (string,text)’s terminating null character rather than (a,) null pointer
+//\\ //// ==> completion hint (1 line):
+is the same as strchr except that if it does not find the character, it returns a pointer to string’s terminating null character rather than a null pointer
+//\\ //// Replacement text (1+ lines):
+char * strchrnul (X1tring, X2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2='a'
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strchrnul (const char *string, int c)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+strchrnul is the same as strchr except that if it does
+not find the character, it returns a pointer to string’s terminating
+null character rather than a null pointer.
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Search-Functions/strchrnul.txt

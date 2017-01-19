@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+if (the,) calling process is privileged, this function sets both (the,) real and effective user id of (the,) process to newuid
+//\\ //// ==> completion hint (1 line):
+If the calling process is privileged, this function sets both the real and effective user ID of the process to newuid
+//\\ //// Replacement text (1+ lines):
+int setuid (uid_t newuid)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setuid (uid_t newuid)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+If the calling process is privileged, this function sets both the real
+and effective user ID of the process to newuid.  It also deletes
+the file user ID of the process, if any.  newuid may be any
+legal value.  (Once this has been done, there is no way to recover the
+old effective user ID.)
+
+If the process is not privileged, and the system supports the
+_POSIX_SAVED_IDS feature, then this function behaves like
+seteuid.
+
+The return values and error conditions are the same as for seteuid.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-User-ID.html#Setting-User-ID
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-User-ID/setuid.txt

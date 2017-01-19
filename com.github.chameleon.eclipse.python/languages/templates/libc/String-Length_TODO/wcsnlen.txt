@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+is (the,) wide character equivalent to strnlen
+//\\ //// ==> completion hint (1 line):
+is the wide character equivalent to strnlen
+//\\ //// Replacement text (1+ lines):
+size_t size=wcsnlen (const wchar_t *ws, X2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2=20
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t wcsnlen (const wchar_t *ws, size_t maxlen)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+wcsnlen is the wide character equivalent to strnlen.  The
+maxlen parameter specifies the maximum number of wide characters.
+
+This function is a GNU extension and is declared in wchar.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//String-Length.html#String-Length
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/String-Length/wcsnlen.txt

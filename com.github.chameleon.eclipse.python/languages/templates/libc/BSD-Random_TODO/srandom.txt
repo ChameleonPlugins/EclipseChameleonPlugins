@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) state of (the,) random number generator based on (the,) integer seed
+//\\ //// ==> completion hint (1 line):
+sets the state of the random number generator based on the integer seed
+//\\ //// Replacement text (1+ lines):
+void srandom (unsigned int seed)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void srandom (unsigned int seed)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+The srandom function sets the state of the random number
+generator based on the integer seed.  If you supply a seed value
+of 1, this will cause random to reproduce the default set
+of random numbers.
+
+To produce a different set of pseudo-random numbers each time your
+program runs, do srandom (time (0)).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//BSD-Random.html#BSD-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/BSD-Random/srandom.txt

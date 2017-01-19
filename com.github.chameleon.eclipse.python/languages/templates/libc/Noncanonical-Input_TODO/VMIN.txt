@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+(the,) min slot is only meaningful in noncanonical input mode
+//\\ //// ==> completion hint (1 line):
+The MIN slot is only meaningful in noncanonical input mode
+//\\ //// Replacement text (1+ lines):
+Macro: int VMIN
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int VMIN
+
+This is the subscript for the MIN slot in the c_cc array.  Thus,
+termios.c_cc[VMIN] is the value itself.
+
+The MIN slot is only meaningful in noncanonical input mode; it
+specifies the minimum number of bytes that must be available in the
+input queue in order for read to return.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Noncanonical-Input.html#Noncanonical-Input
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Noncanonical-Input/VMIN.txt

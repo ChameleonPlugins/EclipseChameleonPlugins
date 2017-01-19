@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (a,) thread-specific data key for (the,) calling thread, referenced by key
+//\\ //// ==> completion hint (1 line):
+Create a thread-specific data key for the calling thread, referenced by key
+//\\ //// Replacement text (1+ lines):
+int pthread_key_create (pthread_key_t *key, void (*destructor)(void*))
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int pthread_key_create (pthread_key_t *key, void (*destructor)(void*))
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Create a thread-specific data key for the calling thread, referenced by
+key.
+
+Objects declared with the C++11 thread_local keyword are destroyed
+before thread-specific data, so they should not be used in thread-specific
+data destructors or even as members of the thread-specific data, since the
+latter is passed as an argument to the destructor function.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Thread_002dspecific-Data.html#Thread_002dspecific-Data
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Thread_002dspecific-Data/pthread_key_create.txt

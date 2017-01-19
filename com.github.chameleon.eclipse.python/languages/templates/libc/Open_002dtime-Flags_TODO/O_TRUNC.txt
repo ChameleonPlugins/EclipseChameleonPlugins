@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+this is (the,) only open-time action flag specified by posix
+//\\ //// ==> completion hint (1 line):
+This is the only open-time action flag specified by POSIX
+//\\ //// Replacement text (1+ lines):
+Macro: int O_TRUNC
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int O_TRUNC
+Truncate the file to zero length.  This option is only useful for
+regular files, not special files such as directories or FIFOs.  POSIX.1
+requires that you open the file for writing to use O_TRUNC.  In
+BSD and GNU you must have permission to write the file to truncate it,
+but you need not open for write access.
+
+This is the only open-time action flag specified by POSIX.1.  There is
+no good reason for truncation to be done by open, instead of by
+calling ftruncate afterwards.  The O_TRUNC flag existed in
+Unix before ftruncate was invented, and is retained for backward
+compatibility.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Open_002dtime-Flags.html#Open_002dtime-Flags
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Open_002dtime-Flags/O_TRUNC.txt

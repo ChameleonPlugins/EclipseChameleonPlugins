@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(the,) wcsspn function (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) length of (the,) initial substring of wstring that consists entirely of wide characters that are members of (the,) set specified by (the,) (string,text) skipset
+//\\ //// ==> completion hint (1 line):
+The wcsspn function returns the length of the initial substring of wstring that consists entirely of wide characters that are members of the set specified by the string skipset
+//\\ //// Replacement text (1+ lines):
+size_t size=wcsspn (const wchar_t *wstring, const wchar_t *skipset)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t wcsspn (const wchar_t *wstring, const wchar_t *skipset)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The wcsspn (“wide character string span”) function returns the
+length of the initial substring of wstring that consists entirely
+of wide characters that are members of the set specified by the string
+skipset.  The order of the wide characters in skipset is not
+important.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Search-Functions/wcsspn.txt

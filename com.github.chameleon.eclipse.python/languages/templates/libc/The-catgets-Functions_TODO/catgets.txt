@@ -1,0 +1,47 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function catgets has to be used to access (the,) massage catalog previously opened using (the,) catopen function
+//\\ //// ==> completion hint (1 line):
+The function catgets has to be used to access the massage catalog previously opened using the catopen function
+//\\ //// Replacement text (1+ lines):
+char * catgets (nl_catd catalog_desc, int set, int message, X1tring)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * catgets (nl_catd catalog_desc, int set, int message, const char *string)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The function catgets has to be used to access the massage catalog
+previously opened using the catopen function.  The
+catalog_desc parameter must be a value previously returned by
+catopen.
+
+The next two parameters, set and message, reflect the
+internal organization of the message catalog files.  This will be
+explained in detail below.  For now it is interesting to know that a
+catalog can consists of several set and the messages in each thread are
+individually numbered using numbers.  Neither the set number nor the
+message number must be consecutive.  They can be arbitrarily chosen.
+But each message (unless equal to another one) must have its own unique
+pair of set and message number.
+
+Since it is not guaranteed that the message catalog for the language
+selected by the user exists the last parameter string helps to
+handle this case gracefully.  If no matching string can be found
+string is returned.  This means for the programmer that
+
+
+ the string parameters should contain reasonable text (this also
+helps to understand the program seems otherwise there would be no hint
+on the string which is expected to be returned.
+ all string arguments should be written in the same language.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//The-catgets-Functions.html#The-catgets-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/The-catgets-Functions/catgets.txt

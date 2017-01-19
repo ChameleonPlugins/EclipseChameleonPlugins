@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+these functions extract (the,) exponent of x and (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) it as (a,) floating-point value
+//\\ //// ==> completion hint (1 line):
+These functions extract the exponent of x and return it as a floating-point value
+//\\ //// Replacement text (1+ lines):
+double logb (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double logb (double x)
+Function: float logbf (float x)
+Function: long double logbl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions extract the exponent of x and return it as a
+floating-point value.  If FLT_RADIX is two, logb is equal
+to floor (log2 (x)), except it’s probably faster.
+
+If x is de-normalized, logb returns the exponent x
+would have if it were normalized.  If x is infinity (positive or
+negative), logb returns &amp;infin;.  If x is zero,
+logb returns &amp;infin;.  It does not signal.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Exponents-and-Logarithms.html#Exponents-and-Logarithms
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Exponents-and-Logarithms/logb.txt

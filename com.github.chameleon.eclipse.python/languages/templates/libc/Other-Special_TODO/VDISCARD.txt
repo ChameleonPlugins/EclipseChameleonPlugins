@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(the,) discard character is recognized only when iexten is set, but in both canonical and noncanonical mode
+//\\ //// ==> completion hint (1 line):
+The DISCARD character is recognized only when IEXTEN is set, but in both canonical and noncanonical mode
+//\\ //// Replacement text (1+ lines):
+Macro: int VDISCARD
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int VDISCARD
+
+This is the subscript for the DISCARD character in the special control
+character array.  termios.c_cc[VDISCARD] holds the character
+itself.
+
+The DISCARD character is recognized only when IEXTEN is set, but
+in both canonical and noncanonical mode.  Its effect is to toggle the
+discard-output flag.  When this flag is set, all program output is
+discarded.  Setting the flag also discards all output currently in the
+output buffer.  Typing any other character resets the flag.
+
+This character is available on BSD systems and GNU/Linux and GNU/Hurd systems.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Other-Special.html#Other-Special
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Other-Special/VDISCARD.txt

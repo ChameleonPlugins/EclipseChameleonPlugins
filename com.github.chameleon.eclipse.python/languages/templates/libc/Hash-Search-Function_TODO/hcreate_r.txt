@@ -1,0 +1,37 @@
+//\\ //// code completion entries (1+ lines):
+initializes (the,) object pointed to by htab to contain (a,) hashing table with at least nel elements
+//\\ //// ==> completion hint (1 line):
+initializes the object pointed to by htab to contain a hashing table with at least nel elements
+//\\ //// Replacement text (1+ lines):
+int hcreate_r (size_t nel, struct hsearch_data *htab)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int hcreate_r (size_t nel, struct hsearch_data *htab)
+Preliminary:
+| MT-Safe race:htab
+| AS-Unsafe heap
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+
+
+The hcreate_r function initializes the object pointed to by
+htab to contain a hashing table with at least nel elements.
+So this function is equivalent to the hcreate function except
+that the initialized data structure is controlled by the user.
+
+This allows having more than one hashing table at one time.  The memory
+necessary for the struct hsearch_data object can be allocated
+dynamically.  It must be initialized with zero before calling this
+function.
+
+The return value is non-zero if the operation was successful.  If the
+return value is zero, something went wrong, which probably means the
+programs ran out of memory.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Hash-Search-Function.html#Hash-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Hash-Search-Function/hcreate_r.txt

@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+is defined in stdlib
+//\\ //// ==> completion hint (1 line):
+is defined in stdlib
+//\\ //// Replacement text (1+ lines):
+Macro: int MB_CUR_MAX
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int MB_CUR_MAX
+MB_CUR_MAX expands into a positive integer expression that is the
+maximum number of bytes in a multibyte character in the current locale.
+The value is never greater than MB_LEN_MAX.  Unlike
+MB_LEN_MAX this macro need not be a compile-time constant, and in
+the GNU C Library it is not.
+
+
+MB_CUR_MAX is defined in stdlib.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Selecting-the-Conversion.html#Selecting-the-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Selecting-the-Conversion/MB_CUR_MAX.txt

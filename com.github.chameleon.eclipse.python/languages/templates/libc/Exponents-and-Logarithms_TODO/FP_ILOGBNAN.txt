@@ -1,0 +1,19 @@
+//\\ //// code completion entries (1+ lines):
+is defined in iso c99 /@w 
+//\\ //// ==> completion hint (1 line):
+is defined in ISO C99 /@w 
+//\\ //// Replacement text (1+ lines):
+Macro: int FP_ILOGBNAN
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int FP_ILOGBNAN
+ilogb returns this value if its argument is NaN.  The
+numeric value is either INT_MIN or INT_MAX.
+
+This macro is defined in ISO C99.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Exponents-and-Logarithms.html#Exponents-and-Logarithms
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Exponents-and-Logarithms/FP_ILOGBNAN.txt

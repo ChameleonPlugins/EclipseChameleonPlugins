@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(the,) (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) value is interpreted as (a,) process id
+//\\ //// ==> completion hint (1 line):
+The return value is interpreted as a process ID
+//\\ //// Replacement text (1+ lines):
+Macro: int F_GETOWN
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int F_GETOWN
+This macro is used as the command argument to fcntl, to
+specify that it should get information about the process or process
+group to which SIGIO signals are sent.  (For a terminal, this is
+actually the foreground process group ID, which you can get using
+tcgetpgrp; see Terminal Access Functions.)
+
+The return value is interpreted as a process ID; if negative, its
+absolute value is the process group ID.
+
+The following errno error condition is defined for this command:
+
+
+EBADF
+The filedes argument is invalid.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Interrupt-Input.html#Interrupt-Input
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Interrupt-Input/F_GETOWN.txt

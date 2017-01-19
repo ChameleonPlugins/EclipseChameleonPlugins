@@ -1,0 +1,49 @@
+//\\ //// code completion entries (1+ lines):
+is like utimes, except that it takes (an,) open file descriptor as (an,) argument instead of (a,) file name
+//\\ //// ==> completion hint (1 line):
+is like utimes, except that it takes an open file descriptor as an argument instead of a file name
+//\\ //// Replacement text (1+ lines):
+int futimes (int fd, const struct timeval tvp[2])
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int futimes (int fd, const struct timeval tvp[2])
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is like utimes, except that it takes an open file
+descriptor as an argument instead of a file name.  See Low-Level I/O.  This function comes from FreeBSD, and is not available on all
+platforms (if not available, it will fail with ENOSYS).
+
+Like utimes, futimes returns 0 on success and -1
+on failure.  The following errno error conditions are defined for
+futimes:
+
+
+EACCES
+There is a permission problem in the case where a null pointer was
+passed as the times argument.  In order to update the time stamp on
+the file, you must either be the owner of the file, have write
+permission for the file, or be a privileged user.
+
+
+EBADF
+The filedes argument is not a valid file descriptor.
+
+
+EPERM
+If the times argument is not a null pointer, you must either be
+the owner of the file or be a privileged user.
+
+
+EROFS
+The file lives on a read-only file system.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Times.html#File-Times
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Times/futimes.txt

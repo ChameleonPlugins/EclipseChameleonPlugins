@@ -1,0 +1,57 @@
+//\\ //// code completion entries (1+ lines):
+puts (the,) process pid into (the,) process group pgid
+//\\ //// ==> completion hint (1 line):
+puts the process pid into the process group pgid
+//\\ //// Replacement text (1+ lines):
+int setpgid (pid_t pid, pid_t pgid)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setpgid (pid_t pid, pid_t pgid)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The setpgid function puts the process pid into the process
+group pgid.  As a special case, either pid or pgid can
+be zero to indicate the process ID of the calling process.
+
+This function fails on a system that does not support job control.
+See Job Control is Optional, for more information.
+
+If the operation is successful, setpgid returns zero.  Otherwise
+it returns -1.  The following errno error conditions are
+defined for this function:
+
+
+EACCES
+The child process named by pid has executed an exec
+function since it was forked.
+
+
+EINVAL
+The value of the pgid is not valid.
+
+
+ENOSYS
+The system doesn’t support job control.
+
+
+EPERM
+The process indicated by the pid argument is a session leader,
+or is not in the same session as the calling process, or the value of
+the pgid argument doesn’t match a process group ID in the same
+session as the calling process.
+
+
+ESRCH
+The process indicated by the pid argument is not the calling
+process or a child of the calling process.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Process-Group-Functions.html#Process-Group-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Process-Group-Functions/setpgid.txt

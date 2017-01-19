@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+(deallocate,free,release) all (the,) resources allocated in (a,) previous call of hcreate
+//\\ //// ==> completion hint (1 line):
+free all the resources allocated in a previous call of hcreate
+//\\ //// Replacement text (1+ lines):
+void hdestroy (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void hdestroy (void)
+Preliminary:
+| MT-Unsafe race:hsearch
+| AS-Unsafe heap
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+The hdestroy function can be used to free all the resources
+allocated in a previous call of hcreate.  After a call to this
+function it is again possible to call hcreate and allocate a new
+table with possibly different size.
+
+It is important to remember that the elements contained in the hashing
+table at the time hdestroy is called are not freed by this
+function.  It is the responsibility of the program code to free those
+strings (if necessary at all).  Freeing all the element memory is not
+possible without extra, separately kept information since there is no
+function to iterate through all available elements in the hashing table.
+If it is really necessary to free a table and all elements the
+programmer has to keep a list of all table elements and before calling
+hdestroy s/he has to free all element’s data using this list.
+This is a very unpleasant mechanism and it also shows that this kind of
+hashing tables is mainly meant for tables which are created once and
+used until the end of the program run.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Hash-Search-Function.html#Hash-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Hash-Search-Function/hdestroy.txt

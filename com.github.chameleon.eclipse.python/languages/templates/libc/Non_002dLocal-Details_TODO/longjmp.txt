@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+restores current execution to (the,) state saved in state, and continues execution from (the,) call to setjmp that established that (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) point
+//\\ //// ==> completion hint (1 line):
+restores current execution to the state saved in state, and continues execution from the call to setjmp that established that return point
+//\\ //// Replacement text (1+ lines):
+void longjmp (jmp_buf state, int value)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void longjmp (jmp_buf state, int value)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe plugin corrupt lock/hurd
+| AC-Unsafe corrupt lock/hurd
+| See POSIX Safety Concepts.
+
+
+This function restores current execution to the state saved in
+state, and continues execution from the call to setjmp that
+established that return point.  Returning from setjmp by means of
+longjmp returns the value argument that was passed to
+longjmp, rather than 0.  (But if value is given as
+0, setjmp returns 1).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Non_002dLocal-Details.html#Non_002dLocal-Details
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Non_002dLocal-Details/longjmp.txt

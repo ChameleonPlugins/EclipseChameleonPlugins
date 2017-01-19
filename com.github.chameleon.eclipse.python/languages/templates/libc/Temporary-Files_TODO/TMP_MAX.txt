@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+with (the,) gnu c library, you can (add,append,construct,create,define,insert,make,push) (a,) very large number of temporary file names
+//\\ //// ==> completion hint (1 line):
+With the GNU C Library, you can create a very large number of temporary file names
+//\\ //// Replacement text (1+ lines):
+Macro: int TMP_MAX
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int TMP_MAX
+The macro TMP_MAX is a lower bound for how many temporary names
+you can create with tmpnam.  You can rely on being able to call
+tmpnam at least this many times before it might fail saying you
+have made too many temporary file names.
+
+With the GNU C Library, you can create a very large number of temporary
+file names.  If you actually created the files, you would probably run
+out of disk space before you ran out of names.  Some other systems have
+a fixed, small limit on the number of temporary files.  The limit is
+never less than 25.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Temporary-Files.html#Temporary-Files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Temporary-Files/TMP_MAX.txt

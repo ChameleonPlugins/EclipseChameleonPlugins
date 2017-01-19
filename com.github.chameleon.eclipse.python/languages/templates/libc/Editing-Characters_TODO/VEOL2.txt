@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(the,) eol2 character works just like (the,) eol character , but it can be (a,) different character
+//\\ //// ==> completion hint (1 line):
+The EOL2 character works just like the EOL character , but it can be a different character
+//\\ //// Replacement text (1+ lines):
+Macro: int VEOL2
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int VEOL2
+
+This is the subscript for the EOL2 character in the special control
+character array.  termios.c_cc[VEOL2] holds the character
+itself.
+
+The EOL2 character works just like the EOL character (see above), but it
+can be a different character.  Thus, you can specify two characters to
+terminate an input line, by setting EOL to one of them and EOL2 to the
+other.
+
+The EOL2 character is a BSD extension; it exists only on BSD systems
+and GNU/Linux and GNU/Hurd systems.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Editing-Characters.html#Editing-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Editing-Characters/VEOL2.txt

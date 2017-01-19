@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+to (add,append,construct,create,define,insert,make,push) one character at (a,) time, use (the,) function obstack_1grow
+//\\ //// ==> completion hint (1 line):
+To add one character at a time, use the function obstack_1grow
+//\\ //// Replacement text (1+ lines):
+void obstack_1grow (struct obstack *obstack-ptr, char c)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void obstack_1grow (struct obstack *obstack-ptr, char c)
+Preliminary:
+| MT-Safe race:obstack-ptr
+| AS-Safe 
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+To add one character at a time, use the function obstack_1grow.
+It adds a single byte containing c to the growing object.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Growing-Objects.html#Growing-Objects
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Growing-Objects/obstack_1grow.txt

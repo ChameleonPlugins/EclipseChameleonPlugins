@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+your program should handle this signal if you have (a,) special need to leave files or (box,computer,system,node,host,target) tables in (a,) secure state when (a,) process is stopped
+//\\ //// ==> completion hint (1 line):
+Your program should handle this signal if you have a special need to leave files or system tables in a secure state when a process is stopped
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGTSTP
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGTSTP
+The SIGTSTP signal is an interactive stop signal.  Unlike
+SIGSTOP, this signal can be handled and ignored.
+
+Your program should handle this signal if you have a special need to
+leave files or system tables in a secure state when a process is
+stopped.  For example, programs that turn off echoing should handle
+SIGTSTP so they can turn echoing back on before stopping.
+
+This signal is generated when the user types the SUSP character
+(normally C-z).  For more information about terminal driver
+support, see Special Characters.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Job-Control-Signals.html#Job-Control-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Job-Control-Signals/SIGTSTP.txt

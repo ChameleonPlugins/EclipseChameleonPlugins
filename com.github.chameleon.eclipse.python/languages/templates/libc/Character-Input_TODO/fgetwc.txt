@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+reads (the,) next wide character from (the,) stream stream and (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) its value
+//\\ //// ==> completion hint (1 line):
+reads the next wide character from the stream stream and returns its value
+//\\ //// Replacement text (1+ lines):
+wint_t fgetwc (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wint_t fgetwc (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function reads the next wide character from the stream stream
+and returns its value.  If an end-of-file condition or read error
+occurs, WEOF is returned instead.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Character-Input.html#Character-Input
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Character-Input/fgetwc.txt

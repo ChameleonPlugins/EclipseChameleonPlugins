@@ -1,0 +1,20 @@
+//\\ //// code completion entries (1+ lines):
+update name of selected user to X
+//\\ //// ==> completion hint (1 line):
+response = requests.patch(url, json=new_info, headers=header) #...
+//\\ //// Replacement text (1+ lines):
+new_info = {
+    "user": {
+        "name": X1
+    }
+}
+objects = "users"
+url = "http://"+HOST+":"+PORT+"/v3/"+objects+"/"+selected_user
+response = requests.patch(url, json=new_info, headers=header)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="New Name"
+//\\ //// Help/documentation (1+ lines):
+Update the name of the selected_user to a new value, specified.
+//\\ //// Tool tip (1 line):
+
+//\\

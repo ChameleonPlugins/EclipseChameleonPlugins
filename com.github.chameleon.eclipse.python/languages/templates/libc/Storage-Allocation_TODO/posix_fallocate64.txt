@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is (a,) variant of posix_fallocate64 which accepts 64-bit file offsets on all platforms
+//\\ //// ==> completion hint (1 line):
+is a variant of posix_fallocate64 which accepts 64-bit file offsets on all platforms
+//\\ //// Replacement text (1+ lines):
+int posix_fallocate64 (int fd, off64_t length, off64_t offset)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int posix_fallocate64 (int fd, off64_t length, off64_t offset)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This function is a variant of posix_fallocate64 which accepts
+64-bit file offsets on all platforms.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Storage-Allocation.html#Storage-Allocation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Storage-Allocation/posix_fallocate64.txt

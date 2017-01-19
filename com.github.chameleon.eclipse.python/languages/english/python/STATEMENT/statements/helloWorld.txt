@@ -1,0 +1,17 @@
+//\\ //// code completion entries (1+ lines):
+hello world
+start a new program
+//\\ //// ==> completion hint (1 line):
+hello world file template
+//\\ //// Replacement text (1+ lines):
+def main():
+    print "Hello, world!"
+
+if __name__ == '__main__':
+    main()
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+starting point for a new Python file...
+//\\ //// Tool tip (1 line):
+modify as needed

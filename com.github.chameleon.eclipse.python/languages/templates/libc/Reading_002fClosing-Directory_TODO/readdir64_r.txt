@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+is equivalent to (the,) readdir_r function except that it takes parameters of base (output,print,show,say,type,write) struct dirent64 instead of struct dirent in (the,) second and third (place,position)
+//\\ //// ==> completion hint (1 line):
+is equivalent to the readdir_r function except that it takes parameters of base type struct dirent64 instead of struct dirent in the second and third position
+//\\ //// Replacement text (1+ lines):
+int readdir64_r (DIR *dirstream, struct dirent64 *entry, struct dirent64 **result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int readdir64_r (DIR *dirstream, struct dirent64 *entry, struct dirent64 **result)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+The readdir64_r function is equivalent to the readdir_r
+function except that it takes parameters of base type struct
+dirent64 instead of struct dirent in the second and third
+position.  The same precautions mentioned in the documentation of
+readdir_r also apply here.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Reading_002fClosing-Directory.html#Reading_002fClosing-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Reading_002fClosing-Directory/readdir64_r.txt

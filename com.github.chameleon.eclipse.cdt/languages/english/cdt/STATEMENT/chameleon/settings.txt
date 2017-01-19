@@ -1,0 +1,85 @@
+//\\ //// code completion entries (1+ lines):
+settings
+//\\ //// ==> completion hint (1 line):
+# Show settings that need to be set in Eclipse IDE for using Chameleon 
+//\\ //// Replacement text (1+ lines):
+/*
+Settings--What Eclipse settings to set for Chameleon use...
+To configure Eclipse to support Chameleon,
+bring up the appropriate settings menu from the menu bar:
+Windows | Preferences | C/C++ | Code Style | Formatter
+New... & create a new "Formatter" profile (preferred--e.g. named "Chameleon") or Edit... (existing one)
+ Comments Tab:
+  General settings section:
+   [x] Preserve line space between code and line comments if possible 
+
+Windows | Preferences | C/C++ | Editor | Content Assist
+ Insertion Section:
+  [ ] Insert single proposals automatically
+  [ ] Insert common prefixes automatically
+ Sorting and Filtering:
+  [ ] Present proposals in alphabetical order
+ Auto Activation Section:
+  [x] Enable "." as trigger
+  [x] Enable "->" as trigger
+  [x] Enable "::" as trigger
+  [x] Enable auto-replace of '.' with '->' for pointer types
+      Delay (ms): 200
+
+ Windows | Preferences | C/C++ | Editor | Content Assist | Advanced
+   Uncheck *ALL* Checkboxes
+   Check *BOTH* Chameleon entries.
+   Timeout for each proposal kind (ms): 200
+
+ Windows | Preferences | C/C++ | Editor | Save Actions
+ [x] Remove trailing whitespace
+     (*) In edited lines
+     ( ) In all lines     
+     [x] Ensure newline at the end of file
+     [ ] Format source code
+*/
+
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+<pre>
+Settings--What Eclipse settings to set for Chameleon use...
+To configure Eclipse to support Chameleon,
+bring up the appropriate settings menu from the menu bar:
+Windows | Preferences | C/C++ | Code Style | Formatter
+New... & create a new "Formatter" profile (preferred--e.g. named "Chameleon") or Edit... (existing one)
+ Comments Tab:
+  General settings section:
+   [x] Preserve line space between code and line comments if possible 
+
+Windows | Preferences | C/C++ | Editor | Content Assist
+ Insertion Section:
+  [ ] Insert single proposals automatically
+  [ ] Insert common prefixes automatically
+ Sorting and Filtering:
+  [ ] Present proposals in alphabetical order
+ Auto Activation Section:
+  [x] Enable "." as trigger
+  [x] Enable "->" as trigger
+  [x] Enable "::" as trigger
+  [x] Enable auto-replace of '.' with '->' for pointer types
+      Delay (ms): 200
+
+ Windows | Preferences | C/C++ | Editor | Content Assist | Advanced
+   Uncheck *ALL* Checkboxes
+   Check *BOTH* Chameleon entries.
+   Timeout for each proposal kind (ms): 200
+
+ Windows | Preferences | C/C++ | Editor | Save Actions
+ [x] Remove trailing whitespace
+     (*) In edited lines
+     ( ) In all lines     
+     [x] Ensure newline at the end of file
+     [x] Format source code
+</pre>
+
+
+//\\ //// Tool tip (1 line):
+Menu:  Windows | Preferences | C/C++ | Code Style
+//\\
+

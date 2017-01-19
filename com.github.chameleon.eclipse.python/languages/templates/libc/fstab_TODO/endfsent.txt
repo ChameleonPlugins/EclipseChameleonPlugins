@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) sure that all resources acquired by (a,) prior call to setfsent are freed
+//\\ //// ==> completion hint (1 line):
+makes sure that all resources acquired by a prior call to setfsent are freed
+//\\ //// Replacement text (1+ lines):
+void endfsent (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void endfsent (void)
+Preliminary:
+| MT-Unsafe race:fsent
+| AS-Unsafe heap corrupt lock
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+This function makes sure that all resources acquired by a prior call to
+setfsent (explicitly or implicitly by calling getfsent) are
+freed.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//fstab.html#fstab
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/fstab/endfsent.txt

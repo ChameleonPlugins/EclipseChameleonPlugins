@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+opens and rewinds (the,) networks database
+//\\ //// ==> completion hint (1 line):
+opens and rewinds the networks database
+//\\ //// Replacement text (1+ lines):
+void setnetent (int stayopen)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void setnetent (int stayopen)
+Preliminary:
+| MT-Unsafe race:netent env locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function opens and rewinds the networks database.
+
+If the stayopen argument is nonzero, this sets a flag so that
+subsequent calls to getnetbyname or getnetbyaddr will
+not close the database (as they usually would).  This makes for more
+efficiency if you call those functions several times, by avoiding
+reopening the database for each call.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Networks-Database.html#Networks-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Networks-Database/setnetent.txt

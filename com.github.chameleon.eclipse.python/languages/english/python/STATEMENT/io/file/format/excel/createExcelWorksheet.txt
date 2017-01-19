@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+(create,write,make,start) (,an )excel worksheet named X:NAME
+//\\ //// ==> completion hint (1 line):
+Create an Excel worksheet (tab)
+//\\ //// Replacement text (1+ lines):
+# //// workbook created with: create excel workbook
+X1 = workbook.add_worksheet()
+# //// example Next Step: write "Hello World" to "A1"
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=worksheet
+//\\ //// Help/documentation (1+ lines):
+https://xlsxwriter.readthedocs.org/getting_started.html#running-a-sample-program
+//\\ //// Tool tip (1 line):
+# //// example Next Step: write "Hello World" to "A1"
+//\\

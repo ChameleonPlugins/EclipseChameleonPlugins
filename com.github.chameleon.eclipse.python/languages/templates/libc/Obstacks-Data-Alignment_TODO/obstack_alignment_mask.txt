@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+(the,) value is (a,) bit mask
+//\\ //// ==> completion hint (1 line):
+The value is a bit mask
+//\\ //// Replacement text (1+ lines):
+Macro: int obstack_alignment_mask (struct obstack *obstack-ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int obstack_alignment_mask (struct obstack *obstack-ptr)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The value is a bit mask; a bit that is 1 indicates that the corresponding
+bit in the address of an object should be 0.  The mask value should be one
+less than a power of 2; the effect is that all object addresses are
+multiples of that power of 2.  The default value of the mask is a value
+that allows aligned objects to hold any type of data: for example, if
+its value is 3, any type of data can be stored at locations whose
+addresses are multiples of 4.  A mask value of 0 means an object can start
+on any multiple of 1 (that is, no alignment is required).
+
+The expansion of the macro obstack_alignment_mask is an lvalue,
+so you can alter the mask by assignment.  For example, this statement:
+
+
+obstack_alignment_mask (obstack_ptr) = 0;
+
+
+has the effect of turning off alignment processing in the specified obstack.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Obstacks-Data-Alignment.html#Obstacks-Data-Alignment
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Obstacks-Data-Alignment/obstack_alignment_mask.txt

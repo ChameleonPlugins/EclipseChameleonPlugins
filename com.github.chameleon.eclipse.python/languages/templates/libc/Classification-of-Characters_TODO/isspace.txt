@@ -1,0 +1,50 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) true if X:CHARACTER is (a,) whitespace character
+//\\ //// ==> completion hint (1 line):
+Returns true if c is a whitespace character
+//\\ //// Replacement text (1+ lines):
+bool result=isspace (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int isspace (int c)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Returns true if c is a whitespace character.  In the standard
+&quot;C&quot; locale, isspace returns true for only the standard
+whitespace characters:
+
+
+' '
+space
+
+
+'\f'
+formfeed
+
+
+'\n'
+newline
+
+
+'\r'
+carriage return
+
+
+'\t'
+horizontal tab
+
+
+'\v'
+vertical tab
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Classification-of-Characters.html#Classification-of-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Classification-of-Characters/isspace.txt

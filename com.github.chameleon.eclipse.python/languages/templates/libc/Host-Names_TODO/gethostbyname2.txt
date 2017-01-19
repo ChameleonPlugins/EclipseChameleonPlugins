@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is like gethostbyname, but allows (the,) caller to (indicate,select,specify) (the,) desired address family of (the,) result
+//\\ //// ==> completion hint (1 line):
+is like gethostbyname, but allows the caller to specify the desired address family of the result
+//\\ //// Replacement text (1+ lines):
+struct hostent * gethostbyname2 (const char *name, int af)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct hostent * gethostbyname2 (const char *name, int af)
+Preliminary:
+| MT-Unsafe race:hostbyname2 env locale
+| AS-Unsafe dlopen plugin corrupt heap lock
+| AC-Unsafe lock corrupt mem fd
+| See POSIX Safety Concepts.
+
+
+The gethostbyname2 function is like gethostbyname, but
+allows the caller to specify the desired address family (e.g.
+AF_INET or AF_INET6) of the result.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Names.html#Host-Names
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Names/gethostbyname2.txt

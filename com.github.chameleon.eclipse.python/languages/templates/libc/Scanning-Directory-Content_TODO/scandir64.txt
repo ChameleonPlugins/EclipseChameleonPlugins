@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+works like (the,) scandir function except that (the,) directory entries it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) are described by elements of (output,print,show,say,type,write) struct dirent64 /@w 
+//\\ //// ==> completion hint (1 line):
+works like the scandir function except that the directory entries it returns are described by elements of type struct dirent64 /@w 
+//\\ //// Replacement text (1+ lines):
+int scandir64 (const char *dir, struct dirent64 ***namelist, int (*selector) (const struct dirent64 *), int (*cmp) (const struct dirent64 **, const struct dirent64 **))
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int scandir64 (const char *dir, struct dirent64 ***namelist, int (*selector) (const struct dirent64 *), int (*cmp) (const struct dirent64 **, const struct dirent64 **))
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem fd
+| See POSIX Safety Concepts.
+
+
+The scandir64 function works like the scandir function
+except that the directory entries it returns are described by elements
+of type struct dirent64.  The function pointed to by
+selector is again used to select the desired entries, except that
+selector now must point to a function which takes a
+struct dirent64 * parameter.
+
+Similarly the cmp function should expect its two arguments to be
+of type struct dirent64 **.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Scanning-Directory-Content.html#Scanning-Directory-Content
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Scanning-Directory-Content/scandir64.txt

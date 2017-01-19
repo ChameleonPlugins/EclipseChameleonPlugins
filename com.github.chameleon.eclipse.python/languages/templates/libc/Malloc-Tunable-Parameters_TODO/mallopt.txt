@@ -1,0 +1,59 @@
+//\\ //// code completion entries (1+ lines):
+when calling mallopt, (the,) param argument (indicate,select,specify) (the,) parameter to be set, and value (the,) (new,) value to be set
+//\\ //// ==> completion hint (1 line):
+When calling mallopt, the param argument specifies the parameter to be set, and value the new value to be set
+//\\ //// Replacement text (1+ lines):
+int mallopt (int param, int value)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int mallopt (int param, int value)
+Preliminary:
+| MT-Unsafe init const:mallopt
+| AS-Unsafe init lock
+| AC-Unsafe init lock
+| See POSIX Safety Concepts.
+
+
+
+When calling mallopt, the param argument specifies the
+parameter to be set, and value the new value to be set.  Possible
+choices for param, as defined in malloc.h, are:
+
+
+M_MMAP_MAX
+The maximum number of chunks to allocate with mmap.  Setting this
+to zero disables all use of mmap.
+
+M_MMAP_THRESHOLD
+All chunks larger than this value are allocated outside the normal
+heap, using the mmap system call.  This way it is guaranteed
+that the memory for these chunks can be returned to the system on
+free.  Note that requests smaller than this threshold might still
+be allocated via mmap.
+
+M_PERTURB
+If non-zero, memory blocks are filled with values depending on some
+low order bits of this parameter when they are allocated (except when
+allocated by calloc) and freed.  This can be used to debug the
+use of uninitialized or freed heap memory.  Note that this option does not
+guarantee that the freed block will have any specific values.  It only
+guarantees that the content the block had before it was freed will be
+overwritten.
+
+M_TOP_PAD
+This parameter determines the amount of extra memory to obtain from the
+system when a call to sbrk is required.  It also specifies the
+number of bytes to retain when shrinking the heap by calling sbrk
+with a negative argument.  This provides the necessary hysteresis in
+heap size such that excessive amounts of system calls can be avoided.
+
+M_TRIM_THRESHOLD
+This is the minimum size (in bytes) of the top-most, releasable chunk
+that will cause sbrk to be called with a negative argument in
+order to return memory to the system.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Malloc-Tunable-Parameters.html#Malloc-Tunable-Parameters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Malloc-Tunable-Parameters/mallopt.txt

@@ -1,0 +1,43 @@
+//\\ //// code completion entries (1+ lines):
+reads (the,) value of (a,) (string,text)-valued (box,computer,system,node,host,target) parameter, storing (the,) (string,text) into len bytes of memory space starting at buf
+//\\ //// ==> completion hint (1 line):
+reads the value of a string-valued system parameter, storing the string into len bytes of memory space starting at buf
+//\\ //// Replacement text (1+ lines):
+size_t size=confstr (int parameter, char *buf, size_t len)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t confstr (int parameter, char *buf, size_t len)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function reads the value of a string-valued system parameter,
+storing the string into len bytes of memory space starting at
+buf.  The parameter argument should be one of the
+‘_CS_’ symbols listed below.
+
+The normal return value from confstr is the length of the string
+value that you asked for.  If you supply a null pointer for buf,
+then confstr does not try to store the string; it just returns
+its length.  A value of 0 indicates an error.
+
+If the string you asked for is too long for the buffer (that is, longer
+than len - 1), then confstr stores just that much
+(leaving room for the terminating null character).  You can tell that
+this has happened because confstr returns a value greater than or
+equal to len.
+
+The following errno error conditions are defined for this function:
+
+
+EINVAL
+The value of the parameter is invalid.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//String-Parameters.html#String-Parameters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/String-Parameters/confstr.txt

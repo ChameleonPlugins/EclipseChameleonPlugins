@@ -1,0 +1,68 @@
+//\\ //// code completion entries (1+ lines):
+when using shared mappings, (the,) kernel can (output,print,show,say,type,write) (the,) file at any time before (the,) mapping is removed
+//\\ //// ==> completion hint (1 line):
+When using shared mappings, the kernel can write the file at any time before the mapping is removed
+//\\ //// Replacement text (1+ lines):
+int msync (X1, X2, X3)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2=256
+X1=NULL
+X3=MAP_SHARED
+
+//\\ //// Help/documentation (1+ lines):
+Function: int msync (void *address, size_t length, int flags)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+When using shared mappings, the kernel can write the file at any time
+before the mapping is removed.  To be certain data has actually been
+written to the file and will be accessible to non-memory-mapped I/O, it
+is necessary to use this function.
+
+It operates on the region address to (address + length).
+It may be used on part of a mapping or multiple mappings, however the
+region given should not contain any unmapped space.
+
+flags can contain some options:
+
+
+MS_SYNC
+
+
+
+This flag makes sure the data is actually written to disk.
+Normally msync only makes sure that accesses to a file with
+conventional I/O reflect the recent changes.
+
+
+MS_ASYNC
+
+
+
+This tells msync to begin the synchronization, but not to wait for
+it to complete.
+
+
+
+
+
+msync returns 0 for success and -1 for
+error.  Errors include:
+
+
+EINVAL
+An invalid region was given, or the flags were invalid.
+
+
+EFAULT
+There is no existing mapping in at least part of the given region.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Memory_002dmapped-I_002fO.html#Memory_002dmapped-I_002fO
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Memory_002dmapped-I_002fO/msync.txt

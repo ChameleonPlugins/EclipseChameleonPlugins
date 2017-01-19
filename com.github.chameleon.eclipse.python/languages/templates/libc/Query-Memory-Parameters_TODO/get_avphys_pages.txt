@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) number of available pages of physical (the,) (box,computer,system,node,host,target) has
+//\\ //// ==> completion hint (1 line):
+returns the number of available pages of physical the system has
+//\\ //// Replacement text (1+ lines):
+long int get_avphys_pages (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int get_avphys_pages (void)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap lock
+| AC-Unsafe lock fd mem
+| See POSIX Safety Concepts.
+
+
+The get_avphys_pages function returns the number of available pages of
+physical the system has.  To get the amount of memory this number has to
+be multiplied by the page size.
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Query-Memory-Parameters.html#Query-Memory-Parameters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Query-Memory-Parameters/get_avphys_pages.txt

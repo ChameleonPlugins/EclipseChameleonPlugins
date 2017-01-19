@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+this is like scanf, except that (the,) characters are taken from (the,) null-terminated (string,text) X:TEXT instead of from (a,) stream
+//\\ //// ==> completion hint (1 line):
+This is like scanf, except that the characters are taken from the null-terminated string s instead of from a stream
+//\\ //// Replacement text (1+ lines):
+int sscanf (X1, const char *template, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sscanf (const char *s, const char *template, …)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+This is like scanf, except that the characters are taken from the
+null-terminated string s instead of from a stream.  Reaching the
+end of the string is treated as an end-of-file condition.
+
+The behavior of this function is undefined if copying takes place
+between objects that overlap—for example, if s is also given
+as an argument to receive a string read under control of the ‘%s’,
+‘%S’, or ‘%[’ conversion.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Formatted-Input-Functions.html#Formatted-Input-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Formatted-Input-Functions/sscanf.txt

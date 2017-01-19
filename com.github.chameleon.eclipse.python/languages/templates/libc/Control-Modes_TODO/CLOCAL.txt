@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+on many systems if this bit is not set and you call open without (the,) o_nonblock flag set, open blocks until (a,) modem connection is established
+//\\ //// ==> completion hint (1 line):
+On many systems if this bit is not set and you call open without the O_NONBLOCK flag set, open blocks until a modem connection is established
+//\\ //// Replacement text (1+ lines):
+Macro: tcflag_t CLOCAL
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: tcflag_t CLOCAL
+If this bit is set, it indicates that the terminal is connected
+“locally” and that the modem status lines (such as carrier detect)
+should be ignored.
+
+
+
+On many systems if this bit is not set and you call open without
+the O_NONBLOCK flag set, open blocks until a modem
+connection is established.
+
+If this bit is not set and a modem disconnect is detected, a
+SIGHUP signal is sent to the controlling process group for the
+terminal (if it has one).  Normally, this causes the process to exit;
+see Signal Handling.  Reading from the terminal after a disconnect
+causes an end-of-file condition, and writing causes an EIO error
+to be returned.  The terminal device must be closed and reopened to
+clear the condition.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Control-Modes.html#Control-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Control-Modes/CLOCAL.txt

@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+initializes all 48 bits of (the,) state of (the,) internal random number generator from (the,) contents of (the,) parameter seed16v
+//\\ //// ==> completion hint (1 line):
+initializes all 48 bits of the state of the internal random number generator from the contents of the parameter seed16v
+//\\ //// Replacement text (1+ lines):
+unsigned short int * seed48 (unsigned short int seed16v[3])
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: unsigned short int * seed48 (unsigned short int seed16v[3])
+Preliminary:
+| MT-Unsafe race:drand48
+| AS-Unsafe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The seed48 function initializes all 48 bits of the state of the
+internal random number generator from the contents of the parameter
+seed16v.  Here the lower 16 bits of the first element of
+see16v initialize the least significant 16 bits of the internal
+state, the lower 16 bits of seed16v[1] initialize the mid-order
+16 bits of the state and the 16 lower bits of seed16v[2]
+initialize the most significant 16 bits of the state.
+
+Unlike srand48 this function lets the user initialize all 48 bits
+of the state.
+
+The value returned by seed48 is a pointer to an array containing
+the values of the internal state before the change.  This might be
+useful to restart the random number generator at a certain state.
+Otherwise the value can simply be ignored.
+
+As for srand48, the values a and c from the
+congruential formula are reset to the default values.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/seed48.txt

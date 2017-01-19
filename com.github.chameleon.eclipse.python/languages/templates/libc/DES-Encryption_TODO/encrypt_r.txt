@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+these are reentrant versions of setkey and encrypt
+//\\ //// ==> completion hint (1 line):
+These are reentrant versions of setkey and encrypt
+//\\ //// Replacement text (1+ lines):
+Function: void setkey_r (const char *key, struct crypt_data * data)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void setkey_r (const char *key, struct crypt_data * data)
+Function: void encrypt_r (char *block, int edflag, struct crypt_data * data)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+
+These are reentrant versions of setkey and encrypt.  The
+only difference is the extra parameter, which stores the expanded
+version of key.  Before calling setkey_r the first time,
+data-&gt;initialized must be cleared to zero.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//DES-Encryption.html#DES-Encryption
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/DES-Encryption/encrypt_r.txt

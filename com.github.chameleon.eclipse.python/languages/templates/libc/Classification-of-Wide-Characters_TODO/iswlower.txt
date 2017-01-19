@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) true if X:WIDE_CHARACTER is (a,) lower-case letter
+//\\ //// ==> completion hint (1 line):
+Returns true if wc is a lower-case letter
+//\\ //// Replacement text (1+ lines):
+bool result=iswlower (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int iswlower (wint_t wc)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Returns true if wc is a lower-case letter.  The letter need not be
+from the Latin alphabet, any alphabet representable is valid.
+
+This function can be implemented using
+
+
+iswctype (wc, wctype (&quot;lower&quot;))
+
+
+
+It is declared in wctype.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Classification-of-Wide-Characters.html#Classification-of-Wide-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Classification-of-Wide-Characters/iswlower.txt

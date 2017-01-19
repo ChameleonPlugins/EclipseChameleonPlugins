@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+is similar to asctime, except that you (indicate,select,specify) (the,) calendar time argument as (a,) time_t simple time value rather than in broken-down local time format
+//\\ //// ==> completion hint (1 line):
+is similar to asctime, except that you specify the calendar time argument as a time_t simple time value rather than in broken-down local time format
+//\\ //// Replacement text (1+ lines):
+char * ctime (const time_t *time)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * ctime (const time_t *time)
+Preliminary:
+| MT-Unsafe race:tmbuf race:asctime env locale
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+The ctime function is similar to asctime, except that you
+specify the calendar time argument as a time_t simple time value
+rather than in broken-down local time format.  It is equivalent to
+
+
+asctime (localtime (time))
+
+
+Calling ctime also sets the current time zone as if
+tzset were called.  See Time Zone Functions.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Formatting-Calendar-Time.html#Formatting-Calendar-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Formatting-Calendar-Time/ctime.txt

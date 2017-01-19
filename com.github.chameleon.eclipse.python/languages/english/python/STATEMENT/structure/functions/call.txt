@@ -1,0 +1,13 @@
+//\\ //// code completion entries (1+ lines):
+call a function
+//\\ //// ==> completion hint (1 line):
+foo()
+//\\ //// Replacement text (1+ lines):
+foo()
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+function call help...
+//\\ //// Tool tip (1 line):
+You can add parameters if you wish: e.g. foo(param1, param2)
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):

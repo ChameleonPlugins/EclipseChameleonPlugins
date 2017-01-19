@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+prepares (the,) file named file which must be in (the,) format of (a,) fstab and mtab file for (the,) upcoming processing through (the,) other functions of (the,) family
+//\\ //// ==> completion hint (1 line):
+prepares the file named FILE which must be in the format of a fstab and mtab file for the upcoming processing through the other functions of the family
+//\\ //// Replacement text (1+ lines):
+FILE * setmntent (const char *file, const char *mode)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: FILE * setmntent (const char *file, const char *mode)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap lock
+| AC-Unsafe mem fd lock
+| See POSIX Safety Concepts.
+
+
+The setmntent function prepares the file named FILE which
+must be in the format of a fstab and mtab file for the
+upcoming processing through the other functions of the family.  The
+mode parameter can be chosen in the way the opentype
+parameter for fopen (see Opening Streams) can be chosen.  If
+the file is opened for writing the file is also allowed to be empty.
+
+If the file was successfully opened setmntent returns a file
+descriptor for future use.  Otherwise the return value is NULL
+and errno is set accordingly.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//mtab.html#mtab
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/mtab/setmntent.txt

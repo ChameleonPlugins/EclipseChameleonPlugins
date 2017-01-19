@@ -1,0 +1,37 @@
+//\\ //// code completion entries (1+ lines):
+if _file_offset_bits is undefined, or if it is defined to (the,) value 32, nothing (convert,change,replace)
+//\\ //// ==> completion hint (1 line):
+If _FILE_OFFSET_BITS is undefined, or if it is defined to the value 32, nothing changes
+//\\ //// Replacement text (1+ lines):
+Macro: _FILE_OFFSET_BITS
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: _FILE_OFFSET_BITS
+This macro determines which file system interface shall be used, one
+replacing the other.  Whereas _LARGEFILE64_SOURCE makes the 64 bit interface available as an additional interface,
+_FILE_OFFSET_BITS allows the 64 bit interface to
+replace the old interface.
+
+If _FILE_OFFSET_BITS is undefined, or if it is defined to the
+value 32, nothing changes.  The 32 bit interface is used and
+types like off_t have a size of 32 bits on 32 bit
+systems.
+
+If the macro is defined to the value 64, the large file interface
+replaces the old interface.  I.e., the functions are not made available
+under different names (as they are with _LARGEFILE64_SOURCE).
+Instead the old function names now reference the new functions, e.g., a
+call to fseeko now indeed calls fseeko64.
+
+This macro should only be selected if the system provides mechanisms for
+handling large files.  On 64 bit systems this macro has no effect
+since the *64 functions are identical to the normal functions.
+
+This macro was introduced as part of the Large File Support extension
+(LFS).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Feature-Test-Macros.html#Feature-Test-Macros
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Feature-Test-Macros/_FILE_OFFSET_BITS.txt

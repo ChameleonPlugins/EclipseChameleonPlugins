@@ -1,0 +1,37 @@
+//\\ //// code completion entries (1+ lines):
+compares (the,) wide character (string,text) ws1 against ws2
+//\\ //// ==> completion hint (1 line):
+compares the wide character string ws1 against ws2
+//\\ //// Replacement text (1+ lines):
+int wcscmp (const wchar_t *ws1, const wchar_t *ws2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int wcscmp (const wchar_t *ws1, const wchar_t *ws2)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+The wcscmp function compares the wide character string ws1
+against ws2.  The value returned is smaller than or larger than zero
+depending on whether the first differing wide character is ws1 is
+smaller or larger than the corresponding character in ws2.
+
+If the two strings are equal, wcscmp returns 0.
+
+A consequence of the ordering used by wcscmp is that if ws1
+is an initial substring of ws2, then ws1 is considered to be
+“less than” ws2.
+
+wcscmp does not take sorting conventions of the language the
+strings are written in into account.  To get that one has to use
+wcscoll.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//String_002fArray-Comparison.html#String_002fArray-Comparison
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/String_002fArray-Comparison/wcscmp.txt

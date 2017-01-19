@@ -1,0 +1,42 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function ecvt (convert,change,replace) (the,) floating-point number value to (a,) (string,text) with at most ndigit decimal digits
+//\\ //// ==> completion hint (1 line):
+The function ecvt converts the floating-point number value to a string with at most ndigit decimal digits
+//\\ //// Replacement text (1+ lines):
+char * ecvt (double value, int ndigit, int *decpt, int *neg)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * ecvt (double value, int ndigit, int *decpt, int *neg)
+Preliminary:
+| MT-Unsafe race:ecvt
+| AS-Unsafe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The function ecvt converts the floating-point number value
+to a string with at most ndigit decimal digits.  The
+returned string contains no decimal point or sign.  The first digit of
+the string is non-zero (unless value is actually zero) and the
+last digit is rounded to nearest.  *decpt is set to the
+index in the string of the first digit after the decimal point.
+*neg is set to a nonzero value if value is negative,
+zero otherwise.
+
+If ndigit decimal digits would exceed the precision of a
+double it is reduced to a system-specific value.
+
+The returned string is statically allocated and overwritten by each call
+to ecvt.
+
+If value is zero, it is implementation defined whether
+*decpt is 0 or 1.
+
+For example: ecvt (12.3, 5, &amp;d, &amp;n) returns &quot;12300&quot;
+and sets d to 2 and n to 0.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//System-V-Number-Conversion.html#System-V-Number-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/System-V-Number-Conversion/ecvt.txt

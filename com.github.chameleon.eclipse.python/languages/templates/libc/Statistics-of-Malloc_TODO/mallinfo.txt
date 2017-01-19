@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) information about (the,) current dynamic memory usage in (a,) structure of (output,print,show,say,type,write) struct mallinfo
+//\\ //// ==> completion hint (1 line):
+returns information about the current dynamic memory usage in a structure of type struct mallinfo
+//\\ //// Replacement text (1+ lines):
+struct mallinfo mallinfo (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct mallinfo mallinfo (void)
+Preliminary:
+| MT-Unsafe init const:mallopt
+| AS-Unsafe init lock
+| AC-Unsafe init lock
+| See POSIX Safety Concepts.
+
+
+
+
+This function returns information about the current dynamic memory usage
+in a structure of type struct mallinfo.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Statistics-of-Malloc.html#Statistics-of-Malloc
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Statistics-of-Malloc/mallinfo.txt

@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+is like strtol except that it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) intmax_t value, and accepts numbers of (a,) corresponding range
+//\\ //// ==> completion hint (1 line):
+is like strtol except that it returns a intmax_t value, and accepts numbers of a corresponding range
+//\\ //// Replacement text (1+ lines):
+intmax_t strtoimax (const char *restrict string, char **restrict tailptr, int base)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: intmax_t strtoimax (const char *restrict string, char **restrict tailptr, int base)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The strtoimax function is like strtol except that it returns
+a intmax_t value, and accepts numbers of a corresponding range.
+
+If the string has valid syntax for an integer but the value is not
+representable because of overflow, strtoimax returns either
+INTMAX_MAX or INTMAX_MIN (see Integers), as
+appropriate for the sign of the value.  It also sets errno to
+ERANGE to indicate there was overflow.
+
+See Integers for a description of the intmax_t type.  The
+strtoimax function was introduced in ISO C99.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Parsing-of-Integers.html#Parsing-of-Integers
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Parsing-of-Integers/strtoimax.txt

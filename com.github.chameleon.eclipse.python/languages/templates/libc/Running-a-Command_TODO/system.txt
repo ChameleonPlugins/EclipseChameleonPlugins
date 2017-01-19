@@ -1,0 +1,44 @@
+//\\ //// code completion entries (1+ lines):
+(run,execute,start) command as (a,) shell command
+//\\ //// ==> completion hint (1 line):
+executes command as a shell command
+//\\ //// Replacement text (1+ lines):
+int system (const char *command)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int system (const char *command)
+
+Preliminary:
+| MT-Safe 
+| AS-Unsafe plugin heap lock
+| AC-Unsafe lock mem
+| See POSIX Safety Concepts.
+
+
+This function executes command as a shell command.  In the GNU C Library,
+it always uses the default shell sh to run the command.
+In particular, it searches the directories in PATH to find
+programs to execute.  The return value is -1 if it wasn’t
+possible to create the shell process, and otherwise is the status of the
+shell process.  See Process Completion, for details on how this
+status code can be interpreted.
+
+If the command argument is a null pointer, a return value of zero
+indicates that no command processor is available.
+
+This function is a cancellation point in multi-threaded programs.  This
+is a problem if the thread allocates some resources (like memory, file
+descriptors, semaphores or whatever) at the time system is
+called.  If the thread gets canceled these resources stay allocated
+until the program ends.  To avoid this calls to system should be
+protected using cancellation handlers.
+
+
+The system function is declared in the header file
+stdlib.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Running-a-Command.html#Running-a-Command
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Running-a-Command/system.txt

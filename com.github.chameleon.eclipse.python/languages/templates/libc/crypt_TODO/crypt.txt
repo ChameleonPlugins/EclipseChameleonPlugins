@@ -1,0 +1,61 @@
+//\\ //// code completion entries (1+ lines):
+takes (a,) password, key, as (a,) (string,text), and (a,) salt character array which is described below, and (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) printable ascii (string,text) which (run,execute,start) with another salt
+//\\ //// ==> completion hint (1 line):
+takes a password, key, as a string, and a salt character array which is described below, and returns a printable ASCII string which starts with another salt
+//\\ //// Replacement text (1+ lines):
+char * crypt (const char *key, X1alt)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * crypt (const char *key, const char *salt)
+Preliminary:
+| MT-Unsafe race:crypt
+| AS-Unsafe corrupt lock heap dlopen
+| AC-Unsafe lock mem
+| See POSIX Safety Concepts.
+
+
+
+The crypt function takes a password, key, as a string, and
+a salt character array which is described below, and returns a
+printable ASCII string which starts with another salt.  It is believed
+that, given the output of the function, the best way to find a key
+that will produce that output is to guess values of key until the
+original value of key is found.
+
+The salt parameter does two things.  Firstly, it selects which
+algorithm is used, the MD5-based one or the DES-based one.  Secondly, it
+makes life harder for someone trying to guess passwords against a file
+containing many passwords; without a salt, an intruder can make a
+guess, run crypt on it once, and compare the result with all the
+passwords.  With a salt, the intruder must run crypt once
+for each different salt.
+
+For the MD5-based algorithm, the salt should consist of the string
+$1$, followed by up to 8 characters, terminated by either
+another $ or the end of the string.  The result of crypt
+will be the salt, followed by a $ if the salt didn’t end
+with one, followed by 22 characters from the alphabet
+./0-9A-Za-z, up to 34 characters total.  Every character in the
+key is significant.
+
+For the DES-based algorithm, the salt should consist of two
+characters from the alphabet ./0-9A-Za-z, and the result of
+crypt will be those two characters followed by 11 more from the
+same alphabet, 13 in total.  Only the first 8 characters in the
+key are significant.
+
+The MD5-based algorithm has no limit on the useful length of the
+password used, and is slightly more secure.  It is therefore preferred
+over the DES-based algorithm.
+
+When the user enters their password for the first time, the salt
+should be set to a new string which is reasonably random.  To verify a
+password against the result of a previous call to crypt, pass
+the result of the previous call as the salt.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//crypt.html#crypt
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/crypt/crypt.txt

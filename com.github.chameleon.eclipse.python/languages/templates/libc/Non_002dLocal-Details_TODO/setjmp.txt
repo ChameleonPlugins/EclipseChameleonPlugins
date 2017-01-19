@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+when called normally, setjmp stores information about (the,) execution state of (the,) program in state and (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) zero
+//\\ //// ==> completion hint (1 line):
+When called normally, setjmp stores information about the execution state of the program in state and returns zero
+//\\ //// Replacement text (1+ lines):
+Macro: int setjmp (jmp_buf state)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int setjmp (jmp_buf state)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+When called normally, setjmp stores information about the
+execution state of the program in state and returns zero.  If
+longjmp is later used to perform a non-local exit to this
+state, setjmp returns a nonzero value.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Non_002dLocal-Details.html#Non_002dLocal-Details
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Non_002dLocal-Details/setjmp.txt

@@ -1,0 +1,49 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) scheduling policy assigned to (the,) process with process id pid, or (the,) calling process if pid is zero
+//\\ //// ==> completion hint (1 line):
+returns the scheduling policy assigned to the process with Process ID pid, or the calling process if pid is zero
+//\\ //// Replacement text (1+ lines):
+int sched_getscheduler (pid_t pid)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sched_getscheduler (pid_t pid)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This function returns the scheduling policy assigned to the process with
+Process ID (pid) pid, or the calling process if pid is zero.
+
+The return value is the scheduling policy.  See
+sched_setscheduler for the possible values.
+
+If the function fails, the return value is instead -1 and
+errno is set accordingly.
+
+The errno values specific to this function are:
+
+
+ESRCH
+There is no process with pid pid and it is not zero.
+
+
+EINVAL
+pid is negative.
+
+
+
+
+Note that this function is not an exact mate to sched_setscheduler
+because while that function sets the scheduling policy and the absolute
+priority, this function gets only the scheduling policy.  To get the
+absolute priority, use sched_getparam.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Basic-Scheduling-Functions.html#Basic-Scheduling-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Basic-Scheduling-Functions/sched_getscheduler.txt

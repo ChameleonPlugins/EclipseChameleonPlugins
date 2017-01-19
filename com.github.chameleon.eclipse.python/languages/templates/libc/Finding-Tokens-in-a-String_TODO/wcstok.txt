@@ -1,0 +1,52 @@
+//\\ //// code completion entries (1+ lines):
+(a,) (string,text) can be (divide,split,separate) into tokens by making (a,) series of calls to (the,) function wcstok
+//\\ //// ==> completion hint (1 line):
+A string can be split into tokens by making a series of calls to the function wcstok
+//\\ //// Replacement text (1+ lines):
+wchar_t * wcstok (wchar_t *newstring, const wchar_t *delimiters, wchar_t **save_ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wchar_t * wcstok (wchar_t *newstring, const wchar_t *delimiters, wchar_t **save_ptr)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+A string can be split into tokens by making a series of calls to the
+function wcstok.
+
+The string to be split up is passed as the newstring argument on
+the first call only.  The wcstok function uses this to set up
+some internal state information.  Subsequent calls to get additional
+tokens from the same wide character string are indicated by passing a
+null pointer as the newstring argument, which causes the pointer
+previously stored in save_ptr to be used instead.
+
+The delimiters argument is a wide character string that specifies
+a set of delimiters that may surround the token being extracted.  All
+the initial wide characters that are members of this set are discarded.
+The first wide character that is not a member of this set of
+delimiters marks the beginning of the next token.  The end of the token
+is found by looking for the next wide character that is a member of the
+delimiter set.  This wide character in the original wide character
+string newstring is overwritten by a null wide character, the
+pointer past the overwritten wide character is saved in save_ptr,
+and the pointer to the beginning of the token in newstring is
+returned.
+
+On the next call to wcstok, the searching begins at the next
+wide character beyond the one that marked the end of the previous token.
+Note that the set of delimiters delimiters do not have to be the
+same on every call in a series of calls to wcstok.
+
+If the end of the wide character string newstring is reached, or
+if the remainder of string consists only of delimiter wide characters,
+wcstok returns a null pointer.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Finding-Tokens-in-a-String.html#Finding-Tokens-in-a-String
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Finding-Tokens-in-a-String/wcstok.txt

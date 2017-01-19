@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+actual floating-point exceptions are (a,) complicated subject because there are many (output,print,show,say,type,write) of exceptions with subtly different meanings, and (the,) sigfpe signal doesn’t distinguish between them
+//\\ //// ==> completion hint (1 line):
+Actual floating-point exceptions are a complicated subject because there are many types of exceptions with subtly different meanings, and the SIGFPE signal doesn’t distinguish between them
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGFPE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGFPE
+The SIGFPE signal reports a fatal arithmetic error.  Although the
+name is derived from “floating-point exception”, this signal actually
+covers all arithmetic errors, including division by zero and overflow.
+If a program stores integer data in a location which is then used in a
+floating-point operation, this often causes an “invalid operation”
+exception, because the processor cannot recognize the data as a
+floating-point number.
+
+
+
+Actual floating-point exceptions are a complicated subject because there
+are many types of exceptions with subtly different meanings, and the
+SIGFPE signal doesn’t distinguish between them.  The IEEE
+Standard for Binary Floating-Point Arithmetic (ANSI/IEEE Std 754-1985
+and ANSI/IEEE Std 854-1987)
+defines various floating-point exceptions and requires conforming
+computer systems to report their occurrences.  However, this standard
+does not specify how the exceptions are reported, or what kinds of
+handling and control the operating system can offer to the programmer.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Program-Error-Signals.html#Program-Error-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Program-Error-Signals/SIGFPE.txt

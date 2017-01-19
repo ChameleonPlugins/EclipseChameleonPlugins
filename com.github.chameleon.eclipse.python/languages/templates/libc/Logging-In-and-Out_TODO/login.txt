@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+(the,) login functions (add,append,construct,create,define,insert,make,push) (an,) entry into (the,) user accounting database
+//\\ //// ==> completion hint (1 line):
+The login functions inserts an entry into the user accounting database
+//\\ //// Replacement text (1+ lines):
+void login (const struct utmp *entry)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void login (const struct utmp *entry)
+Preliminary:
+| MT-Unsafe race:utent sig:ALRM timer
+| AS-Unsafe lock heap
+| AC-Unsafe lock corrupt fd mem
+| See POSIX Safety Concepts.
+
+
+The login functions inserts an entry into the user accounting
+database.  The ut_line member is set to the name of the terminal
+on standard input.  If standard input is not a terminal login
+uses standard output or standard error output to determine the name of
+the terminal.  If struct utmp has a ut_type member,
+login sets it to USER_PROCESS, and if there is an
+ut_pid member, it will be set to the process ID of the current
+process.  The remaining entries are copied from entry.
+
+A copy of the entry is written to the user accounting log file.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Logging-In-and-Out.html#Logging-In-and-Out
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Logging-In-and-Out/login.txt

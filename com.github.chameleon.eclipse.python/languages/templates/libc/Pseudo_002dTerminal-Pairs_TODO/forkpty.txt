@@ -1,0 +1,38 @@
+//\\ //// code completion entries (1+ lines):
+is similar to (the,) openpty function, but in addition, forks (a,) (new,) process for (the,) child process
+//\\ //// ==> completion hint (1 line):
+is similar to the openpty function, but in addition, forks a new process for the child process
+//\\ //// Replacement text (1+ lines):
+int forkpty (int *amaster, char *name, const struct termios *termp, const struct winsize *winp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int forkpty (int *amaster, char *name, const struct termios *termp, const struct winsize *winp)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function is similar to the openpty function, but in
+addition, forks a new process (see Creating a Process) and makes the
+newly opened slave pseudo-terminal device the controlling terminal
+(see Controlling Terminal) for the child process.
+
+If the operation is successful, there are then both parent and child
+processes and both see forkpty return, but with different values:
+it returns a value of 0 in the child process and returns the child’s
+process ID in the parent process.
+
+If the allocation of a pseudo-terminal pair or the process creation
+failed, forkpty returns a value of -1 in the parent
+process.
+
+Warning: The forkpty function has the same problems with
+respect to the name argument as openpty.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Pseudo_002dTerminal-Pairs.html#Pseudo_002dTerminal-Pairs
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Pseudo_002dTerminal-Pairs/forkpty.txt

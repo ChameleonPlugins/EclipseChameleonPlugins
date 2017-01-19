@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+initializes (a,) stream for reading from (the,) group data base
+//\\ //// ==> completion hint (1 line):
+initializes a stream for reading from the group data base
+//\\ //// Replacement text (1+ lines):
+void setgrent (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void setgrent (void)
+Preliminary:
+| MT-Unsafe race:grent locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function initializes a stream for reading from the group data base.
+You use this stream by calling getgrent or getgrent_r.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Scanning-All-Groups.html#Scanning-All-Groups
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Scanning-All-Groups/setgrent.txt

@@ -1,0 +1,17 @@
+//\\ //// code completion entries (1+ lines):
+open file X:FILE
+//\\ //// ==> completion hint (1 line):
+// open a file
+//\\ //// Replacement text (1+ lines):
+int fd;
+if ((fd = open(X1, O_RDWR)) == -1) {
+	perror("open failed");
+	exit(1);
+}
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="/mnt/fabric_emulation"
+//\\ //// Help/documentation (1+ lines):
+Documentation
+//\\ //// Tool tip (1 line):
+Next: Write  to file
+//\\

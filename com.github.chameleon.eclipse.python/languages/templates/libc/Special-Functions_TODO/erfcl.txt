@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+erfc (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) 1
+//\\ //// ==> completion hint (1 line):
+erfc returns 1
+//\\ //// Replacement text (1+ lines):
+Function: double erfc (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double erfc (double x)
+Function: float erfcf (float x)
+Function: long double erfcl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+erfc returns 1.0 - erf(x), but computed in a
+fashion that avoids round-off error when x is large.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Special-Functions.html#Special-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Special-Functions/erfcl.txt

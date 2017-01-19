@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) (new,) file descriptor for (the,) next available master pseudo-terminal
+//\\ //// ==> completion hint (1 line):
+returns a new file descriptor for the next available master pseudo-terminal
+//\\ //// Replacement text (1+ lines):
+int getpt (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getpt (void)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe fd
+| See POSIX Safety Concepts.
+
+
+The getpt function returns a new file descriptor for the next
+available master pseudo-terminal.  The normal return value from
+getpt is a non-negative integer file descriptor.  In the case of
+an error, a value of -1 is returned instead.  The following
+errno conditions are defined for this function:
+
+
+ENOENT
+There are no free master pseudo-terminals available.
+
+
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Allocation.html#Allocation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Allocation/getpt.txt

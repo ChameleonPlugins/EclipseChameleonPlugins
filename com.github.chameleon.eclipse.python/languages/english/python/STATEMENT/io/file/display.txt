@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+(display,print,show) the contents of closed X:FILE
+//\\ //// ==> completion hint (1 line):
+# Display the contents of a closed file
+//\\ //// Replacement text (1+ lines):
+# Display the contents of a closed file
+print open(X1, "rb").read()
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=r"file.txt"
+//\\ //// Help/documentation (1+ lines):
+print open(X1, "rb").read()
+//\\ //// Tool tip (1 line):
+Change the filename to the file you want to display if needed...
+//\\
+ 

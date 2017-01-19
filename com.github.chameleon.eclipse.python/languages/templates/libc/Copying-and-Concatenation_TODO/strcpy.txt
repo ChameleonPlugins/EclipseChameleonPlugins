@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+this copies characters from (the,) (string,text) from into (the,) (string,text) to
+//\\ //// ==> completion hint (1 line):
+This copies characters from the string from into the string to
+//\\ //// Replacement text (1+ lines):
+char * strcpy (char *restrict to, const char *restrict from)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strcpy (char *restrict to, const char *restrict from)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This copies characters from the string from (up to and including
+the terminating null character) into the string to.  Like
+memcpy, this function has undefined results if the strings
+overlap.  The return value is the value of to.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/strcpy.txt

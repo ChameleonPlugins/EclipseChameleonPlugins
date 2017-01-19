@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+is similar to freopen
+//\\ //// ==> completion hint (1 line):
+is similar to freopen
+//\\ //// Replacement text (1+ lines):
+FILE * freopen64 (X1, const char *opentype, FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: FILE * freopen64 (const char *filename, const char *opentype, FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe corrupt fd
+| See POSIX Safety Concepts.
+
+
+This function is similar to freopen.  The only difference is that
+on 32 bit machine the stream returned is able to read beyond the
+2^31 bytes limits imposed by the normal interface.  It should be
+noted that the stream pointed to by stream need not be opened
+using fopen64 or freopen64 since its mode is not important
+for this function.
+
+If the sources are compiled with _FILE_OFFSET_BITS == 64 on a 32
+bits machine this function is available under the name freopen
+and so transparently replaces the old interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Opening-Streams.html#Opening-Streams
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Opening-Streams/freopen64.txt

@@ -1,0 +1,13 @@
+//\\ //// code completion entries (1+ lines):
+get current time
+//\\ //// ==> completion hint (1 line):
+#from time import strftime as date
+current_date = date(‘%H:%M:%S’)
+//\\ //// Replacement text (1+ lines):
+#from time import strftime as date
+current_date = date(‘%H:%M:%S’)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Change format if you want...
+//\\ //// Tool tip (1 line):

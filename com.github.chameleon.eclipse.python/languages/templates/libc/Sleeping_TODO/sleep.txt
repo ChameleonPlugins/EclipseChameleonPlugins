@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+waits for seconds or until (a,) signal is delivered, whichever happens first
+//\\ //// ==> completion hint (1 line):
+waits for seconds or until a signal is delivered, whichever happens first
+//\\ //// Replacement text (1+ lines):
+unsigned int sleep (unsigned int seconds)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: unsigned int sleep (unsigned int seconds)
+Preliminary:
+| MT-Unsafe sig:SIGCHLD/linux
+| AS-Unsafe 
+| AC-Unsafe 
+| See POSIX Safety Concepts.
+
+
+The sleep function waits for seconds or until a signal
+is delivered, whichever happens first.
+
+If sleep function returns because the requested interval is over,
+it returns a value of zero.  If it returns because of delivery of a
+signal, its return value is the remaining time in the sleep interval.
+
+The sleep function is declared in unistd.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Sleeping.html#Sleeping
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Sleeping/sleep.txt

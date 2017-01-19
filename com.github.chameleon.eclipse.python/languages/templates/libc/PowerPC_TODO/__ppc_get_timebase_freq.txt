@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+read (the,) current frequency at which (the,) time base register is updated
+//\\ //// ==> completion hint (1 line):
+Read the current frequency at which the Time Base Register is updated
+//\\ //// Replacement text (1+ lines):
+uint64_t __ppc_get_timebase_freq (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: uint64_t __ppc_get_timebase_freq (void)
+Preliminary:
+| MT-Unsafe init
+| AS-Unsafe corrupt:init
+| AC-Unsafe corrupt:init
+| See POSIX Safety Concepts.
+
+
+Read the current frequency at which the Time Base Register is updated.
+
+This frequency is not related to the processor clock or the bus clock.
+It is also possible that this frequency is not constant.  More information is
+available in Power ISA 2.06b - Book II - Section 5.2.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//PowerPC.html#PowerPC
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/PowerPC/__ppc_get_timebase_freq.txt

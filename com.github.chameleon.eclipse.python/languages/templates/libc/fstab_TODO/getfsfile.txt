@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) next entry of (the,) fstab file which has (a,) (string,text) equal to name pointed to by (the,) fs_file element
+//\\ //// ==> completion hint (1 line):
+returns the next entry of the fstab file which has a string equal to name pointed to by the fs_file element
+//\\ //// Replacement text (1+ lines):
+struct fstab * getfsfile (const char *name)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct fstab * getfsfile (const char *name)
+Preliminary:
+| MT-Unsafe race:fsent locale
+| AS-Unsafe corrupt heap lock
+| AC-Unsafe corrupt lock mem
+| See POSIX Safety Concepts.
+
+
+This function returns the next entry of the fstab file which has
+a string equal to name pointed to by the fs_file element.
+Since there is normally exactly one entry for each mount point it
+makes no sense to call this function more than once for the same
+argument.  If this is the first call to any of the functions handling
+fstab since program start or the last call of endfsent,
+the file will be opened.
+
+The function returns a pointer to a variable of type struct
+fstab.  This variable is shared by all threads and therefore this
+function is not thread-safe.  If an error occurred getfsent
+returns a NULL pointer.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//fstab.html#fstab
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/fstab/getfsfile.txt

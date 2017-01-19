@@ -1,0 +1,50 @@
+//\\ //// code completion entries (1+ lines):
+provides (a,) convenient way of iterating over (the,) elements in (the,) argz vector argz
+//\\ //// ==> completion hint (1 line):
+provides a convenient way of iterating over the elements in the argz vector argz
+//\\ //// Replacement text (1+ lines):
+char * argz_next (const char *argz, size_t argz_len, const char *entry)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * argz_next (const char *argz, size_t argz_len, const char *entry)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The argz_next function provides a convenient way of iterating
+over the elements in the argz vector argz.  It returns a pointer
+to the next element in argz after the element entry, or
+0 if there are no elements following entry.  If entry
+is 0, the first element of argz is returned.
+
+This behavior suggests two styles of iteration:
+
+
+    char *entry = 0;
+    while ((entry = argz_next (argz, argz_len, entry)))
+      action;
+
+
+(the double parentheses are necessary to make some C compilers shut up
+about what they consider a questionable while-test) and:
+
+
+    char *entry;
+    for (entry = argz;
+         entry;
+         entry = argz_next (argz, argz_len, entry))
+      action;
+
+
+Note that the latter depends on argz having a value of 0 if
+it is empty (rather than a pointer to an empty block of memory); this
+invariant is maintained for argz vectors created by the functions here.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argz-Functions.html#Argz-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argz-Functions/argz_next.txt

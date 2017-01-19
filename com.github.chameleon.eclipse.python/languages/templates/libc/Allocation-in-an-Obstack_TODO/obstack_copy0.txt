@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+like obstack_copy, but (add,append,construct,create,define,insert,make,push) (an,) extra byte containing (a,) null character
+//\\ //// ==> completion hint (1 line):
+Like obstack_copy, but appends an extra byte containing a null character
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = obstack_copy0 (struct obstack *obstack-ptr, X1, int size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=NULL
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * obstack_copy0 (struct obstack *obstack-ptr, void *address, int size)
+Preliminary:
+| MT-Safe race:obstack-ptr
+| AS-Safe 
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+Like obstack_copy, but appends an extra byte containing a null
+character.  This extra byte is not counted in the argument size.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Allocation-in-an-Obstack.html#Allocation-in-an-Obstack
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Allocation-in-an-Obstack/obstack_copy0.txt

@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is similar to localtime, except that (the,) broken-down time is expressed as coordinated universal time rather than relative to (a,) local time zone
+//\\ //// ==> completion hint (1 line):
+is similar to localtime, except that the broken-down time is expressed as Coordinated Universal Time rather than relative to a local time zone
+//\\ //// Replacement text (1+ lines):
+struct tm * gmtime (const time_t *time)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct tm * gmtime (const time_t *time)
+Preliminary:
+| MT-Unsafe race:tmbuf env locale
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+This function is similar to localtime, except that the broken-down
+time is expressed as Coordinated Universal Time (UTC) (formerly called
+Greenwich Mean Time (GMT)) rather than relative to a local time zone.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Broken_002ddown-Time.html#Broken_002ddown-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Broken_002ddown-Time/gmtime.txt

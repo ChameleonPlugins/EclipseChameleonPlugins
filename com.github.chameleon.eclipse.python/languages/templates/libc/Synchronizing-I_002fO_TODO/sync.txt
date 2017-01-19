@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(a,) call to this function will not (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) as long as there is data which has not been written to (the,) device
+//\\ //// ==> completion hint (1 line):
+A call to this function will not return as long as there is data which has not been written to the device
+//\\ //// Replacement text (1+ lines):
+void sync (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void sync (void)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+A call to this function will not return as long as there is data which
+has not been written to the device.  All dirty buffers in the kernel will
+be written and so an overall consistent system can be achieved (if no
+other process in parallel writes data).
+
+A prototype for sync can be found in unistd.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Synchronizing-I_002fO.html#Synchronizing-I_002fO
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Synchronizing-I_002fO/sync.txt

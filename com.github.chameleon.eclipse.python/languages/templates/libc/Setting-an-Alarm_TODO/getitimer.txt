@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+stores information about (the,) timer specified by which in (the,) structure pointed at by old
+//\\ //// ==> completion hint (1 line):
+stores information about the timer specified by which in the structure pointed at by old
+//\\ //// Replacement text (1+ lines):
+int getitimer (int which, struct itimerval *old)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getitimer (int which, struct itimerval *old)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The getitimer function stores information about the timer specified
+by which in the structure pointed at by old.
+
+The return value and error conditions are the same as for setitimer.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-an-Alarm.html#Setting-an-Alarm
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-an-Alarm/getitimer.txt

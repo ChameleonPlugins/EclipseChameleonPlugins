@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+copies (the,) null-terminated wide character (string,text) ws into (a,) newly allocated (string,text)
+//\\ //// ==> completion hint (1 line):
+copies the null-terminated wide character string ws into a newly allocated string
+//\\ //// Replacement text (1+ lines):
+wchar_t * wcsdup (const wchar_t *ws)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wchar_t * wcsdup (const wchar_t *ws)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+This function copies the null-terminated wide character string ws
+into a newly allocated string.  The string is allocated using
+malloc; see Unconstrained Allocation.  If malloc
+cannot allocate space for the new string, wcsdup returns a null
+pointer.  Otherwise it returns a pointer to the new wide character
+string.
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/wcsdup.txt

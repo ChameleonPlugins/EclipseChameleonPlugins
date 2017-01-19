@@ -1,0 +1,20 @@
+//\\ //// code completion entries (1+ lines):
+find where one string is located inside of another
+//\\ //// ==> completion hint (1 line):
+indexOf(String searchString, Number startPosition);
+//\\ //// Replacement text (1+ lines):
+indexOf(searchString, startPosition);
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+function indexOf(String searchString, Number startPosition) http://www.w3.og/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html<br>
+<DL>
+  <DT><b>Parameters:</b></DT><br>
+   <DD>{String} text<br></DD>
+  <DT><b>Since:</b></DT><br>
+   <DD>StandardECMA-262 3rd. Edition</DD><br>
+   <DD>Level 2 Document Object Model HTML Specification.</DD>
+ </DL>
+//\\ //// Tool tip (1 line):
+Replace the variable with your own variable name if you want...
+//\\

@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+is like atol, except that it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (an,) int
+//\\ //// ==> completion hint (1 line):
+is like atol, except that it returns an int
+//\\ //// Replacement text (1+ lines):
+int atoi (X1tring)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int atoi (const char *string)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is like atol, except that it returns an int.
+The atoi function is also considered obsolete; use strtol
+instead.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Parsing-of-Integers.html#Parsing-of-Integers
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Parsing-of-Integers/atoi.txt

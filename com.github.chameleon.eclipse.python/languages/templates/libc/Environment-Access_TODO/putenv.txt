@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) or (chomp,chop,delete,destroy,drop,pop,remove) definitions from (the,) environment
+//\\ //// ==> completion hint (1 line):
+adds or removes definitions from the environment
+//\\ //// Replacement text (1+ lines):
+int putenv (char *string)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int putenv (char *string)
+Preliminary:
+| MT-Unsafe const:env
+| AS-Unsafe heap lock
+| AC-Unsafe corrupt lock mem
+| See POSIX Safety Concepts.
+
+
+The putenv function adds or removes definitions from the environment.
+If the string is of the form ‘name=value’, the
+definition is added to the environment.  Otherwise, the string is
+interpreted as the name of an environment variable, and any definition
+for this variable in the environment is removed.
+
+If the function is successful it returns 0.  Otherwise the return
+value is nonzero and errno is set to indicate the error.
+
+The difference to the setenv function is that the exact string
+given as the parameter string is put into the environment.  If the
+user should change the string after the putenv call this will
+reflect automatically in the environment.  This also requires that
+string not be an automatic variable whose scope is left before the
+variable is removed from the environment.  The same applies of course to
+dynamically allocated variables which are freed later.
+
+This function is part of the extended Unix interface.  You should define
+_XOPEN_SOURCE before including any header.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Environment-Access.html#Environment-Access
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Environment-Access/putenv.txt

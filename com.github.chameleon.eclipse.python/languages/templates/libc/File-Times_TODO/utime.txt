@@ -1,0 +1,59 @@
+//\\ //// code completion entries (1+ lines):
+is used to modify (the,) file times associated with (the,) file named X:FILENAME
+//\\ //// ==> completion hint (1 line):
+is used to modify the file times associated with the file named filename
+//\\ //// Replacement text (1+ lines):
+int utime (X1, const struct utimbuf *times)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int utime (const char *filename, const struct utimbuf *times)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is used to modify the file times associated with the file
+named filename.
+
+If times is a null pointer, then the access and modification times
+of the file are set to the current time.  Otherwise, they are set to the
+values from the actime and modtime members (respectively)
+of the utimbuf structure pointed to by times.
+
+The attribute modification time for the file is set to the current time
+in either case (since changing the time stamps is itself a modification
+of the file attributes).
+
+The utime function returns 0 if successful and -1
+on failure.  In addition to the usual file name errors
+(see File Name Errors), the following errno error conditions
+are defined for this function:
+
+
+EACCES
+There is a permission problem in the case where a null pointer was
+passed as the times argument.  In order to update the time stamp on
+the file, you must either be the owner of the file, have write
+permission for the file, or be a privileged user.
+
+
+ENOENT
+The file doesn’t exist.
+
+
+EPERM
+If the times argument is not a null pointer, you must either be
+the owner of the file or be a privileged user.
+
+
+EROFS
+The file lives on a read-only file system.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Times.html#File-Times
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Times/utime.txt

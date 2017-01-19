@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) reads characters from (the,) stream stdin up to (the,) next newline character, and stores them in (the,) (string,text) s
+//\\ //// ==> completion hint (1 line):
+The function gets reads characters from the stream stdin up to the next newline character, and stores them in the string s
+//\\ //// Replacement text (1+ lines):
+Deprecated function: char * gets (char *s)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Deprecated function: char * gets (char *s)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+The function gets reads characters from the stream stdin
+up to the next newline character, and stores them in the string s.
+The newline character is discarded (note that this differs from the
+behavior of fgets, which copies the newline character into the
+string).  If gets encounters a read error or end-of-file, it
+returns a null pointer; otherwise it returns s.
+
+Warning: The gets function is very dangerous
+because it provides no protection against overflowing the string
+s.  The GNU C Library includes it for compatibility only.  You
+should always use fgets or getline instead.  To
+remind you of this, the linker (if using GNU ld) will issue a
+warning whenever you use gets.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Line-Input.html#Line-Input
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Line-Input/gets.txt

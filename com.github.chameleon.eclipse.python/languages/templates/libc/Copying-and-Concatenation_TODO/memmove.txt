@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+copies (the,) size bytes at from into (the,) size bytes at to, even if those two blocks of space overlap
+//\\ //// ==> completion hint (1 line):
+copies the size bytes at from into the size bytes at to, even if those two blocks of space overlap
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = memmove (void *to, const void *from, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * memmove (void *to, const void *from, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+memmove copies the size bytes at from into the
+size bytes at to, even if those two blocks of space
+overlap.  In the case of overlap, memmove is careful to copy the
+original values of the bytes in the block at from, including those
+bytes which also belong to the block at to.
+
+The value returned by memmove is the value of to.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/memmove.txt

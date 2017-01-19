@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function is expected to be (output,print,show,say,type,write) to (the,) stderr stream and must be able to handle whatever orientation (the,) stream has
+//\\ //// ==> completion hint (1 line):
+The function is expected to be print to the stderr stream and must be able to handle whatever orientation the stream has
+//\\ //// Replacement text (1+ lines):
+Variable: void (*error_print_progname) (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Variable: void (*error_print_progname) (void)
+If the error_print_progname variable is defined to a non-zero
+value the function pointed to is called by error or
+error_at_line.  It is expected to print the program name or do
+something similarly useful.
+
+The function is expected to be print to the stderr stream and
+must be able to handle whatever orientation the stream has.
+
+The variable is global and shared by all threads.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Error-Messages.html#Error-Messages
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Error-Messages/(void).txt

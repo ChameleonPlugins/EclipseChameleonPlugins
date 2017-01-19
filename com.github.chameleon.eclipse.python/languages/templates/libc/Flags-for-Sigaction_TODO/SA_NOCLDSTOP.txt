@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+setting this flag for (a,) signal other than sigchld has no effect
+//\\ //// ==> completion hint (1 line):
+Setting this flag for a signal other than SIGCHLD has no effect
+//\\ //// Replacement text (1+ lines):
+Macro: int SA_NOCLDSTOP
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SA_NOCLDSTOP
+This flag is meaningful only for the SIGCHLD signal.  When the
+flag is set, the system delivers the signal for a terminated child
+process but not for one that is stopped.  By default, SIGCHLD is
+delivered for both terminated children and stopped children.
+
+Setting this flag for a signal other than SIGCHLD has no effect.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Flags-for-Sigaction.html#Flags-for-Sigaction
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Flags-for-Sigaction/SA_NOCLDSTOP.txt

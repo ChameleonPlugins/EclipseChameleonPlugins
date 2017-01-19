@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+is similar to nftw but it can work on filesystems with large files
+//\\ //// ==> completion hint (1 line):
+is similar to nftw but it can work on filesystems with large files
+//\\ //// Replacement text (1+ lines):
+int nftw64 (X1, __nftw64_func_t func, int descriptors, int flag)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int nftw64 (const char *filename, __nftw64_func_t func, int descriptors, int flag)
+Preliminary:
+| MT-Safe cwd
+| AS-Unsafe heap
+| AC-Unsafe mem fd cwd
+| See POSIX Safety Concepts.
+
+
+This function is similar to nftw but it can work on filesystems
+with large files.  File information is reported using a variable of type
+struct stat64 which is passed by reference to the callback
+function.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 on a
+32-bit system this function is available under the name nftw and
+transparently replaces the old implementation.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Working-with-Directory-Trees.html#Working-with-Directory-Trees
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Working-with-Directory-Trees/nftw64.txt

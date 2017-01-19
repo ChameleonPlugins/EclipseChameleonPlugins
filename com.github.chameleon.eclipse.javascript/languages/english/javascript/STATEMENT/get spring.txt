@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+(spring for demo) get web information (a REST get call) using Spring
+//\\ //// ==> completion hint (1 line):
+// get web information (REST call) using Spring
+//\\ //// Replacement text (1+ lines):
+// get web information (REST call) using Spring
+String result = restTemplate.getForObject("http://YOUR_URL_GOES_HERE=?{input}", String.class, "INPUT");
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+// REST get
+String result = restTemplate.getForObject("http://YOUR_URL_GOES_HERE=?{input}", String.class, "INPUT");
+//\\ //// Tool tip (1 line):
+Change 'YOUR_URL_GOES_HERE' and "INPUT" to the approrpiate values.  The results will end up in the results variable...
+//\\

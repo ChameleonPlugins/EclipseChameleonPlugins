@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+this is similar to setjmp
+//\\ //// ==> completion hint (1 line):
+This is similar to setjmp
+//\\ //// Replacement text (1+ lines):
+int sigsetjmp (sigjmp_buf state, int savesigs)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sigsetjmp (sigjmp_buf state, int savesigs)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock/hurd
+| AC-Unsafe lock/hurd
+| See POSIX Safety Concepts.
+
+
+This is similar to setjmp.  If savesigs is nonzero, the set
+of blocked signals is saved in state and will be restored if a
+siglongjmp is later performed with this state.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Non_002dLocal-Exits-and-Signals.html#Non_002dLocal-Exits-and-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Non_002dLocal-Exits-and-Signals/sigsetjmp.txt

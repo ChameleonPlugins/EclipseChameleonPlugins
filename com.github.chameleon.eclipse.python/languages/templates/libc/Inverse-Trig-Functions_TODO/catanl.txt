@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+these functions compute (the,) complex arc tangent of z—that is, (the,) value whose tangent is z
+//\\ //// ==> completion hint (1 line):
+These functions compute the complex arc tangent of z—that is, the value whose tangent is z
+//\\ //// Replacement text (1+ lines):
+Function: complex double catan (complex double z)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: complex double catan (complex double z)
+Function: complex float catanf (complex float z)
+Function: complex long double catanl (complex long double z)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions compute the complex arc tangent of z—that is,
+the value whose tangent is z.  The value is in units of radians.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Inverse-Trig-Functions.html#Inverse-Trig-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Inverse-Trig-Functions/catanl.txt

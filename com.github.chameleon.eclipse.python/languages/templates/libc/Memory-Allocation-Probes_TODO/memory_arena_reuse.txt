@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+this occurs within reused_arena, right after (the,) mutex mentioned in probe memory_arena_reuse_wait is acquired
+//\\ //// ==> completion hint (1 line):
+This occurs within reused_arena, right after the mutex mentioned in probe memory_arena_reuse_wait is acquired
+//\\ //// Replacement text (1+ lines):
+Probe: memory_arena_reuse (void *$arg1, void *$arg2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Probe: memory_arena_reuse (void *$arg1, void *$arg2)
+This probe is triggered when malloc has just selected an existing
+arena to reuse, and (temporarily) reserved it for exclusive use.
+Argument $arg1 is a pointer to the newly-selected arena, and
+$arg2 is a pointer to the arena previously used by that thread.
+
+This occurs within
+reused_arena, right after the mutex mentioned in probe
+memory_arena_reuse_wait is acquired; argument $arg1 will
+point to the same arena.  In this configuration, this will usually only
+occur once per thread.  The exception is when a thread first selected
+the main arena, but a subsequent allocation from it fails: then, and
+only then, may we switch to another arena to retry that allocations, and
+for further allocations within that thread.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Memory-Allocation-Probes.html#Memory-Allocation-Probes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Memory-Allocation-Probes/memory_arena_reuse.txt

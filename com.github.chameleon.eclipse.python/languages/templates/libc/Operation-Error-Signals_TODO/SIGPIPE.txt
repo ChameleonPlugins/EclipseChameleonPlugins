@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+pipes and fifo special files are discussed in more detail in pipes and fifos
+//\\ //// ==> completion hint (1 line):
+Pipes and FIFO special files are discussed in more detail in Pipes and FIFOs
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGPIPE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGPIPE
+
+
+Broken pipe.  If you use pipes or FIFOs, you have to design your
+application so that one process opens the pipe for reading before
+another starts writing.  If the reading process never starts, or
+terminates unexpectedly, writing to the pipe or FIFO raises a
+SIGPIPE signal.  If SIGPIPE is blocked, handled or
+ignored, the offending call fails with EPIPE instead.
+
+Pipes and FIFO special files are discussed in more detail in Pipes and FIFOs.
+
+Another cause of SIGPIPE is when you try to output to a socket
+that isn’t connected.  See Sending Data.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Operation-Error-Signals.html#Operation-Error-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Operation-Error-Signals/SIGPIPE.txt

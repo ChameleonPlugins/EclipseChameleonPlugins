@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+this is just like fputc, except that most systems implement it as (a,) macro, making it faster
+//\\ //// ==> completion hint (1 line):
+This is just like fputc, except that most systems implement it as a macro, making it faster
+//\\ //// Replacement text (1+ lines):
+int putc (X1, FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int putc (int c, FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe corrupt lock
+| See POSIX Safety Concepts.
+
+
+This is just like fputc, except that most systems implement it as
+a macro, making it faster.  One consequence is that it may evaluate the
+stream argument more than once, which is an exception to the
+general rule for macros.  putc is usually the best function to
+use for writing a single character.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Simple-Output.html#Simple-Output
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Simple-Output/putc.txt

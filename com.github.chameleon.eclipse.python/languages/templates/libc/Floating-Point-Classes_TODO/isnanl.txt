@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) nonzero value if x is (a,) “not (a,) number” value, and zero otherwise
+//\\ //// ==> completion hint (1 line):
+returns a nonzero value if x is a “not a number” value, and zero otherwise
+//\\ //// Replacement text (1+ lines):
+Function: int isnan (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int isnan (double x)
+Function: int isnanf (float x)
+Function: int isnanl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function returns a nonzero value if x is a “not a number”
+value, and zero otherwise.
+
+NB: The isnan macro defined by ISO C99 overrides
+the BSD function.  This is normally not a problem, because the two
+routines behave identically.  However, if you really need to get the BSD
+function for some reason, you can write
+
+
+(isnan) (x)
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Floating-Point-Classes.html#Floating-Point-Classes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Floating-Point-Classes/isnanl.txt

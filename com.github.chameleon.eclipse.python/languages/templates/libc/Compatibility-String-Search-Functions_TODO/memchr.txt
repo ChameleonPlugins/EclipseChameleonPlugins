@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) first occurrence of (the,) byte X:CHARACTER in (the,) initial size bytes of (the,) object beginning at block
+//\\ //// ==> completion hint (1 line):
+finds the first occurrence of the byte c in the initial size bytes of the object beginning at block
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = memchr (const void *block, X2, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * memchr (const void *block, int c, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function finds the first occurrence of the byte c (converted
+to an unsigned char) in the initial size bytes of the
+object beginning at block.  The return value is a pointer to the
+located byte, or a null pointer if no match was found.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Compatibility-String-Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Compatibility-String-Search-Functions/memchr.txt

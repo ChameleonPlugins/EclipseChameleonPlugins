@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+this is just like fgetc, except that it is permissible for it to be implemented as (a,) macro that evaluates (the,) stream argument more than once
+//\\ //// ==> completion hint (1 line):
+This is just like fgetc, except that it is permissible for it to be implemented as a macro that evaluates the stream argument more than once
+//\\ //// Replacement text (1+ lines):
+int getc (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getc (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+This is just like fgetc, except that it is permissible (and
+typical) for it to be implemented as a macro that evaluates the
+stream argument more than once.  getc is often highly
+optimized, so it is usually the best function to use to read a single
+character.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Character-Input.html#Character-Input
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Character-Input/getc.txt

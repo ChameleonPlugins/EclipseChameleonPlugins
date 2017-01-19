@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) positive difference between x and y
+//\\ //// ==> completion hint (1 line):
+returns the positive difference between x and y
+//\\ //// Replacement text (1+ lines):
+double fdim (double x, double y)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double fdim (double x, double y)
+Function: float fdimf (float x, float y)
+Function: long double fdiml (long double x, long double y)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The fdim function returns the positive difference between
+x and y.  The positive difference is x -
+y if x is greater than y, and 0 otherwise.
+
+If x, y, or both are NaN, NaN is returned.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Misc-FP-Arithmetic.html#Misc-FP-Arithmetic
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Misc-FP-Arithmetic/fdim.txt

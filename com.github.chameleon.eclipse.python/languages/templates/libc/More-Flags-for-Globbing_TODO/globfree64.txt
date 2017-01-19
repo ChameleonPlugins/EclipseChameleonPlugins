@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+is equivalent to globfree but it (deallocate,free,release) records of (output,print,show,say,type,write) glob64_t which were allocated by glob64
+//\\ //// ==> completion hint (1 line):
+is equivalent to globfree but it frees records of type glob64_t which were allocated by glob64
+//\\ //// Replacement text (1+ lines):
+void globfree64 (glob64_t *pglob)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void globfree64 (glob64_t *pglob)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function is equivalent to globfree but it frees records of
+type glob64_t which were allocated by glob64.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//More-Flags-for-Globbing.html#More-Flags-for-Globbing
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/More-Flags-for-Globbing/globfree64.txt

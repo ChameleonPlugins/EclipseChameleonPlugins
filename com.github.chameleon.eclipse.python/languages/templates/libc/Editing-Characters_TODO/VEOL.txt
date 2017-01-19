@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(the,) eol character is recognized only in canonical input mode
+//\\ //// ==> completion hint (1 line):
+The EOL character is recognized only in canonical input mode
+//\\ //// Replacement text (1+ lines):
+Macro: int VEOL
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int VEOL
+
+This is the subscript for the EOL character in the special control
+character array.  termios.c_cc[VEOL] holds the character
+itself.
+
+The EOL character is recognized only in canonical input mode.  It acts
+as a line terminator, just like a newline character.  The EOL character
+is not discarded; it is read as the last character in the input line.
+
+
+You don’t need to use the EOL character to make RET end a line.
+Just set the ICRNL flag.  In fact, this is the default state of
+affairs.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Editing-Characters.html#Editing-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Editing-Characters/VEOL.txt

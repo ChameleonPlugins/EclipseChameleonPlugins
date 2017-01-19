@@ -1,0 +1,38 @@
+//\\ //// code completion entries (1+ lines):
+is (the,) reentrant variant of getmntent
+//\\ //// ==> completion hint (1 line):
+is the reentrant variant of getmntent
+//\\ //// Replacement text (1+ lines):
+struct mntent * getmntent_r (FILE *stream, struct mntent *result, char *buffer, int bufsize)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct mntent * getmntent_r (FILE *stream, struct mntent *result, char *buffer, int bufsize)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe corrupt heap
+| AC-Unsafe corrupt lock mem
+| See POSIX Safety Concepts.
+
+
+The getmntent_r function is the reentrant variant of
+getmntent.  It also returns the next entry from the file and
+returns a pointer.  The actual variable the values are stored in is not
+static, though.  Instead the function stores the values in the variable
+pointed to by the result parameter.  Additional information (e.g.,
+the strings pointed to by the elements of the result) are kept in the
+buffer of size bufsize pointed to by buffer.
+
+Escaped characters (space, tab, backslash) are converted back in the
+same way as it happens for getmentent.
+
+The function returns a NULL pointer in error cases.  Errors could be:
+
+ error while reading the file,
+ end of file reached,
+ bufsize is too small for reading a complete new entry.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//mtab.html#mtab
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/mtab/getmntent_r.txt

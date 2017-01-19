@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+(the,) tzname array is initialized from (the,) tz environment variable whenever tzset, ctime, strftime, mktime, or localtime is called
+//\\ //// ==> completion hint (1 line):
+The tzname array is initialized from the TZ environment variable whenever tzset, ctime, strftime, mktime, or localtime is called
+//\\ //// Replacement text (1+ lines):
+Variable: char * tzname [2]
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Variable: char * tzname [2]
+The array tzname contains two strings, which are the standard
+names of the pair of time zones (standard and Daylight
+Saving) that the user has selected.  tzname[0] is the name of
+the standard time zone (for example, &quot;EST&quot;), and tzname[1]
+is the name for the time zone when Daylight Saving Time is in use (for
+example, &quot;EDT&quot;).  These correspond to the std and dst
+strings (respectively) from the TZ environment variable.  If
+Daylight Saving Time is never used, tzname[1] is the empty string.
+
+The tzname array is initialized from the TZ environment
+variable whenever tzset, ctime, strftime,
+mktime, or localtime is called.  If multiple abbreviations
+have been used (e.g. &quot;EWT&quot; and &quot;EDT&quot; for U.S. Eastern War
+Time and Eastern Daylight Time), the array contains the most recent
+abbreviation.
+
+The tzname array is required for POSIX.1 compatibility, but in
+GNU programs it is better to use the tm_zone member of the
+broken-down time structure, since tm_zone reports the correct
+abbreviation even when it is not the latest one.
+
+Though the strings are declared as char * the user must refrain
+from modifying these strings.  Modifying the strings will almost certainly
+lead to trouble.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Time-Zone-Functions.html#Time-Zone-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Time-Zone-Functions/tzname.txt

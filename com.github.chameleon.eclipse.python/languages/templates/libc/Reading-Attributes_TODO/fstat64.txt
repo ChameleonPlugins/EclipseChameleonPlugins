@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+is similar to fstat but is able to work on large files on 32-bit platforms
+//\\ //// ==> completion hint (1 line):
+is similar to fstat but is able to work on large files on 32-bit platforms
+//\\ //// Replacement text (1+ lines):
+int fstat64 (X1, struct stat64 *buf)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fstat64 (int filedes, struct stat64 *buf)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is similar to fstat but is able to work on large
+files on 32-bit platforms.  For large files the file descriptor
+filedes should be obtained by open64 or creat64.
+The buf pointer points to a variable of type struct stat64
+which is able to represent the larger values.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 this
+function is available under the name fstat and so transparently
+replaces the interface for small files on 32-bit machines.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Reading-Attributes.html#Reading-Attributes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Reading-Attributes/fstat64.txt

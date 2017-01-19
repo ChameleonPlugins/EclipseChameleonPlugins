@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+is similar to asctime but instead of placing (the,) result in (a,) static buffer it (output,print,show,say,type,write) (the,) (string,text) in (the,) buffer pointed to by (the,) parameter buffer
+//\\ //// ==> completion hint (1 line):
+is similar to asctime but instead of placing the result in a static buffer it writes the string in the buffer pointed to by the parameter buffer
+//\\ //// Replacement text (1+ lines):
+char * asctime_r (const struct tm *brokentime, char *buffer)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * asctime_r (const struct tm *brokentime, char *buffer)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is similar to asctime but instead of placing the
+result in a static buffer it writes the string in the buffer pointed to
+by the parameter buffer.  This buffer should have room
+for at least 26 bytes, including the terminating null.
+
+If no error occurred the function returns a pointer to the string the
+result was written into, i.e., it returns buffer.  Otherwise
+return NULL.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Formatting-Calendar-Time.html#Formatting-Calendar-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Formatting-Calendar-Time/asctime_r.txt

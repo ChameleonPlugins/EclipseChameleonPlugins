@@ -1,0 +1,47 @@
+//\\ //// code completion entries (1+ lines):
+with (a,) non-null (string,text) argument (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) number of bytes that (add,append,construct,create,define,insert,make,push) up (the,) multibyte character beginning at (string,text), never examining more than size bytes
+//\\ //// ==> completion hint (1 line):
+with a non-null string argument returns the number of bytes that make up the multibyte character beginning at string, never examining more than size bytes
+//\\ //// Replacement text (1+ lines):
+int mblen (X1tring, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int mblen (const char *string, size_t size)
+Preliminary:
+| MT-Unsafe race
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The mblen function with a non-null string argument returns
+the number of bytes that make up the multibyte character beginning at
+string, never examining more than size bytes.  (The idea is
+to supply for size the number of bytes of data you have in hand.)
+
+The return value of mblen distinguishes three possibilities: the
+first size bytes at string start with valid multibyte
+characters, they start with an invalid byte sequence or just part of a
+character, or string points to an empty string (a null character).
+
+For a valid multibyte character, mblen returns the number of
+bytes in that character (always at least 1 and never more than
+size).  For an invalid byte sequence, mblen returns
+-1.  For an empty string, it returns 0.
+
+If the multibyte character code uses shift characters, then mblen
+maintains and updates a shift state as it scans.  If you call
+mblen with a null pointer for string, that initializes the
+shift state to its standard initial value.  It also returns a nonzero
+value if the multibyte character code in use actually has a shift state.
+See Shift State.
+
+
+The function mblen is declared in stdlib.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Non_002dreentrant-Character-Conversion.html#Non_002dreentrant-Character-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Non_002dreentrant-Character-Conversion/mblen.txt

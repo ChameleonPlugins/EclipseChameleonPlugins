@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(the,) normal (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) value from fcntl with this command is (a,) nonnegative number which can be interpreted as (the,) bitwise or of (the,) individual flags 
+//\\ //// ==> completion hint (1 line):
+The normal return value from fcntl with this command is a nonnegative number which can be interpreted as the bitwise OR of the individual flags 
+//\\ //// Replacement text (1+ lines):
+Macro: int F_GETFD
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int F_GETFD
+This macro is used as the command argument to fcntl, to
+specify that it should return the file descriptor flags associated
+with the filedes argument.
+
+The normal return value from fcntl with this command is a
+nonnegative number which can be interpreted as the bitwise OR of the
+individual flags (except that currently there is only one flag to use).
+
+In case of an error, fcntl returns -1.  The following
+errno error conditions are defined for this command:
+
+
+EBADF
+The filedes argument is invalid.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Descriptor-Flags.html#Descriptor-Flags
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Descriptor-Flags/F_GETFD.txt

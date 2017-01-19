@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function memcmp compares (the,) size bytes of memory beginning at a1 against (the,) size bytes of memory beginning at a2
+//\\ //// ==> completion hint (1 line):
+The function memcmp compares the size bytes of memory beginning at a1 against the size bytes of memory beginning at a2
+//\\ //// Replacement text (1+ lines):
+int memcmp (const void *a1, const void *a2, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int memcmp (const void *a1, const void *a2, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The function memcmp compares the size bytes of memory
+beginning at a1 against the size bytes of memory beginning
+at a2.  The value returned has the same sign as the difference
+between the first differing pair of bytes (interpreted as unsigned
+char objects, then promoted to int).
+
+If the contents of the two blocks are equal, memcmp returns
+0.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//String_002fArray-Comparison.html#String_002fArray-Comparison
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/String_002fArray-Comparison/memcmp.txt

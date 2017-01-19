@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+reads up to count objects of size size into (the,) array data, from (the,) stream stream
+//\\ //// ==> completion hint (1 line):
+reads up to count objects of size size into the array data, from the stream stream
+//\\ //// Replacement text (1+ lines):
+size_t size=fread (void *data, size_t size, size_t count, FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t fread (void *data, size_t size, size_t count, FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function reads up to count objects of size size into
+the array data, from the stream stream.  It returns the
+number of objects actually read, which might be less than count if
+a read error occurs or the end of the file is reached.  This function
+returns a value of zero (and doesn’t read anything) if either size
+or count is zero.
+
+If fread encounters end of file in the middle of an object, it
+returns the number of complete objects read, and discards the partial
+object.  Therefore, the stream remains at the actual end of the file.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Block-Input_002fOutput.html#Block-Input_002fOutput
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Block-Input_002fOutput/fread.txt

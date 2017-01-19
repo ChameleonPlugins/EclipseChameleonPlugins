@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+this (output,print,show,say,type,write) is defined in wctype
+//\\ //// ==> completion hint (1 line):
+This type is defined in wctype
+//\\ //// Replacement text (1+ lines):
+Data Type: wctrans_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: wctrans_t
+This data type is defined as a scalar type which can hold a value
+representing the locale-dependent character mapping.  There is no way to
+construct such a value apart from using the return value of the
+wctrans function.
+
+
+This type is defined in wctype.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Wide-Character-Case-Conversion.html#Wide-Character-Case-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Wide-Character-Case-Conversion/wctrans_t.txt

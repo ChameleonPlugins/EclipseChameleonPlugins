@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) true if X:CHARACTER is (an,) alphabetic character 
+//\\ //// ==> completion hint (1 line):
+Returns true if c is an alphabetic character 
+//\\ //// Replacement text (1+ lines):
+bool result=isalpha (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int isalpha (int c)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Returns true if c is an alphabetic character (a letter).  If
+islower or isupper is true of a character, then
+isalpha is also true.
+
+In some locales, there may be additional characters for which
+isalpha is true—letters which are neither upper case nor lower
+case.  But in the standard &quot;C&quot; locale, there are no such
+additional characters.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Classification-of-Characters.html#Classification-of-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Classification-of-Characters/isalpha.txt

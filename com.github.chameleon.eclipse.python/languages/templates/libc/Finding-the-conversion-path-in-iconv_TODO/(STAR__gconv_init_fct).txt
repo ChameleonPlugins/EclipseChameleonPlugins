@@ -1,0 +1,166 @@
+//\\ //// code completion entries (1+ lines):
+as explained in (the,) description of (the,) struct __gconv_step data structure above (the,) initialization function has to initialize parts of it
+//\\ //// ==> completion hint (1 line):
+As explained in the description of the struct __gconv_step data structure above the initialization function has to initialize parts of it
+//\\ //// Replacement text (1+ lines):
+Data type: int (*__gconv_init_fct) (struct __gconv_step *)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data type: int (*__gconv_init_fct) (struct __gconv_step *)
+This specifies the interface of the initialization function of the
+module.  It is called exactly once for each conversion the module
+implements.
+
+As explained in the description of the struct __gconv_step data
+structure above the initialization function has to initialize parts of
+it.
+
+
+__min_needed_from
+__max_needed_from
+__min_needed_to
+__max_needed_to
+These elements must be initialized to the exact numbers of the minimum
+and maximum number of bytes used by one character in the source and
+destination character sets, respectively.  If the characters all have the
+same size, the minimum and maximum values are the same.
+
+
+__stateful
+This element must be initialized to a nonzero value if the source
+character set is stateful.  Otherwise it must be zero.
+
+
+
+If the initialization function needs to communicate some information
+to the conversion function, this communication can happen using the
+__data element of the __gconv_step structure.  But since
+this data is shared by all the conversions, it must not be modified by
+the conversion function.  The example below shows how this can be used.
+
+
+#define MIN_NEEDED_FROM         1
+#define MAX_NEEDED_FROM         4
+#define MIN_NEEDED_TO           4
+#define MAX_NEEDED_TO           4
+
+int
+gconv_init (struct __gconv_step *step)
+{
+  /* Determine which direction.  */
+  struct iso2022jp_data *new_data;
+  enum direction dir = illegal_dir;
+  enum variant var = illegal_var;
+  int result;
+
+  if (__strcasecmp (step-&gt;__from_name, &quot;ISO-2022-JP//&quot;) == 0)
+    {
+      dir = from_iso2022jp;
+      var = iso2022jp;
+    }
+  else if (__strcasecmp (step-&gt;__to_name, &quot;ISO-2022-JP//&quot;) == 0)
+    {
+      dir = to_iso2022jp;
+      var = iso2022jp;
+    }
+  else if (__strcasecmp (step-&gt;__from_name, &quot;ISO-2022-JP-2//&quot;) == 0)
+    {
+      dir = from_iso2022jp;
+      var = iso2022jp2;
+    }
+  else if (__strcasecmp (step-&gt;__to_name, &quot;ISO-2022-JP-2//&quot;) == 0)
+    {
+      dir = to_iso2022jp;
+      var = iso2022jp2;
+    }
+
+  result = __GCONV_NOCONV;
+  if (dir != illegal_dir)
+    {
+      new_data = (struct iso2022jp_data *)
+        malloc (sizeof (struct iso2022jp_data));
+
+      result = __GCONV_NOMEM;
+      if (new_data != NULL)
+        {
+          new_data-&gt;dir = dir;
+          new_data-&gt;var = var;
+          step-&gt;__data = new_data;
+
+          if (dir == from_iso2022jp)
+            {
+              step-&gt;__min_needed_from = MIN_NEEDED_FROM;
+              step-&gt;__max_needed_from = MAX_NEEDED_FROM;
+              step-&gt;__min_needed_to = MIN_NEEDED_TO;
+              step-&gt;__max_needed_to = MAX_NEEDED_TO;
+            }
+          else
+            {
+              step-&gt;__min_needed_from = MIN_NEEDED_TO;
+              step-&gt;__max_needed_from = MAX_NEEDED_TO;
+              step-&gt;__min_needed_to = MIN_NEEDED_FROM;
+              step-&gt;__max_needed_to = MAX_NEEDED_FROM + 2;
+            }
+
+          /* Yes, this is a stateful encoding.  */
+          step-&gt;__stateful = 1;
+
+          result = __GCONV_OK;
+        }
+    }
+
+  return result;
+}
+
+
+The function first checks which conversion is wanted.  The module from
+which this function is taken implements four different conversions;
+which one is selected can be determined by comparing the names.  The
+comparison should always be done without paying attention to the case.
+
+Next, a data structure, which contains the necessary information about
+which conversion is selected, is allocated.  The data structure
+struct iso2022jp_data is locally defined since, outside the
+module, this data is not used at all.  Please note that if all four
+conversions this modules supports are requested there are four data
+blocks.
+
+One interesting thing is the initialization of the __min_ and
+__max_ elements of the step data object.  A single ISO-2022-JP
+character can consist of one to four bytes.  Therefore the
+MIN_NEEDED_FROM and MAX_NEEDED_FROM macros are defined
+this way.  The output is always the INTERNAL character set (aka
+UCS-4) and therefore each character consists of exactly four bytes.  For
+the conversion from INTERNAL to ISO-2022-JP we have to take into
+account that escape sequences might be necessary to switch the character
+sets.  Therefore the __max_needed_to element for this direction
+gets assigned MAX_NEEDED_FROM + 2.  This takes into account the
+two bytes needed for the escape sequences to single the switching.  The
+asymmetry in the maximum values for the two directions can be explained
+easily: when reading ISO-2022-JP text, escape sequences can be handled
+alone (i.e., it is not necessary to process a real character since the
+effect of the escape sequence can be recorded in the state information).
+The situation is different for the other direction.  Since it is in
+general not known which character comes next, one cannot emit escape
+sequences to change the state in advance.  This means the escape
+sequences that have to be emitted together with the next character.
+Therefore one needs more room than only for the character itself.
+
+The possible return values of the initialization function are:
+
+
+__GCONV_OK
+The initialization succeeded
+
+__GCONV_NOCONV
+The requested conversion is not supported in the module.  This can
+happen if the gconv-modules file has errors.
+
+__GCONV_NOMEM
+Memory required to store additional information could not be allocated.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//glibc-iconv-Implementation.html#Finding-the-conversion-path-in-iconv
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Finding-the-conversion-path-in-iconv/(*__gconv_init_fct).txt

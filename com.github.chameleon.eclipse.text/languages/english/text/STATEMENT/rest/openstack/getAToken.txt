@@ -1,0 +1,16 @@
+//\\ //// code completion entries (1+ lines):
+get a token
+log in to OpenStack
+//\\ //// ==> completion hint (1 line):
+# get a token
+//\\ //// Replacement text (1+ lines):
+# get a token
+#import urllib
+token = urllib.urlopen("http://localhost:5000/v3/auth/tokens").read()
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Documentation
+//\\ //// Tool tip (1 line):
+token is returned...
+//\\

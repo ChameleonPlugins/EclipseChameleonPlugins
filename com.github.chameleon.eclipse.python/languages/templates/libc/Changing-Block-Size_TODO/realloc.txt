@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) size of (the,) block whose address is ptr to be newsize
+//\\ //// ==> completion hint (1 line):
+changes the size of the block whose address is ptr to be newsize
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = realloc (void *ptr, size_t newsize)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * realloc (void *ptr, size_t newsize)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock fd mem
+| See POSIX Safety Concepts.
+
+
+
+
+The realloc function changes the size of the block whose address is
+ptr to be newsize.
+
+Since the space after the end of the block may be in use, realloc
+may find it necessary to copy the block to a new address where more free
+space is available.  The value of realloc is the new address of the
+block.  If the block needs to be moved, realloc copies the old
+contents.
+
+If you pass a null pointer for ptr, realloc behaves just
+like ‘malloc (newsize)’.  This can be convenient, but beware
+that older implementations (before ISO C) may not support this
+behavior, and will probably crash when realloc is passed a null
+pointer.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Changing-Block-Size.html#Changing-Block-Size
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Changing-Block-Size/realloc.txt

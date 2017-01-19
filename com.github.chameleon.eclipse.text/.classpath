@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.github.chameleon.core"/>
+	<classpathentry exported="true" kind="lib" path="lib/com.github.chameleon.core.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry exported="true" kind="lib" path="C:/opt/springsource/sts-3.5.1.RELEASE/plugins/org.eclipse.wst.jsdt.core_1.3.1.v201401291437.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/opt/springsource/sts-3.5.1.RELEASE/plugins/org.eclipse.wst.jsdt.ui_1.1.401.v201401171657.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/opt/eclipse_4.4/plugins/org.eclipse.jface.text.source_3.9.0.v20140521-1657.jar"/>
+	<classpathentry kind="lib" path="C:/opt/eclipse-4.4.1_standard-luna-SR1-win32-x86_64/plugins/org.eclipse.platform_4.4.2.v20150204-1700/platform.jar"/>
+	<classpathentry kind="lib" path="C:/opt/eclipse-4.4.1_standard-luna-SR1-win32-x86_64/plugins/org.eclipse.ui.forms_3.6.100.v20140422-1825.jar"/>
+	<classpathentry kind="lib" path="C:/opt/eclipse-4.4.1_standard-luna-SR1-win32-x86_64/plugins/org.eclipse.ui.ide_3.10.2.v20141118-1227.jar"/>
+	<classpathentry kind="lib" path="C:/opt/eclipse-4.4.1_standard-luna-SR1-win32-x86_64/plugins/org.eclipse.core.filesystem_1.4.100.v20140514-1614.jar"/>
+	<classpathentry kind="lib" path="C:/opt/eclipse-4.4.1_standard-luna-SR1-win32-x86_64/plugins/org.eclipse.core.runtime_3.10.0.v20140318-2214.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

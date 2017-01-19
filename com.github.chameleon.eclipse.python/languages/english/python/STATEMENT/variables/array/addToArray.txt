@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) value X:VALUE to array X:ARRAY
+//\\ //// ==> completion hint (1 line):
+add a value to an array
+//\\ //// Replacement text (1+ lines):
+X2.append(X1)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="value"
+X2=myarray
+//\\ //// Help/documentation (1+ lines):
+Next steps: To remove a value: remove value X from array X
+//\\ //// Tool tip (1 line):
+Next steps: To remove a value: remove value X from array X
+//\\

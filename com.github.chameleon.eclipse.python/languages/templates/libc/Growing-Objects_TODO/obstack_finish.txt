@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+when you are finished growing (the,) object, use (the,) function obstack_finish to close it off and (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) its final address
+//\\ //// ==> completion hint (1 line):
+When you are finished growing the object, use the function obstack_finish to close it off and return its final address
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = obstack_finish (struct obstack *obstack-ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * obstack_finish (struct obstack *obstack-ptr)
+Preliminary:
+| MT-Safe race:obstack-ptr
+| AS-Safe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+When you are finished growing the object, use the function
+obstack_finish to close it off and return its final address.
+
+Once you have finished the object, the obstack is available for ordinary
+allocation or for growing another object.
+
+This function can return a null pointer under the same conditions as
+obstack_alloc (see Allocation in an Obstack).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Growing-Objects.html#Growing-Objects
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Growing-Objects/obstack_finish.txt

@@ -1,0 +1,59 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) current limit or sets (the,) current and maximum limit for (a,) particular resource for (the,) calling process according to (the,) command cmd
+//\\ //// ==> completion hint (1 line):
+gets the current limit or sets the current and maximum limit for a particular resource for the calling process according to the command cmd
+//\\ //// Replacement text (1+ lines):
+long int ulimit (X1md, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int ulimit (int cmd, …)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+ulimit gets the current limit or sets the current and maximum
+limit for a particular resource for the calling process according to the
+command cmd.a
+
+If you are getting a limit, the command argument is the only argument.
+If you are setting a limit, there is a second argument:
+long int limit which is the value to which you are setting
+the limit.
+
+The cmd values and the operations they specify are:
+
+GETFSIZE
+Get the current limit on the size of a file, in units of 512 bytes.
+
+
+SETFSIZE
+Set the current and maximum limit on the size of a file to limit *
+512 bytes.
+
+
+
+
+There are also some other cmd values that may do things on some
+systems, but they are not supported.
+
+Only the superuser may increase a maximum limit.
+
+When you successfully get a limit, the return value of ulimit is
+that limit, which is never negative.  When you successfully set a limit,
+the return value is zero.  When the function fails, the return value is
+-1 and errno is set according to the reason:
+
+
+EPERM
+A process tried to increase a maximum limit, but is not superuser.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Limits-on-Resources.html#Limits-on-Resources
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Limits-on-Resources/ulimit.txt

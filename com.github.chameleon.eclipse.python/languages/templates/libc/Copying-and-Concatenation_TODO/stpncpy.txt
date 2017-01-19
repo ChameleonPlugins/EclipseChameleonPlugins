@@ -1,0 +1,42 @@
+//\\ //// code completion entries (1+ lines):
+is similar to stpcpy but copies always exactly size characters into to
+//\\ //// ==> completion hint (1 line):
+is similar to stpcpy but copies always exactly size characters into to
+//\\ //// Replacement text (1+ lines):
+char * stpncpy (char *restrict to, const char *restrict from, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * stpncpy (char *restrict to, const char *restrict from, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is similar to stpcpy but copies always exactly
+size characters into to.
+
+If the length of from is more than size, then stpncpy
+copies just the first size characters and returns a pointer to the
+character directly following the one which was copied last.  Note that in
+this case there is no null terminator written into to.
+
+If the length of from is less than size, then stpncpy
+copies all of from, followed by enough null characters to add up
+to size characters in all.  This behavior is rarely useful, but it
+is implemented to be useful in contexts where this behavior of the
+strncpy is used.  stpncpy returns a pointer to the
+first written null character.
+
+This function is not part of ISO or POSIX but was found useful while
+developing the GNU C Library itself.
+
+Its behavior is undefined if the strings overlap.  The function is
+declared in string.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/stpncpy.txt

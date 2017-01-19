@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+read (the,) current value of (the,) time base register
+//\\ //// ==> completion hint (1 line):
+Read the current value of the Time Base Register
+//\\ //// Replacement text (1+ lines):
+uint64_t __ppc_get_timebase (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: uint64_t __ppc_get_timebase (void)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Read the current value of the Time Base Register.
+
+The Time Base Register is a 64-bit register that stores a monotonically
+incremented value updated at a system-dependent frequency that may be
+different from the processor frequency.  More information is available in
+Power ISA 2.06b - Book II - Section 5.2.
+
+__ppc_get_timebase uses the processor’s time base facility directly
+without requiring assistance from the operating system, so it is very
+efficient.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//PowerPC.html#PowerPC
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/PowerPC/__ppc_get_timebase.txt

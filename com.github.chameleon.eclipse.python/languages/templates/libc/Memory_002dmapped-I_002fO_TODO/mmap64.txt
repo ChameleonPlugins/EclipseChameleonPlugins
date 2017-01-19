@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+is equivalent to (the,) mmap function but (the,) offset parameter is of (output,print,show,say,type,write) off64_t
+//\\ //// ==> completion hint (1 line):
+is equivalent to the mmap function but the offset parameter is of type off64_t
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = mmap64 (X1, X2, X3, X4, X5, off64_t offset)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X5=fd
+X2=256
+X1=NULL
+X4=MAP_SHARED
+X3=PROT_WRITE
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * mmap64 (void *address, size_t length, int protect, int flags, int filedes, off64_t offset)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The mmap64 function is equivalent to the mmap function but
+the offset parameter is of type off64_t.  On 32-bit systems
+this allows the file associated with the filedes descriptor to be
+larger than 2GB.  filedes must be a descriptor returned from a
+call to open64 or fopen64 and freopen64 where the
+descriptor is retrieved with fileno.
+
+When the sources are translated with _FILE_OFFSET_BITS == 64 this
+function is actually available under the name mmap.  I.e., the
+new, extended API using 64 bit file sizes and offsets transparently
+replaces the old API.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Memory_002dmapped-I_002fO.html#Memory_002dmapped-I_002fO
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Memory_002dmapped-I_002fO/mmap64.txt

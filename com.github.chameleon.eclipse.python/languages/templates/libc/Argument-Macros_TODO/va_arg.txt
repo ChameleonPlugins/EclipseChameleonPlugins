@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+(the,) va_arg macro (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) value of (the,) next optional argument, and modifies (the,) value of ap to point to (the,) subsequent argument
+//\\ //// ==> completion hint (1 line):
+The va_arg macro returns the value of the next optional argument, and modifies the value of ap to point to the subsequent argument
+//\\ //// Replacement text (1+ lines):
+Macro: type va_arg (va_list ap, type)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: type va_arg (va_list ap, type)
+Preliminary:
+| MT-Safe race:ap
+| AS-Safe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The va_arg macro returns the value of the next optional argument,
+and modifies the value of ap to point to the subsequent argument.
+Thus, successive uses of va_arg return successive optional
+arguments.
+
+The type of the value returned by va_arg is type as
+specified in the call.  type must be a self-promoting type (not
+char or short int or float) that matches the type
+of the actual argument.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argument-Macros.html#Argument-Macros
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argument-Macros/va_arg.txt

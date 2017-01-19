@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+this is (a,) bsd extension, and exists only in bsd systems and gnu/linux and gnu/hurd systems
+//\\ //// ==> completion hint (1 line):
+This is a BSD extension, and exists only in BSD systems and GNU/Linux and GNU/Hurd systems
+//\\ //// Replacement text (1+ lines):
+Macro: tcflag_t ECHOCTL
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: tcflag_t ECHOCTL
+If this bit is set and the ECHO bit is also set, echo control
+characters with ‘^’ followed by the corresponding text character.
+Thus, control-A echoes as ‘^A’.  This is usually the preferred mode
+for interactive input, because echoing a control character back to the
+terminal could have some undesired effect on the terminal.
+
+This is a BSD extension, and exists only in BSD systems and
+GNU/Linux and GNU/Hurd systems.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Local-Modes.html#Local-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Local-Modes/ECHOCTL.txt

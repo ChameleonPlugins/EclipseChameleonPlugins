@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+these functions compute (the,) arc cosine of x—that is, (the,) value whose cosine is x
+//\\ //// ==> completion hint (1 line):
+These functions compute the arc cosine of x—that is, the value whose cosine is x
+//\\ //// Replacement text (1+ lines):
+Function: double acos (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double acos (double x)
+Function: float acosf (float x)
+Function: long double acosl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions compute the arc cosine of x—that is, the value
+whose cosine is x.  The value is in units of radians.
+Mathematically, there are infinitely many such values; the one actually
+returned is the one between 0 and pi (inclusive).
+
+The arc cosine function is defined mathematically only
+over the domain -1 to 1.  If x is outside the
+domain, acos signals a domain error.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Inverse-Trig-Functions.html#Inverse-Trig-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Inverse-Trig-Functions/acosf.txt

@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+(output,print,show,say,write) X:VALUE to X:LOCATION with format string X:STRING named X:NAME of worksheet X:NAME and workbook X:NAME
+//\\ //// ==> completion hint (1 line):
+Write a value to a location in a spreadsheet
+//\\ //// Replacement text (1+ lines):
+X4 = X6.add_format()
+X4.set_num_format(X3)
+X5.write(X2, X1,X4)
+# //// example Next Step: close worksheet
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1='Hello World'
+X2='A1'
+X3='YYYY-mm-dd HH:MM:SS'
+X4=my_format
+X5=my_worksheet
+X6=my_workbook
+//\\ //// Help/documentation (1+ lines):
+https://xlsxwriter.readthedocs.org/getting_started.html#running-a-sample-program
+//\\ //// Tool tip (1 line):
+# //// example Next Step: close worksheet
+//\\

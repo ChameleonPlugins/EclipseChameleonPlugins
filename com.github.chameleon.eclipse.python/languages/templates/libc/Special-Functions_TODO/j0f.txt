@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+j0 (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) bessel function of (the,) first kind of order 0 of x
+//\\ //// ==> completion hint (1 line):
+j0 returns the Bessel function of the first kind of order 0 of x
+//\\ //// Replacement text (1+ lines):
+Function: double j0 (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double j0 (double x)
+Function: float j0f (float x)
+Function: long double j0l (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+j0 returns the Bessel function of the first kind of order 0 of
+x.  It may signal underflow if x is too large.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Special-Functions.html#Special-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Special-Functions/j0f.txt

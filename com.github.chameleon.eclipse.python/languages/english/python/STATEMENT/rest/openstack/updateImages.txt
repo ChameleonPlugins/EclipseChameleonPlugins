@@ -1,0 +1,18 @@
+//\\ //// code completion entries (1+ lines):
+update images
+//\\ //// ==> completion hint (1 line):
+# update images
+//\\ //// Replacement text (1+ lines):
+# update images
+#import urllib
+///////TODO: Pass in id
+results = urllib.urlopen("http://localhost:5000/v2/images/"+id).read()
+///////TODO: PATCH instead of GET...
+
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Documentation
+//\\ //// Tool tip (1 line):
+results returned...
+//\\

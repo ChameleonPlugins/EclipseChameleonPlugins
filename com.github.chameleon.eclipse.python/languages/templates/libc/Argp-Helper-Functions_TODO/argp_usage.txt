@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(output,print,show,say,type,write) (the,) standard usage message for (the,) argp parser referred to by state to null and terminate (the,) program with (end,exit,quit,(halt,pause,stop,suspend)) 
+//\\ //// ==> completion hint (1 line):
+Outputs the standard usage message for the argp parser referred to by state to null and terminate the program with exit 
+//\\ //// Replacement text (1+ lines):
+void argp_usage (const struct argp_state *state)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void argp_usage (const struct argp_state *state)
+Preliminary:
+| MT-Unsafe race:argpbuf env locale
+| AS-Unsafe heap i18n corrupt
+| AC-Unsafe mem corrupt lock
+| See POSIX Safety Concepts.
+
+
+Outputs the standard usage message for the argp parser referred to by
+state to state-&gt;err_stream and terminate the program
+with exit (argp_err_exit_status).  See Argp Global Variables.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argp-Helper-Functions.html#Argp-Helper-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argp-Helper-Functions/argp_usage.txt

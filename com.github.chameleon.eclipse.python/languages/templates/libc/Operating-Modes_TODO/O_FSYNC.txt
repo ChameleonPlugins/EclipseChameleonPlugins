@@ -1,0 +1,19 @@
+//\\ //// code completion entries (1+ lines):
+synchronous writing is (a,) bsd feature
+//\\ //// ==> completion hint (1 line):
+Synchronous writing is a BSD feature
+//\\ //// Replacement text (1+ lines):
+Macro: int O_FSYNC
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int O_FSYNC
+The bit that enables synchronous writing for the file.  If set, each
+write call will make sure the data is reliably stored on disk before
+returning. 
+Synchronous writing is a BSD feature.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Operating-Modes.html#Operating-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Operating-Modes/O_FSYNC.txt

@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+getdomainname (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) nis domain name of (the,) (box,computer,system,node,host,target) on which it is called
+//\\ //// ==> completion hint (1 line):
+getdomainname returns the NIS domain name of the system on which it is called
+//\\ //// Replacement text (1+ lines):
+int getdomainnname (char *name, X2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2=256
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getdomainnname (char *name, size_t length)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+
+
+getdomainname returns the NIS (aka YP) domain name of the system
+on which it is called.  Note that this is not the more popular DNS
+domain name.  Get that with gethostname.
+
+The specifics of this function are analogous to gethostname, above.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Identification.html#Host-Identification
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Identification/getdomainnname.txt

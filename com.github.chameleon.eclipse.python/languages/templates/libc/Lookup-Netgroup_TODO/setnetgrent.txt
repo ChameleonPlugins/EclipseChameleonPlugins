@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(a,) call to this function initializes (the,) internal state of (the,) library to allow following calls of (the,) getnetgrent to iterate over all entries in (the,) netgroup with name netgroup
+//\\ //// ==> completion hint (1 line):
+A call to this function initializes the internal state of the library to allow following calls of the getnetgrent to iterate over all entries in the netgroup with name netgroup
+//\\ //// Replacement text (1+ lines):
+int setnetgrent (const char *netgroup)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setnetgrent (const char *netgroup)
+Preliminary:
+| MT-Unsafe race:netgrent locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+A call to this function initializes the internal state of the library to
+allow following calls of the getnetgrent to iterate over all entries
+in the netgroup with name netgroup.
+
+When the call is successful (i.e., when a netgroup with this name exists)
+the return value is 1.  When the return value is 0 no
+netgroup of this name is known or some other error occurred.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Lookup-Netgroup.html#Lookup-Netgroup
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Lookup-Netgroup/setnetgrent.txt

@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+is equivalent to (the,) fileno function except that it does not implicitly (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) stream if (the,) state is fsetlocking_internal
+//\\ //// ==> completion hint (1 line):
+is equivalent to the fileno function except that it does not implicitly lock the stream if the state is FSETLOCKING_INTERNAL
+//\\ //// Replacement text (1+ lines):
+int fileno_unlocked (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fileno_unlocked (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The fileno_unlocked function is equivalent to the fileno
+function except that it does not implicitly lock the stream if the state
+is FSETLOCKING_INTERNAL.
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Descriptors-and-Streams.html#Descriptors-and-Streams
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Descriptors-and-Streams/fileno_unlocked.txt

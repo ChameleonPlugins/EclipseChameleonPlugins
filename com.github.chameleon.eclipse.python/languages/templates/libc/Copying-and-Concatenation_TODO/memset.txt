@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+copies (the,) value of X:CHARACTER into each of (the,) first size bytes of (the,) object beginning at block
+//\\ //// ==> completion hint (1 line):
+copies the value of c into each of the first size bytes of the object beginning at block
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = memset (void *block, X2, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * memset (void *block, int c, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function copies the value of c (converted to an
+unsigned char) into each of the first size bytes of the
+object beginning at block.  It returns the value of block.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/memset.txt

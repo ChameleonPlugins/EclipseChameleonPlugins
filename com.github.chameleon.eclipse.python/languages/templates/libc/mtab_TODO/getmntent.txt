@@ -1,0 +1,43 @@
+//\\ //// code completion entries (1+ lines):
+takes as (the,) parameter (a,) file handle previously returned by successful call to setmntent
+//\\ //// ==> completion hint (1 line):
+takes as the parameter a file handle previously returned by successful call to setmntent
+//\\ //// Replacement text (1+ lines):
+struct mntent * getmntent (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct mntent * getmntent (FILE *stream)
+Preliminary:
+| MT-Unsafe race:mntentbuf locale
+| AS-Unsafe corrupt heap init
+| AC-Unsafe init corrupt lock mem
+| See POSIX Safety Concepts.
+
+
+The getmntent function takes as the parameter a file handle
+previously returned by successful call to setmntent.  It returns
+a pointer to a static variable of type struct mntent which is
+filled with the information from the next entry from the file currently
+read.
+
+The file format used prescribes the use of spaces or tab characters to
+separate the fields.  This makes it harder to use name containing one
+of these characters (e.g., mount points using spaces).  Therefore
+these characters are encoded in the files and the getmntent
+function takes care of the decoding while reading the entries back in.
+'\040' is used to encode a space character, '\011' to
+encode a tab character, '\012' to encode a newline character,
+and '\\' to encode a backslash.
+
+If there was an error or the end of the file is reached the return value
+is NULL.
+
+This function is not thread-safe since all calls to this function return
+a pointer to the same static variable.  getmntent_r should be
+used in situations where multiple threads access the file.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//mtab.html#mtab
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/mtab/getmntent.txt

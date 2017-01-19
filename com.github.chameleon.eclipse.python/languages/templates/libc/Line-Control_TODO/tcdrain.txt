@@ -1,0 +1,49 @@
+//\\ //// code completion entries (1+ lines):
+waits until all queued (output,print,show,say,type,write) to (the,) terminal X:FILEDESCRIPTOR has been transmitted
+//\\ //// ==> completion hint (1 line):
+waits until all queued output to the terminal filedes has been transmitted
+//\\ //// Replacement text (1+ lines):
+int tcdrain (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int tcdrain (int filedes)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The tcdrain function waits until all queued
+output to the terminal filedes has been transmitted.
+
+This function is a cancellation point in multi-threaded programs.  This
+is a problem if the thread allocates some resources (like memory, file
+descriptors, semaphores or whatever) at the time tcdrain is
+called.  If the thread gets canceled these resources stay allocated
+until the program ends.  To avoid this calls to tcdrain should be
+protected using cancellation handlers.
+
+The return value is normally zero.  In the event of an error, a value
+of -1 is returned.  The following errno error conditions
+are defined for this function:
+
+
+EBADF
+The filedes is not a valid file descriptor.
+
+
+ENOTTY
+The filedes is not associated with a terminal device.
+
+
+EINTR
+The operation was interrupted by delivery of a signal.
+See Interrupted Primitives.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Line-Control.html#Line-Control
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Line-Control/tcdrain.txt

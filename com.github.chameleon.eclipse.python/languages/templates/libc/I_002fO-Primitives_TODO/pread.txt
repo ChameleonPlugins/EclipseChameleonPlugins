@@ -1,0 +1,56 @@
+//\\ //// code completion entries (1+ lines):
+is similar to (the,) read function
+//\\ //// ==> completion hint (1 line):
+is similar to the read function
+//\\ //// Replacement text (1+ lines):
+ssize_t pread (X1, void *buffer, size_t size, X4)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+X4=0
+
+//\\ //// Help/documentation (1+ lines):
+Function: ssize_t pread (int filedes, void *buffer, size_t size, off_t offset)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The pread function is similar to the read function.  The
+first three arguments are identical, and the return values and error
+codes also correspond.
+
+The difference is the fourth argument and its handling.  The data block
+is not read from the current position of the file descriptor
+filedes.  Instead the data is read from the file starting at
+position offset.  The position of the file descriptor itself is
+not affected by the operation.  The value is the same as before the call.
+
+When the source file is compiled with _FILE_OFFSET_BITS == 64 the
+pread function is in fact pread64 and the type
+off_t has 64 bits, which makes it possible to handle files up to
+2^63 bytes in length.
+
+The return value of pread describes the number of bytes read.
+In the error case it returns -1 like read does and the
+error codes are also the same, with these additions:
+
+
+EINVAL
+The value given for offset is negative and therefore illegal.
+
+
+ESPIPE
+The file descriptor filedes is associate with a pipe or a FIFO and
+this device does not allow positioning of the file pointer.
+
+
+
+The function is an extension defined in the Unix Single Specification
+version 2.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//I_002fO-Primitives.html#I_002fO-Primitives
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/I_002fO-Primitives/pread.txt

@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+is similar to strcpy, except that (the,) characters from from are concatenated or appended to (the,) (end,exit,quit,(halt,pause,stop,suspend)) of to, instead of overwriting it
+//\\ //// ==> completion hint (1 line):
+is similar to strcpy, except that the characters from from are concatenated or appended to the end of to, instead of overwriting it
+//\\ //// Replacement text (1+ lines):
+char * strcat (char *restrict to, const char *restrict from)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strcat (char *restrict to, const char *restrict from)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The strcat function is similar to strcpy, except that the
+characters from from are concatenated or appended to the end of
+to, instead of overwriting it.  That is, the first character from
+from overwrites the null character marking the end of to.
+
+An equivalent definition for strcat would be:
+
+
+char *
+strcat (char *restrict to, const char *restrict from)
+{
+  strcpy (to + strlen (to), from);
+  return to;
+}
+
+
+This function has undefined results if the strings overlap.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/strcat.txt

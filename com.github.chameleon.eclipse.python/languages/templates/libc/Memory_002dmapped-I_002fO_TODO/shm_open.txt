@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+returns (a,) file descriptor that can be used to (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) shared memory via mmap
+//\\ //// ==> completion hint (1 line):
+returns a file descriptor that can be used to allocate shared memory via mmap
+//\\ //// Replacement text (1+ lines):
+int shm_open (const char *name, int oflag, mode_t mode)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int shm_open (const char *name, int oflag, mode_t mode)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe init heap lock
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+
+This function returns a file descriptor that can be used to allocate shared
+memory via mmap.  Unrelated processes can use same name to create or
+open existing shared memory objects.
+
+A name argument specifies the shared memory object to be opened.
+In the GNU C Library it must be a string smaller than NAME_MAX bytes starting
+with an optional slash but containing no other slashes.
+
+The semantics of oflag and mode arguments is same as in open.
+
+shm_open returns the file descriptor on success or -1 on error.
+On failure errno is set.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Memory_002dmapped-I_002fO.html#Memory_002dmapped-I_002fO
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Memory_002dmapped-I_002fO/shm_open.txt

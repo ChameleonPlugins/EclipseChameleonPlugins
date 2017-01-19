@@ -1,0 +1,16 @@
+//\\ //// code completion entries (1+ lines):
+fix error: Unable to find vcvarsall.bat
+//\\ //// ==> completion hint (1 line):
+how to install numpy, a Visual Studio dependency
+//\\ //// Replacement text (1+ lines):
+# Download and install MS VC++ Compiler for Python:
+# http://www.microsoft.com/en-us/download/details.aspx?id=44266
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+# Download and install MS VC++ Compiler for Python:
+# http://www.microsoft.com/en-us/download/details.aspx?id=44266
+//\\ //// Tool tip (1 line):
+good luck...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):      
+fix/errorUnabletofindvcvarsall.bat.txt

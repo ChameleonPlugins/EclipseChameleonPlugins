@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function dirfd (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) file descriptor associated with (the,) directory stream dirstream
+//\\ //// ==> completion hint (1 line):
+The function dirfd returns the file descriptor associated with the directory stream dirstream
+//\\ //// Replacement text (1+ lines):
+int dirfd (DIR *dirstream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int dirfd (DIR *dirstream)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The function dirfd returns the file descriptor associated with
+the directory stream dirstream.  This descriptor can be used until
+the directory is closed with closedir.  If the directory stream
+implementation is not using file descriptors the return value is
+-1.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Opening-a-Directory.html#Opening-a-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Opening-a-Directory/dirfd.txt

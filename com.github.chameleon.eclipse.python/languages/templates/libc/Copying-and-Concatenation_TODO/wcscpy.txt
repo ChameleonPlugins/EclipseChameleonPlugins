@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+this copies wide characters from (the,) (string,text) wfrom into (the,) (string,text) wto
+//\\ //// ==> completion hint (1 line):
+This copies wide characters from the string wfrom into the string wto
+//\\ //// Replacement text (1+ lines):
+wchar_t * wcscpy (wchar_t *restrict wto, const wchar_t *restrict wfrom)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wchar_t * wcscpy (wchar_t *restrict wto, const wchar_t *restrict wfrom)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This copies wide characters from the string wfrom (up to and
+including the terminating null wide character) into the string
+wto.  Like wmemcpy, this function has undefined results if
+the strings overlap.  The return value is the value of wto.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/wcscpy.txt

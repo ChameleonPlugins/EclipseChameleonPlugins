@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+for portability, use only (the,) functions described in this section to initialize, (convert,change,replace), and (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) information from sigset_t objects—don’t try to manipulate them directly
+//\\ //// ==> completion hint (1 line):
+For portability, use only the functions described in this section to initialize, change, and retrieve information from sigset_t objects—don’t try to manipulate them directly
+//\\ //// Replacement text (1+ lines):
+Data Type: sigset_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: sigset_t
+The sigset_t data type is used to represent a signal set.
+Internally, it may be implemented as either an integer or structure
+type.
+
+For portability, use only the functions described in this section to
+initialize, change, and retrieve information from sigset_t
+objects—don’t try to manipulate them directly.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signal-Sets.html#Signal-Sets
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signal-Sets/sigset_t.txt

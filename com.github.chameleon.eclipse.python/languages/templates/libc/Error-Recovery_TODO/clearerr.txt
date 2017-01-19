@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+clears (the,) (end,exit,quit,(halt,pause,stop,suspend))-of-file and error indicators for (the,) stream stream
+//\\ //// ==> completion hint (1 line):
+clears the end-of-file and error indicators for the stream stream
+//\\ //// Replacement text (1+ lines):
+void clearerr (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void clearerr (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+This function clears the end-of-file and error indicators for the
+stream stream.
+
+The file positioning functions (see File Positioning) also clear the
+end-of-file indicator for the stream.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Error-Recovery.html#Error-Recovery
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Error-Recovery/clearerr.txt

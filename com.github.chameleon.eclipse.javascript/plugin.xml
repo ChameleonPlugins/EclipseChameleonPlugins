@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<?eclipse version="3.4"?>  
+<plugin>
+                <!-- org.eclipse.wst.jsdt.ui.text.java.IJavaCompletionProposalComputer -->
+   <extension point="org.eclipse.wst.jsdt.ui.javaCompletionProposalComputer" 
+     id="chameleon_javascript_category"  
+     name="Chameleon JavaScript programming languages mappings">
+     <proposalCategory icon="platform:/plugin/com.github.chameleon.eclipse.javascript/icons/Chameleon.gif"/>
+   </extension>
+
+<!--
+   <extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer"  
+     id="chameleon_java_category"  
+     name="Chameleon Java programming languages mappings">
+     <proposalCategory icon="platform:/plugin/com.github.chameleon.eclipse.java/icons/Chameleon.gif"/>
+   </extension>  
+   -->
+ <extension
+       id="chameleon_javascript_proposal"
+       name="Chameleon JavaScript programming languages mappings"
+       point="org.eclipse.wst.jsdt.ui.javaCompletionProposalComputer">  
+   <javaCompletionProposalComputer  
+      class="com.github.chameleon.eclipse.javascript.ChameleonJavaScriptCompletionProposalComputer"  
+      categoryId="com.github.chameleon.eclipse.javascript.chameleon_category"
+      activate="true">  
+   </javaCompletionProposalComputer>
+     <!--proposalCategory icon="platform:/plugin/com.github.chameleon.eclipse.javascript/icons/Chameleon.gif"/-->
+ </extension>
+
+
+ 
+ <extension
+       name="Chameleon JavaScript programming languages mappings"
+       point="org.eclipse.ui.preferencePages">
+    <page
+          class="com.github.chameleon.eclipse.javascript.preferences.ChameleonPreferencePage"
+          id="com.github.chameleon.eclipse.javascript.preferences.ChameleonPreferencePage"
+          name="Chameleon Preferences">
+    </page>
+    <!--proposalCategory icon="com.github.chameleon.eclipse.javascript/rcp.eclipse/icons/Chameleon.gif"/-->    
+ </extension>
+ 
+ <extension
+       point="org.eclipse.core.runtime.preferences">
+    <initializer
+          class="com.github.chameleon.eclipse.javascript.preferences.PreferenceInitializer">
+    </initializer>
+    <!--proposalCategory icon="com.github.chameleon.eclipse.javascript/rcp.eclipse/icons/Chameleon.gif"/-->    
+ </extension>
+  
+</plugin> 

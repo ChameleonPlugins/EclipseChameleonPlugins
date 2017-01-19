@@ -1,0 +1,62 @@
+//\\ //// code completion entries (1+ lines):
+is similar to strdup but (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) (new,) (string,text) using alloca instead of malloc 
+//\\ //// ==> completion hint (1 line):
+is similar to strdup but allocates the new string using alloca instead of malloc 
+//\\ //// Replacement text (1+ lines):
+Macro: char * strdupa (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Macro: char * strdupa (const char *s)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This macro is similar to strdup but allocates the new string
+using alloca instead of malloc (see Variable Size Automatic).  This means of course the returned string has the same
+limitations as any block of memory allocated using alloca.
+
+For obvious reasons strdupa is implemented only as a macro;
+you cannot get the address of this function.  Despite this limitation
+it is a useful function.  The following code shows a situation where
+using malloc would be a lot more expensive.
+
+
+
+#include &lt;paths.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+
+const char path[] = _PATH_STDPATH;
+
+int
+main (void)
+{
+  char *wr_path = strdupa (path);
+  char *cp = strtok (wr_path, &quot;:&quot;);
+
+  while (cp != NULL)
+    {
+      puts (cp);
+      cp = strtok (NULL, &quot;:&quot;);
+    }
+  return 0;
+}
+
+
+Please note that calling strtok using path directly is
+invalid.  It is also not allowed to call strdupa in the argument
+list of strtok since strdupa uses alloca
+(see Variable Size Automatic) can interfere with the parameter
+passing.
+
+This function is only available if GNU CC is used.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/strdupa.txt

@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+works just like (the,) localtime function
+//\\ //// ==> completion hint (1 line):
+works just like the localtime function
+//\\ //// Replacement text (1+ lines):
+struct tm * localtime_r (const time_t *time, struct tm *resultp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct tm * localtime_r (const time_t *time, struct tm *resultp)
+Preliminary:
+| MT-Safe env locale
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+
+The localtime_r function works just like the localtime
+function.  It takes a pointer to a variable containing a simple time
+and converts it to the broken-down time format.
+
+But the result is not placed in a static buffer.  Instead it is placed
+in the object of type struct tm to which the parameter
+resultp points.
+
+If the conversion is successful the function returns a pointer to the
+object the result was written into, i.e., it returns resultp.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Broken_002ddown-Time.html#Broken_002ddown-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Broken_002ddown-Time/localtime_r.txt

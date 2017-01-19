@@ -1,0 +1,58 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) structure specified by tptr to current values
+//\\ //// ==> completion hint (1 line):
+sets the structure specified by tptr to current values
+//\\ //// Replacement text (1+ lines):
+int ntp_adjtime (struct timex *tptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int ntp_adjtime (struct timex *tptr)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The ntp_adjtime function sets the structure specified by
+tptr to current values.
+
+In addition, ntp_adjtime updates some settings to match what you
+pass to it in *tptr.  Use the modes element of *tptr
+to select what settings to update.  You can set offset,
+freq, maxerror, esterror, status,
+constant, and tick.
+
+modes = zero means set nothing.
+
+Only the superuser can update settings.
+
+
+The return value is 0 on success and other values on failure.  The
+following errno error conditions are defined for this function:
+
+
+TIME_ERROR
+The high accuracy clock model is not properly set up at the moment, thus the
+clock must be considered unsynchronized, and the values should be
+treated with care.  Another reason could be that the specified new values
+are not allowed.
+
+
+EPERM
+The process specified a settings update, but is not superuser.
+
+
+
+
+For more details see RFC1305 (Network Time Protocol, Version 3) and
+related documents.
+
+Portability note: Early versions of the GNU C Library did not
+have this function but did have the synonymous adjtimex.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//High-Accuracy-Clock.html#High-Accuracy-Clock
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/High-Accuracy-Clock/ntp_adjtime.txt

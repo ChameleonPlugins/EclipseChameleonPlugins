@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) next representable neighbor of x in (the,) direction towards y
+//\\ //// ==> completion hint (1 line):
+returns the next representable neighbor of x in the direction towards y
+//\\ //// Replacement text (1+ lines):
+Function: double nextafter (double x, double y)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double nextafter (double x, double y)
+Function: float nextafterf (float x, float y)
+Function: long double nextafterl (long double x, long double y)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The nextafter function returns the next representable neighbor of
+x in the direction towards y.  The size of the step between
+x and the result depends on the type of the result.  If
+x = y the function simply returns y.  If either
+value is NaN, NaN is returned.  Otherwise
+a value corresponding to the value of the least significant bit in the
+mantissa is added or subtracted, depending on the direction.
+nextafter will signal overflow or underflow if the result goes
+outside of the range of normalized numbers.
+
+This function is defined in IEC 559 (and the appendix with
+recommended functions in IEEE 754/IEEE 854).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//FP-Bit-Twiddling.html#FP-Bit-Twiddling
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/FP-Bit-Twiddling/nextafterl.txt

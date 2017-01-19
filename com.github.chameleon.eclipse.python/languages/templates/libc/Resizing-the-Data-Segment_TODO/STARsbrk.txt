@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+is (the,) same as brk except that you (indicate,select,specify) (the,) (new,) (end,exit,quit,(halt,pause,stop,suspend)) of (the,) data segment as (an,) offset delta from (the,) current (end,exit,quit,(halt,pause,stop,suspend)) and on success (the,) (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) value is (the,) address of (the,) resulting (end,exit,quit,(halt,pause,stop,suspend)) of (the,) data segment instead of zero
+//\\ //// ==> completion hint (1 line):
+is the same as brk except that you specify the new end of the data segment as an offset delta from the current end and on success the return value is the address of the resulting end of the data segment instead of zero
+//\\ //// Replacement text (1+ lines):
+void *sbrk (ptrdiff_t delta)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void *sbrk (ptrdiff_t delta)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This function is the same as brk except that you specify the new
+end of the data segment as an offset delta from the current end
+and on success the return value is the address of the resulting end of
+the data segment instead of zero.
+
+This means you can use ‘sbrk(0)’ to find out what the current end
+of the data segment is.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Resizing-the-Data-Segment.html#Resizing-the-Data-Segment
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Resizing-the-Data-Segment/*sbrk.txt

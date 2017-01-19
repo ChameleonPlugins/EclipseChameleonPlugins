@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+is similar to (the,) lrand48 function in that it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) number in (the,) range of 0 to 2^31 but (the,) state of (the,) random number generator used to produce (the,) random bits is determined by (the,) array provided as (the,) parameter to (the,) function
+//\\ //// ==> completion hint (1 line):
+is similar to the lrand48 function in that it returns a number in the range of 0 to 2^31 but the state of the random number generator used to produce the random bits is determined by the array provided as the parameter to the function
+//\\ //// Replacement text (1+ lines):
+long int nrand48 (unsigned short int xsubi[3])
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int nrand48 (unsigned short int xsubi[3])
+Preliminary:
+| MT-Unsafe race:drand48
+| AS-Unsafe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+This function is similar to the lrand48 function in that it
+returns a number in the range of 0 to 2^31 (exclusive) but
+the state of the random number generator used to produce the random bits
+is determined by the array provided as the parameter to the function.
+
+The numbers in the array are updated afterwards so that subsequent calls
+to this function yield different results (as is expected of a random
+number generator).  The array should have been initialized before the
+first call to obtain reproducible results.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/nrand48.txt

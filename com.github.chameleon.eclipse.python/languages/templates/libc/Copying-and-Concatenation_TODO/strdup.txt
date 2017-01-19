@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+copies (the,) null-terminated (string,text) X:TEXT into (a,) newly allocated (string,text)
+//\\ //// ==> completion hint (1 line):
+copies the null-terminated string s into a newly allocated string
+//\\ //// Replacement text (1+ lines):
+char * strdup (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strdup (const char *s)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+This function copies the null-terminated string s into a newly
+allocated string.  The string is allocated using malloc; see
+Unconstrained Allocation.  If malloc cannot allocate space
+for the new string, strdup returns a null pointer.  Otherwise it
+returns a pointer to the new string.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/strdup.txt

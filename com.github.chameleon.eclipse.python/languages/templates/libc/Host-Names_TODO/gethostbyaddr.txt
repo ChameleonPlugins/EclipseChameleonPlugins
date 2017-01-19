@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) information about (the,) (box,computer,system,node,host,target) with internet address addr
+//\\ //// ==> completion hint (1 line):
+returns information about the host with Internet address addr
+//\\ //// Replacement text (1+ lines):
+struct hostent * gethostbyaddr (const X1, socklen_t length, int format)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=buf
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct hostent * gethostbyaddr (const void *addr, socklen_t length, int format)
+Preliminary:
+| MT-Unsafe race:hostbyaddr env locale
+| AS-Unsafe dlopen plugin corrupt heap lock
+| AC-Unsafe lock corrupt mem fd
+| See POSIX Safety Concepts.
+
+
+The gethostbyaddr function returns information about the host
+with Internet address addr.  The parameter addr is not
+really a pointer to char - it can be a pointer to an IPv4 or an IPv6
+address.  The length argument is the size (in bytes) of the address
+at addr.  format specifies the address format; for an IPv4
+Internet address, specify a value of AF_INET; for an IPv6
+Internet address, use AF_INET6.
+
+If the lookup fails, gethostbyaddr returns a null pointer.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Names.html#Host-Names
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Names/gethostbyaddr.txt

@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) thread-specific data associated with key in (the,) calling thread
+//\\ //// ==> completion hint (1 line):
+Return the thread-specific data associated with key in the calling thread
+//\\ //// Replacement text (1+ lines):
+void *pthread_getspecific (pthread_key_t key)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void *pthread_getspecific (pthread_key_t key)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Return the thread-specific data associated with key in the calling
+thread.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Thread_002dspecific-Data.html#Thread_002dspecific-Data
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Thread_002dspecific-Data/*pthread_getspecific.txt

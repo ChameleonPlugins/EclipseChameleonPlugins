@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+convert X:NUMBER to (a string,text) as X:NAME
+//\\ //// ==> completion hint (1 line):
+X1 as text
+//\\ //// Replacement text (1+ lines):
+X2 = str(X1)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=-3.14
+X2=my_text
+//\\ //// Help/documentation (1+ lines):
+https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(basic_instructions)
+NUMBER can be a number such as -3.14
+//\\ //// Tool tip (1 line):
+Change the number as needed
+//\\

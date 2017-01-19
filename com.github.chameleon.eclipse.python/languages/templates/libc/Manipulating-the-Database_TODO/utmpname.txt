@@ -1,0 +1,44 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) name of (the,) database to be examined to file, and closes any previously opened database
+//\\ //// ==> completion hint (1 line):
+changes the name of the database to be examined to file, and closes any previously opened database
+//\\ //// Replacement text (1+ lines):
+int utmpname (const char *file)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int utmpname (const char *file)
+Preliminary:
+| MT-Unsafe race:utent
+| AS-Unsafe lock heap
+| AC-Unsafe lock mem
+| See POSIX Safety Concepts.
+
+
+The utmpname function changes the name of the database to be
+examined to file, and closes any previously opened database.  By
+default getutent, getutid, getutline and
+pututline read from and write to the user accounting database.
+
+The following macros are defined for use as the file argument:
+
+
+Macro: char * _PATH_UTMP
+This macro is used to specify the user accounting database.
+
+
+
+Macro: char * _PATH_WTMP
+This macro is used to specify the user accounting log file.
+
+
+The utmpname function returns a value of 0 if the new name
+was successfully stored, and a value of -1 to indicate an error.
+Note that utmpname does not try to open the database, and that
+therefore the return value does not say anything about whether the
+database can be successfully opened.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Manipulating-the-Database.html#Manipulating-the-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Manipulating-the-Database/utmpname.txt

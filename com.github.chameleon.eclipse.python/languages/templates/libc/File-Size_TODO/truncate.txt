@@ -1,0 +1,63 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) size of X:FILENAME to length
+//\\ //// ==> completion hint (1 line):
+changes the size of filename to length
+//\\ //// Replacement text (1+ lines):
+int truncate (X1, off_t length)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int truncate (const char *filename, off_t length)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+The truncate function changes the size of filename to
+length.  If length is shorter than the previous length, data
+at the end will be lost.  The file must be writable by the user to
+perform this operation.
+
+If length is longer, holes will be added to the end.  However, some
+systems do not support this feature and will leave the file unchanged.
+
+When the source file is compiled with _FILE_OFFSET_BITS == 64 the
+truncate function is in fact truncate64 and the type
+off_t has 64 bits which makes it possible to handle files up to
+2^63 bytes in length.
+
+The return value is 0 for success, or -1 for an error.  In
+addition to the usual file name errors, the following errors may occur:
+
+
+EACCES
+The file is a directory or not writable.
+
+
+EINVAL
+length is negative.
+
+
+EFBIG
+The operation would extend the file beyond the limits of the operating system.
+
+
+EIO
+A hardware I/O error occurred.
+
+
+EPERM
+The file is &quot;append-only&quot; or &quot;immutable&quot;.
+
+
+EINTR
+The operation was interrupted by a signal.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Size.html#File-Size
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Size/truncate.txt

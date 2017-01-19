@@ -1,0 +1,37 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) simple time pointed to by time to broken-down time representation, expressed relative to (the,) user’s specified time zone
+//\\ //// ==> completion hint (1 line):
+converts the simple time pointed to by time to broken-down time representation, expressed relative to the user’s specified time zone
+//\\ //// Replacement text (1+ lines):
+struct tm * localtime (const time_t *time)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct tm * localtime (const time_t *time)
+Preliminary:
+| MT-Unsafe race:tmbuf env locale
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+The localtime function converts the simple time pointed to by
+time to broken-down time representation, expressed relative to the
+user’s specified time zone.
+
+The return value is a pointer to a static broken-down time structure, which
+might be overwritten by subsequent calls to ctime, gmtime,
+or localtime.  (But no other library function overwrites the contents
+of this object.)
+
+The return value is the null pointer if time cannot be represented
+as a broken-down time; typically this is because the year cannot fit into
+an int.
+
+Calling localtime also sets the current time zone as if
+tzset were called.  See Time Zone Functions.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Broken_002ddown-Time.html#Broken_002ddown-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Broken_002ddown-Time/localtime.txt

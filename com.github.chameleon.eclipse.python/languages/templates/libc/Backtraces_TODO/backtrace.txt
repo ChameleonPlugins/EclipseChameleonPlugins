@@ -1,0 +1,37 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) backtrace for (the,) current thread, as (a,) list of pointers, and (place,position) (the,) information into buffer
+//\\ //// ==> completion hint (1 line):
+obtains a backtrace for the current thread, as a list of pointers, and places the information into buffer
+//\\ //// Replacement text (1+ lines):
+int backtrace (void **buffer, int size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int backtrace (void **buffer, int size)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe init heap dlopen plugin lock
+| AC-Unsafe init mem lock fd
+| See POSIX Safety Concepts.
+
+
+The backtrace function obtains a backtrace for the current
+thread, as a list of pointers, and places the information into
+buffer.  The argument size should be the number of
+void * elements that will fit into buffer.  The return
+value is the actual number of entries of buffer that are obtained,
+and is at most size.
+
+The pointers placed in buffer are actually return addresses
+obtained by inspecting the stack, one return address per stack frame.
+
+Note that certain compiler optimizations may interfere with obtaining a
+valid backtrace.  Function inlining causes the inlined function to not
+have a stack frame; tail call optimization replaces one stack frame with
+another; frame pointer elimination will stop backtrace from
+interpreting the stack contents correctly.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Backtraces.html#Backtraces
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Backtraces/backtrace.txt

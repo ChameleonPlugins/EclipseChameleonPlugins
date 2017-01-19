@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+this variable is (a,) gnu extension and is declared in errno
+//\\ //// ==> completion hint (1 line):
+This variable is a GNU extension and is declared in errno
+//\\ //// Replacement text (1+ lines):
+Variable: char * program_invocation_short_name
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Variable: char * program_invocation_short_name
+This variable’s value is the name that was used to invoke the program
+running in the current process, with directory names removed.  (That is
+to say, it is the same as program_invocation_name minus
+everything up to the last slash, if any.)
+
+This variable is a GNU extension and is declared in errno.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Error-Messages.html#Error-Messages
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Error-Messages/program_invocation_short_name.txt

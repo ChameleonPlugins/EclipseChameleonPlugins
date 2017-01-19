@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (an,) internet address format
+//\\ //// ==> completion hint (1 line):
+converts an Internet address format
+//\\ //// Replacement text (1+ lines):
+int inet_pton (int af, const char *cp, void *buf)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int inet_pton (int af, const char *cp, void *buf)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function converts an Internet address (either IPv4 or IPv6) from
+presentation (textual) to network (binary) format.  af should be
+either AF_INET or AF_INET6, as appropriate for the type of
+address being converted.  cp is a pointer to the input string, and
+buf is a pointer to a buffer for the result.  It is the caller’s
+responsibility to make sure the buffer is large enough.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Address-Functions.html#Host-Address-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Address-Functions/inet_pton.txt

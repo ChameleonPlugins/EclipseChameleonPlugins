@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+is like strcat except that not more than size characters from from are appended to (the,) (end,exit,quit,(halt,pause,stop,suspend)) of to
+//\\ //// ==> completion hint (1 line):
+is like strcat except that not more than size characters from from are appended to the end of to
+//\\ //// Replacement text (1+ lines):
+char * strncat (char *restrict to, const char *restrict from, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strncat (char *restrict to, const char *restrict from, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is like strcat except that not more than size
+characters from from are appended to the end of to.  A
+single null character is also always appended to to, so the total
+allocated size of to must be at least size + 1 bytes
+longer than its initial length.
+
+The strncat function could be implemented like this:
+
+
+char *
+strncat (char *to, const char *from, size_t size)
+{
+  memcpy (to + strlen (to), from, strnlen (from, size));
+  to[strlen (to) + strnlen (from, size)] = '\0';
+  return to;
+}
+
+
+The behavior of strncat is undefined if the strings overlap.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/strncat.txt

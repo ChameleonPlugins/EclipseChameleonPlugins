@@ -1,0 +1,103 @@
+//\\ //// code completion entries (1+ lines):
+enqueue (an,) arbitrary number of read and (output,print,show,say,type,write) requests at one time
+//\\ //// ==> completion hint (1 line):
+enqueue an arbitrary number of read and write requests at one time
+//\\ //// Replacement text (1+ lines):
+int lio_listio (int mode, struct aiocb *const list[], int nent, struct sigevent *sig)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int lio_listio (int mode, struct aiocb *const list[], int nent, struct sigevent *sig)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock heap
+| AC-Unsafe lock mem
+| See POSIX Safety Concepts.
+
+
+The lio_listio function can be used to enqueue an arbitrary
+number of read and write requests at one time.  The requests can all be
+meant for the same file, all for different files or every solution in
+between.
+
+lio_listio gets the nent requests from the array pointed to
+by list.  The operation to be performed is determined by the
+aio_lio_opcode member in each element of list.  If this
+field is LIO_READ a read operation is enqueued, similar to a call
+of aio_read for this element of the array (except that the way
+the termination is signalled is different, as we will see below).  If
+the aio_lio_opcode member is LIO_WRITE a write operation
+is enqueued.  Otherwise the aio_lio_opcode must be LIO_NOP
+in which case this element of list is simply ignored.  This
+“operation” is useful in situations where one has a fixed array of
+struct aiocb elements from which only a few need to be handled at
+a time.  Another situation is where the lio_listio call was
+canceled before all requests are processed (see Cancel AIO Operations) and the remaining requests have to be reissued.
+
+The other members of each element of the array pointed to by
+list must have values suitable for the operation as described in
+the documentation for aio_read and aio_write above.
+
+The mode argument determines how lio_listio behaves after
+having enqueued all the requests.  If mode is LIO_WAIT it
+waits until all requests terminated.  Otherwise mode must be
+LIO_NOWAIT and in this case the function returns immediately after
+having enqueued all the requests.  In this case the caller gets a
+notification of the termination of all requests according to the
+sig parameter.  If sig is NULL no notification is
+send.  Otherwise a signal is sent or a thread is started, just as
+described in the description for aio_read or aio_write.
+
+If mode is LIO_WAIT, the return value of lio_listio
+is 0 when all requests completed successfully.  Otherwise the
+function return -1 and errno is set accordingly.  To find
+out which request or requests failed one has to use the aio_error
+function on all the elements of the array list.
+
+In case mode is LIO_NOWAIT, the function returns 0 if
+all requests were enqueued correctly.  The current state of the requests
+can be found using aio_error and aio_return as described
+above.  If lio_listio returns -1 in this mode, the
+global variable errno is set accordingly.  If a request did not
+yet terminate, a call to aio_error returns EINPROGRESS.  If
+the value is different, the request is finished and the error value (or
+0) is returned and the result of the operation can be retrieved
+using aio_return.
+
+Possible values for errno are:
+
+
+EAGAIN
+The resources necessary to queue all the requests are not available at
+the moment.  The error status for each element of list must be
+checked to determine which request failed.
+
+Another reason could be that the system wide limit of AIO requests is
+exceeded.  This cannot be the case for the implementation on GNU systems
+since no arbitrary limits exist.
+
+EINVAL
+The mode parameter is invalid or nent is larger than
+AIO_LISTIO_MAX.
+
+EIO
+One or more of the request’s I/O operations failed.  The error status of
+each request should be checked to determine which one failed.
+
+ENOSYS
+The lio_listio function is not supported.
+
+
+
+If the mode parameter is LIO_NOWAIT and the caller cancels
+a request, the error status for this request returned by
+aio_error is ECANCELED.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64, this
+function is in fact lio_listio64 since the LFS interface
+transparently replaces the normal implementation.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Asynchronous-Reads_002fWrites.html#Asynchronous-Reads_002fWrites
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Asynchronous-Reads_002fWrites/lio_listio.txt

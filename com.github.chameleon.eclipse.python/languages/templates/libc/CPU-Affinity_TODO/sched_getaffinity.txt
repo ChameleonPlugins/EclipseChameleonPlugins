@@ -1,0 +1,43 @@
+//\\ //// code completion entries (1+ lines):
+this functions stores (the,) cpu affinity mask for (the,) process or thread with (the,) id pid in (the,) cpusetsize bytes long bitmap pointed to by cpuset
+//\\ //// ==> completion hint (1 line):
+This functions stores the CPU affinity mask for the process or thread with the ID pid in the cpusetsize bytes long bitmap pointed to by cpuset
+//\\ //// Replacement text (1+ lines):
+int sched_getaffinity (pid_t pid, size_t cpusetsize, cpu_set_t *cpuset)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sched_getaffinity (pid_t pid, size_t cpusetsize, cpu_set_t *cpuset)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This functions stores the CPU affinity mask for the process or thread
+with the ID pid in the cpusetsize bytes long bitmap
+pointed to by cpuset.  If successful, the function always
+initializes all bits in the cpu_set_t object and returns zero.
+
+If pid does not correspond to a process or thread on the system
+the or the function fails for some other reason, it returns -1
+and errno is set to represent the error condition.
+
+
+ESRCH
+No process or thread with the given ID found.
+
+
+EFAULT
+The pointer cpuset is does not point to a valid object.
+
+
+
+This function is a GNU extension and is declared in sched.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//CPU-Affinity.html#CPU-Affinity
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/CPU-Affinity/sched_getaffinity.txt

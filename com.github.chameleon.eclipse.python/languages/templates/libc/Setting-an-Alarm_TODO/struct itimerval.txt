@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(the,) struct timeval data (output,print,show,say,type,write) is described in elapsed time
+//\\ //// ==> completion hint (1 line):
+The struct timeval data type is described in Elapsed Time
+//\\ //// Replacement text (1+ lines):
+Data Type: struct itimerval
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: struct itimerval
+This structure is used to specify when a timer should expire.  It contains
+the following members:
+
+struct timeval it_interval
+This is the period between successive timer interrupts.  If zero, the
+alarm will only be sent once.
+
+
+struct timeval it_value
+This is the period between now and the first timer interrupt.  If zero,
+the alarm is disabled.
+
+
+
+The struct timeval data type is described in Elapsed Time.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-an-Alarm.html#Setting-an-Alarm
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-an-Alarm/struct itimerval.txt

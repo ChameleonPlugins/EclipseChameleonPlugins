@@ -1,0 +1,13 @@
+//\\ //// code completion entries (1+ lines):
+(break,exit,finish,leave,return,stop) (,from )block
+//\\ //// ==> completion hint (1 line):
+break from a block of code
+//\\ //// Replacement text (1+ lines):
+break
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+break help...
+//\\ //// Tool tip (1 line):
+break statement...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):

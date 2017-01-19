@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+searches (the,) sorted array array for (an,) object that is equivalent to key
+//\\ //// ==> completion hint (1 line):
+searches the sorted array array for an object that is equivalent to key
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = bsearch (const void *key, const void *array, size_t count, size_t size, comparison_fn_t compare)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * bsearch (const void *key, const void *array, size_t count, size_t size, comparison_fn_t compare)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The bsearch function searches the sorted array array for an object
+that is equivalent to key.  The array contains count elements,
+each of which is of size size bytes.
+
+The compare function is used to perform the comparison.  This
+function is called with two pointer arguments and should return an
+integer less than, equal to, or greater than zero corresponding to
+whether its first argument is considered less than, equal to, or greater
+than its second argument.  The elements of the array must already
+be sorted in ascending order according to this comparison function.
+
+The return value is a pointer to the matching array element, or a null
+pointer if no match is found.  If the array contains more than one element
+that matches, the one that is returned is unspecified.
+
+This function derives its name from the fact that it is implemented
+using the binary search algorithm.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Array-Search-Function.html#Array-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Array-Search-Function/bsearch.txt

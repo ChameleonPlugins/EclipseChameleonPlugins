@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+if this bit is clear, then (the,) beginning of (a,) word is (a,) nonwhitespace character following (a,) whitespace character
+//\\ //// ==> completion hint (1 line):
+If this bit is clear, then the beginning of a word is a nonwhitespace character following a whitespace character
+//\\ //// Replacement text (1+ lines):
+Macro: tcflag_t ALTWERASE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: tcflag_t ALTWERASE
+This bit determines how far the WERASE character should erase.  The
+WERASE character erases back to the beginning of a word; the question
+is, where do words begin?
+
+If this bit is clear, then the beginning of a word is a nonwhitespace
+character following a whitespace character.  If the bit is set, then the
+beginning of a word is an alphanumeric character or underscore following
+a character which is none of those.
+
+See Editing Characters, for more information about the WERASE character.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Local-Modes.html#Local-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Local-Modes/ALTWERASE.txt

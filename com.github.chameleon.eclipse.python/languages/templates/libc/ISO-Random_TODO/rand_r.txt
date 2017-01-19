@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) random number in (the,) range 0 to rand_max just as rand does
+//\\ //// ==> completion hint (1 line):
+returns a random number in the range 0 to RAND_MAX just as rand does
+//\\ //// Replacement text (1+ lines):
+int rand_r (unsigned int *seed)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int rand_r (unsigned int *seed)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function returns a random number in the range 0 to RAND_MAX
+just as rand does.  However, all its state is stored in the
+seed argument.  This means the RNG’s state can only have as many
+bits as the type unsigned int has.  This is far too few to
+provide a good RNG.
+
+If your program requires a reentrant RNG, we recommend you use the
+reentrant GNU extensions to the SVID random number generator.  The
+POSIX.1 interface should only be used when the GNU extensions are not
+available.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//ISO-Random.html#ISO-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/ISO-Random/rand_r.txt

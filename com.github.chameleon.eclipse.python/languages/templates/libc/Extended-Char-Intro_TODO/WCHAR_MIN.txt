@@ -1,0 +1,19 @@
+//\\ //// code completion entries (1+ lines):
+was introduced in amendment 1 /@w to iso c90 /@w 
+//\\ //// ==> completion hint (1 line):
+was introduced in Amendment 1 /@w to ISO C90 /@w 
+//\\ //// Replacement text (1+ lines):
+Macro: wint_t WCHAR_MIN
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: wint_t WCHAR_MIN
+The macro WCHAR_MIN evaluates to the minimum value representable
+by an object of type wint_t.
+
+This macro was introduced in Amendment 1 to ISO C90.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Extended-Char-Intro.html#Extended-Char-Intro
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Extended-Char-Intro/WCHAR_MIN.txt

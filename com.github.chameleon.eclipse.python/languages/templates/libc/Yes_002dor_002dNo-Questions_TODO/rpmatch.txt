@@ -1,0 +1,45 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function rpmatch checks (the,) (string,text) in response whether or not it is (a,) correct yes-or-no answer and if yes, which one
+//\\ //// ==> completion hint (1 line):
+The function rpmatch checks the string in response whether or not it is a correct yes-or-no answer and if yes, which one
+//\\ //// Replacement text (1+ lines):
+int rpmatch (const char *response)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int rpmatch (const char *response)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The function rpmatch checks the string in response whether
+or not it is a correct yes-or-no answer and if yes, which one.  The
+check uses the YESEXPR and NOEXPR data in the
+LC_MESSAGES category of the currently selected locale.  The
+return value is as follows:
+
+
+1
+The user entered an affirmative answer.
+
+
+0
+The user entered a negative answer.
+
+
+-1
+The answer matched neither the YESEXPR nor the NOEXPR
+regular expression.
+
+
+
+This function is not standardized but available beside in the GNU C Library at
+least also in the IBM AIX library.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Yes_002dor_002dNo-Questions.html#Yes_002dor_002dNo-Questions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Yes_002dor_002dNo-Questions/rpmatch.txt

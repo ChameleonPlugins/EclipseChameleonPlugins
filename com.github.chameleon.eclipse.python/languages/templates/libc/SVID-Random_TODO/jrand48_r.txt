@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+is similar to jrand48
+//\\ //// ==> completion hint (1 line):
+is similar to jrand48
+//\\ //// Replacement text (1+ lines):
+int jrand48_r (unsigned short int xsubi[3], struct drand48_data *buffer, long int *result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int jrand48_r (unsigned short int xsubi[3], struct drand48_data *buffer, long int *result)
+Preliminary:
+| MT-Safe race:buffer
+| AS-Safe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The jrand48_r function is similar to jrand48.  Like the
+other reentrant functions of this function family it uses the
+congruential formula parameters from the buffer pointed to by
+buffer.
+
+If the return value is non-negative the variable pointed to by
+result contains the result.
+
+This function is a GNU extension and should not be used in portable
+programs.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/jrand48_r.txt

@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+this is like wcschr, except that it searches haystack for (a,) substring needle rather than just (a,) single wide character
+//\\ //// ==> completion hint (1 line):
+This is like wcschr, except that it searches haystack for a substring needle rather than just a single wide character
+//\\ //// Replacement text (1+ lines):
+wchar_t * wcsstr (const wchar_t *haystack, const wchar_t *needle)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wchar_t * wcsstr (const wchar_t *haystack, const wchar_t *needle)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is like wcschr, except that it searches haystack for a
+substring needle rather than just a single wide character.  It
+returns a pointer into the string haystack that is the first wide
+character of the substring, or a null pointer if no match was found.  If
+needle is an empty string, the function returns haystack.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Search-Functions/wcsstr.txt

@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+is equivalent to (the,) strtoull function in nearly all aspects but handles wide character strings
+//\\ //// ==> completion hint (1 line):
+is equivalent to the strtoull function in nearly all aspects but handles wide character strings
+//\\ //// Replacement text (1+ lines):
+unsigned long long int wcstoull (const wchar_t *restrict string, wchar_t **restrict tailptr, int base)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: unsigned long long int wcstoull (const wchar_t *restrict string, wchar_t **restrict tailptr, int base)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The wcstoull function is equivalent to the strtoull function
+in nearly all aspects but handles wide character strings.
+
+The wcstoull function was introduced in Amendment 1 of ISO C90.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Parsing-of-Integers.html#Parsing-of-Integers
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Parsing-of-Integers/wcstoull.txt

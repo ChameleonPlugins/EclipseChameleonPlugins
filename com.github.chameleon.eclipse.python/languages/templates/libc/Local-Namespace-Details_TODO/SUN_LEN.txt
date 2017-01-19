@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+(the,) macro computes (the,) length of socket address in (the,) local namespace
+//\\ //// ==> completion hint (1 line):
+The macro computes the length of socket address in the local namespace
+//\\ //// Replacement text (1+ lines):
+Macro: int SUN_LEN (struct sockaddr_un * ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SUN_LEN (struct sockaddr_un * ptr)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The macro computes the length of socket address in the local namespace.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Local-Namespace-Details.html#Local-Namespace-Details
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Local-Namespace-Details/SUN_LEN.txt

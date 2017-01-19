@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) stream be line buffered, and (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) buffer for you
+//\\ //// ==> completion hint (1 line):
+makes stream be line buffered, and allocates the buffer for you
+//\\ //// Replacement text (1+ lines):
+void setlinebuf (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void setlinebuf (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function makes stream be line buffered, and allocates the
+buffer for you.
+
+This function is provided for compatibility with old BSD code.  Use
+setvbuf instead.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Controlling-Buffering.html#Controlling-Buffering
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Controlling-Buffering/setlinebuf.txt

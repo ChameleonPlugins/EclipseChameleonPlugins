@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(deallocate,free,release) (the,) block of memory pointed at by ptr
+//\\ //// ==> completion hint (1 line):
+deallocates the block of memory pointed at by ptr
+//\\ //// Replacement text (1+ lines):
+void free (void *ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void free (void *ptr)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock fd mem
+| See POSIX Safety Concepts.
+
+
+The free function deallocates the block of memory pointed at
+by ptr.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Freeing-after-Malloc.html#Freeing-after-Malloc
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Freeing-after-Malloc/free.txt

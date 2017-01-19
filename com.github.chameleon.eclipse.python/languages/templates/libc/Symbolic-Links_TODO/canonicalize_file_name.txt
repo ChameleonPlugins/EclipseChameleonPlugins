@@ -1,0 +1,59 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) absolute name of (the,) file named by name which contains no 
+//\\ //// ==> completion hint (1 line):
+returns the absolute name of the file named by name which contains no 
+//\\ //// Replacement text (1+ lines):
+char * canonicalize_file_name (const char *name)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * canonicalize_file_name (const char *name)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem fd
+| See POSIX Safety Concepts.
+
+
+
+The canonicalize_file_name function returns the absolute name of
+the file named by name which contains no ., ..
+components nor any repeated path separators (/) or symlinks.  The
+result is passed back as the return value of the function in a block of
+memory allocated with malloc.  If the result is not used anymore
+the memory should be freed with a call to free.
+
+If any of the path components is missing the function returns a NULL
+pointer.  This is also what is returned if the length of the path
+reaches or exceeds PATH_MAX characters.  In any case
+errno is set accordingly.
+
+
+ENAMETOOLONG
+The resulting path is too long.  This error only occurs on systems which
+have a limit on the file name length.
+
+
+EACCES
+At least one of the path components is not readable.
+
+
+ENOENT
+The input file name is empty.
+
+
+ENOENT
+At least one of the path components does not exist.
+
+
+ELOOP
+More than MAXSYMLINKS many symlinks have been followed.
+
+
+
+This function is a GNU extension and is declared in stdlib.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Symbolic-Links.html#Symbolic-Links
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Symbolic-Links/canonicalize_file_name.txt

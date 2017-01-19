@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+get and list users
+//\\ //// ==> completion hint (1 line):
+users = response.json()[objects] #////
+//\\ //// Replacement text (1+ lines):
+PORT="35357" #//// modify as needed...
+objects = "users"
+url = "http://"+HOST+":"+PORT+"/v3/" + objects
+response = requests.get(url, headers=header)
+users = response.json()[objects] #////
+print "==== USERS: ===="
+for item in users:
+    print item["name"]
+print ""
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Gets users list from OpenStack and displays their names
+//\\ //// Tool tip (1 line):
+Change PORT if needed...
+//\\

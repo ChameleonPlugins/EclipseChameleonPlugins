@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+closes (the,) user accounting database
+//\\ //// ==> completion hint (1 line):
+closes the user accounting database
+//\\ //// Replacement text (1+ lines):
+void endutent (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void endutent (void)
+Preliminary:
+| MT-Unsafe race:utent
+| AS-Unsafe lock
+| AC-Unsafe lock fd
+| See POSIX Safety Concepts.
+
+
+This function closes the user accounting database.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Manipulating-the-Database.html#Manipulating-the-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Manipulating-the-Database/endutent.txt

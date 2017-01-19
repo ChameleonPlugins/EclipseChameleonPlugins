@@ -1,0 +1,16 @@
+//\\ //// code completion entries (1+ lines):
+get from X URL (using a web REST get call)
+//\\ //// ==> completion hint (1 line):
+# get web information (REST call)
+//\\ //// Replacement text (1+ lines):
+# get web information (REST call)
+#import urllib
+results = urllib.urlopen(X1).read()
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+#import urllib
+results = urllib.urlopen(X1).read()
+//\\ //// Tool tip (1 line):
+The results will end up in the results variable...
+//\\

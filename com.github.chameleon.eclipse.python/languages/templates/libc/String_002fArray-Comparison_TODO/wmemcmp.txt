@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function wmemcmp compares (the,) size wide characters beginning at a1 against (the,) size wide characters beginning at a2
+//\\ //// ==> completion hint (1 line):
+The function wmemcmp compares the size wide characters beginning at a1 against the size wide characters beginning at a2
+//\\ //// Replacement text (1+ lines):
+int wmemcmp (const wchar_t *a1, const wchar_t *a2, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int wmemcmp (const wchar_t *a1, const wchar_t *a2, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The function wmemcmp compares the size wide characters
+beginning at a1 against the size wide characters beginning
+at a2.  The value returned is smaller than or larger than zero
+depending on whether the first differing wide character is a1 is
+smaller or larger than the corresponding character in a2.
+
+If the contents of the two blocks are equal, wmemcmp returns
+0.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//String_002fArray-Comparison.html#String_002fArray-Comparison
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/String_002fArray-Comparison/wmemcmp.txt

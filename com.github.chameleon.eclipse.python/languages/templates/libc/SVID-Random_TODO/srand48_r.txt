@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+(the,) description of (the,) random number generator represented by (the,) information in buffer is initialized similarly to what (the,) function srand48 does
+//\\ //// ==> completion hint (1 line):
+The description of the random number generator represented by the information in buffer is initialized similarly to what the function srand48 does
+//\\ //// Replacement text (1+ lines):
+int srand48_r (long int seedval, struct drand48_data *buffer)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int srand48_r (long int seedval, struct drand48_data *buffer)
+Preliminary:
+| MT-Safe race:buffer
+| AS-Safe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The description of the random number generator represented by the
+information in buffer is initialized similarly to what the function
+srand48 does.  The state is initialized from the parameter
+seedval and the parameters for the congruential formula are
+initialized to their default values.
+
+If the return value is non-negative the function call succeeded.
+
+This function is a GNU extension and should not be used in portable
+programs.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/srand48_r.txt

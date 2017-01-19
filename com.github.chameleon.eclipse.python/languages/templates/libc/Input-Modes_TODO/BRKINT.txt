@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+if neither brkint nor ignbrk are set, (a,) break condition is passed to (the,) application as (a,) single '\0' character if parmrk is not set, or otherwise as (a,) three-character sequence '\377', '\0', '\0'
+//\\ //// ==> completion hint (1 line):
+If neither BRKINT nor IGNBRK are set, a break condition is passed to the application as a single '\0' character if PARMRK is not set, or otherwise as a three-character sequence '\377', '\0', '\0'
+//\\ //// Replacement text (1+ lines):
+Macro: tcflag_t BRKINT
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: tcflag_t BRKINT
+If this bit is set and IGNBRK is not set, a break condition
+clears the terminal input and output queues and raises a SIGINT
+signal for the foreground process group associated with the terminal.
+
+If neither BRKINT nor IGNBRK are set, a break condition is
+passed to the application as a single '\0' character if
+PARMRK is not set, or otherwise as a three-character sequence
+'\377', '\0', '\0'.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Input-Modes.html#Input-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Input-Modes/BRKINT.txt

@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is (the,) equivalent of sigsuspend : it sets (the,) calling process’s signal mask to mask, and waits for (a,) signal to arrive
+//\\ //// ==> completion hint (1 line):
+is the equivalent of sigsuspend : it sets the calling process’s signal mask to mask, and waits for a signal to arrive
+//\\ //// Replacement text (1+ lines):
+int sigpause (int mask)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sigpause (int mask)
+Preliminary:
+| MT-Unsafe race:sigprocmask/!bsd!linux
+| AS-Unsafe lock/hurd
+| AC-Unsafe lock/hurd
+| See POSIX Safety Concepts.
+
+
+This function is the equivalent of sigsuspend (see Waiting for a Signal):  it sets the calling process’s signal mask to mask,
+and waits for a signal to arrive.  On return the previous set of blocked
+signals is restored.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//BSD-Signal-Handling.html#BSD-Signal-Handling
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/BSD-Signal-Handling/sigpause.txt

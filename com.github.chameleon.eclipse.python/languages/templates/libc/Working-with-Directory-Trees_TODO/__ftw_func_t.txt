@@ -1,0 +1,67 @@
+//\\ //// code completion entries (1+ lines):
+(the,) last parameter is (a,) flag giving more information about (the,) current file
+//\\ //// ==> completion hint (1 line):
+The last parameter is a flag giving more information about the current file
+//\\ //// Replacement text (1+ lines):
+Data Type: __ftw_func_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: __ftw_func_t
+
+
+int (*) (const char *, const struct stat *, int)
+
+
+The type of callback functions given to the ftw function.  The
+first parameter points to the file name, the second parameter to an
+object of type struct stat which is filled in for the file named
+in the first parameter.
+
+The last parameter is a flag giving more information about the current
+file.  It can have the following values:
+
+
+FTW_F
+
+
+The item is either a normal file or a file which does not fit into one
+of the following categories.  This could be special files, sockets etc.
+
+FTW_D
+
+
+The item is a directory.
+
+FTW_NS
+
+
+The stat call failed and so the information pointed to by the
+second paramater is invalid.
+
+FTW_DNR
+
+
+The item is a directory which cannot be read.
+
+FTW_SL
+
+
+The item is a symbolic link.  Since symbolic links are normally followed
+seeing this value in a ftw callback function means the referenced
+file does not exist.  The situation for nftw is different.
+
+This value is only available if the program is compiled with
+_XOPEN_EXTENDED defined before including
+the first header.  The original SVID systems do not have symbolic links.
+
+
+
+If the sources are compiled with _FILE_OFFSET_BITS == 64 this
+type is in fact __ftw64_func_t since this mode changes
+struct stat to be struct stat64.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Working-with-Directory-Trees.html#Working-with-Directory-Trees
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Working-with-Directory-Trees/__ftw_func_t.txt

@@ -1,0 +1,52 @@
+//\\ //// code completion entries (1+ lines):
+is used to inquire about (the,) supplementary group ids of (the,) process
+//\\ //// ==> completion hint (1 line):
+is used to inquire about the supplementary group IDs of the process
+//\\ //// Replacement text (1+ lines):
+int getgroups (X1ount, gid_t *groups)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getgroups (int count, gid_t *groups)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The getgroups function is used to inquire about the supplementary
+group IDs of the process.  Up to count of these group IDs are
+stored in the array groups; the return value from the function is
+the number of group IDs actually stored.  If count is smaller than
+the total number of supplementary group IDs, then getgroups
+returns a value of -1 and errno is set to EINVAL.
+
+If count is zero, then getgroups just returns the total
+number of supplementary group IDs.  On systems that do not support
+supplementary groups, this will always be zero.
+
+Here’s how to use getgroups to read all the supplementary group
+IDs:
+
+
+gid_t *
+read_all_groups (void)
+{
+  int ngroups = getgroups (0, NULL);
+  gid_t *groups
+    = (gid_t *) xmalloc (ngroups * sizeof (gid_t));
+  int val = getgroups (ngroups, groups);
+  if (val &lt; 0)
+    {
+      free (groups);
+      return NULL;
+    }
+  return groups;
+}
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Reading-Persona.html#Reading-Persona
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Reading-Persona/getgroups.txt

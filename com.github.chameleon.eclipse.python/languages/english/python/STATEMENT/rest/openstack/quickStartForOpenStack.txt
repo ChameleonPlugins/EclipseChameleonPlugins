@@ -1,0 +1,128 @@
+//\\ //// code completion entries (1+ lines):
+quick start for openstack
+quickstart for openstack
+tutorial for openstack
+//\\ //// ==> completion hint (1 line):
+use OpenStack ReST API calls with Chameleon
+//\\ //// Replacement text (1+ lines):
+
+
+
+"""**********************************************************************
+ **********************************************************************
+ * quick start for OpenStack (for Chameleon)
+ * 
+ * In this tutorial we add web (ReST) calls to use OpenStack for
+ * automating the Cloud.
+ * If you just finished tutorial3, delete or
+ * comment out that code, or add this new code before or after the
+ * existing code.
+ *********************************************************************"""
+
+#//// 1. TYPE/SELECT: log in to the cloud
+
+
+#//// 2. TYPE/SELECT: get and list users
+
+
+#//// 3. TYPE/SELECT: save first users name as old_name
+
+
+#//// 4. TYPE/SELECT: select first user
+
+
+#//// 5. TYPE/SELECT: ask "New name?" to name variable
+
+
+#//// 6. TYPE/SELECT: update name of selected user to name
+
+
+#//// 7. TYPE/SELECT: get and list users
+
+
+#//// 8. TYPE/SELECT: pause
+
+
+#//// 9. TYPE/SELECT: update name of selected user to old_name
+
+
+#//// 10. TYPE/SELECT: get and list users
+
+
+"""**********************************************************************
+ * Now run it with the following, from the menu:
+ * Run | Run (Or press Ctrl-F11)
+ *  
+ * You should see the users listed,
+ * asked for a new name,
+ * shown the list again with the new name for the first user,
+ * asked to press ENTER to continue,
+ * then shown the list after the user is renamed to the original user.
+ * Congratulations! 
+ *   
+ **********************************************************************"""
+
+
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+<pre>
+"""**********************************************************************
+ **********************************************************************
+ * quick start for OpenStack (for Chameleon)
+ * 
+ * In this tutorial we add web (ReST) calls to use OpenStack for
+ * automating the Cloud.
+ * If you just finished tutorial3, delete or
+ * comment out that code, or add this new code before or after the
+ * existing code.
+ *********************************************************************"""
+
+#//// 1. TYPE/SELECT: log in to the cloud
+
+
+#//// 2. TYPE/SELECT: get and list users
+
+
+#//// 3. TYPE/SELECT: save first users name as old_name
+
+
+#//// 4. TYPE/SELECT: select first user
+
+
+#//// 5. TYPE/SELECT: ask "New name?" to name variable
+
+
+#//// 6. TYPE/SELECT: update name of selected user to name
+
+
+#//// 7. TYPE/SELECT: get and list users
+
+
+#//// 8. TYPE/SELECT: pause
+
+
+#//// 9. TYPE/SELECT: update name of selected user to old_name
+
+
+#//// 10. TYPE/SELECT: get and list users
+
+
+"""**********************************************************************
+ * Now run it with the following, from the menu:
+ * Run | Run (Or press Ctrl-F11)
+ *  
+ * You should see the users listed,
+ * asked for a new name,
+ * shown the list again with the new name for the first user,
+ * asked to press ENTER to continue,
+ * then shown the list after the user is renamed to the original user.
+ * Congratulations! 
+ *   
+ **********************************************************************"""
+</pre>
+
+
+//\\ //// Tool tip (1 line):
+Save (Ctrl-S) then Scroll to tutorial4 (for Chameleon)
+//\\

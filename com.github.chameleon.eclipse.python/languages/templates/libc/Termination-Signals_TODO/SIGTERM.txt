@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+(the,) shell command kill generates sigterm by default
+//\\ //// ==> completion hint (1 line):
+The shell command kill generates SIGTERM by default
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGTERM
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGTERM
+
+The SIGTERM signal is a generic signal used to cause program
+termination.  Unlike SIGKILL, this signal can be blocked,
+handled, and ignored.  It is the normal way to politely ask a program to
+terminate.
+
+The shell command kill generates SIGTERM by default.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Termination-Signals.html#Termination-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Termination-Signals/SIGTERM.txt

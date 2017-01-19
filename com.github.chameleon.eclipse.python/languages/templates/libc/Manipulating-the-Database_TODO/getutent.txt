@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+reads (the,) next entry from (the,) user accounting database
+//\\ //// ==> completion hint (1 line):
+reads the next entry from the user accounting database
+//\\ //// Replacement text (1+ lines):
+struct utmp * getutent (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct utmp * getutent (void)
+Preliminary:
+| MT-Unsafe init race:utent race:utentbuf sig:ALRM timer
+| AS-Unsafe heap lock
+| AC-Unsafe lock fd mem
+| See POSIX Safety Concepts.
+
+
+
+The getutent function reads the next entry from the user
+accounting database.  It returns a pointer to the entry, which is
+statically allocated and may be overwritten by subsequent calls to
+getutent.  You must copy the contents of the structure if you
+wish to save the information or you can use the getutent_r
+function which stores the data in a user-provided buffer.
+
+A null pointer is returned in case no further entry is available.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Manipulating-the-Database.html#Manipulating-the-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Manipulating-the-Database/getutent.txt

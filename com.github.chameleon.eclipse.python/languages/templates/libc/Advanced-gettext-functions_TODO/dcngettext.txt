@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(the,) dcngettext is similar to (the,) dcgettext function in (the,) way (the,) message catalog is selected
+//\\ //// ==> completion hint (1 line):
+The dcngettext is similar to the dcgettext function in the way the message catalog is selected
+//\\ //// Replacement text (1+ lines):
+char * dcngettext (const char *domain, const char *msgid1, const char *msgid2, unsigned long int n, X5ategory)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X5='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * dcngettext (const char *domain, const char *msgid1, const char *msgid2, unsigned long int n, int category)
+Preliminary:
+| MT-Safe env
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+The dcngettext is similar to the dcgettext function in the
+way the message catalog is selected.  The difference is that it takes
+two extra parameter to provide the correct plural form.  These two
+parameters are handled in the same way ngettext handles them.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Advanced-gettext-functions.html#Advanced-gettext-functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Advanced-gettext-functions/dcngettext.txt

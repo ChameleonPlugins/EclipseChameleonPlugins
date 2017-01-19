@@ -1,0 +1,58 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) size of (an,) existing memory area
+//\\ //// ==> completion hint (1 line):
+change the size of an existing memory area
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = mremap (X1, X2, size_t new_length, int flag)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2=256
+X1=NULL
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * mremap (void *address, size_t length, size_t new_length, int flag)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This function can be used to change the size of an existing memory
+area. address and length must cover a region entirely mapped
+in the same mmap statement.  A new mapping with the same
+characteristics will be returned with the length new_length.
+
+One option is possible, MREMAP_MAYMOVE.  If it is given in
+flags, the system may remove the existing mapping and create a new
+one of the desired length in another location.
+
+The address of the resulting mapping is returned, or -1.  Possible
+error codes include:
+
+
+EFAULT
+There is no existing mapping in at least part of the original region, or
+the region covers two or more distinct mappings.
+
+
+EINVAL
+The address given is misaligned or inappropriate.
+
+
+EAGAIN
+The region has pages locked, and if extended it would exceed the
+process’s resource limit for locked pages.  See Limits on Resources.
+
+
+ENOMEM
+The region is private writable, and insufficient virtual memory is
+available to extend it.  Also, this error will occur if
+MREMAP_MAYMOVE is not given and the extension would collide with
+another mapped region.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Memory_002dmapped-I_002fO.html#Memory_002dmapped-I_002fO
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Memory_002dmapped-I_002fO/mremap.txt

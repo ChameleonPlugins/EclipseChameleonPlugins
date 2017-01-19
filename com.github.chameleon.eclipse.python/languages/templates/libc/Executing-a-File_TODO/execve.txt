@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+this is similar to execv, but permits you to (indicate,select,specify) (the,) environment for (the,) (new,) program explicitly as (the,) env argument
+//\\ //// ==> completion hint (1 line):
+This is similar to execv, but permits you to specify the environment for the new program explicitly as the env argument
+//\\ //// Replacement text (1+ lines):
+int execve (X1, char *const argv[], char *const env[])
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int execve (const char *filename, char *const argv[], char *const env[])
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is similar to execv, but permits you to specify the environment
+for the new program explicitly as the env argument.  This should
+be an array of strings in the same format as for the environ
+variable; see Environment Access.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Executing-a-File.html#Executing-a-File
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Executing-a-File/execve.txt

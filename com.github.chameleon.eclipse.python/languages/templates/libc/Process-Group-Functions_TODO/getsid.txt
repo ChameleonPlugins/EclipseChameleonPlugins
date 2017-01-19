@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) process group id of (the,) session leader of (the,) specified process
+//\\ //// ==> completion hint (1 line):
+returns the process group ID of the session leader of the specified process
+//\\ //// Replacement text (1+ lines):
+pid_t getsid (pid_t pid)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: pid_t getsid (pid_t pid)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+The getsid function returns the process group ID of the session
+leader of the specified process.  If a pid is 0, the
+process group ID of the session leader of the current process is
+returned.
+
+In case of error -1 is returned and errno is set.  The
+following errno error conditions are defined for this function:
+
+
+ESRCH
+There is no process with the given process ID pid.
+
+EPERM
+The calling process and the process specified by pid are in
+different sessions, and the implementation doesn’t allow to access the
+process group ID of the session leader of the process with ID pid
+from the calling process.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Process-Group-Functions.html#Process-Group-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Process-Group-Functions/getsid.txt

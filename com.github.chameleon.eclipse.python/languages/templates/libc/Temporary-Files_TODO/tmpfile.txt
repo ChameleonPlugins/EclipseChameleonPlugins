@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (a,) temporary binary file for update mode, as if by calling fopen with mode &quot
+//\\ //// ==> completion hint (1 line):
+creates a temporary binary file for update mode, as if by calling fopen with mode &quot
+//\\ //// Replacement text (1+ lines):
+FILE * tmpfile (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: FILE * tmpfile (void)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap lock
+| AC-Unsafe mem fd lock
+| See POSIX Safety Concepts.
+
+
+This function creates a temporary binary file for update mode, as if by
+calling fopen with mode &quot;wb+&quot;.  The file is deleted
+automatically when it is closed or when the program terminates.  (On
+some other ISO C systems the file may fail to be deleted if the program
+terminates abnormally).
+
+This function is reentrant.
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 on a
+32-bit system this function is in fact tmpfile64, i.e., the LFS
+interface transparently replaces the old interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Temporary-Files.html#Temporary-Files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Temporary-Files/tmpfile.txt

@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+read (comma separated values,csv values) from X:FILE to X:VALUES
+//\\ //// ==> completion hint (1 line):
+# read comma separated values (csv) from a file to a variable
+//\\ //// Replacement text (1+ lines):
+# import csv #uncomment this if needed and move to top of file
+X2 = csv.read(X1)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="file.txt"
+X2=values
+//\\ //// Help/documentation (1+ lines):
+read csv (Comma Separated Value) values into a reader
+//\\ //// Tool tip (1 line):
+Update 'myfile' and "file.txt" if needed...
+//\\

@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+as (the,) unification of all unices, functionality only available in bsd and svid is also included
+//\\ //// ==> completion hint (1 line):
+As the unification of all Unices, functionality only available in BSD and SVID is also included
+//\\ //// Replacement text (1+ lines):
+Macro: _XOPEN_SOURCE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: _XOPEN_SOURCE
+Macro: _XOPEN_SOURCE_EXTENDED
+If you define this macro, functionality described in the X/Open
+Portability Guide is included.  This is a superset of the POSIX.1 and
+POSIX.2 functionality and in fact _POSIX_SOURCE and
+_POSIX_C_SOURCE are automatically defined.
+
+As the unification of all Unices, functionality only available in
+BSD and SVID is also included.
+
+If the macro _XOPEN_SOURCE_EXTENDED is also defined, even more
+functionality is available.  The extra functions will make all functions
+available which are necessary for the X/Open Unix brand.
+
+If the macro _XOPEN_SOURCE has the value 500 this includes
+all functionality described so far plus some new definitions from the
+Single Unix Specification, version 2.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Feature-Test-Macros.html#Feature-Test-Macros
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Feature-Test-Macros/_XOPEN_SOURCE.txt

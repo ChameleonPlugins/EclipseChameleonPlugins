@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+open file X:NAME as X:NAME to read 
+//\\ //// ==> completion hint (1 line):
+# open FILE ("file.txt") as NAME (file) to read
+//\\ //// Replacement text (1+ lines):
+X2 = open(X1, "r")
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="file.txt"
+X2=myfile
+//\\ //// Help/documentation (1+ lines):
+open a file read-only
+//\\ //// Tool tip (1 line):
+ Update 'myfile' and "file.txt" if needed...
+//\\

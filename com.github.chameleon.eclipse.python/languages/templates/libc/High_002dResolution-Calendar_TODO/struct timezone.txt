@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(the,) struct timezone (output,print,show,say,type,write) is obsolete and should never be used
+//\\ //// ==> completion hint (1 line):
+The struct timezone type is obsolete and should never be used
+//\\ //// Replacement text (1+ lines):
+Data Type: struct timezone
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: struct timezone
+The struct timezone structure is used to hold minimal information
+about the local time zone.  It has the following members:
+
+
+int tz_minuteswest
+This is the number of minutes west of UTC.
+
+
+int tz_dsttime
+If nonzero, Daylight Saving Time applies during some part of the year.
+
+
+
+The struct timezone type is obsolete and should never be used.
+Instead, use the facilities described in Time Zone Functions.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//High_002dResolution-Calendar.html#High_002dResolution-Calendar
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/High_002dResolution-Calendar/struct timezone.txt

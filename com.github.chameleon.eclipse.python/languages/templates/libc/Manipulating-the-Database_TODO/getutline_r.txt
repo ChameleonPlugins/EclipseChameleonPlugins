@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) just like getutline (the,) next entry matching (the,) information stored in line
+//\\ //// ==> completion hint (1 line):
+retrieves just like getutline the next entry matching the information stored in line
+//\\ //// Replacement text (1+ lines):
+int getutline_r (const struct utmp *line, struct utmp *buffer, struct utmp **result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getutline_r (const struct utmp *line, struct utmp *buffer, struct utmp **result)
+Preliminary:
+| MT-Unsafe race:utent sig:ALRM timer
+| AS-Unsafe lock
+| AC-Unsafe lock fd
+| See POSIX Safety Concepts.
+
+
+This function retrieves just like getutline the next entry
+matching the information stored in line.  But the result is stored
+in the buffer pointed to by the parameter buffer.
+
+If successful the function returns 0 and the pointer variable
+pointed to by the parameter result contains a pointer to the
+buffer with the result (probably the same as result.  If not
+successful the function return -1.
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Manipulating-the-Database.html#Manipulating-the-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Manipulating-the-Database/getutline_r.txt

@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+is similar to ctime, but (place,position) (the,) result in (the,) (string,text) pointed to by buffer
+//\\ //// ==> completion hint (1 line):
+is similar to ctime, but places the result in the string pointed to by buffer
+//\\ //// Replacement text (1+ lines):
+char * ctime_r (const time_t *time, char *buffer)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * ctime_r (const time_t *time, char *buffer)
+Preliminary:
+| MT-Safe env locale
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+This function is similar to ctime, but places the result in the
+string pointed to by buffer.  It is equivalent to (written using
+gcc extensions, see Statement Exprs in Porting and Using gcc):
+
+
+({ struct tm tm; asctime_r (localtime_r (time, &amp;tm), buf); })
+
+
+If no error occurred the function returns a pointer to the string the
+result was written into, i.e., it returns buffer.  Otherwise
+return NULL.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Formatting-Calendar-Time.html#Formatting-Calendar-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Formatting-Calendar-Time/ctime_r.txt

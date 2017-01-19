@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+get images
+//\\ //// ==> completion hint (1 line):
+# get images
+//\\ //// Replacement text (1+ lines):
+# get images
+#import urllib
+images = urllib.urlopen("http://localhost:5000/v2/images").read()
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Documentation
+//\\ //// Tool tip (1 line):
+images returned...
+//\\

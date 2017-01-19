@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+is like getline except that (the,) character which (instruct,tell) it to (end,exit,quit,(halt,pause,stop,suspend)) reading is not necessarily newline
+//\\ //// ==> completion hint (1 line):
+is like getline except that the character which tells it to stop reading is not necessarily newline
+//\\ //// Replacement text (1+ lines):
+ssize_t getdelim (char **lineptr, size_t *n, int delimiter, FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: ssize_t getdelim (char **lineptr, size_t *n, int delimiter, FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt heap
+| AC-Unsafe lock corrupt mem
+| See POSIX Safety Concepts.
+
+
+This function is like getline except that the character which
+tells it to stop reading is not necessarily newline.  The argument
+delimiter specifies the delimiter character; getdelim keeps
+reading until it sees that character (or end of file).
+
+The text is stored in lineptr, including the delimiter character
+and a terminating null.  Like getline, getdelim makes
+lineptr bigger if it isn’t big enough.
+
+getline is in fact implemented in terms of getdelim, just
+like this:
+
+
+ssize_t
+getline (char **lineptr, size_t *n, FILE *stream)
+{
+  return getdelim (lineptr, n, '\n', stream);
+}
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Line-Input.html#Line-Input
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Line-Input/getdelim.txt

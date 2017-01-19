@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) effective group id of (the,) process to newgid, provided that (the,) process is allowed to (convert,change,replace) its group id
+//\\ //// ==> completion hint (1 line):
+sets the effective group ID of the process to newgid, provided that the process is allowed to change its group ID
+//\\ //// Replacement text (1+ lines):
+int setegid (gid_t newgid)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setegid (gid_t newgid)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+This function sets the effective group ID of the process to
+newgid, provided that the process is allowed to change its group
+ID.  Just as with seteuid, if the process is privileged it may
+change its effective group ID to any value; if it isn’t, but it has a
+file group ID, then it may change to its real group ID or file group ID;
+otherwise it may not change its effective group ID.
+
+Note that a process is only privileged if its effective user ID
+is zero.  The effective group ID only affects access permissions.
+
+The return values and error conditions for setegid are the same
+as those for seteuid.
+
+This function is only present if _POSIX_SAVED_IDS is defined.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-Groups.html#Setting-Groups
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-Groups/setegid.txt

@@ -1,0 +1,16 @@
+//\\ //// code completion entries (1+ lines):
+replace X:OLD with X:NEW in X:STRING max X:NUMBER times
+//\\ //// ==> completion hint (1 line):
+remove old value with new value in string a maximum number of times
+//\\ //// Replacement text (1+ lines):
+X3.replace(X1, X2, X4)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="old"
+X2="new"
+X3="my old hat is very old"
+X4=1
+//\\ //// Help/documentation (1+ lines):
+When MAX=-1, or is omitted, replaces all occurrences.
+//\\ //// Tool tip (1 line):
+You can set this equal to something if you wish... X=...
+//\\

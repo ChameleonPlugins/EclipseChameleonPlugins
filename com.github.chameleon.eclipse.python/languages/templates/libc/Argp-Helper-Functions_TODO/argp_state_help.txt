@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(output,print,show,say,type,write) (a,) help message for (the,) argp parser referred to by state, to stream
+//\\ //// ==> completion hint (1 line):
+Outputs a help message for the argp parser referred to by state, to stream
+//\\ //// Replacement text (1+ lines):
+void argp_state_help (const struct argp_state *state, FILE *stream, unsigned flags)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void argp_state_help (const struct argp_state *state, FILE *stream, unsigned flags)
+Preliminary:
+| MT-Unsafe race:argpbuf env locale
+| AS-Unsafe heap i18n corrupt
+| AC-Unsafe mem corrupt lock
+| See POSIX Safety Concepts.
+
+
+
+Outputs a help message for the argp parser referred to by state,
+to stream.  The flags argument determines what sort of help
+message is produced.  See Argp Help Flags.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argp-Helper-Functions.html#Argp-Helper-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argp-Helper-Functions/argp_state_help.txt

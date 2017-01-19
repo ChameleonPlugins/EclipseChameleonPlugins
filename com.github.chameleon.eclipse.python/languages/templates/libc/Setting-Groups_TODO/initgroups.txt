@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) process’s supplementary group ids to be (the,) normal default for (the,) user name user
+//\\ //// ==> completion hint (1 line):
+sets the process’s supplementary group IDs to be the normal default for the user name user
+//\\ //// Replacement text (1+ lines):
+int initgroups (const char *user, gid_t group)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int initgroups (const char *user, gid_t group)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt mem fd lock
+| See POSIX Safety Concepts.
+
+
+The initgroups function sets the process’s supplementary group
+IDs to be the normal default for the user name user.  The group
+group is automatically included.
+
+This function works by scanning the group database for all the groups
+user belongs to.  It then calls setgroups with the list it
+has constructed.
+
+The return values and error conditions are the same as for
+setgroups.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-Groups.html#Setting-Groups
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-Groups/initgroups.txt

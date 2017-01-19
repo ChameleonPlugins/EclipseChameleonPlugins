@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+is similar to nrand48
+//\\ //// ==> completion hint (1 line):
+is similar to nrand48
+//\\ //// Replacement text (1+ lines):
+long int jrand48 (unsigned short int xsubi[3])
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int jrand48 (unsigned short int xsubi[3])
+Preliminary:
+| MT-Unsafe race:drand48
+| AS-Unsafe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The jrand48 function is similar to nrand48.  The only
+difference is that the numbers returned are in the range -2^31 to
+2^31 (exclusive).  For the xsubi parameter the same
+requirements are necessary.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/jrand48.txt

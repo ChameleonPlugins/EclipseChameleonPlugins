@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+is similar to (the,) tsearch function
+//\\ //// ==> completion hint (1 line):
+is similar to the tsearch function
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = tfind (const void *key, void *const *rootp, comparison_fn_t compar)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * tfind (const void *key, void *const *rootp, comparison_fn_t compar)
+Preliminary:
+| MT-Safe race:rootp
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The tfind function is similar to the tsearch function.  It
+locates an element matching the one pointed to by key and returns
+a pointer to this element.  But if no matching element is available no
+new element is entered (note that the rootp parameter points to a
+constant pointer).  Instead the function returns NULL.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Tree-Search-Function.html#Tree-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Tree-Search-Function/tfind.txt

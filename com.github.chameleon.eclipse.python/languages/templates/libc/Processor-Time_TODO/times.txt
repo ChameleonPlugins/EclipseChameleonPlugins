@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+stores (the,) processor time information for (the,) calling process in buffer
+//\\ //// ==> completion hint (1 line):
+stores the processor time information for the calling process in buffer
+//\\ //// Replacement text (1+ lines):
+clock_t times (struct tms *buffer)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: clock_t times (struct tms *buffer)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The times function stores the processor time information for
+the calling process in buffer.
+
+The return value is the number of clock ticks since an arbitrary point
+in the past, e.g. since system start-up.  times returns
+(clock_t)(-1) to indicate failure.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Processor-Time.html#Processor-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Processor-Time/times.txt

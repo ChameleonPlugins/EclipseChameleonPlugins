@@ -1,0 +1,47 @@
+//\\ //// code completion entries (1+ lines):
+installs (the,) cpusetsize bytes long affinity mask pointed to by cpuset for (the,) process or thread with (the,) id pid
+//\\ //// ==> completion hint (1 line):
+installs the cpusetsize bytes long affinity mask pointed to by cpuset for the process or thread with the ID pid
+//\\ //// Replacement text (1+ lines):
+int sched_setaffinity (pid_t pid, size_t cpusetsize, const cpu_set_t *cpuset)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sched_setaffinity (pid_t pid, size_t cpusetsize, const cpu_set_t *cpuset)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This function installs the cpusetsize bytes long affinity mask
+pointed to by cpuset for the process or thread with the ID pid.
+If successful the function returns zero and the scheduler will in future
+take the affinity information into account.
+
+If the function fails it will return -1 and errno is set
+to the error code:
+
+
+ESRCH
+No process or thread with the given ID found.
+
+
+EFAULT
+The pointer cpuset is does not point to a valid object.
+
+
+EINVAL
+The bitset is not valid.  This might mean that the affinity set might
+not leave a processor for the process or thread to run on.
+
+
+
+This function is a GNU extension and is declared in sched.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//CPU-Affinity.html#CPU-Affinity
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/CPU-Affinity/sched_setaffinity.txt

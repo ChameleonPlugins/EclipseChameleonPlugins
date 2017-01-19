@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) and (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) valid file name that does not refer to any existing file
+//\\ //// ==> completion hint (1 line):
+constructs and returns a valid file name that does not refer to any existing file
+//\\ //// Replacement text (1+ lines):
+char * tmpnam (char *result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * tmpnam (char *result)
+Preliminary:
+| MT-Unsafe race:tmpnam/!result
+| AS-Unsafe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function constructs and returns a valid file name that does not
+refer to any existing file.  If the result argument is a null
+pointer, the return value is a pointer to an internal static string,
+which might be modified by subsequent calls and therefore makes this
+function non-reentrant.  Otherwise, the result argument should be
+a pointer to an array of at least L_tmpnam characters, and the
+result is written into that array.
+
+It is possible for tmpnam to fail if you call it too many times
+without removing previously-created files.  This is because the limited
+length of the temporary file names gives room for only a finite number
+of different names.  If tmpnam fails it returns a null pointer.
+
+Warning: Between the time the pathname is constructed and the
+file is created another process might have created a file with the same
+name using tmpnam, leading to a possible security hole.  The
+implementation generates names which can hardly be predicted, but when
+opening the file you should use the O_EXCL flag.  Using
+tmpfile or mkstemp is a safe way to avoid this problem.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Temporary-Files.html#Temporary-Files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Temporary-Files/tmpnam.txt

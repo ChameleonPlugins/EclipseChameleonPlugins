@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is similar to lrand48
+//\\ //// ==> completion hint (1 line):
+is similar to lrand48
+//\\ //// Replacement text (1+ lines):
+long int mrand48 (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int mrand48 (void)
+Preliminary:
+| MT-Unsafe race:drand48
+| AS-Unsafe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The mrand48 function is similar to lrand48.  The only
+difference is that the numbers returned are in the range -2^31 to
+2^31 (exclusive).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/mrand48.txt

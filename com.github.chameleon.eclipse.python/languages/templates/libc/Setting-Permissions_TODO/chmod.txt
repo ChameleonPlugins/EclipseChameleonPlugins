@@ -1,0 +1,60 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) access permission bits for (the,) file named by X:FILENAME to mode
+//\\ //// ==> completion hint (1 line):
+sets the access permission bits for the file named by filename to mode
+//\\ //// Replacement text (1+ lines):
+X1hmod (X1, mode_t mode)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int chmod (const char *filename, mode_t mode)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The chmod function sets the access permission bits for the file
+named by filename to mode.
+
+If filename is a symbolic link, chmod changes the
+permissions of the file pointed to by the link, not those of the link
+itself.
+
+This function returns 0 if successful and -1 if not.  In
+addition to the usual file name errors (see File Name Errors), the following errno error conditions are defined for
+this function:
+
+
+ENOENT
+The named file doesn’t exist.
+
+
+EPERM
+This process does not have permission to change the access permissions
+of this file.  Only the file’s owner (as judged by the effective user ID
+of the process) or a privileged user can change them.
+
+
+EROFS
+The file resides on a read-only file system.
+
+
+EFTYPE
+mode has the S_ISVTX bit (the “sticky bit”) set,
+and the named file is not a directory.  Some systems do not allow setting the
+sticky bit on non-directory files, and some do (and only some of those
+assign a useful meaning to the bit for non-directory files).
+
+You only get EFTYPE on systems where the sticky bit has no useful
+meaning for non-directory files, so it is always safe to just clear the
+bit in mode and call chmod again.  See Permission Bits,
+for full details on the sticky bit.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-Permissions.html#Setting-Permissions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-Permissions/chmod.txt

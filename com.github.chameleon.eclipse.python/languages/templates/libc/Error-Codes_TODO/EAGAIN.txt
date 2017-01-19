@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+this error can happen in (a,) few different situations: 
+//\\ //// ==> completion hint (1 line):
+This error can happen in a few different situations: 
+//\\ //// Replacement text (1+ lines):
+Macro: int EAGAIN
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int EAGAIN
+Resource temporarily unavailable; the call might work if you try again
+later.  The macro EWOULDBLOCK is another name for EAGAIN;
+they are always the same in the GNU C Library.
+
+This error can happen in a few different situations:
+
+
+ An operation that would block was attempted on an object that has
+non-blocking mode selected.  Trying the same operation again will block
+until some external condition makes it possible to read, write, or
+connect (whatever the operation).  You can use select to find out
+when the operation will be possible; see Waiting for I/O.
+
+Portability Note: In many older Unix systems, this condition
+was indicated by EWOULDBLOCK, which was a distinct error code
+different from EAGAIN.  To make your program portable, you should
+check for both codes and treat them the same.
+
+ A temporary resource shortage made an operation impossible.  fork
+can return this error.  It indicates that the shortage is expected to
+pass, so your program can try the call again later and it may succeed.
+It is probably a good idea to delay for a few seconds before trying it
+again, to allow time for other processes to release scarce resources.
+Such shortages are usually fairly serious and affect the whole system,
+so usually an interactive program should report the error to the user
+and return to its command loop.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Error-Codes.html#Error-Codes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Error-Codes/EAGAIN.txt

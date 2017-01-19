@@ -1,0 +1,65 @@
+//\\ //// code completion entries (1+ lines):
+compares (the,) (string,text) s1 against s2, considering them as holding indices/version numbers
+//\\ //// ==> completion hint (1 line):
+compares the string s1 against s2, considering them as holding indices/version numbers
+//\\ //// Replacement text (1+ lines):
+int strverscmp (X11, const char *s2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int strverscmp (const char *s1, const char *s2)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The strverscmp function compares the string s1 against
+s2, considering them as holding indices/version numbers.  The
+return value follows the same conventions as found in the
+strcmp function.  In fact, if s1 and s2 contain no
+digits, strverscmp behaves like strcmp.
+
+Basically, we compare strings normally (character by character), until
+we find a digit in each string - then we enter a special comparison
+mode, where each sequence of digits is taken as a whole.  If we reach the
+end of these two parts without noticing a difference, we return to the
+standard comparison mode.  There are two types of numeric parts:
+&quot;integral&quot; and &quot;fractional&quot; (those  begin with a ’0’).  The types
+of the numeric parts affect the way we sort them:
+
+
+ integral/integral: we compare values as you would expect.
+
+ fractional/integral: the fractional part is less than the integral one.
+Again, no surprise.
+
+ fractional/fractional: the things become a bit more complex.
+If the common prefix contains only leading zeroes, the longest part is less
+than the other one; else the comparison behaves normally.
+
+
+
+strverscmp (&quot;no digit&quot;, &quot;no digit&quot;)
+    ? 0    /* same behavior as strcmp. */
+strverscmp (&quot;item#99&quot;, &quot;item#100&quot;)
+    ? &lt;0   /* same prefix, but 99 &lt; 100. */
+strverscmp (&quot;alpha1&quot;, &quot;alpha001&quot;)
+    ? &gt;0   /* fractional part inferior to integral one. */
+strverscmp (&quot;part1_f012&quot;, &quot;part1_f01&quot;)
+    ? &gt;0   /* two fractional parts. */
+strverscmp (&quot;foo.009&quot;, &quot;foo.0&quot;)
+    ? &lt;0   /* idem, but with leading zeroes only. */
+
+
+This function is especially useful when dealing with filename sorting,
+because filenames frequently hold indices/version numbers.
+
+strverscmp is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//String_002fArray-Comparison.html#String_002fArray-Comparison
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/String_002fArray-Comparison/strverscmp.txt

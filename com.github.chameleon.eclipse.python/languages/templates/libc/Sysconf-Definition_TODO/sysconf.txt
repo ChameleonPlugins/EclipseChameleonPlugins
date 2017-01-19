@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+is used to inquire about runtime (box,computer,system,node,host,target) parameters
+//\\ //// ==> completion hint (1 line):
+is used to inquire about runtime system parameters
+//\\ //// Replacement text (1+ lines):
+long int sysconf (int parameter)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int sysconf (int parameter)
+Preliminary:
+| MT-Safe env
+| AS-Unsafe lock heap
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+This function is used to inquire about runtime system parameters.  The
+parameter argument should be one of the ‘_SC_’ symbols listed
+below.
+
+The normal return value from sysconf is the value you requested.
+A value of -1 is returned both if the implementation does not
+impose a limit, and in case of an error.
+
+The following errno error conditions are defined for this function:
+
+
+EINVAL
+The value of the parameter is invalid.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Sysconf-Definition.html#Sysconf-Definition
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Sysconf-Definition/sysconf.txt

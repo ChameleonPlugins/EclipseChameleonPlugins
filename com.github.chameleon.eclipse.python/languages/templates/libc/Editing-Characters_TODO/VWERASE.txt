@@ -1,0 +1,37 @@
+//\\ //// code completion entries (1+ lines):
+(the,) werase character is recognized only in canonical mode
+//\\ //// ==> completion hint (1 line):
+The WERASE character is recognized only in canonical mode
+//\\ //// Replacement text (1+ lines):
+Macro: int VWERASE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int VWERASE
+
+This is the subscript for the WERASE character in the special control
+character array.  termios.c_cc[VWERASE] holds the character
+itself.
+
+The WERASE character is recognized only in canonical mode.  It erases an
+entire word of prior input, and any whitespace after it; whitespace
+characters before the word are not erased.
+
+The definition of a “word” depends on the setting of the
+ALTWERASE mode; see Local Modes.
+
+If the ALTWERASE mode is not set, a word is defined as a sequence
+of any characters except space or tab.
+
+If the ALTWERASE mode is set, a word is defined as a sequence of
+characters containing only letters, numbers, and underscores, optionally
+followed by one character that is not a letter, number, or underscore.
+
+The WERASE character is usually C-w.
+
+This is a BSD extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Editing-Characters.html#Editing-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Editing-Characters/VWERASE.txt

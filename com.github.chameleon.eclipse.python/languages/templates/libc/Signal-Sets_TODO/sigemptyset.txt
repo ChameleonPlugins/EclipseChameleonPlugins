@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+initializes (the,) signal set set to exclude all of (the,) defined signals
+//\\ //// ==> completion hint (1 line):
+initializes the signal set set to exclude all of the defined signals
+//\\ //// Replacement text (1+ lines):
+int sigemptyset (sigset_t *set)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sigemptyset (sigset_t *set)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function initializes the signal set set to exclude all of the
+defined signals.  It always returns 0.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signal-Sets.html#Signal-Sets
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signal-Sets/sigemptyset.txt

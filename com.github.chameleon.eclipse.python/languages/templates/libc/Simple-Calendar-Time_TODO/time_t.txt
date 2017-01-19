@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+note that (a,) simple time has no concept of local time zone
+//\\ //// ==> completion hint (1 line):
+Note that a simple time has no concept of local time zone
+//\\ //// Replacement text (1+ lines):
+Data Type: time_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: time_t
+This is the data type used to represent simple time.  Sometimes, it also
+represents an elapsed time.  When interpreted as a calendar time value,
+it represents the number of seconds elapsed since 00:00:00 on January 1,
+1970, Coordinated Universal Time.  (This calendar time is sometimes
+referred to as the epoch.)  POSIX requires that this count not
+include leap seconds, but on some systems this count includes leap seconds
+if you set TZ to certain values (see TZ Variable).
+
+Note that a simple time has no concept of local time zone.  Calendar
+Time T is the same instant in time regardless of where on the
+globe the computer is.
+
+In the GNU C Library, time_t is equivalent to long int.
+In other systems, time_t might be either an integer or
+floating-point type.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Simple-Calendar-Time.html#Simple-Calendar-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Simple-Calendar-Time/time_t.txt

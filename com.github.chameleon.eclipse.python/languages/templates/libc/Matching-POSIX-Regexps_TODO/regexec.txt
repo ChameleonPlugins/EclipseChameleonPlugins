@@ -1,0 +1,38 @@
+//\\ //// code completion entries (1+ lines):
+tries to match (the,) compiled regular expression * against (string,text)
+//\\ //// ==> completion hint (1 line):
+tries to match the compiled regular expression * against string
+//\\ //// Replacement text (1+ lines):
+int regexec (const regex_t *restrict compiled, const char *restrict string, size_t nmatch, regmatch_t matchptr[restrict], int eflags)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int regexec (const regex_t *restrict compiled, const char *restrict string, size_t nmatch, regmatch_t matchptr[restrict], int eflags)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+This function tries to match the compiled regular expression
+*compiled against string.
+
+regexec returns 0 if the regular expression matches;
+otherwise, it returns a nonzero value.  See the table below for
+what nonzero values mean.  You can use regerror to produce an
+error message string describing the reason for a nonzero value;
+see Regexp Cleanup.
+
+The argument eflags is a word of bit flags that enable various
+options.
+
+If you want to get information about what part of string actually
+matched the regular expression or its subexpressions, use the arguments
+matchptr and nmatch.  Otherwise, pass 0 for
+nmatch, and NULL for matchptr.  See Regexp Subexpressions.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Matching-POSIX-Regexps.html#Matching-POSIX-Regexps
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Matching-POSIX-Regexps/regexec.txt

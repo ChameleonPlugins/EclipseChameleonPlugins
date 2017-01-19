@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+is like stat, except that it takes (an,) open file descriptor as (an,) argument instead of (a,) file name
+//\\ //// ==> completion hint (1 line):
+is like stat, except that it takes an open file descriptor as an argument instead of a file name
+//\\ //// Replacement text (1+ lines):
+int fstat (X1, struct stat *buf)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fstat (int filedes, struct stat *buf)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The fstat function is like stat, except that it takes an
+open file descriptor as an argument instead of a file name.
+See Low-Level I/O.
+
+Like stat, fstat returns 0 on success and -1
+on failure.  The following errno error conditions are defined for
+fstat:
+
+
+EBADF
+The filedes argument is not a valid file descriptor.
+
+
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64 this
+function is in fact fstat64 since the LFS interface transparently
+replaces the normal implementation.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Reading-Attributes.html#Reading-Attributes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Reading-Attributes/fstat.txt

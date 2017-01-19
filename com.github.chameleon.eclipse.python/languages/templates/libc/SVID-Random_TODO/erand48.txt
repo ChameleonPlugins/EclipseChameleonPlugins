@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) double value in (the,) range of 0
+//\\ //// ==> completion hint (1 line):
+returns a double value in the range of 0
+//\\ //// Replacement text (1+ lines):
+double erand48 (unsigned short int xsubi[3])
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double erand48 (unsigned short int xsubi[3])
+Preliminary:
+| MT-Unsafe race:drand48
+| AS-Unsafe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+This function returns a double value in the range of 0.0
+to 1.0 (exclusive), similarly to drand48.  The argument is
+an array describing the state of the random number generator.
+
+This function can be called subsequently since it updates the array to
+guarantee random numbers.  The array should have been initialized before
+initial use to obtain reproducible results.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/erand48.txt

@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+this is (an,) obsolete alias for memcmp, derived from bsd
+//\\ //// ==> completion hint (1 line):
+This is an obsolete alias for memcmp, derived from BSD
+//\\ //// Replacement text (1+ lines):
+int bcmp (const void *a1, const void *a2, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int bcmp (const void *a1, const void *a2, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is an obsolete alias for memcmp, derived from BSD.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//String_002fArray-Comparison.html#String_002fArray-Comparison
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/String_002fArray-Comparison/bcmp.txt

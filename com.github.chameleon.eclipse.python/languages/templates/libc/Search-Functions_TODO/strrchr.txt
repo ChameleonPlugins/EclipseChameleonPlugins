@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function strrchr is like strchr, except that it searches backwards from (the,) (end,exit,quit,(halt,pause,stop,suspend)) of (the,) (string,text) (string,text) 
+//\\ //// ==> completion hint (1 line):
+The function strrchr is like strchr, except that it searches backwards from the end of the string string 
+//\\ //// Replacement text (1+ lines):
+char * strrchr (X1tring, X2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2='a'
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strrchr (const char *string, int c)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The function strrchr is like strchr, except that it searches
+backwards from the end of the string string (instead of forwards
+from the front).
+
+For example,
+
+strrchr (&quot;hello, world&quot;, 'l')
+    ? &quot;ld&quot;
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Search-Functions/strrchr.txt

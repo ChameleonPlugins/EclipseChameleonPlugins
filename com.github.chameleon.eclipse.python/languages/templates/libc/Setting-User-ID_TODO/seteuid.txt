@@ -1,0 +1,46 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) effective user id of (a,) process to neweuid, provided that (the,) process is allowed to (convert,change,replace) its effective user id
+//\\ //// ==> completion hint (1 line):
+sets the effective user ID of a process to neweuid, provided that the process is allowed to change its effective user ID
+//\\ //// Replacement text (1+ lines):
+int seteuid (uid_t neweuid)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int seteuid (uid_t neweuid)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+This function sets the effective user ID of a process to neweuid,
+provided that the process is allowed to change its effective user ID.  A
+privileged process (effective user ID zero) can change its effective
+user ID to any legal value.  An unprivileged process with a file user ID
+can change its effective user ID to its real user ID or to its file user
+ID.  Otherwise, a process may not change its effective user ID at all.
+
+The seteuid function returns a value of 0 to indicate
+successful completion, and a value of -1 to indicate an error.
+The following errno error conditions are defined for this
+function:
+
+
+EINVAL
+The value of the neweuid argument is invalid.
+
+
+EPERM
+The process may not change to the specified ID.
+
+
+
+Older systems (those without the _POSIX_SAVED_IDS feature) do not
+have this function.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-User-ID.html#Setting-User-ID
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-User-ID/seteuid.txt

@@ -1,0 +1,51 @@
+//\\ //// code completion entries (1+ lines):
+verify (the,) programmer’s belief that expression is nonzero at this point in (the,) program
+//\\ //// ==> completion hint (1 line):
+Verify the programmer’s belief that expression is nonzero at this point in the program
+//\\ //// Replacement text (1+ lines):
+Macro: void assert (int expression)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: void assert (int expression)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap corrupt
+| AC-Unsafe mem lock corrupt
+| See POSIX Safety Concepts.
+
+
+Verify the programmer’s belief that expression is nonzero at
+this point in the program.
+
+If NDEBUG is not defined, assert tests the value of
+expression.  If it is false (zero), assert aborts the
+program (see Aborting a Program) after printing a message of the
+form:
+
+
+file:linenum: function: Assertion `expression' failed.
+
+
+on the standard error stream stderr (see Standard Streams).
+The filename and line number are taken from the C preprocessor macros
+__FILE__ and __LINE__ and specify where the call to
+assert was made.  When using the GNU C compiler, the name of
+the function which calls assert is taken from the built-in
+variable __PRETTY_FUNCTION__; with older compilers, the function
+name and following colon are omitted.
+
+If the preprocessor macro NDEBUG is defined before
+assert.h is included, the assert macro is defined to do
+absolutely nothing.
+
+Warning: Even the argument expression expression is not
+evaluated if NDEBUG is in effect.  So never use assert
+with arguments that involve side effects.  For example, assert
+(++i &gt; 0); is a bad idea, because i will not be incremented if
+NDEBUG is defined.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Consistency-Checking.html#Consistency-Checking
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Consistency-Checking/assert.txt

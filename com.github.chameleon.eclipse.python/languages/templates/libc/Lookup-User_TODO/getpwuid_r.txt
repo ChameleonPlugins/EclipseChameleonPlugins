@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+is similar to getpwuid in that it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) information about (the,) user whose user id is uid
+//\\ //// ==> completion hint (1 line):
+is similar to getpwuid in that it returns information about the user whose user ID is uid
+//\\ //// Replacement text (1+ lines):
+int getpwuid_r (uid_t uid, struct passwd *result_buf, char *buffer, size_t buflen, struct passwd **result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getpwuid_r (uid_t uid, struct passwd *result_buf, char *buffer, size_t buflen, struct passwd **result)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+
+
+This function is similar to getpwuid in that it returns
+information about the user whose user ID is uid.  However, it
+fills the user supplied structure pointed to by result_buf with
+the information instead of using a static buffer.  The first
+buflen bytes of the additional buffer pointed to by buffer
+are used to contain additional information, normally strings which are
+pointed to by the elements of the result structure.
+
+If a user with ID uid is found, the pointer returned in
+result points to the record which contains the wanted data (i.e.,
+result contains the value result_buf).  If no user is found
+or if an error occurred, the pointer returned in result is a null
+pointer.  The function returns zero or an error code.  If the buffer
+buffer is too small to contain all the needed information, the
+error code ERANGE is returned and errno is set to
+ERANGE.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Lookup-User.html#Lookup-User
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Lookup-User/getpwuid_r.txt

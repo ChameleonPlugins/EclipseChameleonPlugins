@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+sets (an,) internal data structure to be (an,) expanded form of key
+//\\ //// ==> completion hint (1 line):
+sets an internal data structure to be an expanded form of key
+//\\ //// Replacement text (1+ lines):
+void setkey (const char *key)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void setkey (const char *key)
+Preliminary:
+| MT-Unsafe race:crypt
+| AS-Unsafe corrupt lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+
+The setkey function sets an internal data structure to be an
+expanded form of key.  key is specified as an array of 64
+bits each stored in a char, the first bit is key[0] and
+the 64th bit is key[63].  The key should have the correct
+parity.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//DES-Encryption.html#DES-Encryption
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/DES-Encryption/setkey.txt

@@ -1,0 +1,14 @@
+add,append,construct,create,define,insert,make,push
+allocate,find,get,grab,lock,obtain,reserve,retrieve,return
+attach,connect
+chomp,chop,delete,destroy,drop,pop,remove
+convert,change,replace
+deallocate,free,release
+divide,split,separate
+end,exit,quit,stop
+halt,pause,stop,suspend
+indicate,select,specify
+instruct,tell
+output,print,show,say,type,write
+place,position
+run,execute,start

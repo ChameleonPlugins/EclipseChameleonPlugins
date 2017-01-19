@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+unmap memory X:BUFFER with size X:SIZE
+//\\ //// ==> completion hint (1 line):
+unmap memory
+//\\ //// Replacement text (1+ lines):
+munmap(X1, X2);
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=buffer
+X2=MAX_BUF
+//\\ //// Help/documentation (1+ lines):
+Documentation
+//\\ //// Tool tip (1 line):
+
+//\\

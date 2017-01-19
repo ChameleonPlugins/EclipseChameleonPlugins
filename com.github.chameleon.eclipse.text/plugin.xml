@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<?eclipse version="3.4"?>  
+<plugin>
+
+ <extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer"  
+     id="chameleon_text_category"  
+     name="Chameleon Text mappings">
+     <proposalCategory icon="platform:/plugin/com.github.chameleon.eclipse.text/icons/Chameleon.gif"/>
+ </extension>  
+   
+ <extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer"
+       id="chameleon_text_proposal"
+       name="Chameleon Text mappings">  
+   <javaCompletionProposalComputer  
+      class="com.github.chameleon.eclipse.text.ChameleonTextCompletionProposalComputer"  
+      categoryId="com.github.chameleon.eclipse.text.chameleon_text_category"
+      activate="true">  
+   </javaCompletionProposalComputer>
+ </extension>
+
+
+ 
+ <extension
+       name="Chameleon Java programming languages mappings"
+       point="org.eclipse.ui.preferencePages">
+    <page
+          class="com.github.chameleon.eclipse.text.preferences.ChameleonPreferencePage"
+          id="com.github.chameleon.eclipse.text.preferences.ChameleonPreferencePage"
+          name="Chameleon Preferences">
+    </page>
+ </extension>
+ 
+ <extension
+       point="org.eclipse.core.runtime.preferences">
+    <initializer
+          class="com.github.chameleon.eclipse.text.preferences.PreferenceInitializer">
+    </initializer>
+ </extension>
+ <extension
+       point="org.eclipse.ui.editors">
+    <editor
+          class="com.github.chameleon.eclipse.text.editor.MultiPageEditor"
+          contributorClass="com.github.chameleon.eclipse.text.editor.MultiPageEditorContributor"
+          default="false"
+          extensions="config,ini,html,htm,j2,text,txt,yaml,yml"
+          icon="icons/Chameleon.gif"
+          id="com.github.chameleon.eclipse.text.editor.Editor"
+          matchingStrategy="com.github.chameleon.eclipse.text.editor.MatchingStrategy"
+          name="Text">
+    </editor>
+ Text Text Editor for Chameleon</extension>
+  
+</plugin> 

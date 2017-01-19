@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) tangent of x, where x is given in radians
+//\\ //// ==> completion hint (1 line):
+These functions return the tangent of x, where x is given in radians
+//\\ //// Replacement text (1+ lines):
+Function: double tan (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double tan (double x)
+Function: float tanf (float x)
+Function: long double tanl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return the tangent of x, where x is given in
+radians.
+
+Mathematically, the tangent function has singularities at odd multiples
+of pi/2.  If the argument x is too close to one of these
+singularities, tan will signal overflow.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Trig-Functions.html#Trig-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Trig-Functions/tanl.txt

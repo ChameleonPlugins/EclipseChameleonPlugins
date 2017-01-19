@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+portability note: (the,) gnu c library does not enforce this limit even if path_max is defined
+//\\ //// ==> completion hint (1 line):
+Portability Note: The GNU C Library does not enforce this limit even if PATH_MAX is defined
+//\\ //// Replacement text (1+ lines):
+Macro: int PATH_MAX
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int PATH_MAX
+The uniform system limit (if any) for the length of an entire file name (that
+is, the argument given to system calls such as open), including the
+terminating null character.
+
+Portability Note: The GNU C Library does not enforce this limit
+even if PATH_MAX is defined.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Limits-for-Files.html#Limits-for-Files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Limits-for-Files/PATH_MAX.txt

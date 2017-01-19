@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+these functions break (the,) argument value into (an,) integer part and (a,) fractional part 
+//\\ //// ==> completion hint (1 line):
+These functions break the argument value into an integer part and a fractional part 
+//\\ //// Replacement text (1+ lines):
+double modf (double value, double *integer-part)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double modf (double value, double *integer-part)
+Function: float modff (float value, float *integer-part)
+Function: long double modfl (long double value, long double *integer-part)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions break the argument value into an integer part and a
+fractional part (between -1 and 1, exclusive).  Their sum
+equals value.  Each of the parts has the same sign as value,
+and the integer part is always rounded toward zero.
+
+modf stores the integer part in *integer-part, and
+returns the fractional part.  For example, modf (2.5, &amp;intpart)
+returns 0.5 and stores 2.0 into intpart.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Rounding-Functions.html#Rounding-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Rounding-Functions/modf.txt

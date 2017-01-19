@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) file (place,position) of (the,) directory stream dirstream to pos
+//\\ //// ==> completion hint (1 line):
+sets the file position of the directory stream dirstream to pos
+//\\ //// Replacement text (1+ lines):
+void seekdir (DIR *dirstream, long int pos)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void seekdir (DIR *dirstream, long int pos)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap/bsd lock/bsd
+| AC-Unsafe mem/bsd lock/bsd
+| See POSIX Safety Concepts.
+
+
+The seekdir function sets the file position of the directory
+stream dirstream to pos.  The value pos must be the
+result of a previous call to telldir on this particular stream;
+closing and reopening the directory can invalidate values returned by
+telldir.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Random-Access-Directory.html#Random-Access-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Random-Access-Directory/seekdir.txt

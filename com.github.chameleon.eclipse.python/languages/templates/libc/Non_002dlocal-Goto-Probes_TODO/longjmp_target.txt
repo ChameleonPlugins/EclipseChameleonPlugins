@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+(the,) longjmp_target probe is triggered at (a,) point where (the,) registers have been restored to (the,) values in (the,) jmp_buf and unwinding will (output,print,show,say,type,write) (a,) call stack including (the,) caller of setjmp or sigsetjmp
+//\\ //// ==> completion hint (1 line):
+The longjmp_target probe is triggered at a point where the registers have been restored to the values in the jmp_buf and unwinding will show a call stack including the caller of setjmp or sigsetjmp
+//\\ //// Replacement text (1+ lines):
+Probe: longjmp_target (void *$arg1, int $arg2, void *$arg3)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Probe: longjmp_target (void *$arg1, int $arg2, void *$arg3)
+This probe is triggered under the same conditions and with the same
+arguments as the longjmp probe.
+
+The longjmp_target probe is triggered at a point where the
+registers have been restored to the values in the jmp_buf and
+unwinding will show a call stack including the caller of setjmp
+or sigsetjmp.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Non_002dlocal-Goto-Probes.html#Non_002dlocal-Goto-Probes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Non_002dlocal-Goto-Probes/longjmp_target.txt

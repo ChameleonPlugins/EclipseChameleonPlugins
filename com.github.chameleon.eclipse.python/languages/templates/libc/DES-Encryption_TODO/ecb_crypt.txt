@@ -1,0 +1,97 @@
+//\\ //// code completion entries (1+ lines):
+(the,) function ecb_crypt encrypts or decrypts one or more blocks using des
+//\\ //// ==> completion hint (1 line):
+The function ecb_crypt encrypts or decrypts one or more blocks using DES
+//\\ //// Replacement text (1+ lines):
+int ecb_crypt (char *key, char *blocks, unsigned len, unsigned mode)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int ecb_crypt (char *key, char *blocks, unsigned len, unsigned mode)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+The function ecb_crypt encrypts or decrypts one or more blocks
+using DES.  Each block is encrypted independently.
+
+The blocks and the key are stored packed in 8-bit bytes, so
+that the first bit of the key is the most-significant bit of
+key[0] and the 63rd bit of the key is stored as the
+least-significant bit of key[7].  The key should have the
+correct parity.
+
+len is the number of bytes in blocks.  It should be a
+multiple of 8 (so that there is a whole number of blocks to encrypt).
+len is limited to a maximum of DES_MAXDATA bytes.
+
+The result of the encryption replaces the input in blocks.
+
+The mode parameter is the bitwise OR of two of the following:
+
+
+DES_ENCRYPT
+
+
+This constant, used in the mode parameter, specifies that
+blocks is to be encrypted.
+
+
+DES_DECRYPT
+
+
+This constant, used in the mode parameter, specifies that
+blocks is to be decrypted.
+
+
+DES_HW
+
+
+This constant, used in the mode parameter, asks to use a hardware
+device.  If no hardware device is available, encryption happens anyway,
+but in software.
+
+
+DES_SW
+
+
+This constant, used in the mode parameter, specifies that no
+hardware device is to be used.
+
+
+
+The result of the function will be one of these values:
+
+
+DESERR_NONE
+
+
+The encryption succeeded.
+
+
+DESERR_NOHWDEVICE
+
+
+The encryption succeeded, but there was no hardware device available.
+
+
+DESERR_HWERROR
+
+
+The encryption failed because of a hardware problem.
+
+
+DESERR_BADPARAM
+
+
+The encryption failed because of a bad parameter, for instance len
+is not a multiple of 8 or len is larger than DES_MAXDATA.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//DES-Encryption.html#DES-Encryption
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/DES-Encryption/ecb_crypt.txt

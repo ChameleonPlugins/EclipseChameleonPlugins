@@ -1,0 +1,37 @@
+//\\ //// code completion entries (1+ lines):
+is similar to (the,) lfind function
+//\\ //// ==> completion hint (1 line):
+is similar to the lfind function
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = lsearch (const void *key, void *base, size_t *nmemb, size_t size, comparison_fn_t compar)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * lsearch (const void *key, void *base, size_t *nmemb, size_t size, comparison_fn_t compar)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+The lsearch function is similar to the lfind function.  It
+searches the given array for an element and returns it if found.  The
+difference is that if no matching element is found the lsearch
+function adds the object pointed to by key (with a size of
+size bytes) at the end of the array and it increments the value of
+*nmemb to reflect this addition.
+
+This means for the caller that if it is not sure that the array contains
+the element one is searching for the memory allocated for the array
+starting at base must have room for at least size more
+bytes.  If one is sure the element is in the array it is better to use
+lfind so having more room in the array is always necessary when
+calling lsearch.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Array-Search-Function.html#Array-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Array-Search-Function/lsearch.txt

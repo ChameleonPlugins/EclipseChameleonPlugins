@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+registers (the,) function function to be called at normal program termination
+//\\ //// ==> completion hint (1 line):
+registers the function function to be called at normal program termination
+//\\ //// Replacement text (1+ lines):
+int atexit (void (*function) (void))
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int atexit (void (*function) (void))
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem
+| See POSIX Safety Concepts.
+
+
+The atexit function registers the function function to be
+called at normal program termination.  The function is called with
+no arguments.
+
+The return value from atexit is zero on success and nonzero if
+the function cannot be registered.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Cleanups-on-Exit.html#Cleanups-on-Exit
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Cleanups-on-Exit/atexit.txt

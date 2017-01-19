@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+convert X:TEXT to (a ,) float as X:NAME
+//\\ //// ==> completion hint (1 line):
+X1 as a float
+//\\ //// Replacement text (1+ lines):
+X2 = float(X1)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="-3.14"
+X2=my_float
+//\\ //// Help/documentation (1+ lines):
+https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(basic_instructions)
+TEXT can be a string such as "-3.14"
+//\\ //// Tool tip (1 line):
+Change the text to a variable or "literal string" (in quotes)
+//\\

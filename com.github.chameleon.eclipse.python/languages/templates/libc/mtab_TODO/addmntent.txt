@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+allows adding (a,) (new,) entry to (the,) file previously opened with setmntent
+//\\ //// ==> completion hint (1 line):
+allows adding a new entry to the file previously opened with setmntent
+//\\ //// Replacement text (1+ lines):
+int addmntent (FILE *stream, const struct mntent *mnt)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int addmntent (FILE *stream, const struct mntent *mnt)
+Preliminary:
+| MT-Safe race:stream locale
+| AS-Unsafe corrupt
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The addmntent function allows adding a new entry to the file
+previously opened with setmntent.  The new entries are always
+appended.  I.e., even if the position of the file descriptor is not at
+the end of the file this function does not overwrite an existing entry
+following the current position.
+
+The implication of this is that to remove an entry from a file one has
+to create a new file while leaving out the entry to be removed and after
+closing the file remove the old one and rename the new file to the
+chosen name.
+
+This function takes care of spaces and tab characters in the names to be
+written to the file.  It converts them and the backslash character into
+the format describe in the getmntent description above.
+
+This function returns 0 in case the operation was successful.
+Otherwise the return value is 1 and errno is set
+appropriately.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//mtab.html#mtab
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/mtab/addmntent.txt

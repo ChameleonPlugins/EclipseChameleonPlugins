@@ -1,0 +1,60 @@
+//\\ //// code completion entries (1+ lines):
+is used to set (a,) terminal’s foreground process group id
+//\\ //// ==> completion hint (1 line):
+is used to set a terminal’s foreground process group ID
+//\\ //// Replacement text (1+ lines):
+int tcsetpgrp (X1, pid_t pgid)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int tcsetpgrp (int filedes, pid_t pgid)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is used to set a terminal’s foreground process group ID.
+The argument filedes is a descriptor which specifies the terminal;
+pgid specifies the process group.  The calling process must be a
+member of the same session as pgid and must have the same
+controlling terminal.
+
+For terminal access purposes, this function is treated as output.  If it
+is called from a background process on its controlling terminal,
+normally all processes in the process group are sent a SIGTTOU
+signal.  The exception is if the calling process itself is ignoring or
+blocking SIGTTOU signals, in which case the operation is
+performed and no signal is sent.
+
+If successful, tcsetpgrp returns 0.  A return value of
+-1 indicates an error.  The following errno error
+conditions are defined for this function:
+
+
+EBADF
+The filedes argument is not a valid file descriptor.
+
+
+EINVAL
+The pgid argument is not valid.
+
+
+ENOSYS
+The system doesn’t support job control.
+
+
+ENOTTY
+The filedes isn’t the controlling terminal of the calling process.
+
+
+EPERM
+The pgid isn’t a process group in the same session as the calling
+process.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Terminal-Access-Functions.html#Terminal-Access-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Terminal-Access-Functions/tcsetpgrp.txt

@@ -1,0 +1,15 @@
+//\\ //// code completion entries (1+ lines):
+(add,construct,create,define,insert,make) (,an )array X:NAME with X:VALUES
+//\\ //// ==> completion hint (1 line):
+create an array
+//\\ //// Replacement text (1+ lines):
+X1=[X2]
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=myarray
+X2=1,"apple",3
+//\\ //// Help/documentation (1+ lines):
+arrays are 0 based (item 0 is the first item in the array)
+arrays can contain different data types such as [1, "apple", 3]
+//\\ //// Tool tip (1 line):
+Change values if desired...
+//\\

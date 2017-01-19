@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) real group id of (the,) process to rgid and (the,) effective group id to egid
+//\\ //// ==> completion hint (1 line):
+sets the real group ID of the process to rgid and the effective group ID to egid
+//\\ //// Replacement text (1+ lines):
+int setregid (gid_t rgid, gid_t egid)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setregid (gid_t rgid, gid_t egid)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+This function sets the real group ID of the process to rgid and
+the effective group ID to egid.  If rgid is -1, it
+means not to change the real group ID; likewise if egid is
+-1, it means not to change the effective group ID.
+
+The setregid function is provided for compatibility with 4.3 BSD
+Unix, which does not support file IDs.  You can use this function to
+swap the effective and real group IDs of the process.  (Privileged
+processes are not limited to this usage.)  If file IDs are supported,
+you should use that feature instead of using this function.
+See Enable/Disable Setuid.
+
+The return values and error conditions for setregid are the same
+as those for setreuid.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-Groups.html#Setting-Groups
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-Groups/setregid.txt

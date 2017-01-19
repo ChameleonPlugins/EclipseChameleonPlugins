@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(chomp,chop,delete,destroy,drop,pop,remove) any null entries from envz, updating * and *
+//\\ //// ==> completion hint (1 line):
+removes any null entries from envz, updating * and *
+//\\ //// Replacement text (1+ lines):
+void envz_strip (char **envz, size_t *envz_len)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void envz_strip (char **envz, size_t *envz_len)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The envz_strip function removes any null entries from envz,
+updating *envz and *envz_len.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Envz-Functions.html#Envz-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Envz-Functions/envz_strip.txt

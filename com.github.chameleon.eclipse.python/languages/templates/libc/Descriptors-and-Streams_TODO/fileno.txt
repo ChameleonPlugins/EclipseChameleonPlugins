@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) file descriptor associated with (the,) stream stream
+//\\ //// ==> completion hint (1 line):
+returns the file descriptor associated with the stream stream
+//\\ //// Replacement text (1+ lines):
+int fileno (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fileno (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function returns the file descriptor associated with the stream
+stream.  If an error is detected (for example, if the stream
+is not valid) or if stream does not do I/O to a file,
+fileno returns -1.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Descriptors-and-Streams.html#Descriptors-and-Streams
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Descriptors-and-Streams/fileno.txt

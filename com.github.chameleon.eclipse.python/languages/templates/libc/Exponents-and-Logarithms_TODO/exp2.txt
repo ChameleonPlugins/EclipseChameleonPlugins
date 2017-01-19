@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+these functions compute 2 raised to (the,) power x
+//\\ //// ==> completion hint (1 line):
+These functions compute 2 raised to the power x
+//\\ //// Replacement text (1+ lines):
+double exp2 (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double exp2 (double x)
+Function: float exp2f (float x)
+Function: long double exp2l (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions compute 2 raised to the power x.
+Mathematically, exp2 (x) is the same as exp (x * log (2)).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Exponents-and-Logarithms.html#Exponents-and-Logarithms
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Exponents-and-Logarithms/exp2.txt

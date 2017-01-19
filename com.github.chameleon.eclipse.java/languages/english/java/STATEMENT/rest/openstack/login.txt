@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+log in to the cloud
+//\\ //// ==> completion hint (1 line):
+token = requests.post(url, json=credentials) #...
+//\\ //// Replacement text (1+ lines):
+user="admin" 		#//// modify as needed...
+password="hpinvent" #//// modify as needed...
+HOST='localhost'	#//// modify as needed...
+TENANT="admin" 		#//// modify as needed...
+PORT="5000" 		#//// modify as needed...
+credentials = {
+    'auth' : {
+        'passwordCredentials' : {
+        'username' : user,
+        'password' : password
+        },
+        'tenantName' : TENANT
+    }
+}
+url = "http://"+HOST+":"+PORT+"/v2.0/tokens"
+import requests #//// Remove if already imported and save file...
+response = requests.post(url, json=credentials)
+token = response.json()['access']['token']['id']	#////
+header = {"X-Auth-Token" : token}
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Log in to OpenStack.  Returns a token for other OpenStack calls.
+//\\ //// Tool tip (1 line):
+Use returned token for other OpenStack (cloud) calls...
+//\\

@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) nonzero value otherwise
+//\\ //// ==> completion hint (1 line):
+returns a nonzero value otherwise
+//\\ //// Replacement text (1+ lines):
+Macro: int CPU_ISSET (X1pu, const cpu_set_t *set)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int CPU_ISSET (int cpu, const cpu_set_t *set)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This macro returns a nonzero value (true) if cpu is a member
+of the CPU set set, and zero (false) otherwise.
+
+The cpu parameter must not have side effects since it is
+evaluated more than once.
+
+This macro is a GNU extension and is defined in sched.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//CPU-Affinity.html#CPU-Affinity
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/CPU-Affinity/CPU_ISSET.txt

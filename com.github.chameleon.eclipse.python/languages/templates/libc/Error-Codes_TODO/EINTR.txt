@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+you can choose to have functions resume after (a,) signal that is handled, rather than failing with eintr
+//\\ //// ==> completion hint (1 line):
+You can choose to have functions resume after a signal that is handled, rather than failing with EINTR
+//\\ //// Replacement text (1+ lines):
+Macro: int EINTR
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int EINTR
+Interrupted function call; an asynchronous signal occurred and prevented
+completion of the call.  When this happens, you should try the call
+again.
+
+You can choose to have functions resume after a signal that is handled,
+rather than failing with EINTR; see Interrupted Primitives.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Error-Codes.html#Error-Codes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Error-Codes/EINTR.txt

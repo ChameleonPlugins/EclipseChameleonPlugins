@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(place,position) (the,) stream stream at (the,) beginning of (the,) file
+//\\ //// ==> completion hint (1 line):
+positions the stream stream at the beginning of the file
+//\\ //// Replacement text (1+ lines):
+void rewind (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void rewind (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+The rewind function positions the stream stream at the
+beginning of the file.  It is equivalent to calling fseek or
+fseeko on the stream with an offset argument of
+0L and a whence argument of SEEK_SET, except that
+the return value is discarded and the error indicator for the stream is
+reset.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Positioning.html#File-Positioning
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Positioning/rewind.txt

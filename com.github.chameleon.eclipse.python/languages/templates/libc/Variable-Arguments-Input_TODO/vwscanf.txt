@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is similar to wscanf, but instead of taking (a,) variable number of arguments directly, it takes (an,) argument list pointer ap of (output,print,show,say,type,write) va_list 
+//\\ //// ==> completion hint (1 line):
+is similar to wscanf, but instead of taking a variable number of arguments directly, it takes an argument list pointer ap of type va_list 
+//\\ //// Replacement text (1+ lines):
+int vwscanf (const wchar_t *template, va_list ap)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int vwscanf (const wchar_t *template, va_list ap)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe corrupt heap
+| AC-Unsafe mem lock corrupt
+| See POSIX Safety Concepts.
+
+
+This function is similar to wscanf, but instead of taking
+a variable number of arguments directly, it takes an argument list
+pointer ap of type va_list (see Variadic Functions).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Variable-Arguments-Input.html#Variable-Arguments-Input
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Variable-Arguments-Input/vwscanf.txt

@@ -1,0 +1,72 @@
+//\\ //// code completion entries (1+ lines):
+add oneview enclosure
+//\\ //// ==> completion hint (1 line):
+add a OneView enclosure using Python API
+//\\ //// Replacement text (1+ lines):
+from __future__ import print_function
+from __future__ import unicode_literals
+from __future__ import division
+from __future__ import absolute_import
+from builtins import range
+from future import standard_library
+standard_library.install_aliases()
+import sys
+
+PYTHON_VERSION = sys.version_info[:3]
+PY2 = (PYTHON_VERSION[0] == 2)
+if PY2:
+    if PYTHON_VERSION < (2, 7, 9):
+        raise Exception('Must use Python 2.7.9 or later')
+elif PYTHON_VERSION < (3, 4):
+    raise Exception('Must use Python 3.4 or later')
+
+import hpOneView as hpov
+from pprint import pprint
+
+def acceptEULA(con):
+    # See if we need to accept the EULA before we try to log in
+    con.get_eula_status()
+    try:
+        if con.get_eula_status() is True:
+            print('EULA display needed')
+            con.set_eula('no')
+    except Exception as e:
+        print('EXCEPTION:')
+        print(e)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+from __future__ import print_function
+from __future__ import unicode_literals
+from __future__ import division
+from __future__ import absolute_import
+from builtins import range
+from future import standard_library
+standard_library.install_aliases()
+import sys
+
+PYTHON_VERSION = sys.version_info[:3]
+PY2 = (PYTHON_VERSION[0] == 2)
+if PY2:
+    if PYTHON_VERSION < (2, 7, 9):
+        raise Exception('Must use Python 2.7.9 or later')
+elif PYTHON_VERSION < (3, 4):
+    raise Exception('Must use Python 3.4 or later')
+
+import hpOneView as hpov
+from pprint import pprint
+
+def acceptEULA(con):
+    # See if we need to accept the EULA before we try to log in
+    con.get_eula_status()
+    try:
+        if con.get_eula_status() is True:
+            print('EULA display needed')
+            con.set_eula('no')
+    except Exception as e:
+        print('EXCEPTION:')
+        print(e)
+        
+//\\ //// Tool tip (1 line):
+Use returned token for other OpenStack (cloud) calls...
+//\\

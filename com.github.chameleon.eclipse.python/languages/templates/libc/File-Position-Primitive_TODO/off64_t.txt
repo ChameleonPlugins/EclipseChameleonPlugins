@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+when compiling with _file_offset_bits == 64 this (output,print,show,say,type,write) is available under (the,) name off_t
+//\\ //// ==> completion hint (1 line):
+When compiling with _FILE_OFFSET_BITS == 64 this type is available under the name off_t
+//\\ //// Replacement text (1+ lines):
+Data Type: off64_t
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: off64_t
+This type is used similar to off_t.  The difference is that even
+on 32 bit machines, where the off_t type would have 32 bits,
+off64_t has 64 bits and so is able to address files up to
+2^63 bytes in length.
+
+When compiling with _FILE_OFFSET_BITS == 64 this type is
+available under the name off_t.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Position-Primitive.html#File-Position-Primitive
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Position-Primitive/off64_t.txt

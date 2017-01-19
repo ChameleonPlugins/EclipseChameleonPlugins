@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+(the,) va_copy macro allows copying of objects of (output,print,show,say,type,write) va_list even if this is not (an,) integral (output,print,show,say,type,write)
+//\\ //// ==> completion hint (1 line):
+The va_copy macro allows copying of objects of type va_list even if this is not an integral type
+//\\ //// Replacement text (1+ lines):
+Macro: void va_copy (va_list dest, va_list src)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: void va_copy (va_list dest, va_list src)
+Macro: void __va_copy (va_list dest, va_list src)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The va_copy macro allows copying of objects of type
+va_list even if this is not an integral type.  The argument pointer
+in dest is initialized to point to the same argument as the
+pointer in src.
+
+This macro was added in ISO C99.  When building for strict conformance
+to ISO C90 (‘gcc -ansi’), it is not available.  The macro
+__va_copy is available as a GNU extension in any standards
+mode; before GCC 3.0, it was the only macro for this functionality.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argument-Macros.html#Argument-Macros
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argument-Macros/va_copy.txt

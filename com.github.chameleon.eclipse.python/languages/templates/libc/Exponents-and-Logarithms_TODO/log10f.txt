@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) base-10 logarithm of x
+//\\ //// ==> completion hint (1 line):
+These functions return the base-10 logarithm of x
+//\\ //// Replacement text (1+ lines):
+Function: double log10 (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double log10 (double x)
+Function: float log10f (float x)
+Function: long double log10l (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return the base-10 logarithm of x.
+log10 (x) equals log (x) / log (10).
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Exponents-and-Logarithms.html#Exponents-and-Logarithms
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Exponents-and-Logarithms/log10f.txt

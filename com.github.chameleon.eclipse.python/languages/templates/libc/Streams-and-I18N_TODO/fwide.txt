@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+set and query (the,) state of (the,) orientation of (the,) stream stream
+//\\ //// ==> completion hint (1 line):
+set and query the state of the orientation of the stream stream
+//\\ //// Replacement text (1+ lines):
+int fwide (FILE *stream, int mode)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fwide (FILE *stream, int mode)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+
+The fwide function can be used to set and query the state of the
+orientation of the stream stream.  If the mode parameter has
+a positive value the streams get wide oriented, for negative values
+narrow oriented.  It is not possible to overwrite previous orientations
+with fwide.  I.e., if the stream stream was already
+oriented before the call nothing is done.
+
+If mode is zero the current orientation state is queried and
+nothing is changed.
+
+The fwide function returns a negative value, zero, or a positive
+value if the stream is narrow, not at all, or wide oriented
+respectively.
+
+This function was introduced in Amendment 1 to ISO C90 and is
+declared in wchar.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Streams-and-I18N.html#Streams-and-I18N
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Streams-and-I18N/fwide.txt

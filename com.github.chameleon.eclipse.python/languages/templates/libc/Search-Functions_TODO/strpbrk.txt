@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+(the,) strpbrk function is related to strcspn, except that it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) pointer to (the,) first character in (string,text) that is (a,) member of (the,) set stopset instead of (the,) length of (the,) initial substring
+//\\ //// ==> completion hint (1 line):
+The strpbrk function is related to strcspn, except that it returns a pointer to the first character in string that is a member of the set stopset instead of the length of the initial substring
+//\\ //// Replacement text (1+ lines):
+char * strpbrk (X1tring, const char *stopset)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strpbrk (const char *string, const char *stopset)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The strpbrk (“string pointer break”) function is related to
+strcspn, except that it returns a pointer to the first character
+in string that is a member of the set stopset instead of the
+length of the initial substring.  It returns a null pointer if no such
+character from stopset is found.
+
+For example,
+
+
+strpbrk (&quot;hello, world&quot;, &quot; \t\n,.;!?&quot;)
+    ? &quot;, world&quot;
+
+
+Note that “character” is here used in the sense of byte.  In a string
+using a multibyte character encoding (abstract) character consisting of
+more than one byte are not treated as an entity.  Each byte is treated
+separately.  The function is not locale-dependent.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Search-Functions/strpbrk.txt

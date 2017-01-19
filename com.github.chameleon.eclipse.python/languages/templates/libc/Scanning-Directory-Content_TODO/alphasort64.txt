@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+behaves like (the,) strcoll function 
+//\\ //// ==> completion hint (1 line):
+behaves like the strcoll function 
+//\\ //// Replacement text (1+ lines):
+int alphasort64 (const struct dirent64 **a, const struct dirent **b)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int alphasort64 (const struct dirent64 **a, const struct dirent **b)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+The alphasort64 function behaves like the strcoll function
+(see String/Array Comparison).  The difference is that the arguments
+are not string pointers but instead they are of type
+struct dirent64 **.
+
+Return value of alphasort64 is less than, equal to, or greater
+than zero depending on the order of the two entries a and b.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Scanning-Directory-Content.html#Scanning-Directory-Content
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Scanning-Directory-Content/alphasort64.txt

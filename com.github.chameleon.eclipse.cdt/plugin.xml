@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<?eclipse version="3.4"?>  
+<plugin>
+ 
+ <extension point="org.eclipse.cdt.ui.completionProposalComputer"
+     id="chameleon_cdt_category"  
+     name="Chameleon C/C++ programming languages mappings">
+	 <proposalCategory icon="platform:/plugin/com.github.chameleon.eclipse.cdt/rcp.eclipse/icons/Chameleon.gif"/>    
+ </extension>  
+
+ <extension point="org.eclipse.cdt.ui.completionProposalComputer"
+     id="chameleon_cdt_proposal"  
+     name="Chameleon C/C++ programming languages mappings">
+  <proposalCategory icon="platform:/plugin/com.github.chameleon.eclipse.cdt/rcp.eclipse/icons/Chameleon.gif"/>    
+
+  <javaCompletionProposalComputer  
+     class="com.github.chameleon.eclipse.cdt.ChameleonCDTCompletionProposalComputer"  
+     categoryId="com.github.chameleon.eclipse.cdt.chameleon_cdt_category"
+     activate="true">  
+  </javaCompletionProposalComputer>
+ </extension>  
+     
+
+  <!-- Preferences -->
+ <extension
+       name="Chameleon C/C++ programming languages mappings"
+       point="org.eclipse.ui.preferencePages">
+    <page
+          class="com.github.chameleon.eclipse.cdt.preferences.ChameleonPreferencePage"
+          id="com.github.chameleon.eclipse.cdt.preferences.ChameleonPreferencePage"
+          name="Chameleon Preferences">
+    </page>
+ </extension>
+ 
+  <extension
+       point="org.eclipse.core.runtime.preferences">
+    <initializer
+          class="com.github.chameleon.eclipse.cdt.preferences.PreferenceInitializer">
+    </initializer>
+ </extension>  
+ 
+  
+</plugin> 

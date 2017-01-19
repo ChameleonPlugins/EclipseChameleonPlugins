@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+initializes (a,) stream which getpwent and getpwent_r use to read (the,) user database
+//\\ //// ==> completion hint (1 line):
+initializes a stream which getpwent and getpwent_r use to read the user database
+//\\ //// Replacement text (1+ lines):
+void setpwent (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void setpwent (void)
+Preliminary:
+| MT-Unsafe race:pwent locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function initializes a stream which getpwent and
+getpwent_r use to read the user database.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Scanning-All-Users.html#Scanning-All-Users
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Scanning-All-Users/setpwent.txt

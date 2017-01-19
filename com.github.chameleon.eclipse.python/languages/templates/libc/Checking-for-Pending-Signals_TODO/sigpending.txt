@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+stores information about pending signals in set
+//\\ //// ==> completion hint (1 line):
+stores information about pending signals in set
+//\\ //// Replacement text (1+ lines):
+int sigpending (sigset_t *set)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sigpending (sigset_t *set)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock/hurd
+| AC-Unsafe lock/hurd
+| See POSIX Safety Concepts.
+
+
+The sigpending function stores information about pending signals
+in set.  If there is a pending signal that is blocked from
+delivery, then that signal is a member of the returned set.  (You can
+test whether a particular signal is a member of this set using
+sigismember; see Signal Sets.)
+
+The return value is 0 if successful, and -1 on failure.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Checking-for-Pending-Signals.html#Checking-for-Pending-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Checking-for-Pending-Signals/sigpending.txt

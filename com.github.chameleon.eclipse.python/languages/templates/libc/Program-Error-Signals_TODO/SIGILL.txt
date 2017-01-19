@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+can also be generated when (the,) stack overflows, or when (the,) (box,computer,system,node,host,target) has trouble running (the,) handler for (a,) signal
+//\\ //// ==> completion hint (1 line):
+can also be generated when the stack overflows, or when the system has trouble running the handler for a signal
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGILL
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGILL
+The name of this signal is derived from “illegal instruction”; it
+usually means your program is trying to execute garbage or a privileged
+instruction.  Since the C compiler generates only valid instructions,
+SIGILL typically indicates that the executable file is corrupted,
+or that you are trying to execute data.  Some common ways of getting
+into the latter situation are by passing an invalid object where a
+pointer to a function was expected, or by writing past the end of an
+automatic array (or similar problems with pointers to automatic
+variables) and corrupting other data on the stack such as the return
+address of a stack frame.
+
+SIGILL can also be generated when the stack overflows, or when
+the system has trouble running the handler for a signal.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Program-Error-Signals.html#Program-Error-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Program-Error-Signals/SIGILL.txt

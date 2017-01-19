@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) length of (the,) quantum used with (the,) round robin scheduling policy, if it is used, for (the,) process with process id pid
+//\\ //// ==> completion hint (1 line):
+returns the length of the quantum used with the Round Robin scheduling policy, if it is used, for the process with Process ID pid
+//\\ //// Replacement text (1+ lines):
+int sched_rr_get_interval (pid_t pid, struct timespec *interval)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sched_rr_get_interval (pid_t pid, struct timespec *interval)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This function returns the length of the quantum (time slice) used with
+the Round Robin scheduling policy, if it is used, for the process with
+Process ID pid.
+
+It returns the length of time as interval.
+
+With a Linux kernel, the round robin time slice is always 150
+microseconds, and pid need not even be a real pid.
+
+The return value is 0 on success and in the pathological case
+that it fails, the return value is -1 and errno is set
+accordingly.  There is nothing specific that can go wrong with this
+function, so there are no specific errno values.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Basic-Scheduling-Functions.html#Basic-Scheduling-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Basic-Scheduling-Functions/sched_rr_get_interval.txt

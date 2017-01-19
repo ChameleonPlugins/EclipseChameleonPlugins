@@ -1,0 +1,44 @@
+//\\ //// code completion entries (1+ lines):
+(indicate,select,specify) (an,) alternate stack for use during signal handling
+//\\ //// ==> completion hint (1 line):
+specifies an alternate stack for use during signal handling
+//\\ //// Replacement text (1+ lines):
+int sigaltstack (const stack_t *restrict stack, stack_t *restrict oldstack)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sigaltstack (const stack_t *restrict stack, stack_t *restrict oldstack)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock/hurd
+| AC-Unsafe lock/hurd
+| See POSIX Safety Concepts.
+
+
+The sigaltstack function specifies an alternate stack for use
+during signal handling.  When a signal is received by the process and
+its action indicates that the signal stack is used, the system arranges
+a switch to the currently installed signal stack while the handler for
+that signal is executed.
+
+If oldstack is not a null pointer, information about the currently
+installed signal stack is returned in the location it points to.  If
+stack is not a null pointer, then this is installed as the new
+stack for use by signal handlers.
+
+The return value is 0 on success and -1 on failure.  If
+sigaltstack fails, it sets errno to one of these values:
+
+
+EINVAL
+You tried to disable a stack that was in fact currently in use.
+
+
+ENOMEM
+The size of the alternate stack was too small.
+It must be greater than MINSIGSTKSZ.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signal-Stack.html#Signal-Stack
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signal-Stack/sigaltstack.txt

@@ -1,0 +1,38 @@
+//\\ //// code completion entries (1+ lines):
+(the,) wctype (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) value representing (a,) class of wide characters which is identified by (the,) (string,text) property
+//\\ //// ==> completion hint (1 line):
+The wctype returns a value representing a class of wide characters which is identified by the string property
+//\\ //// Replacement text (1+ lines):
+wctype_t wctype (const char *property)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wctype_t wctype (const char *property)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The wctype returns a value representing a class of wide
+characters which is identified by the string property.  Beside
+some standard properties each locale can define its own ones.  In case
+no property with the given name is known for the current locale
+selected for the LC_CTYPE category, the function returns zero.
+
+The properties known in every locale are:
+
+
+&quot;alnum&quot;&quot;alpha&quot;&quot;cntrl&quot;&quot;digit&quot;
+&quot;graph&quot;&quot;lower&quot;&quot;print&quot;&quot;punct&quot;
+&quot;space&quot;&quot;upper&quot;&quot;xdigit&quot;
+
+
+
+This function is declared in wctype.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Classification-of-Wide-Characters.html#Classification-of-Wide-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Classification-of-Wide-Characters/wctype.txt

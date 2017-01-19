@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+works like erand48, but in addition it takes (an,) argument buffer which describes (the,) random number generator
+//\\ //// ==> completion hint (1 line):
+works like erand48, but in addition it takes an argument buffer which describes the random number generator
+//\\ //// Replacement text (1+ lines):
+int erand48_r (unsigned short int xsubi[3], struct drand48_data *buffer, double *result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int erand48_r (unsigned short int xsubi[3], struct drand48_data *buffer, double *result)
+Preliminary:
+| MT-Safe race:buffer
+| AS-Safe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The erand48_r function works like erand48, but in addition
+it takes an argument buffer which describes the random number
+generator.  The state of the random number generator is taken from the
+xsubi array, the parameters for the congruential formula from the
+global random number generator data.  The random number is returned in
+the variable pointed to by result.
+
+The return value is non-negative if the call succeeded.
+
+This function is a GNU extension and should not be used in portable
+programs.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/erand48_r.txt

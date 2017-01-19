@@ -1,0 +1,18 @@
+//\\ //// code completion entries (1+ lines):
+(find,get) where X:TEXT is located inside X:TEXT from X:POSITION returning -1 if no match
+//\\ //// ==> completion hint (1 line):
+find where one piece of text is inside another
+//\\ //// Replacement text (1+ lines):
+X2.find(X1, X3)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="bye"
+X2="goodbye"
+X3=2
+//\\ //// Help/documentation (1+ lines):
+If no match is found, returns -1.
+If instead you would like to raise ValueError on error,
+use index() instead of find(), or use the
+appropriate Chameleon template.
+\//\\ //// Tool tip (1 line):
+NOTE: If no match, returns -1.
+//\\

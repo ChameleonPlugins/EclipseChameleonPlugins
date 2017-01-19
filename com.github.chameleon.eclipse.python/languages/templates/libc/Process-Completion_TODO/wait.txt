@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+this is (a,) simplified version of waitpid, and is used to wait until any one child process terminates
+//\\ //// ==> completion hint (1 line):
+This is a simplified version of waitpid, and is used to wait until any one child process terminates
+//\\ //// Replacement text (1+ lines):
+pid_t wait (int *status-ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: pid_t wait (int *status-ptr)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is a simplified version of waitpid, and is used to wait
+until any one child process terminates.  The call:
+
+
+wait (&amp;status)
+
+
+is exactly equivalent to:
+
+
+waitpid (-1, &amp;status, 0)
+
+
+This function is a cancellation point in multi-threaded programs.  This
+is a problem if the thread allocates some resources (like memory, file
+descriptors, semaphores or whatever) at the time wait is
+called.  If the thread gets canceled these resources stay allocated
+until the program ends.  To avoid this calls to wait should be
+protected using cancellation handlers.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Process-Completion.html#Process-Completion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Process-Completion/wait.txt

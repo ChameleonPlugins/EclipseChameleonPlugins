@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+on most operating systems, terminals and sockets are (the,) only kinds of files that can generate sigio
+//\\ //// ==> completion hint (1 line):
+On most operating systems, terminals and sockets are the only kinds of files that can generate SIGIO
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGIO
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGIO
+
+
+This signal is sent when a file descriptor is ready to perform input
+or output.
+
+On most operating systems, terminals and sockets are the only kinds of
+files that can generate SIGIO; other kinds, including ordinary
+files, never generate SIGIO even if you ask them to.
+
+On GNU systems SIGIO will always be generated properly
+if you successfully set asynchronous mode with fcntl.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Asynchronous-I_002fO-Signals.html#Asynchronous-I_002fO-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Asynchronous-I_002fO-Signals/SIGIO.txt

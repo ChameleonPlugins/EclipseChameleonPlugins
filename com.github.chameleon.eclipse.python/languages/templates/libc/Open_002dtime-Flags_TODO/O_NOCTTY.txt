@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+on gnu/hurd systems and 4
+//\\ //// ==> completion hint (1 line):
+On GNU/Hurd systems and 4
+//\\ //// Replacement text (1+ lines):
+Macro: int O_NOCTTY
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int O_NOCTTY
+If the named file is a terminal device, don’t make it the controlling
+terminal for the process.  See Job Control, for information about
+what it means to be the controlling terminal.
+
+On GNU/Hurd systems and 4.4 BSD, opening a file never makes it the
+controlling terminal and O_NOCTTY is zero.  However, GNU/Linux systems
+and some other systems use a nonzero value for O_NOCTTY and set the
+controlling terminal when you open a file that is a terminal device; so
+to be portable, use O_NOCTTY when it is important to avoid this.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Open_002dtime-Flags.html#Open_002dtime-Flags
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Open_002dtime-Flags/O_NOCTTY.txt

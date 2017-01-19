@@ -1,0 +1,13 @@
+//\\ //// code completion entries (1+ lines):
+(return,yield) X:VALUE from generator
+//\\ //// ==> completion hint (1 line):
+yield value
+//\\ //// Replacement text (1+ lines):
+yield X1
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+while help...
+//\\ //// Tool tip (1 line):
+while statement...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):

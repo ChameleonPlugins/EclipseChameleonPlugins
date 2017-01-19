@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (a,) (new,) session
+//\\ //// ==> completion hint (1 line):
+creates a new session
+//\\ //// Replacement text (1+ lines):
+pid_t setsid (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: pid_t setsid (void)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The setsid function creates a new session.  The calling process
+becomes the session leader, and is put in a new process group whose
+process group ID is the same as the process ID of that process.  There
+are initially no other processes in the new process group, and no other
+process groups in the new session.
+
+This function also makes the calling process have no controlling terminal.
+
+The setsid function returns the new process group ID of the
+calling process if successful.  A return value of -1 indicates an
+error.  The following errno error conditions are defined for this
+function:
+
+
+EPERM
+The calling process is already a process group leader, or there is
+already another process group around that has the same process group ID.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Process-Group-Functions.html#Process-Group-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Process-Group-Functions/setsid.txt

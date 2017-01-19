@@ -1,0 +1,18 @@
+//\\ //// code completion entries (1+ lines):
+(add,construct,create,define,insert,make) (a )?function X:NAME with X:PARAMETERS (to,that,which) X:STATEMENTS returning X:VALUE
+//\\ //// ==> completion hint (1 line):
+create function
+//\\ //// Replacement text (1+ lines):
+def X1(X2):
+    X3
+    return X4
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=foo
+X2=
+X3=pass #pass = an empty statement that does nothing
+X4=0
+//\\ //// Help/documentation (1+ lines):
+function call help...
+//\\ //// Tool tip (1 line):
+replace pass with your own statements...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):

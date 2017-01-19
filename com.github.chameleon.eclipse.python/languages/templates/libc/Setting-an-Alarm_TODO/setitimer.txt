@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) timer specified by which according to (new,)
+//\\ //// ==> completion hint (1 line):
+sets the timer specified by which according to new
+//\\ //// Replacement text (1+ lines):
+int setitimer (int which, const struct itimerval *new, struct itimerval *old)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setitimer (int which, const struct itimerval *new, struct itimerval *old)
+Preliminary:
+| MT-Safe timer
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The setitimer function sets the timer specified by which
+according to new.  The which argument can have a value of
+ITIMER_REAL, ITIMER_VIRTUAL, or ITIMER_PROF.
+
+If old is not a null pointer, setitimer returns information
+about any previous unexpired timer of the same kind in the structure it
+points to.
+
+The return value is 0 on success and -1 on failure.  The
+following errno error conditions are defined for this function:
+
+
+EINVAL
+The timer period is too large.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-an-Alarm.html#Setting-an-Alarm
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-an-Alarm/setitimer.txt

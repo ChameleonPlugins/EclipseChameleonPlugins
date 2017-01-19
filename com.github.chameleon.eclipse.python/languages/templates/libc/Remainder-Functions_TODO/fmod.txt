@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+these functions compute (the,) remainder from (the,) division of numerator by denominator
+//\\ //// ==> completion hint (1 line):
+These functions compute the remainder from the division of numerator by denominator
+//\\ //// Replacement text (1+ lines):
+double fmod (double numerator, double denominator)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double fmod (double numerator, double denominator)
+Function: float fmodf (float numerator, float denominator)
+Function: long double fmodl (long double numerator, long double denominator)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions compute the remainder from the division of
+numerator by denominator.  Specifically, the return value is
+numerator - n * denominator, where n
+is the quotient of numerator divided by denominator, rounded
+towards zero to an integer.  Thus, fmod (6.5, 2.3) returns
+1.9, which is 6.5 minus 4.6.
+
+The result has the same sign as the numerator and has magnitude
+less than the magnitude of the denominator.
+
+If denominator is zero, fmod signals a domain error.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Remainder-Functions.html#Remainder-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Remainder-Functions/fmod.txt

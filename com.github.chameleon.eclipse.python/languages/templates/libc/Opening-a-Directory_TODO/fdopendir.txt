@@ -1,0 +1,55 @@
+//\\ //// code completion entries (1+ lines):
+works just like opendir but instead of taking (a,) file name and opening (a,) file descriptor for (the,) directory (the,) caller is required to provide (a,) file descriptor
+//\\ //// ==> completion hint (1 line):
+works just like opendir but instead of taking a file name and opening a file descriptor for the directory the caller is required to provide a file descriptor
+//\\ //// Replacement text (1+ lines):
+DIR * fdopendir (int fd)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: DIR * fdopendir (int fd)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem fd
+| See POSIX Safety Concepts.
+
+
+The fdopendir function works just like opendir but
+instead of taking a file name and opening a file descriptor for the
+directory the caller is required to provide a file descriptor.  This
+file descriptor is then used in subsequent uses of the returned
+directory stream object.
+
+The caller must make sure the file descriptor is associated with a
+directory and it allows reading.
+
+If the fdopendir call returns successfully the file descriptor
+is now under the control of the system.  It can be used in the same
+way the descriptor implicitly created by opendir can be used
+but the program must not close the descriptor.
+
+In case the function is unsuccessful it returns a null pointer and the
+file descriptor remains to be usable by the program.  The following
+errno error conditions are defined for this function:
+
+
+EBADF
+The file descriptor is not valid.
+
+
+ENOTDIR
+The file descriptor is not associated with a directory.
+
+
+EINVAL
+The descriptor does not allow reading the directory content.
+
+
+ENOMEM
+Not enough memory available.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Opening-a-Directory.html#Opening-a-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Opening-a-Directory/fdopendir.txt

@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+maps (an,) interface index to its corresponding name
+//\\ //// ==> completion hint (1 line):
+maps an interface index to its corresponding name
+//\\ //// Replacement text (1+ lines):
+char * if_indextoname (unsigned int ifindex, char *ifname)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * if_indextoname (unsigned int ifindex, char *ifname)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock fd
+| See POSIX Safety Concepts.
+
+
+This function maps an interface index to its corresponding name.  The
+returned name is placed in the buffer pointed to by ifname, which
+must be at least IFNAMSIZ bytes in length.  If the index was
+invalid, the function’s return value is a null pointer, otherwise it is
+ifname.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Interface-Naming.html#Interface-Naming
+//\\ //// Tool tip (1 line):
+!! Python is ZERO based, so lists start at 0
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Interface-Naming/if_indextoname.txt

@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+is similar to getnetgrent with only one exception: (the,) strings (the,) three (string,text) pointers hostp, userp, and domainp point to, are placed in (the,) buffer of buflen bytes starting at buffer
+//\\ //// ==> completion hint (1 line):
+is similar to getnetgrent with only one exception: the strings the three string pointers hostp, userp, and domainp point to, are placed in the buffer of buflen bytes starting at buffer
+//\\ //// Replacement text (1+ lines):
+int getnetgrent_r (char **hostp, char **userp, char **domainp, char *buffer, size_t buflen)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getnetgrent_r (char **hostp, char **userp, char **domainp, char *buffer, size_t buflen)
+Preliminary:
+| MT-Unsafe race:netgrent locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function is similar to getnetgrent with only one exception:
+the strings the three string pointers hostp, userp, and
+domainp point to, are placed in the buffer of buflen bytes
+starting at buffer.  This means the returned values are valid
+even after other netgroup related functions are called.
+
+The return value is 1 if the next entry was successfully read and
+the buffer contains enough room to place the strings in it.  0 is
+returned in case no more entries are found, the buffer is too small, or
+internal errors occurred.
+
+This function is a GNU extension.  The original implementation in the
+SunOS libc does not provide this function.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Lookup-Netgroup.html#Lookup-Netgroup
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Lookup-Netgroup/getnetgrent_r.txt

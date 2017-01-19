@@ -1,0 +1,45 @@
+//\\ //// code completion entries (1+ lines):
+enables (the,) socket socket to accept connections, thus making it (a,) server socket
+//\\ //// ==> completion hint (1 line):
+enables the socket socket to accept connections, thus making it a server socket
+//\\ //// Replacement text (1+ lines):
+int listen (int socket, int n)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int listen (int socket, int n)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe fd
+| See POSIX Safety Concepts.
+
+
+The listen function enables the socket socket to accept
+connections, thus making it a server socket.
+
+The argument n specifies the length of the queue for pending
+connections.  When the queue fills, new clients attempting to connect
+fail with ECONNREFUSED until the server calls accept to
+accept a connection from the queue.
+
+The listen function returns 0 on success and -1
+on failure.  The following errno error conditions are defined
+for this function:
+
+
+EBADF
+The argument socket is not a valid file descriptor.
+
+
+ENOTSOCK
+The argument socket is not a socket.
+
+
+EOPNOTSUPP
+The socket socket does not support this operation.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Listening.html#Listening
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Listening/listen.txt

@@ -1,0 +1,61 @@
+//\\ //// code completion entries (1+ lines):
+(instruct,tell) malloc to perform occasional consistency checks
+//\\ //// ==> completion hint (1 line):
+tells malloc to perform occasional consistency checks
+//\\ //// Replacement text (1+ lines):
+int mcheck (void (*abortfn) (enum mcheck_status status))
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int mcheck (void (*abortfn) (enum mcheck_status status))
+Preliminary:
+| MT-Unsafe race:mcheck const:malloc_hooks
+| AS-Unsafe corrupt
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+
+Calling mcheck tells malloc to perform occasional
+consistency checks.  These will catch things such as writing
+past the end of a block that was allocated with malloc.
+
+The abortfn argument is the function to call when an inconsistency
+is found.  If you supply a null pointer, then mcheck uses a
+default function which prints a message and calls abort
+(see Aborting a Program).  The function you supply is called with
+one argument, which says what sort of inconsistency was detected; its
+type is described below.
+
+It is too late to begin allocation checking once you have allocated
+anything with malloc.  So mcheck does nothing in that
+case.  The function returns -1 if you call it too late, and
+0 otherwise (when it is successful).
+
+The easiest way to arrange to call mcheck early enough is to use
+the option ‘-lmcheck’ when you link your program; then you don’t
+need to modify your program source at all.  Alternatively you might use
+a debugger to insert a call to mcheck whenever the program is
+started, for example these gdb commands will automatically call mcheck
+whenever the program starts:
+
+
+(gdb) break main
+Breakpoint 1, main (argc=2, argv=0xbffff964) at whatever.c:10
+(gdb) command 1
+Type commands for when breakpoint 1 is hit, one per line.
+End with a line saying just &quot;end&quot;.
+&gt;call mcheck(0)
+&gt;continue
+&gt;end
+(gdb) …
+
+
+This will however only work if no initialization function of any object
+involved calls any of the malloc functions since mcheck
+must be called before the first such function.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Heap-Consistency-Checking.html#Heap-Consistency-Checking
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Heap-Consistency-Checking/mcheck.txt

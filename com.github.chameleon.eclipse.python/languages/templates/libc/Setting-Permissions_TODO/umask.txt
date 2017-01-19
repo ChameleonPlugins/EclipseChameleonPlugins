@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+sets (the,) file creation mask of (the,) current process to mask, and (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) previous value of (the,) file creation mask
+//\\ //// ==> completion hint (1 line):
+sets the file creation mask of the current process to mask, and returns the previous value of the file creation mask
+//\\ //// Replacement text (1+ lines):
+mode_t umask (mode_t mask)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: mode_t umask (mode_t mask)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The umask function sets the file creation mask of the current
+process to mask, and returns the previous value of the file
+creation mask.
+
+Here is an example showing how to read the mask with umask
+without changing it permanently:
+
+
+mode_t
+read_umask (void)
+{
+  mode_t mask = umask (0);
+  umask (mask);
+  return mask;
+}
+
+
+However, on GNU/Hurd systems it is better to use getumask if
+you just want to read the mask value, because it is reentrant.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Setting-Permissions.html#Setting-Permissions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Setting-Permissions/umask.txt

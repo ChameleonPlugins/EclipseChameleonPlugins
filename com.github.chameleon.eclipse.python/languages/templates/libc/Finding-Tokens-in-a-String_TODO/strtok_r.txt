@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+(divide,split,separate) (the,) (string,text) into several tokens which can be accessed by successive calls to strtok_r
+//\\ //// ==> completion hint (1 line):
+splits the string into several tokens which can be accessed by successive calls to strtok_r
+//\\ //// Replacement text (1+ lines):
+char * strtok_r (char *newstring, const char *delimiters, char **save_ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strtok_r (char *newstring, const char *delimiters, char **save_ptr)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Just like strtok, this function splits the string into several
+tokens which can be accessed by successive calls to strtok_r.
+The difference is that, as in wcstok, the information about the
+next token is stored in the space pointed to by the third argument,
+save_ptr, which is a pointer to a string pointer.  Calling
+strtok_r with a null pointer for newstring and leaving
+save_ptr between the calls unchanged does the job without
+hindering reentrancy.
+
+This function is defined in POSIX.1 and can be found on many systems
+which support multi-threading.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Finding-Tokens-in-a-String.html#Finding-Tokens-in-a-String
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Finding-Tokens-in-a-String/strtok_r.txt

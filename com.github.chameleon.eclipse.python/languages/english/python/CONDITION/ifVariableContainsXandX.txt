@@ -1,0 +1,16 @@
+//\\ //// code completion entries (1+ lines):
+if X:VARIABLE contains X:TEXT and X:TEXT then X:STATEMENT
+//\\ //// ==> completion hint (1 line):
+if X contains Y and Z then Q 
+//\\ //// Replacement text (1+ lines):
+if X2 in X1 and X3 in X1:
+    X4
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="cat"
+X2="a"
+X3="b"
+X4=print "yes!"
+//\\ //// Help/documentation (1+ lines):
+if x contains y and z then q...
+//\\ //// Tool tip (1 line):
+replace "cat", "a", "b", and statement as needed...

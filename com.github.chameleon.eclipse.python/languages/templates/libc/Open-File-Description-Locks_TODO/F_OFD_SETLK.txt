@@ -1,0 +1,61 @@
+//\\ //// code completion entries (1+ lines):
+if (the,) open file already has (a,) (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) on any part of (the,) region, (the,) old (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) on that part is replaced with (the,) (new,) (allocate,find,get,grab,lock,obtain,reserve,retrieve,return)
+//\\ //// ==> completion hint (1 line):
+If the open file already has a lock on any part of the region, the old lock on that part is replaced with the new lock
+//\\ //// Replacement text (1+ lines):
+Macro: int F_OFD_SETLK
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int F_OFD_SETLK
+This macro is used as the command argument to fcntl, to
+specify that it should set or clear a lock.  This command requires a
+third argument of type struct flock * to be passed to
+fcntl, so that the form of the call is:
+
+
+fcntl (filedes, F_OFD_SETLK, lockp)
+
+
+If the open file already has a lock on any part of the
+region, the old lock on that part is replaced with the new lock.  You
+can remove a lock by specifying a lock type of F_UNLCK.
+
+If the lock cannot be set, fcntl returns immediately with a value
+of -1.  This command does not wait for other tasks
+to release locks.  If fcntl succeeds, it returns 0.
+
+The following errno error conditions are defined for this
+command:
+
+
+EAGAIN
+The lock cannot be set because it is blocked by an existing lock on the
+file.
+
+
+EBADF
+Either: the filedes argument is invalid; you requested a read lock
+but the filedes is not open for read access; or, you requested a
+write lock but the filedes is not open for write access.
+
+
+EINVAL
+Either the lockp argument doesn’t specify valid lock information,
+the operating system kernel doesn’t support open file description locks, or the
+file associated with filedes doesn’t support locks.
+
+
+ENOLCK
+The system has run out of file lock resources; there are already too
+many file locks in place.
+
+Well-designed file systems never report this error, because they have no
+limitation on the number of locks.  However, you must still take account
+of the possibility of this error, as it could result from network access
+to a file system on another machine.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Open-File-Description-Locks.html#Open-File-Description-Locks
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Open-File-Description-Locks/F_OFD_SETLK.txt

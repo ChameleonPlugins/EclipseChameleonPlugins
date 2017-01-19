@@ -1,0 +1,185 @@
+---
+- name: Ansible
+  enabled: yes
+  language: yaml
+  output: ../../../templates/api/
+  url: http://docs.ansible.com/ansible/
+#  url: file:///C:/My%20Web%20Sites/C-language/C-API_functions/www.cprogramming.com/
+  index: modules_by_category.html
+  methodsXpath: //*[self::h1]/text()[contains(.,'()')]
+  summaryXpath: //*[self::h1][text()="FULLMETHOD"]/..//text()
+  summaryRegex: 
+  - "(?i).*Explanation: (.*)"
+  - "(?i)^This function (.*)"
+  - "(?i)^The [^ ]* function (.*)"
+  - "(?i)^.* is used to (.*)"
+  - "(?i)^Use .* to (.*)"
+  - "(?i)^Similar .*, it will (.*)"
+  - "(?i)(.*);.*"
+  helpXpath: //*[self::h1 or self::h2][text()="METHOD()"]/../..
+  replacementXpath: //*[self::h1 or self::h2][text()="METHOD()"]/../../pre/text()
+
+- name: C libc
+  enabled: yes
+  language: c
+  #output: /../../../templates/libc/
+  output: /../../../templates/libc/
+#  url: http://www.gnu.org/software/libc/manual/html_mono/libc.html 
+  url: file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node/
+  methodsXpath: //*/strong/text()
+  summaryXpath: //*/strong[text()="METHOD"]/../../dd/p[2]/node()
+  summaryRegex: 
+  - "(?i)^Just like [^ ]*\\, this function (.*)"
+  - "(?i)^The [^ ]* function (.*)"
+  - "(?i)^is similar to the [^ ]* function in that it (.*)"
+  - "(?i)^This function (.*)"
+  - "(?i)^This macro (.*)"
+  - "(?i)^can be used to (.*)"
+  - "(?i)^Calling [^ ]* (.*)"
+#  - "(?i)^.* (returns .*)"
+  helpXpath: //*/strong[text()="METHOD"]/../..
+  replacementXpath: //*/dt[text()="METHOD"]/../div/text()
+  replacementRegex:
+  - "(?i)^Function: (.* METHOD .*)"
+  replacementFindReplace:
+  - find: "^size_t "
+    replace: "size_t size="
+  - find: "^void \\* "
+    replace: "struct utsname *buf;\nbuf = "
+  - find: "^int is"
+    replace: "bool result=is"
+  - find: "^int to"
+    replace: "int mychar=to"
+  - find: "^int munmap "
+    replace: "munmap "
+  - find: "int c"
+    replace: "X#"
+    completionFind: " c "
+    completionReplace: " X:CHARACTER "
+    defaults: "X#='a'"
+  - find: "int filedes"
+    replace: "X#"
+    completionFind: "\\bfiledes\\b"
+    completionReplace: "X:FILEDESCRIPTOR"
+    defaults: "X#=fd"
+  - find: "const char \\*filename"
+    replace: "X#"
+    completionFind: "\\bfilename\\b"
+    completionReplace: "X:FILENAME"
+    defaults: "X#=\"filename.txt\""
+
+
+  - find: "wint_t wc"
+    replace: "X#"
+    completionFind: "\\bwc\\b"
+    completionReplace: "X:WIDE_CHARACTER"
+    defaults: "X#='a'"
+  - find: "const char \\*s"
+    replace: "X#"
+    completionFind: " s "
+    completionReplace: " X:TEXT "
+    defaults: "X#=\"dog\""
+  - find: "size_t maxlen"
+    replace: "X#"
+    completionFind: " maxlen "
+    completionReplace: " X:LENGTH "
+    defaults: "X#=20"
+  - find: "size_t length"
+    replace: "X#"
+    defaults: "X#=256"
+    completionFind: " length "
+    completionReplace: " X:LENGTH "
+  - find: "void \\*address"
+    replace: "X#"
+    defaults: "X#=NULL"
+    completionFind: " address "
+    completionReplace: " X:ADDRESS "
+  - find: "int flags"
+    replace: "X#"
+    defaults: "X#=MAP_SHARED"
+    completionFind: " flag "
+    completionReplace: " X:FLAG "
+  - find: "int protect"
+    replace: "X#"
+    defaults: "X#=PROT_WRITE"
+    completionFind: " protect "
+    completionReplace: " X:PROTECT "
+  - find: "off_t offset"
+    replace: "X#"
+    defaults: "X#=0"
+    completionFind: " offset "
+    completionReplace: " X:OFFSET "
+  - find: "struct utsname \\*info"
+    replace: "X#"
+    defaults: "X#=buf"
+    completionFind: " info "
+    completionReplace: " X:INFO "
+  - find: "void \\*addr"
+    replace: "X#"
+    defaults: "X#=buf"
+    completionFind: " addr "
+    completionReplace: " X:ADDRESS "
+
+
+- name: C API
+  enabled: no
+  language: c
+  output: ../../../templates/api/
+#  url: http://www.cprogramming.com/
+  url: file:///C:/My%20Web%20Sites/C-language/C-API_functions/www.cprogramming.com/
+  index: function.html
+  methodsXpath: //*[self::h1]/text()[contains(.,'()')]
+  summaryXpath: //*[self::h1][text()="FULLMETHOD"]/..//text()
+  summaryRegex: 
+  - "(?i).*Explanation: (.*)"
+  - "(?i)^This function (.*)"
+  - "(?i)^The [^ ]* function (.*)"
+  - "(?i)^.* is used to (.*)"
+  - "(?i)^Use .* to (.*)"
+  - "(?i)^Similar .*, it will (.*)"
+  - "(?i)(.*);.*"
+#  - "(?i)(.*)\..*"
+#  summaryRegexRemove: 
+#  - "\\(.*\\)"
+  helpXpath: //*[self::h1 or self::h2][text()="METHOD()"]/../..
+  replacementXpath: //*[self::h1 or self::h2][text()="METHOD()"]/../../pre/text()
+
+
+- name: Python XlsxWriter
+  enabled: no
+  language: python
+  output: ../../../templates/io/file/format/excel/
+#  url: https://xlsxwriter.readthedocs.org/
+  url: file:///C:/My%20Web%20Sites/python-language/xlsxWriter/xlsxwriter.readthedocs.org/
+  methodsXpath: //*[self::h2 or self::h3]/text()
+  replacementXpath: //*[self::h2 or self::h3][text()="METHOD()"]/..//pre//text() | //h3[text()="METHOD()"]/..//pre//following-sibling::text()
+  helpXpath: //*[self::h2 or self::h3][text()="METHOD()"]/..
+  summaryXpath: //*[self::h2 or self::h3][text()="METHOD()"]/../dl/dd/p/text()
+
+- name: Python API
+  enabled: no
+  language: python
+  output: ../../../templates/api/
+#  url: https://docs.python.org/2/library/
+  url: file:///C:/My%20Web%20Sites/python-language/PythonAPI/docs.python.org/2/library/
+  methodsXpath: //*/dt/@id
+  summaryXpath: //*/dt[@id="METHOD"]/../dd/p/text()
+  helpXpath: //*/dt[@id="METHOD"]/..
+  replacementXpath: //*/dt[@id="METHOD"]/../div/text()
+
+
+- name: Java 7 API
+  enabled: no
+  language: java
+  output: ../../../templates/api/
+#  url: http://docs.oracle.com/javase/7/docs/api/
+  url: file:///C:/My%20Web%20Sites/Java-language/Java_7_API/docs.oracle.com/javase/7/docs/api/
+  index: allclasses-noframe.html
+ # methodsXpath: //*/strong/text()
+  methodsXpath: //h3[text()="Method Summary"]/../table//tr/td[2]/code//a/text()
+  summaryXpath: //h3[text()="Method Summary"]/../table//tr/td[2]//div/node()
+#  summaryXpath: //*/strong[text()="METHOD"]/../../dd/p[2]/node()
+  helpXpath: //*/strong[text()="METHOD"]/../..
+  replacementXpath: //*/dt[text()="METHOD"]/../div/text()
+
+

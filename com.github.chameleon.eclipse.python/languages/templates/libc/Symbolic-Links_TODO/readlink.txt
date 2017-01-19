@@ -1,0 +1,68 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) value of (the,) symbolic link X:FILENAME
+//\\ //// ==> completion hint (1 line):
+gets the value of the symbolic link filename
+//\\ //// Replacement text (1+ lines):
+ssize_t readlink (X1, char *buffer, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: ssize_t readlink (const char *filename, char *buffer, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The readlink function gets the value of the symbolic link
+filename.  The file name that the link points to is copied into
+buffer.  This file name string is not null-terminated;
+readlink normally returns the number of characters copied.  The
+size argument specifies the maximum number of characters to copy,
+usually the allocation size of buffer.
+
+If the return value equals size, you cannot tell whether or not
+there was room to return the entire name.  So make a bigger buffer and
+call readlink again.  Here is an example:
+
+
+char *
+readlink_malloc (const char *filename)
+{
+  int size = 100;
+  char *buffer = NULL;
+
+  while (1)
+    {
+      buffer = (char *) xrealloc (buffer, size);
+      int nchars = readlink (filename, buffer, size);
+      if (nchars &lt; 0)
+        {
+          free (buffer);
+          return NULL;
+        }
+      if (nchars &lt; size)
+        return buffer;
+      size *= 2;
+    }
+}
+
+
+A value of -1 is returned in case of error.  In addition to the
+usual file name errors (see File Name Errors), the following
+errno error conditions are defined for this function:
+
+
+EINVAL
+The named file is not a symbolic link.
+
+
+EIO
+A hardware error occurred while reading or writing data on the disk.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Symbolic-Links.html#Symbolic-Links
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Symbolic-Links/readlink.txt

@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+yields (the,) interface index corresponding to (a,) particular name
+//\\ //// ==> completion hint (1 line):
+yields the interface index corresponding to a particular name
+//\\ //// Replacement text (1+ lines):
+unsigned int if_nametoindex (const char *ifname)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: unsigned int if_nametoindex (const char *ifname)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock fd
+| See POSIX Safety Concepts.
+
+
+This function yields the interface index corresponding to a particular
+name.  If no interface exists with the name given, it returns 0.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Interface-Naming.html#Interface-Naming
+//\\ //// Tool tip (1 line):
+!! Python is ZERO based, so lists start at 0
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Interface-Naming/if_nametoindex.txt

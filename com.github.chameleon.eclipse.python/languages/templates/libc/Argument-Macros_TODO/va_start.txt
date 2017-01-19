@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+initializes (the,) argument pointer variable ap to point to (the,) first of (the,) optional arguments of (the,) current function
+//\\ //// ==> completion hint (1 line):
+initializes the argument pointer variable ap to point to the first of the optional arguments of the current function
+//\\ //// Replacement text (1+ lines):
+Macro: void va_start (va_list ap, last-required)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: void va_start (va_list ap, last-required)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This macro initializes the argument pointer variable ap to point
+to the first of the optional arguments of the current function;
+last-required must be the last required argument to the function.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argument-Macros.html#Argument-Macros
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argument-Macros/va_start.txt

@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+maps (the,) input character X:WIDE_CHARACTER according to (the,) rules of (the,) mapping for which desc is (a,) descriptor, and returns (the,) value it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return)
+//\\ //// ==> completion hint (1 line):
+maps the input character wc according to the rules of the mapping for which desc is a descriptor, and returns the value it finds
+//\\ //// Replacement text (1+ lines):
+wint_t towctrans (X1, wctrans_t desc)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: wint_t towctrans (wint_t wc, wctrans_t desc)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+towctrans maps the input character wc
+according to the rules of the mapping for which desc is a
+descriptor, and returns the value it finds.  desc must be
+obtained by a successful call to wctrans.
+
+
+This function is declared in wctype.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Wide-Character-Case-Conversion.html#Wide-Character-Case-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Wide-Character-Case-Conversion/towctrans.txt

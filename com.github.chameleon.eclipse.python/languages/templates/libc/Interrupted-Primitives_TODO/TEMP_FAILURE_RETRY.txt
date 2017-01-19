@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(the,) value returned by temp_failure_retry is whatever value expression produced
+//\\ //// ==> completion hint (1 line):
+The value returned by TEMP_FAILURE_RETRY is whatever value expression produced
+//\\ //// Replacement text (1+ lines):
+Macro: TEMP_FAILURE_RETRY (expression)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: TEMP_FAILURE_RETRY (expression)
+This macro evaluates expression once, and examines its value as
+type long int.  If the value equals -1, that indicates a
+failure and errno should be set to show what kind of failure.
+If it fails and reports error code EINTR,
+TEMP_FAILURE_RETRY evaluates it again, and over and over until
+the result is not a temporary failure.
+
+The value returned by TEMP_FAILURE_RETRY is whatever value
+expression produced.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Interrupted-Primitives.html#Interrupted-Primitives
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Interrupted-Primitives/TEMP_FAILURE_RETRY.txt

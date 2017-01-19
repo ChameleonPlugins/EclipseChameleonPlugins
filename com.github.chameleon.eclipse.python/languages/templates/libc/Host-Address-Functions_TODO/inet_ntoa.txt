@@ -1,0 +1,35 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) ipv4 internet (box,computer,system,node,host,target) address addr to (a,) (string,text) in (the,) standard numbers-and-dots notation
+//\\ //// ==> completion hint (1 line):
+converts the IPv4 Internet host address addr to a string in the standard numbers-and-dots notation
+//\\ //// Replacement text (1+ lines):
+char * inet_ntoa (struct in_addr addr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * inet_ntoa (struct in_addr addr)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe race
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function converts the IPv4 Internet host address addr to a
+string in the standard numbers-and-dots notation.  The return value is
+a pointer into a statically-allocated buffer.  Subsequent calls will
+overwrite the same buffer, so you should copy the string if you need
+to save it.
+
+In multi-threaded programs each thread has an own statically-allocated
+buffer.  But still subsequent calls of inet_ntoa in the same
+thread will overwrite the result of the last call.
+
+Instead of inet_ntoa the newer function inet_ntop which is
+described below should be used since it handles both IPv4 and IPv6
+addresses.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Address-Functions.html#Host-Address-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Address-Functions/inet_ntoa.txt

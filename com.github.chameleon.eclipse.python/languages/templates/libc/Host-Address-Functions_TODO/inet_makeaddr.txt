@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(add,append,construct,create,define,insert,make,push) (an,) ipv4 internet (box,computer,system,node,host,target) address by combining (the,) network number net with (the,) local-address-within-network number local
+//\\ //// ==> completion hint (1 line):
+makes an IPv4 Internet host address by combining the network number net with the local-address-within-network number local
+//\\ //// Replacement text (1+ lines):
+struct in_addr inet_makeaddr (uint32_t net, uint32_t local)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct in_addr inet_makeaddr (uint32_t net, uint32_t local)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function makes an IPv4 Internet host address by combining the network
+number net with the local-address-within-network number
+local.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Address-Functions.html#Host-Address-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Address-Functions/inet_makeaddr.txt

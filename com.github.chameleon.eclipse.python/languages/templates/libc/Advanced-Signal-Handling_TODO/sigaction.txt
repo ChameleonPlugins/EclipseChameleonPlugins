@@ -1,0 +1,45 @@
+//\\ //// code completion entries (1+ lines):
+(the,) action argument is used to set up (a,) (new,) action for (the,) signal signum, while (the,) old-action argument is used to (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) information about (the,) action previously associated with this symbol
+//\\ //// ==> completion hint (1 line):
+The action argument is used to set up a new action for the signal signum, while the old-action argument is used to return information about the action previously associated with this symbol
+//\\ //// Replacement text (1+ lines):
+int sigaction (int signum, const struct sigaction *restrict action, struct sigaction *restrict old-action)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int sigaction (int signum, const struct sigaction *restrict action, struct sigaction *restrict old-action)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The action argument is used to set up a new action for the signal
+signum, while the old-action argument is used to return
+information about the action previously associated with this symbol.
+(In other words, old-action has the same purpose as the
+signal function’s return value—you can check to see what the
+old action in effect for the signal was, and restore it later if you
+want.)
+
+Either action or old-action can be a null pointer.  If
+old-action is a null pointer, this simply suppresses the return
+of information about the old action.  If action is a null pointer,
+the action associated with the signal signum is unchanged; this
+allows you to inquire about how a signal is being handled without changing
+that handling.
+
+The return value from sigaction is zero if it succeeds, and
+-1 on failure.  The following errno error conditions are
+defined for this function:
+
+
+EINVAL
+The signum argument is not valid, or you are trying to
+trap or ignore SIGKILL or SIGSTOP.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Advanced-Signal-Handling.html#Advanced-Signal-Handling
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Advanced-Signal-Handling/sigaction.txt

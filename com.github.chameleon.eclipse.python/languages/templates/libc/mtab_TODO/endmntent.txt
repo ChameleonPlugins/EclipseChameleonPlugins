@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+takes for (the,) stream parameter (a,) file handle which previously was returned from (the,) setmntent call
+//\\ //// ==> completion hint (1 line):
+takes for the stream parameter a file handle which previously was returned from the setmntent call
+//\\ //// Replacement text (1+ lines):
+int endmntent (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int endmntent (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap lock
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+This function takes for the stream parameter a file handle which
+previously was returned from the setmntent call.
+endmntent closes the stream and frees all resources.
+
+The return value is 1 unless an error occurred in which case it
+is 0.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//mtab.html#mtab
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/mtab/endmntent.txt

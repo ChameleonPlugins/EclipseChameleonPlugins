@@ -1,0 +1,81 @@
+//\\ //// code completion entries (1+ lines):
+has to be used before starting (a,) conversion
+//\\ //// ==> completion hint (1 line):
+has to be used before starting a conversion
+//\\ //// Replacement text (1+ lines):
+iconv_t iconv_open (const char *tocode, const char *fromcode)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: iconv_t iconv_open (const char *tocode, const char *fromcode)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+
+The iconv_open function has to be used before starting a
+conversion.  The two parameters this function takes determine the
+source and destination character set for the conversion, and if the
+implementation has the possibility to perform such a conversion, the
+function returns a handle.
+
+If the wanted conversion is not available, the iconv_open function
+returns (iconv_t) -1.  In this case the global variable
+errno can have the following values:
+
+
+EMFILE
+The process already has OPEN_MAX file descriptors open.
+
+ENFILE
+The system limit of open file is reached.
+
+ENOMEM
+Not enough memory to carry out the operation.
+
+EINVAL
+The conversion from fromcode to tocode is not supported.
+
+
+
+It is not possible to use the same descriptor in different threads to
+perform independent conversions.  The data structures associated
+with the descriptor include information about the conversion state.
+This must not be messed up by using it in different conversions.
+
+An iconv descriptor is like a file descriptor as for every use a
+new descriptor must be created.  The descriptor does not stand for all
+of the conversions from fromset to toset.
+
+The GNU C Library implementation of iconv_open has one
+significant extension to other implementations.  To ease the extension
+of the set of available conversions, the implementation allows storing
+the necessary files with data and code in an arbitrary number of
+directories.  How this extension must be written will be explained below
+(see glibc iconv Implementation).  Here it is only important to say
+that all directories mentioned in the GCONV_PATH environment
+variable are considered only if they contain a file gconv-modules.
+These directories need not necessarily be created by the system
+administrator.  In fact, this extension is introduced to help users
+writing and using their own, new conversions.  Of course, this does not
+work for security reasons in SUID binaries; in this case only the system
+directory is considered and this normally is
+prefix/lib/gconv.  The GCONV_PATH environment
+variable is examined exactly once at the first call of the
+iconv_open function.  Later modifications of the variable have no
+effect.
+
+
+The iconv_open function was introduced early in the X/Open
+Portability Guide, version 2.  It is supported by all commercial
+Unices as it is required for the Unix branding.  However, the quality and
+completeness of the implementation varies widely.  The iconv_open
+function is declared in iconv.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Generic-Conversion-Interface.html#Generic-Conversion-Interface
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Generic-Conversion-Interface/iconv_open.txt

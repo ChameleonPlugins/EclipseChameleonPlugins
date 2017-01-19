@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) block of size bytes whose address is (a,) multiple of alignment
+//\\ //// ==> completion hint (1 line):
+allocates a block of size bytes whose address is a multiple of alignment
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = aligned_alloc (size_t alignment, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * aligned_alloc (size_t alignment, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock
+| AC-Unsafe lock fd mem
+| See POSIX Safety Concepts.
+
+
+The aligned_alloc function allocates a block of size bytes whose
+address is a multiple of alignment.  The alignment must be a
+power of two and size must be a multiple of alignment.
+
+The aligned_alloc function returns a null pointer on error and sets
+errno to one of the following values:
+
+
+ENOMEM
+There was insufficient memory available to satisfy the request.
+
+
+EINVAL
+alignment is not a power of two.
+
+This function was introduced in ISO C11 and hence may have better
+portability to modern non-POSIX systems than posix_memalign.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Aligned-Memory-Blocks.html#Aligned-Memory-Blocks
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Aligned-Memory-Blocks/aligned_alloc.txt

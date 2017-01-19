@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+to (chomp,chop,delete,destroy,drop,pop,remove) (a,) specific element matching key from (the,) tree tdelete can be used
+//\\ //// ==> completion hint (1 line):
+To remove a specific element matching key from the tree tdelete can be used
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = tdelete (const void *key, void **rootp, comparison_fn_t compar)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * tdelete (const void *key, void **rootp, comparison_fn_t compar)
+Preliminary:
+| MT-Safe race:rootp
+| AS-Unsafe heap
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+To remove a specific element matching key from the tree
+tdelete can be used.  It locates the matching element using the
+same method as tfind.  The corresponding element is then removed
+and a pointer to the parent of the deleted node is returned by the
+function.  If there is no matching entry in the tree nothing can be
+deleted and the function returns NULL.  If the root of the tree
+is deleted tdelete returns some unspecified value not equal to
+NULL.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Tree-Search-Function.html#Tree-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Tree-Search-Function/tdelete.txt

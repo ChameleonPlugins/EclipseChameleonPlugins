@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+is similar to setcontext but instead of just replacing (the,) current context (the,) latter is first saved in (the,) object pointed to by oucp as if this was (a,) call to getcontext
+//\\ //// ==> completion hint (1 line):
+is similar to setcontext but instead of just replacing the current context the latter is first saved in the object pointed to by oucp as if this was a call to getcontext
+//\\ //// Replacement text (1+ lines):
+int swapcontext (ucontext_t *restrict oucp, const ucontext_t *restrict ucp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int swapcontext (ucontext_t *restrict oucp, const ucontext_t *restrict ucp)
+Preliminary:
+| MT-Safe race:oucp race:ucp
+| AS-Unsafe corrupt
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+
+The swapcontext function is similar to setcontext but
+instead of just replacing the current context the latter is first saved
+in the object pointed to by oucp as if this was a call to
+getcontext.  The saved context would resume after the call to
+swapcontext.
+
+Once the current context is saved the context described in ucp is
+installed and execution continues as described in this context.
+
+If swapcontext succeeds the function does not return unless the
+context oucp is used without prior modification by
+makecontext.  The return value in this case is 0.  If the
+function fails it returns -1 and sets errno accordingly.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//System-V-contexts.html#System-V-contexts
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/System-V-contexts/swapcontext.txt

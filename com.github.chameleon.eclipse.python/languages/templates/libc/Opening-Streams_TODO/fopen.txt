@@ -1,0 +1,136 @@
+//\\ //// code completion entries (1+ lines):
+opens (a,) stream for i/o to (the,) file X:FILENAME, and (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) pointer to (the,) stream
+//\\ //// ==> completion hint (1 line):
+opens a stream for I/O to the file filename, and returns a pointer to the stream
+//\\ //// Replacement text (1+ lines):
+FILE * fopen (X1, const char *opentype)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: FILE * fopen (const char *filename, const char *opentype)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap lock
+| AC-Unsafe mem fd lock
+| See POSIX Safety Concepts.
+
+
+The fopen function opens a stream for I/O to the file
+filename, and returns a pointer to the stream.
+
+The opentype argument is a string that controls how the file is
+opened and specifies attributes of the resulting stream.  It must begin
+with one of the following sequences of characters:
+
+
+‘r’
+Open an existing file for reading only.
+
+
+‘w’
+Open the file for writing only.  If the file already exists, it is
+truncated to zero length.  Otherwise a new file is created.
+
+
+‘a’
+Open a file for append access; that is, writing at the end of file only.
+If the file already exists, its initial contents are unchanged and
+output to the stream is appended to the end of the file.
+Otherwise, a new, empty file is created.
+
+
+‘r+’
+Open an existing file for both reading and writing.  The initial contents
+of the file are unchanged and the initial file position is at the
+beginning of the file.
+
+
+‘w+’
+Open a file for both reading and writing.  If the file already exists, it
+is truncated to zero length.  Otherwise, a new file is created.
+
+
+‘a+’
+Open or create file for both reading and appending.  If the file exists,
+its initial contents are unchanged.  Otherwise, a new file is created.
+The initial file position for reading is at the beginning of the file,
+but output is always appended to the end of the file.
+
+
+
+As you can see, ‘+’ requests a stream that can do both input and
+output.  When using such a stream, you must call fflush
+(see Stream Buffering) or a file positioning function such as
+fseek (see File Positioning) when switching from reading
+to writing or vice versa.  Otherwise, internal buffers might not be
+emptied properly.
+
+Additional characters may appear after these to specify flags for the
+call.  Always put the mode (‘r’, ‘w+’, etc.) first; that is
+the only part you are guaranteed will be understood by all systems.
+
+The GNU C Library defines additional characters for use in opentype:
+
+
+‘c’
+The file is opened with cancellation in the I/O functions disabled.
+
+
+‘e’
+The underlying file descriptor will be closed if you use any of the
+exec… functions (see Executing a File).  (This is
+equivalent to having set FD_CLOEXEC on that descriptor.
+See Descriptor Flags.)
+
+
+‘m’
+The file is opened and accessed using mmap.  This is only
+supported with files opened for reading.
+
+
+‘x’
+Insist on creating a new file—if a file filename already
+exists, fopen fails rather than opening it.  If you use
+‘x’ you are guaranteed that you will not clobber an existing
+file.  This is equivalent to the O_EXCL option to the
+open function (see Opening and Closing Files).
+
+The ‘x’ modifier is part of ISO C11.
+
+
+
+The character ‘b’ in opentype has a standard meaning; it
+requests a binary stream rather than a text stream.  But this makes no
+difference in POSIX systems (including GNU systems).  If both
+‘+’ and ‘b’ are specified, they can appear in either order.
+See Binary Streams.
+
+
+
+If the opentype string contains the sequence
+,ccs=STRING then STRING is taken as the name of a
+coded character set and fopen will mark the stream as
+wide-oriented with appropriate conversion functions in place to convert
+from and to the character set STRING.  Any other stream
+is opened initially unoriented and the orientation is decided with the
+first file operation.  If the first operation is a wide character
+operation, the stream is not only marked as wide-oriented, also the
+conversion functions to convert to the coded character set used for the
+current locale are loaded.  This will not change anymore from this point
+on even if the locale selected for the LC_CTYPE category is
+changed.
+
+Any other characters in opentype are simply ignored.  They may be
+meaningful in other systems.
+
+If the open fails, fopen returns a null pointer.
+
+When the sources are compiling with _FILE_OFFSET_BITS == 64 on a
+32 bit machine this function is in fact fopen64 since the LFS
+interface replaces transparently the old interface.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Opening-Streams.html#Opening-Streams
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Opening-Streams/fopen.txt

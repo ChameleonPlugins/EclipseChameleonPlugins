@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) next unprocessed entry of (the,) currently selected netgroup
+//\\ //// ==> completion hint (1 line):
+returns the next unprocessed entry of the currently selected netgroup
+//\\ //// Replacement text (1+ lines):
+int getnetgrent (char **hostp, char **userp, char **domainp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getnetgrent (char **hostp, char **userp, char **domainp)
+Preliminary:
+| MT-Unsafe race:netgrent race:netgrentbuf locale
+| AS-Unsafe dlopen plugin heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function returns the next unprocessed entry of the currently
+selected netgroup.  The string pointers, in which addresses are passed in
+the arguments hostp, userp, and domainp, will contain
+after a successful call pointers to appropriate strings.  If the string
+in the next entry is empty the pointer has the value NULL.
+The returned string pointers are only valid if none of the netgroup
+related functions are called.
+
+The return value is 1 if the next entry was successfully read.  A
+value of 0 means no further entries exist or internal errors occurred.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Lookup-Netgroup.html#Lookup-Netgroup
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Lookup-Netgroup/getnetgrent.txt

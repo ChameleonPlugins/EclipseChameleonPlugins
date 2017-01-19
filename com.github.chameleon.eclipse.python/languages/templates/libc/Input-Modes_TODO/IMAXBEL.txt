@@ -1,0 +1,19 @@
+//\\ //// code completion entries (1+ lines):
+this is (a,) bsd extension
+//\\ //// ==> completion hint (1 line):
+This is a BSD extension
+//\\ //// Replacement text (1+ lines):
+Macro: tcflag_t IMAXBEL
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: tcflag_t IMAXBEL
+If this bit is set, then filling up the terminal input buffer sends a
+BEL character (code 007) to the terminal to ring the bell.
+
+This is a BSD extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Input-Modes.html#Input-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Input-Modes/IMAXBEL.txt

@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+install X:LIBRARY using easy_install
+//\\ //// ==> completion hint (1 line):
+generate code for a one-time easy_install install
+//\\ //// Replacement text (1+ lines):
+# from subprocess import call #//// uncomment if needed
+call(["easy_install", "X1"])
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="easy_install"
+//\\ //// Help/documentation (1+ lines):
+Remove this code after successful install...
+//\\ //// Tool tip (1 line):
+Remove this code after successful install...
+//\\

@@ -1,0 +1,53 @@
+//\\ //// code completion entries (1+ lines):
+reads (the,) next entry from (the,) directory
+//\\ //// ==> completion hint (1 line):
+reads the next entry from the directory
+//\\ //// Replacement text (1+ lines):
+struct dirent * readdir (DIR *dirstream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct dirent * readdir (DIR *dirstream)
+Preliminary:
+| MT-Unsafe race:dirstream
+| AS-Unsafe lock
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+This function reads the next entry from the directory.  It normally
+returns a pointer to a structure containing information about the
+file.  This structure is associated with the dirstream handle
+and can be rewritten by a subsequent call.
+
+Portability Note: On some systems readdir may not
+return entries for . and .., even though these are always
+valid file names in any directory.  See File Name Resolution.
+
+If there are no more entries in the directory or an error is detected,
+readdir returns a null pointer.  The following errno error
+conditions are defined for this function:
+
+
+EBADF
+The dirstream argument is not valid.
+
+
+
+To distinguish between an end-of-directory condition or an error, you
+must set errno to zero before calling readdir.  To avoid
+entering an infinite loop, you should stop reading from the directory
+after the first error.
+
+In POSIX.1-2008, readdir is not thread-safe.  In the GNU C Library
+implementation, it is safe to call readdir concurrently on
+different dirstreams, but multiple threads accessing the same
+dirstream result in undefined behavior.  readdir_r is a
+fully thread-safe alternative, but suffers from poor portability (see
+below).  It is recommended that you use readdir, with external
+locking if multiple threads access the same dirstream.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Reading_002fClosing-Directory.html#Reading_002fClosing-Directory
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Reading_002fClosing-Directory/readdir.txt

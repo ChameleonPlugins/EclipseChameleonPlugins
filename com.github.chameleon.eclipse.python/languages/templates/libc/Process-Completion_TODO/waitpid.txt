@@ -1,0 +1,86 @@
+//\\ //// code completion entries (1+ lines):
+is used to request status information from (a,) child process whose process id is pid
+//\\ //// ==> completion hint (1 line):
+is used to request status information from a child process whose process ID is pid
+//\\ //// Replacement text (1+ lines):
+pid_t waitpid (pid_t pid, int *status-ptr, int options)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: pid_t waitpid (pid_t pid, int *status-ptr, int options)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The waitpid function is used to request status information from a
+child process whose process ID is pid.  Normally, the calling
+process is suspended until the child process makes status information
+available by terminating.
+
+Other values for the pid argument have special interpretations.  A
+value of -1 or WAIT_ANY requests status information for
+any child process; a value of 0 or WAIT_MYPGRP requests
+information for any child process in the same process group as the
+calling process; and any other negative value - pgid
+requests information for any child process whose process group ID is
+pgid.
+
+If status information for a child process is available immediately, this
+function returns immediately without waiting.  If more than one eligible
+child process has status information available, one of them is chosen
+randomly, and its status is returned immediately.  To get the status
+from the other eligible child processes, you need to call waitpid
+again.
+
+The options argument is a bit mask.  Its value should be the
+bitwise OR (that is, the ‘|’ operator) of zero or more of the
+WNOHANG and WUNTRACED flags.  You can use the
+WNOHANG flag to indicate that the parent process shouldn’t wait;
+and the WUNTRACED flag to request status information from stopped
+processes as well as processes that have terminated.
+
+The status information from the child process is stored in the object
+that status-ptr points to, unless status-ptr is a null pointer.
+
+This function is a cancellation point in multi-threaded programs.  This
+is a problem if the thread allocates some resources (like memory, file
+descriptors, semaphores or whatever) at the time waitpid is
+called.  If the thread gets canceled these resources stay allocated
+until the program ends.  To avoid this calls to waitpid should be
+protected using cancellation handlers.
+
+The return value is normally the process ID of the child process whose
+status is reported.  If there are child processes but none of them is
+waiting to be noticed, waitpid will block until one is.  However,
+if the WNOHANG option was specified, waitpid will return
+zero instead of blocking.
+
+If a specific PID to wait for was given to waitpid, it will
+ignore all other children (if any).  Therefore if there are children
+waiting to be noticed but the child whose PID was specified is not one
+of them, waitpid will block or return zero as described above.
+
+A value of -1 is returned in case of error.  The following
+errno error conditions are defined for this function:
+
+
+EINTR
+The function was interrupted by delivery of a signal to the calling
+process.  See Interrupted Primitives.
+
+
+ECHILD
+There are no child processes to wait for, or the specified pid
+is not a child of the calling process.
+
+
+EINVAL
+An invalid value was provided for the options argument.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Process-Completion.html#Process-Completion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Process-Completion/waitpid.txt

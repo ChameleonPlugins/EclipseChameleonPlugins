@@ -1,0 +1,65 @@
+//\\ //// code completion entries (1+ lines):
+ (convert,change,replace) (a,) single wide character into (a,) multibyte (string,text) corresponding to that wide character
+//\\ //// ==> completion hint (1 line):
+ converts a single wide character into a multibyte string corresponding to that wide character
+//\\ //// Replacement text (1+ lines):
+size_t size=wcrtomb (char *restrict s, wchar_t wc, mbstate_t *restrict ps)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t wcrtomb (char *restrict s, wchar_t wc, mbstate_t *restrict ps)
+Preliminary:
+| MT-Unsafe race:wcrtomb/!ps
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock mem fd
+| See POSIX Safety Concepts.
+
+
+The wcrtomb function (“wide character restartable to
+multibyte”) converts a single wide character into a multibyte string
+corresponding to that wide character.
+
+If s is a null pointer, the function resets the state stored in
+the objects pointed to by ps (or the internal mbstate_t
+object) to the initial state.  This can also be achieved by a call like
+this:
+
+
+wcrtombs (temp_buf, L'\0', ps)
+
+
+since, if s is a null pointer, wcrtomb performs as if it
+writes into an internal buffer, which is guaranteed to be large enough.
+
+If wc is the NUL wide character, wcrtomb emits, if
+necessary, a shift sequence to get the state ps into the initial
+state followed by a single NUL byte, which is stored in the string
+s.
+
+Otherwise a byte sequence (possibly including shift sequences) is written
+into the string s.  This only happens if wc is a valid wide
+character (i.e., it has a multibyte representation in the character set
+selected by locale of the LC_CTYPE category).  If wc is no
+valid wide character, nothing is stored in the strings s,
+errno is set to EILSEQ, the conversion state in ps
+is undefined and the return value is (size_t) -1.
+
+If no error occurred the function returns the number of bytes stored in
+the string s.  This includes all bytes representing shift
+sequences.
+
+One word about the interface of the function: there is no parameter
+specifying the length of the array s.  Instead the function
+assumes that there are at least MB_CUR_MAX bytes available since
+this is the maximum length of any byte sequence representing a single
+character.  So the caller has to make sure that there is enough space
+available, otherwise buffer overruns can occur.
+
+
+wcrtomb was introduced in Amendment 1 to ISO C90 and is
+declared in wchar.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Converting-a-Character.html#Converting-a-Character
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Converting-a-Character/wcrtomb.txt

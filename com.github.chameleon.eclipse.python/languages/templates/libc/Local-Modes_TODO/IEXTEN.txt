@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+on bsd systems and gnu/linux and gnu/hurd systems, it enables (the,) lnext and discard characters
+//\\ //// ==> completion hint (1 line):
+On BSD systems and GNU/Linux and GNU/Hurd systems, it enables the LNEXT and DISCARD characters
+//\\ //// Replacement text (1+ lines):
+Macro: tcflag_t IEXTEN
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: tcflag_t IEXTEN
+POSIX.1 gives IEXTEN implementation-defined meaning,
+so you cannot rely on this interpretation on all systems.
+
+On BSD systems and GNU/Linux and GNU/Hurd systems, it enables the LNEXT and
+DISCARD characters.
+See Other Special.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Local-Modes.html#Local-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Local-Modes/IEXTEN.txt

@@ -1,0 +1,76 @@
+//\\ //// code completion entries (1+ lines):
+(the,) strtol function (convert,change,replace) (the,) initial part of (string,text) to (a,) signed integer, which is returned as (a,) value of (output,print,show,say,type,write) long int
+//\\ //// ==> completion hint (1 line):
+The strtol function converts the initial part of string to a signed integer, which is returned as a value of type long int
+//\\ //// Replacement text (1+ lines):
+long int strtol (const char *restrict string, char **restrict tailptr, int base)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int strtol (const char *restrict string, char **restrict tailptr, int base)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The strtol (“string-to-long”) function converts the initial
+part of string to a signed integer, which is returned as a value
+of type long int.
+
+This function attempts to decompose string as follows:
+
+
+ A (possibly empty) sequence of whitespace characters.  Which characters
+are whitespace is determined by the isspace function
+(see Classification of Characters).  These are discarded.
+
+ An optional plus or minus sign (‘+’ or ‘-’).
+
+ A nonempty sequence of digits in the radix specified by base.
+
+If base is zero, decimal radix is assumed unless the series of
+digits begins with ‘0’ (specifying octal radix), or ‘0x’ or
+‘0X’ (specifying hexadecimal radix); in other words, the same
+syntax used for integer constants in C.
+
+Otherwise base must have a value between 2 and 36.
+If base is 16, the digits may optionally be preceded by
+‘0x’ or ‘0X’.  If base has no legal value the value returned
+is 0l and the global variable errno is set to EINVAL.
+
+ Any remaining characters in the string.  If tailptr is not a null
+pointer, strtol stores a pointer to this tail in
+*tailptr.
+
+
+If the string is empty, contains only whitespace, or does not contain an
+initial substring that has the expected syntax for an integer in the
+specified base, no conversion is performed.  In this case,
+strtol returns a value of zero and the value stored in
+*tailptr is the value of string.
+
+In a locale other than the standard &quot;C&quot; locale, this function
+may recognize additional implementation-dependent syntax.
+
+If the string has valid syntax for an integer but the value is not
+representable because of overflow, strtol returns either
+LONG_MAX or LONG_MIN (see Range of Type), as
+appropriate for the sign of the value.  It also sets errno
+to ERANGE to indicate there was overflow.
+
+You should not check for errors by examining the return value of
+strtol, because the string might be a valid representation of
+0l, LONG_MAX, or LONG_MIN.  Instead, check whether
+tailptr points to what you expect after the number
+(e.g. '\0' if the string should end after the number).  You also
+need to clear errno before the call and check it afterward, in
+case there was overflow.
+
+There is an example at the end of this section.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Parsing-of-Integers.html#Parsing-of-Integers
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Parsing-of-Integers/strtol.txt

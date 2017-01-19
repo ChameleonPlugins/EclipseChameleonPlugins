@@ -1,0 +1,19 @@
+//\\ //// code completion entries (1+ lines):
+fix Cannot fetch index base URL 
+//\\ //// ==> completion hint (1 line):
+how to set proxy
+//\\ //// Replacement text (1+ lines):
+#Run the following at a shell prompt to set it once,
+#or copy it to /etc/environment
+#or ~/.bash_rc or ~/.bash_profile
+export http_proxy=X1
+export https_proxy=X1
+export ftp_proxy=X1
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=web-proxy.fc.hp.com:8088
+//\\ //// Help/documentation (1+ lines):
+# import a file...
+//\\ //// Tool tip (1 line):
+imports should be placed at the top of the file...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):      
+fix/nameError.txt

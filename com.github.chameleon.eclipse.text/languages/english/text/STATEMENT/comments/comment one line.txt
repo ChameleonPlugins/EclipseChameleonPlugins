@@ -1,0 +1,18 @@
+//\\ //// code completion entries (1+ lines):
+comment with a single line of text
+//\\ //// ==> completion hint (1 line):
+//comment
+//\\ //// Replacement text (1+ lines):
+//comment
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+//a single line comment
+ //\\
+/*
+a multi-line
+comment
+*/
+//\\ //// Tool tip (1 line):
+Change the text to the comment you want to add, then Save (Ctrl-S)
+//\\

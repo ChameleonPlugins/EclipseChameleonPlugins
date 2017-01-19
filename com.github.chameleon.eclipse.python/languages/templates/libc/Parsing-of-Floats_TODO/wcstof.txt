@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(the,) wcstod, wcstof, and wcstol functions are equivalent in nearly all aspect to (the,) strtod, strtof, and strtold functions but it handles wide character (string,text)
+//\\ //// ==> completion hint (1 line):
+The wcstod, wcstof, and wcstol functions are equivalent in nearly all aspect to the strtod, strtof, and strtold functions but it handles wide character string
+//\\ //// Replacement text (1+ lines):
+Function: double wcstod (const wchar_t *restrict string, wchar_t **restrict tailptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double wcstod (const wchar_t *restrict string, wchar_t **restrict tailptr)
+Function: float wcstof (const wchar_t *string, wchar_t **tailptr)
+Function: long double wcstold (const wchar_t *string, wchar_t **tailptr)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The wcstod, wcstof, and wcstol functions are
+equivalent in nearly all aspect to the strtod, strtof, and
+strtold functions but it handles wide character string.
+
+The wcstod function was introduced in Amendment 1 of ISO C90.  The wcstof and wcstold functions were introduced in
+ISO C99.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Parsing-of-Floats.html#Parsing-of-Floats
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Parsing-of-Floats/wcstof.txt

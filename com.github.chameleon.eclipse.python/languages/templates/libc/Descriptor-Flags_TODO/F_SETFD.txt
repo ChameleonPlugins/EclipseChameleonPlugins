@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+(the,) normal (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) value from fcntl with this command is (an,) unspecified value other than -1, which (indicate,select,specify) (an,) error
+//\\ //// ==> completion hint (1 line):
+The normal return value from fcntl with this command is an unspecified value other than -1, which indicates an error
+//\\ //// Replacement text (1+ lines):
+Macro: int F_SETFD
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int F_SETFD
+This macro is used as the command argument to fcntl, to
+specify that it should set the file descriptor flags associated with the
+filedes argument.  This requires a third int argument to
+specify the new flags, so the form of the call is:
+
+
+fcntl (filedes, F_SETFD, new-flags)
+
+
+The normal return value from fcntl with this command is an
+unspecified value other than -1, which indicates an error.
+The flags and error conditions are the same as for the F_GETFD
+command.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Descriptor-Flags.html#Descriptor-Flags
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Descriptor-Flags/F_SETFD.txt

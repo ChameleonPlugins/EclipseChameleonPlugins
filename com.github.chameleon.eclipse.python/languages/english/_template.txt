@@ -1,0 +1,13 @@
+ //\\ //// code completion entries (1+ lines):
+
+ //\\ //// ==> completion hint (1 line):
+
+ //\\ //// Replacement text (1+ lines):
+
+ //\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+ //\\ //// Help/documentation (1+ lines):
+
+ //\\ //// Tool tip (1 line):
+
+ //\\ //// Template path (e.g. core/sayHi.txt) (1 line):

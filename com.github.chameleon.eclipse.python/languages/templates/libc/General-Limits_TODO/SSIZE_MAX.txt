@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+is defined in all posix systems because this limit is never configurable
+//\\ //// ==> completion hint (1 line):
+is defined in all POSIX systems because this limit is never configurable
+//\\ //// Replacement text (1+ lines):
+Macro: ssize_t SSIZE_MAX
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: ssize_t SSIZE_MAX
+The largest value that can fit in an object of type ssize_t.
+Effectively, this is the limit on the number of bytes that can be read
+or written in a single operation.
+
+This macro is defined in all POSIX systems because this limit is never
+configurable.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//General-Limits.html#General-Limits
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/General-Limits/SSIZE_MAX.txt

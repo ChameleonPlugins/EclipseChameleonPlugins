@@ -1,0 +1,45 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) first occurrence of (the,) character X:CHARACTER in (the,) null-terminated (string,text) beginning at (string,text)
+//\\ //// ==> completion hint (1 line):
+finds the first occurrence of the character c in the null-terminated string beginning at string
+//\\ //// Replacement text (1+ lines):
+char * strchr (X1tring, X2)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X2='a'
+X1="dog"
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strchr (const char *string, int c)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The strchr function finds the first occurrence of the character
+c (converted to a char) in the null-terminated string
+beginning at string.  The return value is a pointer to the located
+character, or a null pointer if no match was found.
+
+For example,
+
+strchr (&quot;hello, world&quot;, 'l')
+    ? &quot;llo, world&quot;
+strchr (&quot;hello, world&quot;, '?')
+    ? NULL
+
+
+The terminating null character is considered to be part of the string,
+so you can use this function get a pointer to the end of a string by
+specifying a null character as the value of the c argument.
+
+When strchr returns a null pointer, it does not let you know
+the position of the terminating null character it has found.  If you
+need that information, it is better (but less portable) to use
+strchrnul than to search for it a second time.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Search-Functions/strchr.txt

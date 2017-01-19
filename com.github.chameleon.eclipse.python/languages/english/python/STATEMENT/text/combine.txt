@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+(combine,concatenate) X:TEXT and X:TEXT
+//\\ //// ==> completion hint (1 line):
+combine two strings
+//\\ //// Replacement text (1+ lines):
+X1 + X2
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="first"
+X2="second"
+//\\ //// Help/documentation (1+ lines):
+e.g. print ("first" + "last")
+//\\ //// Tool tip (1 line):
+You can set this equal to something if you wish... X=...
+//\\

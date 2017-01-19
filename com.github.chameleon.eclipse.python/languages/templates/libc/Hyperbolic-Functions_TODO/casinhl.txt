@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) inverse complex hyperbolic sine of z—(the,) value whose complex hyperbolic sine is z
+//\\ //// ==> completion hint (1 line):
+These functions return the inverse complex hyperbolic sine of z—the value whose complex hyperbolic sine is z
+//\\ //// Replacement text (1+ lines):
+Function: complex double casinh (complex double z)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: complex double casinh (complex double z)
+Function: complex float casinhf (complex float z)
+Function: complex long double casinhl (complex long double z)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return the inverse complex hyperbolic sine of
+z—the value whose complex hyperbolic sine is z.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Hyperbolic-Functions.html#Hyperbolic-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Hyperbolic-Functions/casinhl.txt

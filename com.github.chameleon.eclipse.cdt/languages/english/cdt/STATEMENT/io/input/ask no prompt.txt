@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+ask the user for text, without printing anything first
+get input from the user WITHOUT prompting them with a question
+input a value from the user WITHOUT prompting them with a question
+read a value from the user WITHOUT prompting them with a question
+//\\ //// ==> completion hint (1 line):
+// ask the user for text, without printing anything first
+//\\ //// Replacement text (1+ lines):
+// ask the user for text, without printing anything first
+BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+String answer = bufferedReader.readLine();
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+function BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+String answer = bufferedReader.readLine(); http://www.w3.og/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html<br>
+<DL>
+  <DT><b>Parameters:</b></DT><br>
+   <DD>{String} text<br></DD>
+  <DT><b>Since:</b></DT><br>
+   <DD>StandardECMA-262 3rd. Edition</DD><br>
+   <DD>Level 2 Document Object Model HTML Specification.</DD>
+ </DL>
+//\\ //// Tool tip (1 line):
+Replace 'answer' with your own variable name if you want...
+//\\

@@ -1,0 +1,13 @@
+//\\ //// code completion entries (1+ lines):
+close workbook named X:NAME
+//\\ //// ==> completion hint (1 line):
+Close workbook
+//\\ //// Replacement text (1+ lines):
+X1.close()
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=workbook
+//\\ //// Help/documentation (1+ lines):
+https://xlsxwriter.readthedocs.org/getting_started.html#running-a-sample-program
+//\\ //// Tool tip (1 line):
+
+//\\

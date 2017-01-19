@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+this (end,exit,quit,(halt,pause,stop,suspend)) (the,) use of ap
+//\\ //// ==> completion hint (1 line):
+This ends the use of ap
+//\\ //// Replacement text (1+ lines):
+Macro: void va_end (va_list ap)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: void va_end (va_list ap)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This ends the use of ap.  After a va_end call, further
+va_arg calls with the same ap may not work.  You should invoke
+va_end before returning from the function in which va_start
+was invoked with the same ap argument.
+
+In the GNU C Library, va_end does nothing, and you need not ever
+use it except for reasons of portability.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argument-Macros.html#Argument-Macros
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argument-Macros/va_end.txt

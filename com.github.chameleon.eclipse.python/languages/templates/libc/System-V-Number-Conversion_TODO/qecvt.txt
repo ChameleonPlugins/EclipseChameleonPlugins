@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+is equivalent to ecvt except that it takes (a,) long double for (the,) first parameter and that ndigit is restricted by (the,) precision of (a,) long double
+//\\ //// ==> completion hint (1 line):
+is equivalent to ecvt except that it takes a long double for the first parameter and that ndigit is restricted by the precision of a long double
+//\\ //// Replacement text (1+ lines):
+char * qecvt (long double value, int ndigit, int *decpt, int *neg)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * qecvt (long double value, int ndigit, int *decpt, int *neg)
+Preliminary:
+| MT-Unsafe race:qecvt
+| AS-Unsafe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is equivalent to ecvt except that it takes a
+long double for the first parameter and that ndigit is
+restricted by the precision of a long double.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//System-V-Number-Conversion.html#System-V-Number-Conversion
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/System-V-Number-Conversion/qecvt.txt

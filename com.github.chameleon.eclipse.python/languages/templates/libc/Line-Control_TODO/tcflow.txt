@@ -1,0 +1,73 @@
+//\\ //// code completion entries (1+ lines):
+is used to perform operations relating to xon/xoff flow control on (the,) terminal file specified by X:FILEDESCRIPTOR
+//\\ //// ==> completion hint (1 line):
+is used to perform operations relating to XON/XOFF flow control on the terminal file specified by filedes
+//\\ //// Replacement text (1+ lines):
+int tcflow (X1, int action)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int tcflow (int filedes, int action)
+Preliminary:
+| MT-Unsafe race:tcattr(filedes)/bsd
+| AS-Unsafe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The tcflow function is used to perform operations relating to
+XON/XOFF flow control on the terminal file specified by filedes.
+
+The action argument specifies what operation to perform, and can
+be one of the following values:
+
+
+
+
+TCOOFF
+Suspend transmission of output.
+
+
+
+TCOON
+Restart transmission of output.
+
+
+
+TCIOFF
+Transmit a STOP character.
+
+
+
+TCION
+Transmit a START character.
+
+
+
+For more information about the STOP and START characters, see Special Characters.
+
+The return value is normally zero.  In the event of an error, a value
+of -1 is returned.  The following errno error conditions
+are defined for this function:
+
+
+
+
+EBADF
+The filedes is not a valid file descriptor.
+
+
+
+ENOTTY
+The filedes is not associated with a terminal device.
+
+
+
+EINVAL
+A bad value was supplied as the action argument.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Line-Control.html#Line-Control
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Line-Control/tcflow.txt

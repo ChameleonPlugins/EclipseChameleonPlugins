@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+jn (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) bessel function of (the,) first kind of order n of x
+//\\ //// ==> completion hint (1 line):
+jn returns the Bessel function of the first kind of order n of x
+//\\ //// Replacement text (1+ lines):
+Function: double jn (int n, double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double jn (int n, double x)
+Function: float jnf (int n, float x)
+Function: long double jnl (int n, long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+jn returns the Bessel function of the first kind of order
+n of x.  It may signal underflow if x is too large.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Special-Functions.html#Special-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Special-Functions/jnl.txt

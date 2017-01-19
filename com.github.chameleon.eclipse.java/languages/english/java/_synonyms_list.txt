@@ -1,0 +1,16 @@
+ascii,ascii table in a comment,comment with ascii table.txt
+get,get input from the user prompting them with a question,ask.txt
+get,get input from the user WITHOUT prompting them with a question,ask no prompt.txt
+input,input a value from the user prompting them with a question,ask.txt
+input,input a value from the user WITHOUT prompting them with a question,ask no prompt.txt
+output,output a line of text but do not go to the next line,print.txt
+outputln,output a line of text and go to the next line,println.txt
+print,print the contents of a file,display.txt
+read,read a value from the user prompting them with a question,ask.txt
+read,read a value from the user WITHOUT prompting them with a question,ask no prompt.txt
+say,say a line of text but do not go to the next line,print.txt
+sayln,say a line of text and go to the next line,println.txt
+say,say X but do not go to the next line,printX.txt
+sayln,say X and go to the next line,printlnX.txt
+show,show the contents of a closed file,display.txt
+write,write a line of text but do not go to the next line,print.txt

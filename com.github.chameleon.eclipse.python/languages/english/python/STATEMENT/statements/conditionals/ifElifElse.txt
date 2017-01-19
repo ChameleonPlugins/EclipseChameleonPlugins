@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+if X:CONDITION then X:STATEMENT else if X:STAEMENT else X:STATEMENT
+//\\ //// ==> completion hint (1 line):
+if X then X else X
+//\\ //// Replacement text (1+ lines):
+if X1:
+    X2
+elif X3:	# //// add elif blocks as needed...
+    X4
+else:
+    X5
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=x>0
+X2=print ">"
+X3=x<0
+X4=print "<"
+X5=print "neither"
+//\\ //// Help/documentation (1+ lines):
+if/then/else
+//\\ //// Tool tip (1 line):
+if/then/else condition...
+

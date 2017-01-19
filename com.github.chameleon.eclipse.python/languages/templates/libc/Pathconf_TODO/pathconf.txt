@@ -1,0 +1,44 @@
+//\\ //// code completion entries (1+ lines):
+is used to inquire about (the,) limits that apply to (the,) file named X:FILENAME
+//\\ //// ==> completion hint (1 line):
+is used to inquire about the limits that apply to the file named filename
+//\\ //// Replacement text (1+ lines):
+long int pathconf (X1, int parameter)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: long int pathconf (const char *filename, int parameter)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock heap
+| AC-Unsafe lock fd mem
+| See POSIX Safety Concepts.
+
+
+This function is used to inquire about the limits that apply to
+the file named filename.
+
+The parameter argument should be one of the ‘_PC_’ constants
+listed below.
+
+The normal return value from pathconf is the value you requested.
+A value of -1 is returned both if the implementation does not
+impose a limit, and in case of an error.  In the former case,
+errno is not set, while in the latter case, errno is set
+to indicate the cause of the problem.  So the only way to use this
+function robustly is to store 0 into errno just before
+calling it.
+
+Besides the usual file name errors (see File Name Errors),
+the following error condition is defined for this function:
+
+
+EINVAL
+The value of parameter is invalid, or the implementation doesn’t
+support the parameter for the specific file.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Pathconf.html#Pathconf
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Pathconf/pathconf.txt

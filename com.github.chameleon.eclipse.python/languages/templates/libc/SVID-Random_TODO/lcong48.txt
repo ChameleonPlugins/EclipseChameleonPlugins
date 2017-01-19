@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+allows (the,) user to (convert,change,replace) (the,) complete state of (the,) random number generator
+//\\ //// ==> completion hint (1 line):
+allows the user to change the complete state of the random number generator
+//\\ //// Replacement text (1+ lines):
+void lcong48 (unsigned short int param[7])
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void lcong48 (unsigned short int param[7])
+Preliminary:
+| MT-Unsafe race:drand48
+| AS-Unsafe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+The lcong48 function allows the user to change the complete state
+of the random number generator.  Unlike srand48 and
+seed48, this function also changes the constants in the
+congruential formula.
+
+From the seven elements in the array param the least significant
+16 bits of the entries param[0] to param[2]
+determine the initial state, the least significant 16 bits of
+param[3] to param[5] determine the 48 bit
+constant a and param[6] determines the 16-bit value
+c.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/lcong48.txt

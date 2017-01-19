@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) size in bytes of (the,) currently growing object
+//\\ //// ==> completion hint (1 line):
+returns the size in bytes of the currently growing object
+//\\ //// Replacement text (1+ lines):
+int obstack_object_size (struct obstack *obstack-ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int obstack_object_size (struct obstack *obstack-ptr)
+Preliminary:
+| MT-Safe race:obstack-ptr
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function returns the size in bytes of the currently growing object.
+This is equivalent to
+
+
+obstack_next_free (obstack-ptr) - obstack_base (obstack-ptr)
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Status-of-an-Obstack.html#Status-of-an-Obstack
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Status-of-an-Obstack/obstack_object_size.txt

@@ -1,0 +1,47 @@
+//\\ //// code completion entries (1+ lines):
+searches forward from (the,) current point in (the,) database for (an,) entry that matches id
+//\\ //// ==> completion hint (1 line):
+searches forward from the current point in the database for an entry that matches id
+//\\ //// Replacement text (1+ lines):
+struct utmp * getutid (const struct utmp *id)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: struct utmp * getutid (const struct utmp *id)
+Preliminary:
+| MT-Unsafe init race:utent sig:ALRM timer
+| AS-Unsafe lock heap
+| AC-Unsafe lock mem fd
+| See POSIX Safety Concepts.
+
+
+This function searches forward from the current point in the database
+for an entry that matches id.  If the ut_type member of the
+id structure is one of RUN_LVL, BOOT_TIME,
+OLD_TIME or NEW_TIME the entries match if the
+ut_type members are identical.  If the ut_type member of
+the id structure is INIT_PROCESS, LOGIN_PROCESS,
+USER_PROCESS or DEAD_PROCESS, the entries match if the
+ut_type member of the entry read from the database is one of
+these four, and the ut_id members match.  However if the
+ut_id member of either the id structure or the entry read
+from the database is empty it checks if the ut_line members match
+instead.  If a matching entry is found, getutid returns a pointer
+to the entry, which is statically allocated, and may be overwritten by a
+subsequent call to getutent, getutid or getutline.
+You must copy the contents of the structure if you wish to save the
+information.
+
+A null pointer is returned in case the end of the database is reached
+without a match.
+
+The getutid function may cache the last read entry.  Therefore,
+if you are using getutid to search for multiple occurrences, it
+is necessary to zero out the static data after each call.  Otherwise
+getutid could just return a pointer to the same entry over and
+over again.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Manipulating-the-Database.html#Manipulating-the-Database
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Manipulating-the-Database/getutid.txt

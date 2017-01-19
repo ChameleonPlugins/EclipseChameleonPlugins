@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+ask for inputs for get token
+//\\ //// ==> completion hint (1 line):
+# ask for inputs for get token
+//\\ //// Replacement text (1+ lines):
+# ask for inputs for get token
+name = raw_input("name? ")
+password = raw_input("password? ")
+input = { "auth": {
+    "identity": {
+      "methods": ["password"],
+      "password": {
+        "user": {
+          "name": name,
+          "domain": { "id": "default" },
+          "password": password
+        }
+      }
+    }
+  }
+}
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Documentation for getting inputs for get token
+//\\ //// Tool tip (1 line):
+input is returned, and may be used to get a token...
+//\\

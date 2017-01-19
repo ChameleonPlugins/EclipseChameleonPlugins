@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+is used to (convert,change,replace) (the,) file (place,position) of (the,) stream stream
+//\\ //// ==> completion hint (1 line):
+is used to change the file position of the stream stream
+//\\ //// Replacement text (1+ lines):
+int fseek (FILE *stream, long int offset, int whence)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fseek (FILE *stream, long int offset, int whence)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+The fseek function is used to change the file position of the
+stream stream.  The value of whence must be one of the
+constants SEEK_SET, SEEK_CUR, or SEEK_END, to
+indicate whether the offset is relative to the beginning of the
+file, the current file position, or the end of the file, respectively.
+
+This function returns a value of zero if the operation was successful,
+and a nonzero value to indicate failure.  A successful call also clears
+the end-of-file indicator of stream and discards any characters
+that were “pushed back” by the use of ungetc.
+
+fseek either flushes any buffered output before setting the file
+position or else remembers it so it will be written later in its proper
+place in the file.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Positioning.html#File-Positioning
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Positioning/fseek.txt

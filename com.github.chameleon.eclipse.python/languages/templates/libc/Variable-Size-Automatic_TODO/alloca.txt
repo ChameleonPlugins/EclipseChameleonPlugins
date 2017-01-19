@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(the,) (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) value of alloca is (the,) address of (a,) block of size bytes of memory, allocated in (the,) stack frame of (the,) calling function
+//\\ //// ==> completion hint (1 line):
+The return value of alloca is the address of a block of size bytes of memory, allocated in the stack frame of the calling function
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = alloca (size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * alloca (size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The return value of alloca is the address of a block of size
+bytes of memory, allocated in the stack frame of the calling function.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Variable-Size-Automatic.html#Variable-Size-Automatic
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Variable-Size-Automatic/alloca.txt

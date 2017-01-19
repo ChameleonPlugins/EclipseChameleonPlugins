@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+is like utimes, except that it does not follow symbolic links
+//\\ //// ==> completion hint (1 line):
+is like utimes, except that it does not follow symbolic links
+//\\ //// Replacement text (1+ lines):
+int lutimes (X1, const struct timeval tvp[2])
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int lutimes (const char *filename, const struct timeval tvp[2])
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is like utimes, except that it does not follow
+symbolic links.  If filename is the name of a symbolic link,
+lutimes sets the file access and modification times of the
+symbolic link special file itself (as seen by lstat;
+see Symbolic Links) while utimes sets the file access and
+modification times of the file the symbolic link refers to.  This
+function comes from FreeBSD, and is not available on all platforms (if
+not available, it will fail with ENOSYS).
+
+The return values and error conditions are the same as for the utime
+function.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Times.html#File-Times
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Times/lutimes.txt

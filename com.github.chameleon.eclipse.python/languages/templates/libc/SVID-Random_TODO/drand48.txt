@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) double value in (the,) range of 0
+//\\ //// ==> completion hint (1 line):
+returns a double value in the range of 0
+//\\ //// Replacement text (1+ lines):
+double drand48 (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double drand48 (void)
+Preliminary:
+| MT-Unsafe race:drand48
+| AS-Unsafe 
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+This function returns a double value in the range of 0.0
+to 1.0 (exclusive).  The random bits are determined by the global
+state of the random number generator in the C library.
+
+Since the double type according to IEEE 754 has a 52-bit
+mantissa this means 4 bits are not initialized by the random number
+generator.  These are (of course) chosen to be the least significant
+bits and they are initialized to 0.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//SVID-Random.html#SVID-Random
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/SVID-Random/drand48.txt

@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+for getrlimit, (the,) structure is (an,) (output,print,show,say,type,write)
+//\\ //// ==> completion hint (1 line):
+For getrlimit, the structure is an output
+//\\ //// Replacement text (1+ lines):
+Data Type: struct rlimit
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Data Type: struct rlimit
+This structure is used with getrlimit to receive limit values,
+and with setrlimit to specify limit values for a particular process
+and resource.  It has two fields:
+
+
+rlim_t rlim_cur
+The current limit
+
+
+rlim_t rlim_max
+The maximum limit.
+
+
+
+For getrlimit, the structure is an output; it receives the current
+values.  For setrlimit, it specifies the new values.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Limits-on-Resources.html#Limits-on-Resources
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Limits-on-Resources/struct rlimit.txt

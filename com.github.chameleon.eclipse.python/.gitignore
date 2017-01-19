@@ -1,0 +1,8 @@
+.classpath
+.classpath
+bin/com/hp/chameleon/preferences/ChameleonPreferencePage.class
+bin/com/hp/chameleon/preferences/PreferenceConstants.class
+bin/com/hp/chameleon/preferences/PreferenceInitializer.class
+bin/com/hp/chameleon/preferences/SamplePropertyPage.class
+
+languages/.project

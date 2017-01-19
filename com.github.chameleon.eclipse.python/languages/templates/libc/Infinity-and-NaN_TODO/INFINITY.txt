@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+you can test whether (a,) floating-point value is infinite by comparing it to this macro
+//\\ //// ==> completion hint (1 line):
+You can test whether a floating-point value is infinite by comparing it to this macro
+//\\ //// Replacement text (1+ lines):
+Macro: float INFINITY
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: float INFINITY
+An expression representing positive infinity.  It is equal to the value
+produced  by mathematical operations like 1.0 / 0.0.
+-INFINITY represents negative infinity.
+
+You can test whether a floating-point value is infinite by comparing it
+to this macro.  However, this is not recommended; you should use the
+isfinite macro instead.  See Floating Point Classes.
+
+This macro was introduced in the ISO C99 standard.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Infinity-and-NaN.html#Infinity-and-NaN
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Infinity-and-NaN/INFINITY.txt

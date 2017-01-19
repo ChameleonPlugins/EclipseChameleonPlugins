@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+(output,print,show,say,write) X:TEXT to buffer X:BUFFER then do not go to the next line
+//\\ //// ==> completion hint (1 line):
+print text to a buffer
+//\\ //// Replacement text (1+ lines):
+sprintf(X2, X1);
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="hello world"
+X2=buffer
+//\\ //// Help/documentation (1+ lines):
+Documentation
+//\\ //// Tool tip (1 line):
+Next: unmap memory when done with buffer
+//\\

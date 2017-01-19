@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) number of elements in (the,) argz vector argz and argz_len
+//\\ //// ==> completion hint (1 line):
+Returns the number of elements in the argz vector argz and argz_len
+//\\ //// Replacement text (1+ lines):
+size_t size=argz_count (const char *argz, size_t arg_len)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: size_t argz_count (const char *argz, size_t arg_len)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Returns the number of elements in the argz vector argz and
+argz_len.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argz-Functions.html#Argz-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argz-Functions/argz_count.txt

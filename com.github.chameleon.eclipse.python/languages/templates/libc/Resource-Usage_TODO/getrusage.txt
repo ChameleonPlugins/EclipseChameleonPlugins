@@ -1,0 +1,43 @@
+//\\ //// code completion entries (1+ lines):
+reports resource usage totals for processes specified by processes, storing (the,) information in *
+//\\ //// ==> completion hint (1 line):
+reports resource usage totals for processes specified by processes, storing the information in *
+//\\ //// Replacement text (1+ lines):
+int getrusage (int processes, struct rusage *rusage)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int getrusage (int processes, struct rusage *rusage)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function reports resource usage totals for processes specified by
+processes, storing the information in *rusage.
+
+In most systems, processes has only two valid values:
+
+
+RUSAGE_SELF
+Just the current process.
+
+
+RUSAGE_CHILDREN
+All child processes (direct and indirect) that have already terminated.
+
+
+
+The return value of getrusage is zero for success, and -1
+for failure.
+
+
+EINVAL
+The argument processes is not valid.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Resource-Usage.html#Resource-Usage
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Resource-Usage/getrusage.txt

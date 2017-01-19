@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+this is (the,) iso c /@w function to (chomp,chop,delete,destroy,drop,pop,remove) (a,) file
+//\\ //// ==> completion hint (1 line):
+This is the ISO C /@w function to remove a file
+//\\ //// Replacement text (1+ lines):
+int remove (X1)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int remove (const char *filename)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is the ISO C function to remove a file.  It works like
+unlink for files and like rmdir for directories.
+remove is declared in stdio.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Deleting-Files.html#Deleting-Files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Deleting-Files/remove.txt

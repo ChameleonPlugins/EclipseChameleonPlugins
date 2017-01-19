@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) uint16_t integer netshort from network byte order to (box,computer,system,node,host,target) byte order
+//\\ //// ==> completion hint (1 line):
+converts the uint16_t integer netshort from network byte order to host byte order
+//\\ //// Replacement text (1+ lines):
+uint16_t ntohs (uint16_t netshort)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: uint16_t ntohs (uint16_t netshort)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function converts the uint16_t integer netshort from
+network byte order to host byte order.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Byte-Order.html#Byte-Order
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Byte-Order/ntohs.txt

@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+when (the,) mtrace function is called it looks for (an,) environment variable named malloc_trace
+//\\ //// ==> completion hint (1 line):
+When the mtrace function is called it looks for an environment variable named MALLOC_TRACE
+//\\ //// Replacement text (1+ lines):
+void mtrace (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void mtrace (void)
+Preliminary:
+| MT-Unsafe env race:mtrace const:malloc_hooks init
+| AS-Unsafe init heap corrupt lock
+| AC-Unsafe init corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+
+When the mtrace function is called it looks for an environment
+variable named MALLOC_TRACE.  This variable is supposed to
+contain a valid file name.  The user must have write access.  If the
+file already exists it is truncated.  If the environment variable is not
+set or it does not name a valid file which can be opened for writing
+nothing is done.  The behavior of malloc etc. is not changed.
+For obvious reasons this also happens if the application is installed
+with the SUID or SGID bit set.
+
+If the named file is successfully opened, mtrace installs special
+handlers for the functions malloc, realloc, and
+free (see Hooks for Malloc).  From then on, all uses of these
+functions are traced and protocolled into the file.  There is now of
+course a speed penalty for all calls to the traced functions so tracing
+should not be enabled during normal use.
+
+This function is a GNU extension and generally not available on other
+systems.  The prototype can be found in mcheck.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Tracing-malloc.html#Tracing-malloc
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Tracing-malloc/mtrace.txt

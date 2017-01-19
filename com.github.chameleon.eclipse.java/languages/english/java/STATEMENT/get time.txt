@@ -1,0 +1,13 @@
+//\\ //// code completion entries (1+ lines):
+get current time
+//\\ //// ==> completion hint (1 line):
+String currentTime = new SimpleDateFormat("hh:mm:ss a").format(Calendar.getInstance().getTime());
+//\\ //// Replacement text (1+ lines):
+String currentTime = new SimpleDateFormat("hh:mm:ss a").format(Calendar.getInstance().getTime());
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Help...
+//\\ //// Tool tip (1 line):
+Change 'currentTime' if you want...
+//\\

@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+fix [Invalid Frame]: Please select frame to connect the console.
+//\\ //// ==> completion hint (1 line):
+how to select frame
+//\\ //// Replacement text (1+ lines):
+#
+# Steps to select frame
+# 
+# * Select a Python file (such as this one)
+# * Press Ctrl-Alt-Enter
+# * Select from the dialog: Console for currently active editor
+# * You should be taken to a PyDev console, with >>> prompt
+#
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+#
+# Steps to select frame
+# 
+//\\ //// Tool tip (1 line):
+Run these steps and try again...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):      
+fix/invalidFrame.txt

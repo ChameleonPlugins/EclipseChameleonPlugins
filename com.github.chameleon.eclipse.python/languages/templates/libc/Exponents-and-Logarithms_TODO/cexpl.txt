@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) e raised to (the,) power of z
+//\\ //// ==> completion hint (1 line):
+These functions return e raised to the power of z
+//\\ //// Replacement text (1+ lines):
+Function: complex double cexp (complex double z)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: complex double cexp (complex double z)
+Function: complex float cexpf (complex float z)
+Function: complex long double cexpl (complex long double z)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return e (the base of natural
+logarithms) raised to the power of z.
+Mathematically, this corresponds to the value
+
+exp (z) = exp (creal (z)) * (cos (cimag (z)) + I * sin (cimag (z)))
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Exponents-and-Logarithms.html#Exponents-and-Logarithms
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Exponents-and-Logarithms/cexpl.txt

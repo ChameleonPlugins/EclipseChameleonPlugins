@@ -1,0 +1,13 @@
+a
+add,append,construct,create,define,insert,make,push
+an
+attach,connect
+box,computer,system,node,host,target
+chomp,chop,delete,destroy,drop,pop,remove
+convert,change,replace
+find,get,grab,obtain,retrieve,return
+new
+output,print,show,say,type,write
+run,execute,start
+string,text
+the

@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+these function (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) hyperbolic cosine of x, defined mathematically as (exp ( /@w 
+//\\ //// ==> completion hint (1 line):
+These function return the hyperbolic cosine of x, defined mathematically as (exp ( /@w 
+//\\ //// Replacement text (1+ lines):
+Function: double cosh (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double cosh (double x)
+Function: float coshf (float x)
+Function: long double coshl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These function return the hyperbolic cosine of x,
+defined mathematically as (exp (x) + exp (-x)) / 2.
+They may signal overflow if x is too large.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Hyperbolic-Functions.html#Hyperbolic-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Hyperbolic-Functions/coshl.txt

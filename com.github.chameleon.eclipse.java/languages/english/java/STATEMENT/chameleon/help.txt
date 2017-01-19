@@ -1,0 +1,121 @@
+//\\ //// code completion entries (1+ lines):
+help
+//\\ //// ==> completion hint (1 line):
+// Get Chameleon help... Then be sure to reformat with a save (Ctrl-s), or reformat with Ctlr-Shift-F 
+//\\ //// Replacement text (1+ lines):
+	
+	
+	
+		/**********************************************************************
+		 **********************************************************************
+		 * help (for Chameleon)
+		 * 
+		 * JAVA COMMENTS: Comments such as this are shown in blue or green text.
+		 * They end with the 2 characters on the next line:
+		 */ 
+		/**
+		 * ...and begin with the first 2 (or 3) characters on the line above.
+		 */
+		 // One line comments can start with two slashes, like this one.
+		 /** Be sure to add your code OUTSIDE of comments...
+		 * (If your text is all blue or green instead of black, you are inside a
+		 * comment)
+		 * 
+		 * To use the Chameleon Eclipse plug-in,
+		 * you will need to perform these steps each time:
+		 * 
+		 * 1. Start typing what you want to do, e.g. tutorial
+		 * 
+		 * 2. Select the desired entry from the list that pops up and
+		 * press ENTER. IF the list or tooltip gets in the way, press ESC to 
+		 * remove it.  IF a list does not come up, or to bring it
+		 * back up, press Ctrl and Space.
+		 * 
+		 * 
+		 * 3. Save your file (Ctrl-S). This may also automatically fix some
+		 * programming errors and formatting.
+		 * 
+		 * 4. If you still see words underlined in RED, (like this: itsanerror), hover
+		 * over them and select the needed action, such as "Import" a needed
+		 * routine, or "Add throws/declaration". This will usually be the
+		 * first or second item. Words underlined in ORANGE
+		 * might not be an issue, such as if you see
+		 * "The value of the local variable is not used". It may be because the
+		 * program is not yet complete.
+		 * 
+		 * Wherever you see a comment line this...
+		 */
+    	// start to TYPE: open a file in append mode
+    	//    and SELECT: open a file in append mode
+		/**
+		 * ...then on the line following the comment,
+		 * start typing the text specified,
+		 * and select it from the list that will appear.
+		 *
+		 * Want to start the tutorial? You can do so below...
+		 **********************************************************************/
+		// start to TYPE: tutorial 
+		//    and SELECT: tutorial
+         
+        
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+        <pre>
+		/**********************************************************************
+		 **********************************************************************
+		 * help (for Chameleon)
+		 * 
+		 * JAVA COMMENTS: Comments such as this are shown in blue or green text.
+		 * They end with the 2 characters on the next line:
+		 */ 
+		/**
+		 * ...and begin with the first 2 (or 3) characters on the line above.
+		 */
+		 // One line comments can start with two slashes, like this one.
+		 /** Be sure to add your code OUTSIDE of comments...
+		 * (If your text is all blue or green instead of black, you are inside a
+		 * comment)
+		 * 
+		 * To use the Chameleon Eclipse plug-in,
+		 * you will need to perform these steps each time:
+		 * 
+		 * 1. Start typing what you want to do, e.g. tutorial
+		 * 
+		 * 2. Select the desired entry from the list that pops up and
+		 * press ENTER. IF the list or tooltip gets in the way, press ESC to 
+		 * remove it.  IF a list does not come up, or to bring it
+		 * back up, press Ctrl and Space.
+		 * 
+		 * 
+		 * 3. Save your file (Ctrl-S). This may also automatically fix some
+		 * programming errors and formatting.
+		 * 
+		 * 4. If you still see words underlined in RED, (like this: itsanerror), hover
+		 * over them and select the needed action, such as "Import" a needed
+		 * routine, or "Add throws/declaration". This will usually be the
+		 * first or second item. Words underlined in ORANGE
+		 * might not be an issue, such as if you see
+		 * "The value of the local variable is not used". It may be because the
+		 * program is not yet complete.
+		 * 
+		 * Wherever you see a comment line this...
+		 */
+    	// start to TYPE: open a file in append mode
+    	//    and SELECT: open a file in append mode
+		/**
+		 * ...then on the line following the comment,
+		 * start typing the text specified,
+		 * and select it from the list that will appear.
+		 *
+		 * Want to start the tutorial? You can do so below...
+		 **********************************************************************/
+		// start to TYPE: tutorial 
+		//    and SELECT: tutorial
+
+         </pre>
+         
+         
+//\\ //// Tool tip (1 line):
+Save (Ctrl-S) then Scroll to "help (for Chameleon)" 
+//\\

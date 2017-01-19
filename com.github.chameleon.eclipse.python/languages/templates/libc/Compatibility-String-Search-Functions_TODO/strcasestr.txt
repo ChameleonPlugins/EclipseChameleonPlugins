@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+this is like strstr, except that it ignores case in searching for (the,) substring
+//\\ //// ==> completion hint (1 line):
+This is like strstr, except that it ignores case in searching for the substring
+//\\ //// Replacement text (1+ lines):
+char * strcasestr (const char *haystack, const char *needle)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * strcasestr (const char *haystack, const char *needle)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is like strstr, except that it ignores case in searching for
+the substring.   Like strcasecmp, it is locale dependent how
+uppercase and lowercase characters are related.
+
+
+For example,
+
+strcasestr (&quot;hello, world&quot;, &quot;L&quot;)
+    ? &quot;llo, world&quot;
+strcasestr (&quot;hello, World&quot;, &quot;wo&quot;)
+    ? &quot;World&quot;
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Search-Functions.html#Compatibility-String-Search-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Compatibility-String-Search-Functions/strcasestr.txt

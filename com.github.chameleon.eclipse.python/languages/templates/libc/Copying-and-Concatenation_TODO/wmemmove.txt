@@ -1,0 +1,44 @@
+//\\ //// code completion entries (1+ lines):
+copies (the,) size wide characters at wfrom into (the,) size wide characters at wto, even if those two blocks of space overlap
+//\\ //// ==> completion hint (1 line):
+copies the size wide characters at wfrom into the size wide characters at wto, even if those two blocks of space overlap
+//\\ //// Replacement text (1+ lines):
+wchar_t * wmemmove (wchar_t *wto, const wchar_t *wfrom, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: wchar_t * wmemmove (wchar_t *wto, const wchar_t *wfrom, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+wmemmove copies the size wide characters at wfrom
+into the size wide characters at wto, even if those two
+blocks of space overlap.  In the case of overlap, memmove is
+careful to copy the original values of the wide characters in the block
+at wfrom, including those wide characters which also belong to the
+block at wto.
+
+The following is a possible implementation of wmemcpy but there
+are more optimizations possible.
+
+
+wchar_t *
+wmempcpy (wchar_t *restrict wto, const wchar_t *restrict wfrom,
+          size_t size)
+{
+  return (wchar_t *) mempcpy (wto, wfrom, size * sizeof (wchar_t));
+}
+
+
+The value returned by wmemmove is the value of wto.
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Copying-and-Concatenation.html#Copying-and-Concatenation
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Copying-and-Concatenation/wmemmove.txt

@@ -1,0 +1,17 @@
+//\\ //// code completion entries (1+ lines):
+iterate over X:ITEM in X:ARRAY doing X:STATEMENTS
+//\\ //// ==> completion hint (1 line):
+foreach item in set: 
+//\\ //// Replacement text (1+ lines):
+for X1 in X2:
+    X3
+    
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=item
+X2=[1,2,3]
+X3=print (item)
+//\\ //// Help/documentation (1+ lines):
+foreach help...
+//\\ //// Tool tip (1 line):
+foreach statement...
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):

@@ -1,0 +1,27 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) address of (the,) first (deallocate,free,release) byte in (the,) current chunk of obstack obstack-ptr
+//\\ //// ==> completion hint (1 line):
+returns the address of the first free byte in the current chunk of obstack obstack-ptr
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = obstack_next_free (struct obstack *obstack-ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * obstack_next_free (struct obstack *obstack-ptr)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function returns the address of the first free byte in the current
+chunk of obstack obstack-ptr.  This is the end of the currently
+growing object.  If no object is growing, obstack_next_free
+returns the same value as obstack_base.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Status-of-an-Obstack.html#Status-of-an-Obstack
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Status-of-an-Obstack/obstack_next_free.txt

@@ -1,0 +1,20 @@
+//\\ //// code completion entries (1+ lines):
+(add,construct,create,define,insert,make) (,a )(dictionary,hash,map) X:NAME with values X:VALUES
+//\\ //// ==> completion hint (1 line):
+create a dictionary
+//\\ //// Replacement text (1+ lines):
+X1={
+    X2
+}
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=mydictionary
+X2="apple" : "a red fruit.", 
+    "banana" : "a yellow fruit that is delicious."
+//\\ //// Help/documentation (1+ lines):
+Numeric values can be used in dictionaries.
+Number or text can be used for key or value.
+Example:
+mydictionary={1 : "number", "apple" : "red fruit", "two" : 2}
+//\\ //// Tool tip (1 line):
+change values as needed...
+//\\

@@ -1,0 +1,50 @@
+//\\ //// code completion entries (1+ lines):
+set (the,) nice value of (a,) set of processes to niceval
+//\\ //// ==> completion hint (1 line):
+Set the nice value of a set of processes to niceval
+//\\ //// Replacement text (1+ lines):
+int setpriority (X1lass, int id, int niceval)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: int setpriority (int class, int id, int niceval)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+Set the nice value of a set of processes to niceval; class
+and id specify which ones (see below).
+
+The return value is 0 on success, and -1 on
+failure.  The following errno error condition are possible for
+this function:
+
+
+ESRCH
+The combination of class and id does not match any existing
+process.
+
+
+EINVAL
+The value of class is not valid.
+
+
+EPERM
+The call would set the nice value of a process which is owned by a different
+user than the calling process (i.e., the target process’ real or effective
+uid does not match the calling process’ effective uid) and the calling
+process does not have CAP_SYS_NICE permission.
+
+
+EACCES
+The call would lower the process’ nice value and the process does not have
+CAP_SYS_NICE permission.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Traditional-Scheduling-Functions.html#Traditional-Scheduling-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Traditional-Scheduling-Functions/setpriority.txt

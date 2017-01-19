@@ -1,0 +1,39 @@
+//\\ //// code completion entries (1+ lines):
+to search in (a,) hashing table created using hcreate (the,) hsearch function must be used
+//\\ //// ==> completion hint (1 line):
+To search in a hashing table created using hcreate the hsearch function must be used
+//\\ //// Replacement text (1+ lines):
+ENTRY * hsearch (ENTRY item, ACTION action)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: ENTRY * hsearch (ENTRY item, ACTION action)
+Preliminary:
+| MT-Unsafe race:hsearch
+| AS-Unsafe 
+| AC-Unsafe corrupt/action==ENTER
+| See POSIX Safety Concepts.
+
+
+To search in a hashing table created using hcreate the
+hsearch function must be used.  This function can perform simple
+search for an element (if action has the FIND) or it can
+alternatively insert the key element into the hashing table.  Entries
+are never replaced.
+
+The key is denoted by a pointer to an object of type ENTRY.  For
+locating the corresponding position in the hashing table only the
+key element of the structure is used.
+
+If an entry with matching key is found the action parameter is
+irrelevant.  The found entry is returned.  If no matching entry is found
+and the action parameter has the value FIND the function
+returns a NULL pointer.  If no entry is found and the
+action parameter has the value ENTER a new entry is added
+to the hashing table which is initialized with the parameter item.
+A pointer to the newly added entry is returned.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Hash-Search-Function.html#Hash-Search-Function
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Hash-Search-Function/hsearch.txt

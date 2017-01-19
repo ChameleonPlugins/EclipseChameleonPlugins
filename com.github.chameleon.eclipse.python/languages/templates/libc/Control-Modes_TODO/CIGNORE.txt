@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(the,) c_cflag member and (the,) line speed values returned by cfgetispeed and cfgetospeed will be unaffected by (the,) call
+//\\ //// ==> completion hint (1 line):
+The c_cflag member and the line speed values returned by cfgetispeed and cfgetospeed will be unaffected by the call
+//\\ //// Replacement text (1+ lines):
+Macro: tcflag_t CIGNORE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: tcflag_t CIGNORE
+If this bit is set, it says to ignore the control modes and line speed
+values entirely.  This is only meaningful in a call to tcsetattr.
+
+The c_cflag member and the line speed values returned by
+cfgetispeed and cfgetospeed will be unaffected by the
+call.  CIGNORE is useful if you want to set all the software
+modes in the other members, but leave the hardware details in
+c_cflag unchanged.  (This is how the TCSASOFT flag to
+tcsettattr works.)
+
+This bit is never set in the structure filled in by tcgetattr.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Control-Modes.html#Control-Modes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Control-Modes/CIGNORE.txt

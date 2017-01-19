@@ -1,0 +1,58 @@
+//\\ //// code completion entries (1+ lines):
+(the,) dcgettext (add,append,construct,create,define,insert,make,push) another argument to those which dgettext takes
+//\\ //// ==> completion hint (1 line):
+The dcgettext adds another argument to those which dgettext takes
+//\\ //// Replacement text (1+ lines):
+char * dcgettext (const char *domainname, const char *msgid, X3ategory)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X3='a'
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * dcgettext (const char *domainname, const char *msgid, int category)
+Preliminary:
+| MT-Safe env
+| AS-Unsafe corrupt heap lock dlopen
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+The dcgettext adds another argument to those which
+dgettext takes.  This argument category specifies the last
+piece of information needed to localize the message catalog.  I.e., the
+domain name and the locale category exactly specify which message
+catalog has to be used (relative to a given directory, see below).
+
+The dgettext function can be expressed in terms of
+dcgettext by using
+
+
+dcgettext (domain, string, LC_MESSAGES)
+
+
+instead of
+
+
+dgettext (domain, string)
+
+
+This also shows which values are expected for the third parameter.  One
+has to use the available selectors for the categories available in
+locale.h.  Normally the available values are LC_CTYPE,
+LC_COLLATE, LC_MESSAGES, LC_MONETARY,
+LC_NUMERIC, and LC_TIME.  Please note that LC_ALL
+must not be used and even though the names might suggest this, there is
+no relation to the environments variables of this name.
+
+The dcgettext function is only implemented for compatibility with
+other systems which have gettext functions.  There is not really
+any situation where it is necessary (or useful) to use a different value
+but LC_MESSAGES in for the category parameter.  We are
+dealing with messages here and any other choice can only be irritating.
+
+As for gettext the return value type is char * which is an
+anachronism.  The returned string must never be modified.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Translation-with-gettext.html#Translation-with-gettext
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Translation-with-gettext/dcgettext.txt

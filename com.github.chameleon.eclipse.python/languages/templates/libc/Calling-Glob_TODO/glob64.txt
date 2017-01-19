@@ -1,0 +1,38 @@
+//\\ //// code completion entries (1+ lines):
+was added as part of (the,) large file summit extensions but is not part of (the,) original lfs proposal
+//\\ //// ==> completion hint (1 line):
+was added as part of the Large File Summit extensions but is not part of the original LFS proposal
+//\\ //// Replacement text (1+ lines):
+int glob64 (const char *pattern, X2, int (*errfunc) (X1, int error-code), glob64_t *vector-ptr)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+X2=MAP_SHARED
+
+//\\ //// Help/documentation (1+ lines):
+Function: int glob64 (const char *pattern, int flags, int (*errfunc) (const char *filename, int error-code), glob64_t *vector-ptr)
+Preliminary:
+| MT-Unsafe race:utent env sig:ALRM timer locale
+| AS-Unsafe dlopen corrupt heap lock
+| AC-Unsafe corrupt lock fd mem
+| See POSIX Safety Concepts.
+
+
+The glob64 function was added as part of the Large File Summit
+extensions but is not part of the original LFS proposal.  The reason for
+this is simple: it is not necessary.  The necessity for a glob64
+function is added by the extensions of the GNU glob
+implementation which allows the user to provide own directory handling
+and stat functions.  The readdir and stat functions
+do depend on the choice of _FILE_OFFSET_BITS since the definition
+of the types struct dirent and struct stat will change
+depending on the choice.
+
+Beside this difference the glob64 works just like glob in
+all aspects.
+
+This function is a GNU extension.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Calling-Glob.html#Calling-Glob
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Calling-Glob/glob64.txt

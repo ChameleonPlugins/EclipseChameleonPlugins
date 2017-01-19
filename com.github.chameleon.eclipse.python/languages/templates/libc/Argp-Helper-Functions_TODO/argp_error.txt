@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(output,print,show,say,type,write) (the,) printf format (string,text) fmt and following args, preceded by (the,) program name and ‘:’, and followed by (a,) ‘try … ’ /@w message, and terminates (the,) program with (an,) (end,exit,quit,(halt,pause,stop,suspend)) status of argp_err_exit_status
+//\\ //// ==> completion hint (1 line):
+Prints the printf format string fmt and following args, preceded by the program name and ‘:’, and followed by a ‘Try … ’ /@w message, and terminates the program with an exit status of argp_err_exit_status
+//\\ //// Replacement text (1+ lines):
+void argp_error (const struct argp_state *state, const char *fmt, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void argp_error (const struct argp_state *state, const char *fmt, …)
+Preliminary:
+| MT-Unsafe race:argpbuf env locale
+| AS-Unsafe heap i18n corrupt
+| AC-Unsafe mem corrupt lock
+| See POSIX Safety Concepts.
+
+
+Prints the printf format string fmt and following args, preceded
+by the program name and ‘:’, and followed by a ‘Try … --help’ message, and terminates the program with an exit status of
+argp_err_exit_status.  See Argp Global Variables.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Argp-Helper-Functions.html#Argp-Helper-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Argp-Helper-Functions/argp_error.txt

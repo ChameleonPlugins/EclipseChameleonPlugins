@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.github.chameleon.eclipse.cdt.feature_1.0.0.qualifier.jar" id="com.github.chameleon.eclipse.cdt.feature" version="1.0.0.qualifier">
+      <category name="com.github.chameleon.english"/>
+   </feature>
+   <category-def name="com.github.chameleon.english" label="Chameleon English Plug-ins"/>
+</site>

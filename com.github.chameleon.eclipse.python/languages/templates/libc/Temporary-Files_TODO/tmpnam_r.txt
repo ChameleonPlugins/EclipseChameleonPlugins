@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+is nearly identical to (the,) tmpnam function, except that if result is (a,) null pointer it (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) null pointer
+//\\ //// ==> completion hint (1 line):
+is nearly identical to the tmpnam function, except that if result is a null pointer it returns a null pointer
+//\\ //// Replacement text (1+ lines):
+char * tmpnam_r (char *result)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * tmpnam_r (char *result)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is nearly identical to the tmpnam function, except
+that if result is a null pointer it returns a null pointer.
+
+This guarantees reentrancy because the non-reentrant situation of
+tmpnam cannot happen here.
+
+Warning: This function has the same security problems as
+tmpnam.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Temporary-Files.html#Temporary-Files
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Temporary-Files/tmpnam_r.txt

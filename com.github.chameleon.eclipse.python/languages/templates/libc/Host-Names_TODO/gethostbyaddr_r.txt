@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) information about (the,) (box,computer,system,node,host,target) with internet address addr
+//\\ //// ==> completion hint (1 line):
+returns information about the host with Internet address addr
+//\\ //// Replacement text (1+ lines):
+int gethostbyaddr_r (const X1, socklen_t length, int format, struct hostent *restrict result_buf, char *restrict buf, size_t buflen, struct hostent **restrict result, int *restrict h_errnop)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=buf
+
+//\\ //// Help/documentation (1+ lines):
+Function: int gethostbyaddr_r (const void *addr, socklen_t length, int format, struct hostent *restrict result_buf, char *restrict buf, size_t buflen, struct hostent **restrict result, int *restrict h_errnop)
+Preliminary:
+| MT-Safe env locale
+| AS-Unsafe dlopen plugin corrupt heap lock
+| AC-Unsafe lock corrupt mem fd
+| See POSIX Safety Concepts.
+
+
+The gethostbyaddr_r function returns information about the host
+with Internet address addr.  The parameter addr is not
+really a pointer to char - it can be a pointer to an IPv4 or an IPv6
+address.  The length argument is the size (in bytes) of the address
+at addr.  format specifies the address format; for an IPv4
+Internet address, specify a value of AF_INET; for an IPv6
+Internet address, use AF_INET6.
+
+Similar to the gethostbyname_r function, the caller must provide
+buffers for the result and memory used internally.  In case of success
+the function returns zero.  Otherwise the value is an error number where
+ERANGE has the special meaning that the caller-provided buffer is
+too small.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Host-Names.html#Host-Names
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Host-Names/gethostbyaddr_r.txt

@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) representation of nan, provided that nan is supported by (the,) (box,computer,system,node,host,target) platform
+//\\ //// ==> completion hint (1 line):
+returns a representation of NaN, provided that NaN is supported by the target platform
+//\\ //// Replacement text (1+ lines):
+double nan (const char *tagp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double nan (const char *tagp)
+Function: float nanf (const char *tagp)
+Function: long double nanl (const char *tagp)
+Preliminary:
+| MT-Safe locale
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The nan function returns a representation of NaN, provided that
+NaN is supported by the target platform.
+nan (&quot;n-char-sequence&quot;) is equivalent to
+strtod (&quot;NAN(n-char-sequence)&quot;).
+
+The argument tagp is used in an unspecified manner.  On IEEE 754 systems, there are many representations of NaN, and tagp
+selects one.  On other systems it may do nothing.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//FP-Bit-Twiddling.html#FP-Bit-Twiddling
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/FP-Bit-Twiddling/nan.txt

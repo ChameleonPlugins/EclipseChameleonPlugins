@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+this (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (an,) uninitialized block of size bytes in (an,) obstack and returns its address
+//\\ //// ==> completion hint (1 line):
+This allocates an uninitialized block of size bytes in an obstack and returns its address
+//\\ //// Replacement text (1+ lines):
+struct utsname *buf;
+buf = obstack_alloc (struct obstack *obstack-ptr, int size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void * obstack_alloc (struct obstack *obstack-ptr, int size)
+Preliminary:
+| MT-Safe race:obstack-ptr
+| AS-Safe 
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+This allocates an uninitialized block of size bytes in an obstack
+and returns its address.  Here obstack-ptr specifies which obstack
+to allocate the block in; it is the address of the struct obstack
+object which represents the obstack.  Each obstack function or macro
+requires you to specify an obstack-ptr as the first argument.
+
+This function calls the obstack’s obstack_chunk_alloc function if
+it needs to allocate a new chunk of memory; it calls
+obstack_alloc_failed_handler if allocation of memory by
+obstack_chunk_alloc failed.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Allocation-in-an-Obstack.html#Allocation-in-an-Obstack
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Allocation-in-an-Obstack/obstack_alloc.txt

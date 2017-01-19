@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+is similar to execv, except that it searches (the,) directories listed in (the,) path environment variable to (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) full file name of (a,) file from X:FILENAME if X:FILENAME does not contain (a,) slash
+//\\ //// ==> completion hint (1 line):
+is similar to execv, except that it searches the directories listed in the PATH environment variable to find the full file name of a file from filename if filename does not contain a slash
+//\\ //// Replacement text (1+ lines):
+int execvp (X1, char *const argv[])
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1="filename.txt"
+
+//\\ //// Help/documentation (1+ lines):
+Function: int execvp (const char *filename, char *const argv[])
+Preliminary:
+| MT-Safe env
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+The execvp function is similar to execv, except that it
+searches the directories listed in the PATH environment variable
+(see Standard Environment) to find the full file name of a
+file from filename if filename does not contain a slash.
+
+This function is useful for executing system utility programs, because
+it looks for them in the places that the user has chosen.  Shells use it
+to run the commands that users type.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Executing-a-File.html#Executing-a-File
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Executing-a-File/execvp.txt

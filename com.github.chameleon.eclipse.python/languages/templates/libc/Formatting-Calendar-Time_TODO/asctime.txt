@@ -1,0 +1,40 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) broken-down time value that brokentime points to into (a,) (string,text) in (a,) standard format: 
+//\\ //// ==> completion hint (1 line):
+converts the broken-down time value that brokentime points to into a string in a standard format: 
+//\\ //// Replacement text (1+ lines):
+char * asctime (const struct tm *brokentime)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * asctime (const struct tm *brokentime)
+Preliminary:
+| MT-Unsafe race:asctime locale
+| AS-Unsafe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The asctime function converts the broken-down time value that
+brokentime points to into a string in a standard format:
+
+
+&quot;Tue May 21 13:46:22 1991\n&quot;
+
+
+The abbreviations for the days of week are: ‘Sun’, ‘Mon’,
+‘Tue’, ‘Wed’, ‘Thu’, ‘Fri’, and ‘Sat’.
+
+The abbreviations for the months are: ‘Jan’, ‘Feb’,
+‘Mar’, ‘Apr’, ‘May’, ‘Jun’, ‘Jul’, ‘Aug’,
+‘Sep’, ‘Oct’, ‘Nov’, and ‘Dec’.
+
+The return value points to a statically allocated string, which might be
+overwritten by subsequent calls to asctime or ctime.
+(But no other library function overwrites the contents of this
+string.)
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Formatting-Calendar-Time.html#Formatting-Calendar-Time
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Formatting-Calendar-Time/asctime.txt

@@ -1,0 +1,38 @@
+//\\ //// code completion entries (1+ lines):
+is used to examine (the,) attributes of (the,) terminal device with file descriptor X:FILEDESCRIPTOR
+//\\ //// ==> completion hint (1 line):
+is used to examine the attributes of the terminal device with file descriptor filedes
+//\\ //// Replacement text (1+ lines):
+int tcgetattr (X1, struct termios *termios-p)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int tcgetattr (int filedes, struct termios *termios-p)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function is used to examine the attributes of the terminal
+device with file descriptor filedes.  The attributes are returned
+in the structure that termios-p points to.
+
+If successful, tcgetattr returns 0.  A return value of -1
+indicates an error.  The following errno error conditions are
+defined for this function:
+
+
+EBADF
+The filedes argument is not a valid file descriptor.
+
+
+ENOTTY
+The filedes is not associated with a terminal.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Mode-Functions.html#Mode-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Mode-Functions/tcgetattr.txt

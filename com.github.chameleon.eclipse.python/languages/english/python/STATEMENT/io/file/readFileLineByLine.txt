@@ -1,0 +1,16 @@
+//\\ //// code completion entries (1+ lines):
+read X:FILE line by line 
+process X:FILE line by line 
+//\\ //// ==> completion hint (1 line):
+# read file line by line
+//\\ //// Replacement text (1+ lines):
+with open(X1) as f:
+    for line_of_text in f:
+        print(line_of_text)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="file.txt"
+//\\ //// Help/documentation (1+ lines):
+read each line of a file and do something with it
+//\\ //// Tool tip (1 line):
+Update "file.txt" if needed and change what you do with each line of text
+//\\

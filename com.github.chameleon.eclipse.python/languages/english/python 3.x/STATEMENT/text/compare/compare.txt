@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+compare (text,string) X:TEXT (to,with) X:TEXT
+//\\ //// ==> completion hint (1 line):
+compare two strings of text
+//\\ //// Replacement text (1+ lines):
+(X1 > X2) - (X1 < X2)
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="Hello"
+X2="Goodbye"
+//\\ //// Help/documentation (1+ lines):
+Returns 0 if equal
+//\\ //// Tool tip (1 line):
+Returns 0 if equal
+//\\

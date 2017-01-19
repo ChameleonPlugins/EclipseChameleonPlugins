@@ -1,0 +1,33 @@
+//\\ //// code completion entries (1+ lines):
+can be called after mtrace was used to enable tracing (the,) malloc calls
+//\\ //// ==> completion hint (1 line):
+can be called after mtrace was used to enable tracing the malloc calls
+//\\ //// Replacement text (1+ lines):
+void muntrace (void)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void muntrace (void)
+Preliminary:
+| MT-Unsafe race:mtrace const:malloc_hooks locale
+| AS-Unsafe corrupt heap
+| AC-Unsafe corrupt mem lock fd
+| See POSIX Safety Concepts.
+
+
+
+The muntrace function can be called after mtrace was used
+to enable tracing the malloc calls.  If no (successful) call of
+mtrace was made muntrace does nothing.
+
+Otherwise it deinstalls the handlers for malloc, realloc,
+and free and then closes the protocol file.  No calls are
+protocolled anymore and the program runs again at full speed.
+
+This function is a GNU extension and generally not available on other
+systems.  The prototype can be found in mcheck.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Tracing-malloc.html#Tracing-malloc
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Tracing-malloc/muntrace.txt

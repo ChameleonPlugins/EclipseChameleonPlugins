@@ -1,0 +1,38 @@
+//\\ //// code completion entries (1+ lines):
+show template
+//\\
+show the Chameleon template
+//\\
+
+ //\\ //// code completion entries (1+ lines):
+
+ //\\ //// ==> completion hint (1 line):
+
+ //\\ //// Replacement text (1+ lines):
+
+ //\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+ //\\ //// Help/documentation (1+ lines):
+
+ //\\ //// Tool tip (1 line):
+
+ //\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+//\\
+
+
+ //\\ //// code completion entries (1+ lines):
+
+ //\\ //// ==> completion hint (1 line):
+
+ //\\ //// Replacement text (1+ lines):
+
+ //\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+
+ //\\ //// Help/documentation (1+ lines):
+
+ //\\ //// Tool tip (1 line):
+
+ //\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+//\\
+Make needed changes then save template to appropriately named .txt file.
+//\\

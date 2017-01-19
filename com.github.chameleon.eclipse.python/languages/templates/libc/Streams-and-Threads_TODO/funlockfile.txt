@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+(deallocate,free,release) (the,) internal locking object of (the,) stream stream
+//\\ //// ==> completion hint (1 line):
+releases the internal locking object of the stream stream
+//\\ //// Replacement text (1+ lines):
+void funlockfile (FILE *stream)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void funlockfile (FILE *stream)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Unsafe lock
+| See POSIX Safety Concepts.
+
+
+The funlockfile function releases the internal locking object of
+the stream stream.  The stream must have been locked before by a
+call to flockfile or a successful call of ftrylockfile.
+The implicit locking performed by the stream operations do not count.
+The funlockfile function does not return an error status and the
+behavior of a call for a stream which is not locked by the current
+thread is undefined.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Streams-and-Threads.html#Streams-and-Threads
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Streams-and-Threads/funlockfile.txt

@@ -1,0 +1,31 @@
+//\\ //// code completion entries (1+ lines):
+check whether (the,) (string,text) pointed to by (the,) mnt_opts element of (the,) variable pointed to by mnt contains (the,) option opt
+//\\ //// ==> completion hint (1 line):
+check whether the string pointed to by the mnt_opts element of the variable pointed to by mnt contains the option opt
+//\\ //// Replacement text (1+ lines):
+char * hasmntopt (const struct mntent *mnt, const char *opt)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * hasmntopt (const struct mntent *mnt, const char *opt)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function can be used to check whether the string pointed to by the
+mnt_opts element of the variable pointed to by mnt contains
+the option opt.  If this is true a pointer to the beginning of the
+option in the mnt_opts element is returned.  If no such option
+exists the function returns NULL.
+
+This function is useful to test whether a specific option is present but
+when all options have to be processed one is better off with using the
+getsubopt function to iterate over all options in the string.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//mtab.html#mtab
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/mtab/hasmntopt.txt

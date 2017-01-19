@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+significand (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) mantissa of x scaled to (the,) range [1, 2)
+//\\ //// ==> completion hint (1 line):
+significand returns the mantissa of x scaled to the range [1, 2)
+//\\ //// Replacement text (1+ lines):
+Function: double significand (double x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double significand (double x)
+Function: float significandf (float x)
+Function: long double significandl (long double x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+significand returns the mantissa of x scaled to the range
+[1, 2).
+It is equivalent to scalb (x, (double) -ilogb (x)).
+
+This function exists mainly for use in certain standardized tests
+of IEEE 754 conformance.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Normalization-Functions.html#Normalization-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Normalization-Functions/significandl.txt

@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+this is like wprintf, except that (the,) (output,print,show,say,type,write) is stored in (the,) wide character array ws instead of written to (a,) stream
+//\\ //// ==> completion hint (1 line):
+This is like wprintf, except that the output is stored in the wide character array ws instead of written to a stream
+//\\ //// Replacement text (1+ lines):
+int swprintf (wchar_t *s, size_t size, const wchar_t *template, …)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int swprintf (wchar_t *s, size_t size, const wchar_t *template, …)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+This is like wprintf, except that the output is stored in the
+wide character array ws instead of written to a stream.  A null
+wide character is written to mark the end of the string.  The size
+argument specifies the maximum number of characters to produce.  The
+trailing null character is counted towards this limit, so you should
+allocate at least size wide characters for the string ws.
+
+The return value is the number of characters generated for the given
+input, excluding the trailing null.  If not all output fits into the
+provided buffer a negative value is returned.  You should try again with
+a bigger output string.  Note: this is different from how
+snprintf handles this situation.
+
+Note that the corresponding narrow stream function takes fewer
+parameters.  swprintf in fact corresponds to the snprintf
+function.  Since the sprintf function can be dangerous and should
+be avoided the ISO C committee refused to make the same mistake
+again and decided to not define a function exactly corresponding to
+sprintf.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Formatted-Output-Functions.html#Formatted-Output-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Formatted-Output-Functions/swprintf.txt

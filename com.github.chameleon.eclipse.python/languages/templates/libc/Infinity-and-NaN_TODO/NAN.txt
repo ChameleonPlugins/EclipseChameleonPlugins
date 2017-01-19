@@ -1,0 +1,24 @@
+//\\ //// code completion entries (1+ lines):
+you can use ‘#ifdef nan’ to test whether (the,) machine supports nan
+//\\ //// ==> completion hint (1 line):
+You can use ‘#ifdef NAN’ to test whether the machine supports NaN
+//\\ //// Replacement text (1+ lines):
+Macro: float NAN
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: float NAN
+An expression representing a value which is “not a number”.  This
+macro is a GNU extension, available only on machines that support the
+“not a number” value—that is to say, on all machines that support
+IEEE floating point.
+
+You can use ‘#ifdef NAN’ to test whether the machine supports
+NaN.  (Of course, you must arrange for GNU extensions to be visible,
+such as by defining _GNU_SOURCE, and then you must include
+math.h.)
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Infinity-and-NaN.html#Infinity-and-NaN
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Infinity-and-NaN/NAN.txt

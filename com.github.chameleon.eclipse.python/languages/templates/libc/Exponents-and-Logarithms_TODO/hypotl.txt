@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) sqrt from (the,) origin
+//\\ //// ==> completion hint (1 line):
+These functions return sqrt from the origin
+//\\ //// Replacement text (1+ lines):
+Function: double hypot (double x, double y)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: double hypot (double x, double y)
+Function: float hypotf (float x, float y)
+Function: long double hypotl (long double x, long double y)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return sqrt (x*x +
+y*y).  This is the length of the hypotenuse of a right
+triangle with sides of length x and y, or the distance
+of the point (x, y) from the origin.  Using this function
+instead of the direct formula is wise, since the error is
+much smaller.  See also the function cabs in Absolute Value.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Exponents-and-Logarithms.html#Exponents-and-Logarithms
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Exponents-and-Logarithms/hypotl.txt

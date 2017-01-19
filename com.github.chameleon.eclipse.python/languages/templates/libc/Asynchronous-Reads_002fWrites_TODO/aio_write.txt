@@ -1,0 +1,90 @@
+//\\ //// code completion entries (1+ lines):
+initiates (an,) asynchronous (output,print,show,say,type,write) operation
+//\\ //// ==> completion hint (1 line):
+initiates an asynchronous write operation
+//\\ //// Replacement text (1+ lines):
+int aio_write (struct aiocb *aiocbp)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int aio_write (struct aiocb *aiocbp)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe lock heap
+| AC-Unsafe lock mem
+| See POSIX Safety Concepts.
+
+
+This function initiates an asynchronous write operation.  The function
+call immediately returns after the operation was enqueued or if before
+this happens an error was encountered.
+
+The first aiocbp-&gt;aio_nbytes bytes from the buffer starting at
+aiocbp-&gt;aio_buf are written to the file for which
+aiocbp-&gt;aio_fildes is a descriptor, starting at the absolute
+position aiocbp-&gt;aio_offset in the file.
+
+If prioritized I/O is supported by the platform, the
+aiocbp-&gt;aio_reqprio value is used to adjust the priority before
+the request is actually enqueued.
+
+The calling process is notified about the termination of the read
+request according to the aiocbp-&gt;aio_sigevent value.
+
+When aio_write returns, the return value is zero if no error
+occurred that can be found before the process is enqueued.  If such an
+early error is found the function returns -1 and sets
+errno to one of the following values.
+
+
+EAGAIN
+The request was not enqueued due to (temporarily) exceeded resource
+limitations.
+
+ENOSYS
+The aio_write function is not implemented.
+
+EBADF
+The aiocbp-&gt;aio_fildes descriptor is not valid.  This condition
+may not be recognized before enqueueing the request, and so this error
+might also be signaled asynchronously.
+
+EINVAL
+The aiocbp-&gt;aio_offset or aiocbp-&gt;aio_reqprio value is
+invalid.  This condition may not be recognized before enqueueing the
+request and so this error might also be signaled asynchronously.
+
+
+
+In the case aio_write returns zero, the current status of the
+request can be queried using aio_error and aio_return
+functions.  As long as the value returned by aio_error is
+EINPROGRESS the operation has not yet completed.  If
+aio_error returns zero, the operation successfully terminated,
+otherwise the value is to be interpreted as an error code.  If the
+function terminated, the result of the operation can be get using a call
+to aio_return.  The returned value is the same as an equivalent
+call to read would have returned.  Possible error codes returned
+by aio_error are:
+
+
+EBADF
+The aiocbp-&gt;aio_fildes descriptor is not valid.
+
+ECANCELED
+The operation was canceled before the operation was finished.
+(see Cancel AIO Operations)
+
+EINVAL
+The aiocbp-&gt;aio_offset value is invalid.
+
+
+
+When the sources are compiled with _FILE_OFFSET_BITS == 64, this
+function is in fact aio_write64 since the LFS interface transparently
+replaces the normal implementation.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Asynchronous-Reads_002fWrites.html#Asynchronous-Reads_002fWrites
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Asynchronous-Reads_002fWrites/aio_write.txt

@@ -1,0 +1,36 @@
+//\\ //// code completion entries (1+ lines):
+prints (a,) message describing (the,) signal signum to (the,) standard error (output,print,show,say,type,write) stream stderr
+//\\ //// ==> completion hint (1 line):
+prints a message describing the signal signum to the standard error output stream stderr
+//\\ //// Replacement text (1+ lines):
+void psignal (int signum, const char *message)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void psignal (int signum, const char *message)
+Preliminary:
+| MT-Safe locale
+| AS-Unsafe corrupt i18n heap
+| AC-Unsafe lock corrupt mem
+| See POSIX Safety Concepts.
+
+
+This function prints a message describing the signal signum to the
+standard error output stream stderr; see Standard Streams.
+
+If you call psignal with a message that is either a null
+pointer or an empty string, psignal just prints the message
+corresponding to signum, adding a trailing newline.
+
+If you supply a non-null message argument, then psignal
+prefixes its output with this string.  It adds a colon and a space
+character to separate the message from the string corresponding
+to signum.
+
+
+This function is a BSD feature, declared in the header file signal.h.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signal-Messages.html#Signal-Messages
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signal-Messages/psignal.txt

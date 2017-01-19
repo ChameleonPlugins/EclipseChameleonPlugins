@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(a,) single value of (output,print,show,say,type,write) int can be added by using (the,) obstack_int_grow function
+//\\ //// ==> completion hint (1 line):
+A single value of type int can be added by using the obstack_int_grow function
+//\\ //// Replacement text (1+ lines):
+void obstack_int_grow (struct obstack *obstack-ptr, int data)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void obstack_int_grow (struct obstack *obstack-ptr, int data)
+Preliminary:
+| MT-Safe race:obstack-ptr
+| AS-Safe 
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+A single value of type int can be added by using the
+obstack_int_grow function.  It adds sizeof (int) bytes to
+the growing object and initializes them with the value of data.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Growing-Objects.html#Growing-Objects
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Growing-Objects/obstack_int_grow.txt

@@ -1,0 +1,22 @@
+//\\ //// code completion entries (1+ lines):
+if (a,) program does full-screen display, it should handle sigwinch
+//\\ //// ==> completion hint (1 line):
+If a program does full-screen display, it should handle SIGWINCH
+//\\ //// Replacement text (1+ lines):
+Macro: int SIGWINCH
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SIGWINCH
+Window size change.  This is generated on some systems (including GNU)
+when the terminal driver’s record of the number of rows and columns on
+the screen is changed.  The default action is to ignore it.
+
+If a program does full-screen display, it should handle SIGWINCH.
+When the signal arrives, it should fetch the new screen size and
+reformat its display accordingly.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Miscellaneous-Signals.html#Miscellaneous-Signals
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Miscellaneous-Signals/SIGWINCH.txt

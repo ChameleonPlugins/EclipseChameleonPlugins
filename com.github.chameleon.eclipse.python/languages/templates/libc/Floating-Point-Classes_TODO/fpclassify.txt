@@ -1,0 +1,56 @@
+//\\ //// code completion entries (1+ lines):
+this is (a,) generic macro which works on all floating-point types and which (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) value of (output,print,show,say,type,write) int
+//\\ //// ==> completion hint (1 line):
+This is a generic macro which works on all floating-point types and which returns a value of type int
+//\\ //// Replacement text (1+ lines):
+Macro: int fpclassify (float-type x)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int fpclassify (float-type x)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This is a generic macro which works on all floating-point types and
+which returns a value of type int.  The possible values are:
+
+
+FP_NAN
+
+
+The floating-point number x is “Not a Number” (see Infinity and NaN)
+
+FP_INFINITE
+
+
+The value of x is either plus or minus infinity (see Infinity and NaN)
+
+FP_ZERO
+
+
+The value of x is zero.  In floating-point formats like IEEE 754, where zero can be signed, this value is also returned if
+x is negative zero.
+
+FP_SUBNORMAL
+
+
+Numbers whose absolute value is too small to be represented in the
+normal format are represented in an alternate, denormalized format
+(see Floating Point Concepts).  This format is less precise but can
+represent values closer to zero.  fpclassify returns this value
+for values of x in this alternate format.
+
+FP_NORMAL
+
+
+This value is returned for all other values of x.  It indicates
+that there is nothing special about the number.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Floating-Point-Classes.html#Floating-Point-Classes
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Floating-Point-Classes/fpclassify.txt

@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+on posix systems, (the,) value of this macro is 1
+//\\ //// ==> completion hint (1 line):
+On POSIX systems, the value of this macro is 1
+//\\ //// Replacement text (1+ lines):
+Macro: int EXIT_FAILURE
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int EXIT_FAILURE
+This macro can be used with the exit function to indicate
+unsuccessful program completion in a general sense.
+
+On POSIX systems, the value of this macro is 1.  On other
+systems, the value might be some other (possibly non-constant) integer
+expression.  Other nonzero status values also indicate failures.  Certain
+programs use different nonzero status values to indicate particular
+kinds of &quot;non-success&quot;.  For example, diff uses status value
+1 to mean that the files are different, and 2 or more to
+mean that there was difficulty in opening the files.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Exit-Status.html#Exit-Status
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Exit-Status/EXIT_FAILURE.txt

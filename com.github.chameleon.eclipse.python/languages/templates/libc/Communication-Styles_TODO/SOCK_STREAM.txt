@@ -1,0 +1,20 @@
+//\\ //// code completion entries (1+ lines):
+use of this style is covered in detail in connections
+//\\ //// ==> completion hint (1 line):
+Use of this style is covered in detail in Connections
+//\\ //// Replacement text (1+ lines):
+Macro: int SOCK_STREAM
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int SOCK_STREAM
+The SOCK_STREAM style is like a pipe (see Pipes and FIFOs).
+It operates over a connection with a particular remote socket and
+transmits data reliably as a stream of bytes.
+
+Use of this style is covered in detail in Connections.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Communication-Styles.html#Communication-Styles
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Communication-Styles/SOCK_STREAM.txt

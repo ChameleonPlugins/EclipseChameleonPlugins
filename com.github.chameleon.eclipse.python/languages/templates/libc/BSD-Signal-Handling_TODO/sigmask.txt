@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (a,) signal mask that has (the,) bit for signal signum set
+//\\ //// ==> completion hint (1 line):
+returns a signal mask that has the bit for signal signum set
+//\\ //// Replacement text (1+ lines):
+Macro: int sigmask (int signum)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int sigmask (int signum)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This macro returns a signal mask that has the bit for signal signum
+set.  You can bitwise-OR the results of several calls to sigmask
+together to specify more than one signal.  For example,
+
+
+(sigmask (SIGTSTP) | sigmask (SIGSTOP)
+ | sigmask (SIGTTIN) | sigmask (SIGTTOU))
+
+
+specifies a mask that includes all the job-control stop signals.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//BSD-Signal-Handling.html#BSD-Signal-Handling
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/BSD-Signal-Handling/sigmask.txt

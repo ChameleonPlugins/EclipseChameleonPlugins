@@ -1,0 +1,34 @@
+//\\ //// code completion entries (1+ lines):
+these functions (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) absolute value of number
+//\\ //// ==> completion hint (1 line):
+These functions return the absolute value of number
+//\\ //// Replacement text (1+ lines):
+Function: int abs (int number)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int abs (int number)
+Function: long int labs (long int number)
+Function: long long int llabs (long long int number)
+Function: intmax_t imaxabs (intmax_t number)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+These functions return the absolute value of number.
+
+Most computers use a two’s complement integer representation, in which
+the absolute value of INT_MIN (the smallest possible int)
+cannot be represented; thus, abs (INT_MIN) is not defined.
+
+llabs and imaxdiv are new to ISO C99.
+
+See Integers for a description of the intmax_t type.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Absolute-Value.html#Absolute-Value
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Absolute-Value/llabs.txt

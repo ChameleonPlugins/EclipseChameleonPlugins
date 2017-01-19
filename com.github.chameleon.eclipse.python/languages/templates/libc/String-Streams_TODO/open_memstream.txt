@@ -1,0 +1,41 @@
+//\\ //// code completion entries (1+ lines):
+opens (a,) stream for writing to (a,) buffer
+//\\ //// ==> completion hint (1 line):
+opens a stream for writing to a buffer
+//\\ //// Replacement text (1+ lines):
+FILE * open_memstream (char **ptr, size_t *sizeloc)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: FILE * open_memstream (char **ptr, size_t *sizeloc)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe heap
+| AC-Unsafe mem
+| See POSIX Safety Concepts.
+
+
+This function opens a stream for writing to a buffer.  The buffer is
+allocated dynamically and grown as necessary, using malloc.
+After you’ve closed the stream, this buffer is your responsibility to
+clean up using free or realloc.  See Unconstrained Allocation.
+
+When the stream is closed with fclose or flushed with
+fflush, the locations ptr and sizeloc are updated to
+contain the pointer to the buffer and its size.  The values thus stored
+remain valid only as long as no further output on the stream takes
+place.  If you do more output, you must flush the stream again to store
+new values before you use them again.
+
+A null character is written at the end of the buffer.  This null character
+is not included in the size value stored at sizeloc.
+
+You can move the stream’s file position with fseek or
+fseeko (see File Positioning).  Moving the file position past
+the end of the data already written fills the intervening space with
+zeroes.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//String-Streams.html#String-Streams
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/String-Streams/open_memstream.txt

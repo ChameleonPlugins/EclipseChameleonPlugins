@@ -1,0 +1,26 @@
+//\\ //// code completion entries (1+ lines):
+(allocate,find,get,grab,lock,obtain,reserve,retrieve,return) (the,) entry in envz with (the,) name name , 0 is returned
+//\\ //// ==> completion hint (1 line):
+finds the entry in envz with the name name , 0 is returned
+//\\ //// Replacement text (1+ lines):
+char * envz_get (const char *envz, size_t envz_len, const char *name)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: char * envz_get (const char *envz, size_t envz_len, const char *name)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The envz_get function finds the entry in envz with the name
+name (like envz_entry), and returns a pointer to the value
+portion of that entry (following the '=').  If there is no entry with
+that name (or only a null entry), 0 is returned.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Envz-Functions.html#Envz-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Envz-Functions/envz_get.txt

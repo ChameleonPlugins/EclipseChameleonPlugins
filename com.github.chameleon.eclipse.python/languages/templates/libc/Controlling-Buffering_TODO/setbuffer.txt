@@ -1,0 +1,28 @@
+//\\ //// code completion entries (1+ lines):
+if buf is (a,) null pointer, this function (add,append,construct,create,define,insert,make,push) stream unbuffered
+//\\ //// ==> completion hint (1 line):
+If buf is a null pointer, this function makes stream unbuffered
+//\\ //// Replacement text (1+ lines):
+void setbuffer (FILE *stream, char *buf, size_t size)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: void setbuffer (FILE *stream, char *buf, size_t size)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt
+| AC-Unsafe lock corrupt
+| See POSIX Safety Concepts.
+
+
+If buf is a null pointer, this function makes stream unbuffered.
+Otherwise, it makes stream fully buffered using buf as the
+buffer.  The size argument specifies the length of buf.
+
+This function is provided for compatibility with old BSD code.  Use
+setvbuf instead.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Controlling-Buffering.html#Controlling-Buffering
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Controlling-Buffering/setbuffer.txt

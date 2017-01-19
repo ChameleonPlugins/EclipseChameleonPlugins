@@ -1,0 +1,21 @@
+//\\ //// code completion entries (1+ lines):
+DEMO map buffer to file
+DEMO map buffer X:BUFFER to file X:FILE
+//\\ //// ==> completion hint (1 line):
+// map memory to an open file
+//\\ //// Replacement text (1+ lines):
+const int MAX_BUF = 256;
+char* X1 = malloc(MAX_BUF);
+if ((X1 = mmap(NULL, MAX_BUF, PROT_WRITE, MAP_SHARED, X2, 0)) == MAP_FAILED) {
+	perror("mmap failed");
+	exit(1);
+}
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1=buffer
+X2=fd
+
+//\\ //// Help/documentation (1+ lines):
+Documentation
+//\\ //// Tool tip (1 line):
+Next: Write  to file
+//\\

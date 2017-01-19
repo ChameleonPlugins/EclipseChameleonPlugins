@@ -1,0 +1,72 @@
+//\\ //// code completion entries (1+ lines):
+is used to clear (the,) input and/or (output,print,show,say,type,write) queues associated with (the,) terminal file X:FILEDESCRIPTOR
+//\\ //// ==> completion hint (1 line):
+is used to clear the input and/or output queues associated with the terminal file filedes
+//\\ //// Replacement text (1+ lines):
+int tcflush (X1, int queue)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+X1=fd
+
+//\\ //// Help/documentation (1+ lines):
+Function: int tcflush (int filedes, int queue)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+The tcflush function is used to clear the input and/or output
+queues associated with the terminal file filedes.  The queue
+argument specifies which queue(s) to clear, and can be one of the
+following values:
+
+
+
+
+TCIFLUSH
+
+Clear any input data received, but not yet read.
+
+
+
+TCOFLUSH
+
+Clear any output data written, but not yet transmitted.
+
+
+
+TCIOFLUSH
+
+Clear both queued input and output.
+
+
+
+The return value is normally zero.  In the event of an error, a value
+of -1 is returned.  The following errno error conditions
+are defined for this function:
+
+
+EBADF
+The filedes is not a valid file descriptor.
+
+
+ENOTTY
+The filedes is not associated with a terminal device.
+
+
+EINVAL
+A bad value was supplied as the queue argument.
+
+
+
+It is unfortunate that this function is named tcflush, because
+the term “flush” is normally used for quite another operation—waiting
+until all output is transmitted—and using it for discarding input or
+output would be confusing.  Unfortunately, the name tcflush comes
+from POSIX and we cannot change it.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Line-Control.html#Line-Control
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Line-Control/tcflush.txt

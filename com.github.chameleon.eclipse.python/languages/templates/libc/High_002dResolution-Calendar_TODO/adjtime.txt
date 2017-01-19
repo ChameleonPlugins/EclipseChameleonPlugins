@@ -1,0 +1,48 @@
+//\\ //// code completion entries (1+ lines):
+speeds up or slows down (the,) (box,computer,system,node,host,target) clock in order to (add,append,construct,create,define,insert,make,push) (a,) gradual adjustment
+//\\ //// ==> completion hint (1 line):
+speeds up or slows down the system clock in order to make a gradual adjustment
+//\\ //// Replacement text (1+ lines):
+int adjtime (const struct timeval *delta, struct timeval *olddelta)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int adjtime (const struct timeval *delta, struct timeval *olddelta)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This function speeds up or slows down the system clock in order to make
+a gradual adjustment.  This ensures that the calendar time reported by
+the system clock is always monotonically increasing, which might not
+happen if you simply set the clock.
+
+The delta argument specifies a relative adjustment to be made to
+the clock time.  If negative, the system clock is slowed down for a
+while until it has lost this much elapsed time.  If positive, the system
+clock is speeded up for a while.
+
+If the olddelta argument is not a null pointer, the adjtime
+function returns information about any previous time adjustment that
+has not yet completed.
+
+This function is typically used to synchronize the clocks of computers
+in a local network.  You must be a privileged user to use it.
+
+With a Linux kernel, you can use the adjtimex function to
+permanently change the clock speed.
+
+The return value is 0 on success and -1 on failure.  The
+following errno error condition is defined for this function:
+
+
+EPERM
+You do not have privilege to set the time.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//High_002dResolution-Calendar.html#High_002dResolution-Calendar
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/High_002dResolution-Calendar/adjtime.txt

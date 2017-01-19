@@ -1,0 +1,25 @@
+//\\ //// code completion entries (1+ lines):
+(convert,change,replace) (the,) uint16_t integer hostshort from (box,computer,system,node,host,target) byte order to network byte order
+//\\ //// ==> completion hint (1 line):
+converts the uint16_t integer hostshort from host byte order to network byte order
+//\\ //// Replacement text (1+ lines):
+uint16_t htons (uint16_t hostshort)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: uint16_t htons (uint16_t hostshort)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+
+This function converts the uint16_t integer hostshort from
+host byte order to network byte order.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Byte-Order.html#Byte-Order
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Byte-Order/htons.txt

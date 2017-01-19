@@ -1,0 +1,29 @@
+//\\ //// code completion entries (1+ lines):
+this functions disables traps for each of (the,) exceptions as indicated by (the,) parameter except
+//\\ //// ==> completion hint (1 line):
+This functions disables traps for each of the exceptions as indicated by the parameter except
+//\\ //// Replacement text (1+ lines):
+int fedisableexcept (int excepts)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int fedisableexcept (int excepts)
+Preliminary:
+| MT-Safe 
+| AS-Safe 
+| AC-Safe 
+| See POSIX Safety Concepts.
+
+
+This functions disables traps for each of the exceptions as indicated by
+the parameter except.  The individual exceptions are described in
+Status bit operations.  Only the specified exceptions are
+disabled, the status of the other exceptions is not changed.
+
+The function returns the previous enabled exceptions in case the
+operation was successful, -1 otherwise.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Control-Functions.html#Control-Functions
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Control-Functions/fedisableexcept.txt

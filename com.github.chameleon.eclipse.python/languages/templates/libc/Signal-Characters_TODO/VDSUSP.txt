@@ -1,0 +1,30 @@
+//\\ //// code completion entries (1+ lines):
+(the,) dsusp 
+//\\ //// ==> completion hint (1 line):
+The DSUSP 
+//\\ //// Replacement text (1+ lines):
+Macro: int VDSUSP
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int VDSUSP
+
+
+This is the subscript for the DSUSP character in the special control
+character array.  termios.c_cc[VDSUSP] holds the character
+itself.
+
+The DSUSP (suspend) character is recognized only if the implementation
+supports job control (see Job Control).  It sends a SIGTSTP
+signal, like the SUSP character, but not right away—only when the
+program tries to read it as input.  Not all systems with job control
+support DSUSP; only BSD-compatible systems (including GNU/Hurd systems).
+
+See Signal Handling, for more information about signals.
+
+Typically, the DSUSP character is C-y.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Signal-Characters.html#Signal-Characters
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Signal-Characters/VDSUSP.txt

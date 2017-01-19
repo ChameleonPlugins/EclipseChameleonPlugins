@@ -1,0 +1,32 @@
+//\\ //// code completion entries (1+ lines):
+lets you explicitly check for inconsistencies in (a,) particular allocated block
+//\\ //// ==> completion hint (1 line):
+lets you explicitly check for inconsistencies in a particular allocated block
+//\\ //// Replacement text (1+ lines):
+enum mcheck_status mprobe (void *pointer)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: enum mcheck_status mprobe (void *pointer)
+Preliminary:
+| MT-Unsafe race:mcheck const:malloc_hooks
+| AS-Unsafe corrupt
+| AC-Unsafe corrupt
+| See POSIX Safety Concepts.
+
+
+
+The mprobe function lets you explicitly check for inconsistencies
+in a particular allocated block.  You must have already called
+mcheck at the beginning of the program, to do its occasional
+checks; calling mprobe requests an additional consistency check
+to be done at the time of the call.
+
+The argument pointer must be a pointer returned by malloc
+or realloc.  mprobe returns a value that says what
+inconsistency, if any, was found.  The values are described below.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Heap-Consistency-Checking.html#Heap-Consistency-Checking
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Heap-Consistency-Checking/mprobe.txt

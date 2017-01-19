@@ -1,0 +1,14 @@
+//\\ //// code completion entries (1+ lines):
+is X:TEXT (contained )?in X:TEXT
+//\\ //// ==> completion hint (1 line):
+is text contained in text
+//\\ //// Replacement text (1+ lines):
+X1 in X2
+//\\ //// Defaults for X if needed (e.g. X1=3) (1+ lines):
+X1="bye"
+X2="goodbye"
+//\\ //// Help/documentation (1+ lines):
+
+//\\ //// Tool tip (1 line):
+
+//\\

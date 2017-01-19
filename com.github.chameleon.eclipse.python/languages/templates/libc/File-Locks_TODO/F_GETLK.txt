@@ -1,0 +1,54 @@
+//\\ //// code completion entries (1+ lines):
+if there is (a,) (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) already in (place,position) that would block (the,) (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) described by (the,) lockp argument, information about that (allocate,find,get,grab,lock,obtain,reserve,retrieve,return) overwrites *
+//\\ //// ==> completion hint (1 line):
+If there is a lock already in place that would block the lock described by the lockp argument, information about that lock overwrites *
+//\\ //// Replacement text (1+ lines):
+Macro: int F_GETLK
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Macro: int F_GETLK
+This macro is used as the command argument to fcntl, to
+specify that it should get information about a lock.  This command
+requires a third argument of type struct flock * to be passed
+to fcntl, so that the form of the call is:
+
+
+fcntl (filedes, F_GETLK, lockp)
+
+
+If there is a lock already in place that would block the lock described
+by the lockp argument, information about that lock overwrites
+*lockp.  Existing locks are not reported if they are
+compatible with making a new lock as specified.  Thus, you should
+specify a lock type of F_WRLCK if you want to find out about both
+read and write locks, or F_RDLCK if you want to find out about
+write locks only.
+
+There might be more than one lock affecting the region specified by the
+lockp argument, but fcntl only returns information about
+one of them.  The l_whence member of the lockp structure is
+set to SEEK_SET and the l_start and l_len fields
+set to identify the locked region.
+
+If no lock applies, the only change to the lockp structure is to
+update the l_type to a value of F_UNLCK.
+
+The normal return value from fcntl with this command is an
+unspecified value other than -1, which is reserved to indicate an
+error.  The following errno error conditions are defined for
+this command:
+
+
+EBADF
+The filedes argument is invalid.
+
+
+EINVAL
+Either the lockp argument doesn’t specify valid lock information,
+or the file associated with filedes doesn’t support locks.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//File-Locks.html#File-Locks
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/File-Locks/F_GETLK.txt

@@ -1,0 +1,23 @@
+//\\ //// code completion entries (1+ lines):
+associate (the,) thread-specific value with key in (the,) calling thread
+//\\ //// ==> completion hint (1 line):
+Associate the thread-specific value with key in the calling thread
+//\\ //// Replacement text (1+ lines):
+int pthread_setspecific (pthread_key_t key, const void *value)
+//\\ //// Default Values, if needed (e.g. X1=x>0) (1+ lines):
+
+//\\ //// Help/documentation (1+ lines):
+Function: int pthread_setspecific (pthread_key_t key, const void *value)
+Preliminary:
+| MT-Safe 
+| AS-Unsafe corrupt heap
+| AC-Unsafe corrupt mem
+| See POSIX Safety Concepts.
+
+
+Associate the thread-specific value with key in the calling thread.
+file:///C:/My%20Web%20Sites/C-language/C-libC_pages/www.gnu.org/software/libc/manual/html_node//Thread_002dspecific-Data.html#Thread_002dspecific-Data
+//\\ //// Tool tip (1 line):
+
+//\\ //// Template path (e.g. core/sayHi.txt) (1 line):
+/../../../templates/libc/Thread_002dspecific-Data/pthread_setspecific.txt
